@@ -1,0 +1,44 @@
+version 2
+run BurstyTraffic-0-20210127-21:20:11-8308
+attr configname BurstyTraffic
+attr datetime 20210127-21:20:11
+attr experiment BurstyTraffic
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network TcpAppExample
+attr processid 8308
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.server.app[0].connection[*].source.typename "\"BurstyPacketProducer\""
+param *.server.app[0].connection[*].source.normalProducer.productionInterval 1s
+param *.server.app[0].connection[*].source.normalProducer.packetLength 100B
+param *.server.app[0].connection[*].source.burstProducer.productionInterval 0.1s
+param *.server.app[0].connection[*].source.burstProducer.packetLength 1000B
+param *.server.app[0].connection[*].source.scheduler.waitIntervals "\"40 4\""
+param *.server.app[0].connection[*].source.scheduler.transitionProbabilities "\"0 1 1 0\""
+param *.*.numApps 1
+param *.client.app[0].typename "\"TcpClientApp\""
+param *.client.app[0].io.connectAddress "\"server\""
+param *.client.app[0].io.connectPort 1000
+param *.client.app[0].source.productionInterval "uniform(0s, 20s)"
+param *.client.app[0].source.packetLength "intuniform(100B, 200B)"
+param *.client.app[0].source.packetData "intuniform(0, 1)"
+param *.server.app[0].typename "\"TcpServerApp\""
+param *.server.app[0].listener.localPort 1000
+
+vector 0 TcpAppExample.client.ppp[0].ppp transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "tx state, vector"
+vector 1 TcpAppExample.server.ppp[0].ppp transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "tx state, vector"
+0	0	0	0
+1	0	0	0
+

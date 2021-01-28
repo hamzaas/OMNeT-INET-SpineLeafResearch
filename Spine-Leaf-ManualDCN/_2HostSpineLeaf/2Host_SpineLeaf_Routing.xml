@@ -1,0 +1,11 @@
+<config>
+    <interface hosts="*" address="10.x.x.x" netmask="255.x.x.x"/>
+    
+    <route hosts="leaf1" destination="H1" netmask="255.255.255.255" gateway="*" interface="eth0" metric="*"/>
+    <route hosts="leaf1" destination="H1" netmask="255.255.255.255" gateway="*" interface="eth1" metric="*"/>
+    <route hosts="leaf1" destination="H1" netmask="255.255.255.255" gateway="*" interface="eth2" metric="*"/>
+    
+    <route hosts="leaf2" destination="H0" netmask="255.255.255.255" gateway="*" interface="eth0" metric="*"/>
+    <route hosts="leaf2" destination="H0" netmask="255.255.255.255" gateway="*" interface="eth1" metric="*"/>
+    <route hosts="leaf2" destination="H0" netmask="255.255.255.255" gateway="*" interface="eth2" metric="*"/>
+</config>

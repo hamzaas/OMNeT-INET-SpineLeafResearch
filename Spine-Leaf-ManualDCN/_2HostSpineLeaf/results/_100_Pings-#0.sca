@@ -1,0 +1,3845 @@
+version 2
+run _100_Pings-0-20210121-15:21:49-3184
+attr configname _100_Pings
+attr datetime 20210121-15:21:49
+attr experiment _100_Pings
+attr inifile 2Host_SpineLeaf.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network RandomTestingTopology
+attr processid 3184
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.H0.numApps 1
+param **.H0.app[0].typename "\"PingApp\""
+param **.H0.app[0].destAddr "\"H1\""
+param **.H0.app[0].count 100
+param *.Visualizer.interfaceTableVisualizer.displayInterfaceTables true
+param *.Visualizer.interfaceTableVisualizer.textColor "\"white\""
+param *.Visualizer.interfaceTableVisualizer.displayBackground true
+param *.Visualizer.interfaceTableVisualizer.displayWiredInterfacesAtConnections false
+param *.Visualizer.interfaceTableVisualizer.backgroundColor "\"black\""
+param *.Visualizer.interfaceTableVisualizer.opacity 0.75
+param *.Visualizer.interfaceTableVisualizer.format "\"%N %\\\\%n/%l%\\\\%m\""
+param **.configurator.config "xmldoc(\"2Host_SpineLeaf_Routing.xml\")"
+
+scalar RandomTestingTopology.spine1.lo[0].lo rcvdPkFromHl:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar RandomTestingTopology.spine1.lo[0].lo rcvdPkFromHl:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.spine1.lo[0].lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar RandomTestingTopology.spine1.lo[0].lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.spine1.eth[0].mac.queue packetPopped:count 31
+attr interpolationmode none
+attr title "packet popped, count"
+scalar RandomTestingTopology.spine1.eth[0].mac.queue packetPopped:sum(packetBytes) 3124
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic RandomTestingTopology.spine1.eth[0].mac.queue queueingTime:histogram
+field count 31
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	31
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar RandomTestingTopology.spine1.eth[0].mac.queue queueLength:max 1
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar RandomTestingTopology.spine1.eth[0].mac.queue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar RandomTestingTopology.spine1.eth[0].mac.queue packetPushed:count 31
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar RandomTestingTopology.spine1.eth[0].mac.queue packetPushed:sum(packetBytes) 3124
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar RandomTestingTopology.spine1.eth[0].mac.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar RandomTestingTopology.spine1.eth[0].mac.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar RandomTestingTopology.spine1.eth[0].mac.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar RandomTestingTopology.spine1.eth[0].mac.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar RandomTestingTopology.spine1.eth[0].mac "simulated time" 100.5488135023
+scalar RandomTestingTopology.spine1.eth[0].mac full-duplex 1
+scalar RandomTestingTopology.spine1.eth[0].mac "frames/sec sent" 0.30830796426344
+scalar RandomTestingTopology.spine1.eth[0].mac "frames/sec rcvd" 0.36798047347572
+scalar RandomTestingTopology.spine1.eth[0].mac "bits/sec sent" 248.55589170555
+scalar RandomTestingTopology.spine1.eth[0].mac "bits/sec rcvd" 297.24865922277
+scalar RandomTestingTopology.spine1.eth[0].mac "rx channel idle (%)" 100
+scalar RandomTestingTopology.spine1.eth[0].mac "rx channel utilization (%)" 0
+scalar RandomTestingTopology.spine1.eth[0].mac txPk:count 31
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar RandomTestingTopology.spine1.eth[0].mac txPk:sum(packetBytes) 3124
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar RandomTestingTopology.spine1.eth[0].mac packetReceivedFromUpper:count 31
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar RandomTestingTopology.spine1.eth[0].mac packetReceivedFromUpper:sum(packetBytes) 3106
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.spine1.eth[0].mac passedUpPk:count 37
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar RandomTestingTopology.spine1.eth[0].mac passedUpPk:sum(packetBytes) 3736
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.spine1.eth[0].mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar RandomTestingTopology.spine1.eth[0].mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar RandomTestingTopology.spine1.eth[0].mac packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar RandomTestingTopology.spine1.eth[0].mac packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar RandomTestingTopology.spine1.eth[0].mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar RandomTestingTopology.spine1.eth[0].mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar RandomTestingTopology.spine1.eth[0].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar RandomTestingTopology.spine1.eth[0].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar RandomTestingTopology.spine1.eth[0].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar RandomTestingTopology.spine1.eth[0].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar RandomTestingTopology.spine1.eth[0].mac rxPkOk:count 37
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar RandomTestingTopology.spine1.eth[0].mac rxPkOk:sum(packetBytes) 3736
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar RandomTestingTopology.spine1.eth[0].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar RandomTestingTopology.spine1.eth[0].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar RandomTestingTopology.spine1.eth[0].encap decapPk:count 37
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar RandomTestingTopology.spine1.eth[0].encap decapPk:sum(packetBytes) 3070
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar RandomTestingTopology.spine1.eth[0].encap encapPk:count 31
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar RandomTestingTopology.spine1.eth[0].encap encapPk:sum(packetBytes) 2548
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar RandomTestingTopology.spine1.eth[1].mac.queue packetPopped:count 38
+attr interpolationmode none
+attr title "packet popped, count"
+scalar RandomTestingTopology.spine1.eth[1].mac.queue packetPopped:sum(packetBytes) 3800
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic RandomTestingTopology.spine1.eth[1].mac.queue queueingTime:histogram
+field count 38
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	38
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar RandomTestingTopology.spine1.eth[1].mac.queue queueLength:max 1
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar RandomTestingTopology.spine1.eth[1].mac.queue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar RandomTestingTopology.spine1.eth[1].mac.queue packetPushed:count 38
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar RandomTestingTopology.spine1.eth[1].mac.queue packetPushed:sum(packetBytes) 3800
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar RandomTestingTopology.spine1.eth[1].mac.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar RandomTestingTopology.spine1.eth[1].mac.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar RandomTestingTopology.spine1.eth[1].mac.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar RandomTestingTopology.spine1.eth[1].mac.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar RandomTestingTopology.spine1.eth[1].mac "simulated time" 100.5488135023
+scalar RandomTestingTopology.spine1.eth[1].mac full-duplex 1
+scalar RandomTestingTopology.spine1.eth[1].mac "frames/sec sent" 0.37792589167777
+scalar RandomTestingTopology.spine1.eth[1].mac "frames/sec rcvd" 0.31825338246549
+scalar RandomTestingTopology.spine1.eth[1].mac "bits/sec sent" 302.34071334222
+scalar RandomTestingTopology.spine1.eth[1].mac "bits/sec rcvd" 253.647945825
+scalar RandomTestingTopology.spine1.eth[1].mac "rx channel idle (%)" 100
+scalar RandomTestingTopology.spine1.eth[1].mac "rx channel utilization (%)" 0
+scalar RandomTestingTopology.spine1.eth[1].mac txPk:count 38
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar RandomTestingTopology.spine1.eth[1].mac txPk:sum(packetBytes) 3800
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar RandomTestingTopology.spine1.eth[1].mac packetReceivedFromUpper:count 38
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar RandomTestingTopology.spine1.eth[1].mac packetReceivedFromUpper:sum(packetBytes) 3764
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.spine1.eth[1].mac passedUpPk:count 32
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar RandomTestingTopology.spine1.eth[1].mac passedUpPk:sum(packetBytes) 3188
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.spine1.eth[1].mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar RandomTestingTopology.spine1.eth[1].mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar RandomTestingTopology.spine1.eth[1].mac packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar RandomTestingTopology.spine1.eth[1].mac packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar RandomTestingTopology.spine1.eth[1].mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar RandomTestingTopology.spine1.eth[1].mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar RandomTestingTopology.spine1.eth[1].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar RandomTestingTopology.spine1.eth[1].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar RandomTestingTopology.spine1.eth[1].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar RandomTestingTopology.spine1.eth[1].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar RandomTestingTopology.spine1.eth[1].mac rxPkOk:count 32
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar RandomTestingTopology.spine1.eth[1].mac rxPkOk:sum(packetBytes) 3188
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar RandomTestingTopology.spine1.eth[1].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar RandomTestingTopology.spine1.eth[1].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar RandomTestingTopology.spine1.eth[1].encap decapPk:count 32
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar RandomTestingTopology.spine1.eth[1].encap decapPk:sum(packetBytes) 2612
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar RandomTestingTopology.spine1.eth[1].encap encapPk:count 38
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar RandomTestingTopology.spine1.eth[1].encap encapPk:sum(packetBytes) 3080
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar RandomTestingTopology.spine1.ipv4.ip packetDropAddressResolutionFailed:count 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar RandomTestingTopology.spine1.ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar RandomTestingTopology.spine1.ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar RandomTestingTopology.spine1.ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar RandomTestingTopology.spine1.ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar RandomTestingTopology.spine1.ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar RandomTestingTopology.spine1.ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar RandomTestingTopology.spine1.ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar RandomTestingTopology.spine1.ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar RandomTestingTopology.spine1.ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar RandomTestingTopology.spine1.ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar RandomTestingTopology.spine1.ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+scalar RandomTestingTopology.spine1.ipv4.arp arpReplySent:count 2
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar RandomTestingTopology.spine1.ipv4.arp arpReplySent:sum(packetBytes) 56
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar RandomTestingTopology.spine1.ipv4.arp arpRequestSent:count 1
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar RandomTestingTopology.spine1.ipv4.arp arpRequestSent:sum(packetBytes) 28
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+scalar RandomTestingTopology.spine1.ipv4.arp arpResolutionFailed:count 0
+attr title "ARP failed resolutions, count"
+scalar RandomTestingTopology.spine1.ipv4.arp arpResolutionCompleted:count 3
+attr title "ARP completed resolutions, count"
+scalar RandomTestingTopology.spine1.ipv4.arp arpResolutionInitiated:count 1
+attr title "ARP initiated resolutions, count"
+scalar RandomTestingTopology.spine2.lo[0].lo rcvdPkFromHl:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar RandomTestingTopology.spine2.lo[0].lo rcvdPkFromHl:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.spine2.lo[0].lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar RandomTestingTopology.spine2.lo[0].lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.spine2.eth[0].mac.queue packetPopped:count 35
+attr interpolationmode none
+attr title "packet popped, count"
+scalar RandomTestingTopology.spine2.eth[0].mac.queue packetPopped:sum(packetBytes) 3532
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic RandomTestingTopology.spine2.eth[0].mac.queue queueingTime:histogram
+field count 35
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	35
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar RandomTestingTopology.spine2.eth[0].mac.queue queueLength:max 1
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar RandomTestingTopology.spine2.eth[0].mac.queue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar RandomTestingTopology.spine2.eth[0].mac.queue packetPushed:count 35
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar RandomTestingTopology.spine2.eth[0].mac.queue packetPushed:sum(packetBytes) 3532
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar RandomTestingTopology.spine2.eth[0].mac.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar RandomTestingTopology.spine2.eth[0].mac.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar RandomTestingTopology.spine2.eth[0].mac.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar RandomTestingTopology.spine2.eth[0].mac.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar RandomTestingTopology.spine2.eth[0].mac "simulated time" 100.5488135023
+scalar RandomTestingTopology.spine2.eth[0].mac full-duplex 1
+scalar RandomTestingTopology.spine2.eth[0].mac "frames/sec sent" 0.34808963707163
+scalar RandomTestingTopology.spine2.eth[0].mac "frames/sec rcvd" 0.30830796426344
+scalar RandomTestingTopology.spine2.eth[0].mac "bits/sec sent" 281.01773671703
+scalar RandomTestingTopology.spine2.eth[0].mac "bits/sec rcvd" 248.55589170555
+scalar RandomTestingTopology.spine2.eth[0].mac "rx channel idle (%)" 100
+scalar RandomTestingTopology.spine2.eth[0].mac "rx channel utilization (%)" 0
+scalar RandomTestingTopology.spine2.eth[0].mac txPk:count 35
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar RandomTestingTopology.spine2.eth[0].mac txPk:sum(packetBytes) 3532
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar RandomTestingTopology.spine2.eth[0].mac packetReceivedFromUpper:count 35
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar RandomTestingTopology.spine2.eth[0].mac packetReceivedFromUpper:sum(packetBytes) 3514
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.spine2.eth[0].mac passedUpPk:count 31
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar RandomTestingTopology.spine2.eth[0].mac passedUpPk:sum(packetBytes) 3124
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.spine2.eth[0].mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar RandomTestingTopology.spine2.eth[0].mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar RandomTestingTopology.spine2.eth[0].mac packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar RandomTestingTopology.spine2.eth[0].mac packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar RandomTestingTopology.spine2.eth[0].mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar RandomTestingTopology.spine2.eth[0].mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar RandomTestingTopology.spine2.eth[0].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar RandomTestingTopology.spine2.eth[0].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar RandomTestingTopology.spine2.eth[0].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar RandomTestingTopology.spine2.eth[0].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar RandomTestingTopology.spine2.eth[0].mac rxPkOk:count 31
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar RandomTestingTopology.spine2.eth[0].mac rxPkOk:sum(packetBytes) 3124
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar RandomTestingTopology.spine2.eth[0].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar RandomTestingTopology.spine2.eth[0].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar RandomTestingTopology.spine2.eth[0].encap decapPk:count 31
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar RandomTestingTopology.spine2.eth[0].encap decapPk:sum(packetBytes) 2566
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar RandomTestingTopology.spine2.eth[0].encap encapPk:count 35
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar RandomTestingTopology.spine2.eth[0].encap encapPk:sum(packetBytes) 2884
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar RandomTestingTopology.spine2.eth[1].mac.queue packetPopped:count 32
+attr interpolationmode none
+attr title "packet popped, count"
+scalar RandomTestingTopology.spine2.eth[1].mac.queue packetPopped:sum(packetBytes) 3188
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic RandomTestingTopology.spine2.eth[1].mac.queue queueingTime:histogram
+field count 32
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	32
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar RandomTestingTopology.spine2.eth[1].mac.queue queueLength:max 1
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar RandomTestingTopology.spine2.eth[1].mac.queue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar RandomTestingTopology.spine2.eth[1].mac.queue packetPushed:count 32
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar RandomTestingTopology.spine2.eth[1].mac.queue packetPushed:sum(packetBytes) 3188
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar RandomTestingTopology.spine2.eth[1].mac.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar RandomTestingTopology.spine2.eth[1].mac.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar RandomTestingTopology.spine2.eth[1].mac.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar RandomTestingTopology.spine2.eth[1].mac.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar RandomTestingTopology.spine2.eth[1].mac "simulated time" 100.5488135023
+scalar RandomTestingTopology.spine2.eth[1].mac full-duplex 1
+scalar RandomTestingTopology.spine2.eth[1].mac "frames/sec sent" 0.31825338246549
+scalar RandomTestingTopology.spine2.eth[1].mac "frames/sec rcvd" 0.35803505527368
+scalar RandomTestingTopology.spine2.eth[1].mac "bits/sec sent" 253.647945825
+scalar RandomTestingTopology.spine2.eth[1].mac "bits/sec rcvd" 286.10979083648
+scalar RandomTestingTopology.spine2.eth[1].mac "rx channel idle (%)" 100
+scalar RandomTestingTopology.spine2.eth[1].mac "rx channel utilization (%)" 0
+scalar RandomTestingTopology.spine2.eth[1].mac txPk:count 32
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar RandomTestingTopology.spine2.eth[1].mac txPk:sum(packetBytes) 3188
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar RandomTestingTopology.spine2.eth[1].mac packetReceivedFromUpper:count 32
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar RandomTestingTopology.spine2.eth[1].mac packetReceivedFromUpper:sum(packetBytes) 3152
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.spine2.eth[1].mac passedUpPk:count 36
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar RandomTestingTopology.spine2.eth[1].mac passedUpPk:sum(packetBytes) 3596
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.spine2.eth[1].mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar RandomTestingTopology.spine2.eth[1].mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar RandomTestingTopology.spine2.eth[1].mac packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar RandomTestingTopology.spine2.eth[1].mac packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar RandomTestingTopology.spine2.eth[1].mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar RandomTestingTopology.spine2.eth[1].mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar RandomTestingTopology.spine2.eth[1].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar RandomTestingTopology.spine2.eth[1].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar RandomTestingTopology.spine2.eth[1].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar RandomTestingTopology.spine2.eth[1].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar RandomTestingTopology.spine2.eth[1].mac rxPkOk:count 36
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar RandomTestingTopology.spine2.eth[1].mac rxPkOk:sum(packetBytes) 3596
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar RandomTestingTopology.spine2.eth[1].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar RandomTestingTopology.spine2.eth[1].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar RandomTestingTopology.spine2.eth[1].encap decapPk:count 36
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar RandomTestingTopology.spine2.eth[1].encap decapPk:sum(packetBytes) 2948
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar RandomTestingTopology.spine2.eth[1].encap encapPk:count 32
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar RandomTestingTopology.spine2.eth[1].encap encapPk:sum(packetBytes) 2576
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar RandomTestingTopology.spine2.ipv4.ip packetDropAddressResolutionFailed:count 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar RandomTestingTopology.spine2.ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar RandomTestingTopology.spine2.ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar RandomTestingTopology.spine2.ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar RandomTestingTopology.spine2.ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar RandomTestingTopology.spine2.ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar RandomTestingTopology.spine2.ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar RandomTestingTopology.spine2.ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar RandomTestingTopology.spine2.ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar RandomTestingTopology.spine2.ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar RandomTestingTopology.spine2.ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar RandomTestingTopology.spine2.ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+scalar RandomTestingTopology.spine2.ipv4.arp arpReplySent:count 2
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar RandomTestingTopology.spine2.ipv4.arp arpReplySent:sum(packetBytes) 56
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar RandomTestingTopology.spine2.ipv4.arp arpRequestSent:count 1
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar RandomTestingTopology.spine2.ipv4.arp arpRequestSent:sum(packetBytes) 28
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+scalar RandomTestingTopology.spine2.ipv4.arp arpResolutionFailed:count 0
+attr title "ARP failed resolutions, count"
+scalar RandomTestingTopology.spine2.ipv4.arp arpResolutionCompleted:count 3
+attr title "ARP completed resolutions, count"
+scalar RandomTestingTopology.spine2.ipv4.arp arpResolutionInitiated:count 1
+attr title "ARP initiated resolutions, count"
+scalar RandomTestingTopology.spine3.lo[0].lo rcvdPkFromHl:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar RandomTestingTopology.spine3.lo[0].lo rcvdPkFromHl:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.spine3.lo[0].lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar RandomTestingTopology.spine3.lo[0].lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.spine3.eth[0].mac.queue packetPopped:count 38
+attr interpolationmode none
+attr title "packet popped, count"
+scalar RandomTestingTopology.spine3.eth[0].mac.queue packetPopped:sum(packetBytes) 3800
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic RandomTestingTopology.spine3.eth[0].mac.queue queueingTime:histogram
+field count 38
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	38
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar RandomTestingTopology.spine3.eth[0].mac.queue queueLength:max 1
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar RandomTestingTopology.spine3.eth[0].mac.queue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar RandomTestingTopology.spine3.eth[0].mac.queue packetPushed:count 38
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar RandomTestingTopology.spine3.eth[0].mac.queue packetPushed:sum(packetBytes) 3800
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar RandomTestingTopology.spine3.eth[0].mac.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar RandomTestingTopology.spine3.eth[0].mac.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar RandomTestingTopology.spine3.eth[0].mac.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar RandomTestingTopology.spine3.eth[0].mac.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar RandomTestingTopology.spine3.eth[0].mac "simulated time" 100.5488135023
+scalar RandomTestingTopology.spine3.eth[0].mac full-duplex 1
+scalar RandomTestingTopology.spine3.eth[0].mac "frames/sec sent" 0.37792589167777
+scalar RandomTestingTopology.spine3.eth[0].mac "frames/sec rcvd" 0.35803505527368
+scalar RandomTestingTopology.spine3.eth[0].mac "bits/sec sent" 302.34071334222
+scalar RandomTestingTopology.spine3.eth[0].mac "bits/sec rcvd" 286.10979083648
+scalar RandomTestingTopology.spine3.eth[0].mac "rx channel idle (%)" 100
+scalar RandomTestingTopology.spine3.eth[0].mac "rx channel utilization (%)" 0
+scalar RandomTestingTopology.spine3.eth[0].mac txPk:count 38
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar RandomTestingTopology.spine3.eth[0].mac txPk:sum(packetBytes) 3800
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar RandomTestingTopology.spine3.eth[0].mac packetReceivedFromUpper:count 38
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar RandomTestingTopology.spine3.eth[0].mac packetReceivedFromUpper:sum(packetBytes) 3764
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.spine3.eth[0].mac passedUpPk:count 36
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar RandomTestingTopology.spine3.eth[0].mac passedUpPk:sum(packetBytes) 3596
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.spine3.eth[0].mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar RandomTestingTopology.spine3.eth[0].mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar RandomTestingTopology.spine3.eth[0].mac packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar RandomTestingTopology.spine3.eth[0].mac packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar RandomTestingTopology.spine3.eth[0].mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar RandomTestingTopology.spine3.eth[0].mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar RandomTestingTopology.spine3.eth[0].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar RandomTestingTopology.spine3.eth[0].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar RandomTestingTopology.spine3.eth[0].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar RandomTestingTopology.spine3.eth[0].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar RandomTestingTopology.spine3.eth[0].mac rxPkOk:count 36
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar RandomTestingTopology.spine3.eth[0].mac rxPkOk:sum(packetBytes) 3596
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar RandomTestingTopology.spine3.eth[0].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar RandomTestingTopology.spine3.eth[0].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar RandomTestingTopology.spine3.eth[0].encap decapPk:count 36
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar RandomTestingTopology.spine3.eth[0].encap decapPk:sum(packetBytes) 2948
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar RandomTestingTopology.spine3.eth[0].encap encapPk:count 38
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar RandomTestingTopology.spine3.eth[0].encap encapPk:sum(packetBytes) 3080
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar RandomTestingTopology.spine3.eth[1].mac.queue packetPopped:count 35
+attr interpolationmode none
+attr title "packet popped, count"
+scalar RandomTestingTopology.spine3.eth[1].mac.queue packetPopped:sum(packetBytes) 3532
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic RandomTestingTopology.spine3.eth[1].mac.queue queueingTime:histogram
+field count 35
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	35
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar RandomTestingTopology.spine3.eth[1].mac.queue queueLength:max 1
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar RandomTestingTopology.spine3.eth[1].mac.queue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar RandomTestingTopology.spine3.eth[1].mac.queue packetPushed:count 35
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar RandomTestingTopology.spine3.eth[1].mac.queue packetPushed:sum(packetBytes) 3532
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar RandomTestingTopology.spine3.eth[1].mac.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar RandomTestingTopology.spine3.eth[1].mac.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar RandomTestingTopology.spine3.eth[1].mac.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar RandomTestingTopology.spine3.eth[1].mac.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar RandomTestingTopology.spine3.eth[1].mac "simulated time" 100.5488135023
+scalar RandomTestingTopology.spine3.eth[1].mac full-duplex 1
+scalar RandomTestingTopology.spine3.eth[1].mac "frames/sec sent" 0.34808963707163
+scalar RandomTestingTopology.spine3.eth[1].mac "frames/sec rcvd" 0.36798047347572
+scalar RandomTestingTopology.spine3.eth[1].mac "bits/sec sent" 281.01773671703
+scalar RandomTestingTopology.spine3.eth[1].mac "bits/sec rcvd" 297.24865922277
+scalar RandomTestingTopology.spine3.eth[1].mac "rx channel idle (%)" 100
+scalar RandomTestingTopology.spine3.eth[1].mac "rx channel utilization (%)" 0
+scalar RandomTestingTopology.spine3.eth[1].mac txPk:count 35
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar RandomTestingTopology.spine3.eth[1].mac txPk:sum(packetBytes) 3532
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar RandomTestingTopology.spine3.eth[1].mac packetReceivedFromUpper:count 35
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar RandomTestingTopology.spine3.eth[1].mac packetReceivedFromUpper:sum(packetBytes) 3514
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.spine3.eth[1].mac passedUpPk:count 37
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar RandomTestingTopology.spine3.eth[1].mac passedUpPk:sum(packetBytes) 3736
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.spine3.eth[1].mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar RandomTestingTopology.spine3.eth[1].mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar RandomTestingTopology.spine3.eth[1].mac packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar RandomTestingTopology.spine3.eth[1].mac packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar RandomTestingTopology.spine3.eth[1].mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar RandomTestingTopology.spine3.eth[1].mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar RandomTestingTopology.spine3.eth[1].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar RandomTestingTopology.spine3.eth[1].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar RandomTestingTopology.spine3.eth[1].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar RandomTestingTopology.spine3.eth[1].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar RandomTestingTopology.spine3.eth[1].mac rxPkOk:count 37
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar RandomTestingTopology.spine3.eth[1].mac rxPkOk:sum(packetBytes) 3736
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar RandomTestingTopology.spine3.eth[1].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar RandomTestingTopology.spine3.eth[1].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar RandomTestingTopology.spine3.eth[1].encap decapPk:count 37
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar RandomTestingTopology.spine3.eth[1].encap decapPk:sum(packetBytes) 3070
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar RandomTestingTopology.spine3.eth[1].encap encapPk:count 35
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar RandomTestingTopology.spine3.eth[1].encap encapPk:sum(packetBytes) 2884
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar RandomTestingTopology.spine3.ipv4.ip packetDropAddressResolutionFailed:count 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar RandomTestingTopology.spine3.ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar RandomTestingTopology.spine3.ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar RandomTestingTopology.spine3.ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar RandomTestingTopology.spine3.ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar RandomTestingTopology.spine3.ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar RandomTestingTopology.spine3.ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar RandomTestingTopology.spine3.ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar RandomTestingTopology.spine3.ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar RandomTestingTopology.spine3.ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar RandomTestingTopology.spine3.ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar RandomTestingTopology.spine3.ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+scalar RandomTestingTopology.spine3.ipv4.arp arpReplySent:count 2
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar RandomTestingTopology.spine3.ipv4.arp arpReplySent:sum(packetBytes) 56
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar RandomTestingTopology.spine3.ipv4.arp arpRequestSent:count 1
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar RandomTestingTopology.spine3.ipv4.arp arpRequestSent:sum(packetBytes) 28
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+scalar RandomTestingTopology.spine3.ipv4.arp arpResolutionFailed:count 0
+attr title "ARP failed resolutions, count"
+scalar RandomTestingTopology.spine3.ipv4.arp arpResolutionCompleted:count 3
+attr title "ARP completed resolutions, count"
+scalar RandomTestingTopology.spine3.ipv4.arp arpResolutionInitiated:count 1
+attr title "ARP initiated resolutions, count"
+scalar RandomTestingTopology.H0.lo[0].lo rcvdPkFromHl:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar RandomTestingTopology.H0.lo[0].lo rcvdPkFromHl:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.H0.lo[0].lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar RandomTestingTopology.H0.lo[0].lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.H0.eth[0].mac.queue packetPopped:count 101
+attr interpolationmode none
+attr title "packet popped, count"
+scalar RandomTestingTopology.H0.eth[0].mac.queue packetPopped:sum(packetBytes) 10264
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic RandomTestingTopology.H0.eth[0].mac.queue queueingTime:histogram
+field count 101
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	101
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar RandomTestingTopology.H0.eth[0].mac.queue queueLength:max 1
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar RandomTestingTopology.H0.eth[0].mac.queue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar RandomTestingTopology.H0.eth[0].mac.queue packetPushed:count 101
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar RandomTestingTopology.H0.eth[0].mac.queue packetPushed:sum(packetBytes) 10264
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar RandomTestingTopology.H0.eth[0].mac.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar RandomTestingTopology.H0.eth[0].mac.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar RandomTestingTopology.H0.eth[0].mac.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar RandomTestingTopology.H0.eth[0].mac.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar RandomTestingTopology.H0.eth[0].mac "simulated time" 100.5488135023
+scalar RandomTestingTopology.H0.eth[0].mac full-duplex 1
+scalar RandomTestingTopology.H0.eth[0].mac "frames/sec sent" 1.0044872384067
+scalar RandomTestingTopology.H0.eth[0].mac "frames/sec rcvd" 1.0044872384067
+scalar RandomTestingTopology.H0.eth[0].mac "bits/sec sent" 816.63817940645
+scalar RandomTestingTopology.H0.eth[0].mac "bits/sec rcvd" 816.63817940645
+scalar RandomTestingTopology.H0.eth[0].mac "rx channel idle (%)" 100
+scalar RandomTestingTopology.H0.eth[0].mac "rx channel utilization (%)" 0
+scalar RandomTestingTopology.H0.eth[0].mac txPk:count 101
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar RandomTestingTopology.H0.eth[0].mac txPk:sum(packetBytes) 10264
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar RandomTestingTopology.H0.eth[0].mac packetReceivedFromUpper:count 101
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar RandomTestingTopology.H0.eth[0].mac packetReceivedFromUpper:sum(packetBytes) 10246
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.H0.eth[0].mac passedUpPk:count 101
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar RandomTestingTopology.H0.eth[0].mac passedUpPk:sum(packetBytes) 10264
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.H0.eth[0].mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar RandomTestingTopology.H0.eth[0].mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar RandomTestingTopology.H0.eth[0].mac packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar RandomTestingTopology.H0.eth[0].mac packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar RandomTestingTopology.H0.eth[0].mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar RandomTestingTopology.H0.eth[0].mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar RandomTestingTopology.H0.eth[0].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar RandomTestingTopology.H0.eth[0].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar RandomTestingTopology.H0.eth[0].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar RandomTestingTopology.H0.eth[0].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar RandomTestingTopology.H0.eth[0].mac rxPkOk:count 101
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar RandomTestingTopology.H0.eth[0].mac rxPkOk:sum(packetBytes) 10264
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar RandomTestingTopology.H0.eth[0].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar RandomTestingTopology.H0.eth[0].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar RandomTestingTopology.H0.eth[0].encap decapPk:count 101
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar RandomTestingTopology.H0.eth[0].encap decapPk:sum(packetBytes) 8446
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar RandomTestingTopology.H0.eth[0].encap encapPk:count 101
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar RandomTestingTopology.H0.eth[0].encap encapPk:sum(packetBytes) 8428
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar RandomTestingTopology.H0.ipv4.ip packetDropAddressResolutionFailed:count 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar RandomTestingTopology.H0.ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar RandomTestingTopology.H0.ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar RandomTestingTopology.H0.ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar RandomTestingTopology.H0.ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar RandomTestingTopology.H0.ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar RandomTestingTopology.H0.ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar RandomTestingTopology.H0.ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar RandomTestingTopology.H0.ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar RandomTestingTopology.H0.ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar RandomTestingTopology.H0.ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar RandomTestingTopology.H0.ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+scalar RandomTestingTopology.H0.ipv4.arp arpReplySent:count 0
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar RandomTestingTopology.H0.ipv4.arp arpReplySent:sum(packetBytes) 0
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar RandomTestingTopology.H0.ipv4.arp arpRequestSent:count 1
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar RandomTestingTopology.H0.ipv4.arp arpRequestSent:sum(packetBytes) 28
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+scalar RandomTestingTopology.H0.ipv4.arp arpResolutionFailed:count 0
+attr title "ARP failed resolutions, count"
+scalar RandomTestingTopology.H0.ipv4.arp arpResolutionCompleted:count 1
+attr title "ARP completed resolutions, count"
+scalar RandomTestingTopology.H0.ipv4.arp arpResolutionInitiated:count 1
+attr title "ARP initiated resolutions, count"
+scalar RandomTestingTopology.H0.udp packetReceived:count 0
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, count"
+scalar RandomTestingTopology.H0.udp packetReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, sum(packetBytes)"
+scalar RandomTestingTopology.H0.udp packetSent:count 0
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, count"
+scalar RandomTestingTopology.H0.udp packetSent:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, sum(packetBytes)"
+scalar RandomTestingTopology.H0.udp passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed up, count"
+scalar RandomTestingTopology.H0.udp droppedPkWrongPort:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+scalar RandomTestingTopology.H0.udp droppedPkBadChecksum:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+scalar RandomTestingTopology.H0.app[0] "Pings sent" 100
+scalar RandomTestingTopology.H0.app[0] "ping loss rate (%)" 0
+scalar RandomTestingTopology.H0.app[0] "ping out-of-order rate (%)" 0
+scalar RandomTestingTopology.H0.app[0] pingRxSeq:count 100
+attr interpolationmode none
+attr title "ping rx seq, count"
+scalar RandomTestingTopology.H0.app[0] pingTxSeq:count 100
+attr interpolationmode none
+attr title "ping tx seq, count"
+scalar RandomTestingTopology.H0.app[0] numOutOfOrderArrivals:last nan
+attr interpolationmode none
+attr title "ping out-of-order arrivals, last"
+scalar RandomTestingTopology.H0.app[0] numLost:last nan
+attr interpolationmode none
+attr title "pings lost, last"
+statistic RandomTestingTopology.H0.app[0] rtt:histogram
+field count 100
+field mean 7.20782e-005
+field stddev 8.0734107020278e-006
+field min 7.08e-005
+field max 0.00014052
+field sum 0.00720782
+field sqrsum 5.259795076e-007
+attr interpolationmode none
+attr title "ping round-trip time, histogram"
+attr unit s
+bin	-inf	0
+bin	5.2e-005	0
+bin	5.4e-005	0
+bin	5.6e-005	0
+bin	5.8e-005	0
+bin	6e-005	0
+bin	6.2e-005	0
+bin	6.4e-005	0
+bin	6.6e-005	0
+bin	6.8e-005	0
+bin	7e-005	97
+bin	7.2e-005	0
+bin	7.4e-005	0
+bin	7.6e-005	0
+bin	7.8e-005	0
+bin	8e-005	0
+bin	8.2e-005	0
+bin	8.4e-005	0
+bin	8.6e-005	0
+bin	8.8e-005	0
+bin	9e-005	0
+bin	9.2e-005	0
+bin	9.4e-005	1
+bin	9.6e-005	0
+bin	9.8e-005	0
+bin	0.0001	0
+bin	0.000102	0
+bin	0.000104	1
+bin	0.000106	0
+bin	0.000108	0
+bin	0.00011	0
+bin	0.000112	0
+bin	0.000114	0
+bin	0.000116	0
+bin	0.000118	0
+bin	0.00012	0
+bin	0.000122	0
+bin	0.000124	0
+bin	0.000126	0
+bin	0.000128	0
+bin	0.00013	0
+bin	0.000132	0
+bin	0.000134	0
+bin	0.000136	0
+bin	0.000138	0
+bin	0.00014	1
+bin	0.000142	0
+bin	0.000144	0
+bin	0.000146	0
+bin	0.000148	0
+bin	0.00015	0
+bin	0.000152	0
+bin	0.000154	0
+bin	0.000156	0
+bin	0.000158	0
+scalar RandomTestingTopology.H1.lo[0].lo rcvdPkFromHl:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar RandomTestingTopology.H1.lo[0].lo rcvdPkFromHl:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.H1.lo[0].lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar RandomTestingTopology.H1.lo[0].lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.H1.eth[0].mac.queue packetPopped:count 101
+attr interpolationmode none
+attr title "packet popped, count"
+scalar RandomTestingTopology.H1.eth[0].mac.queue packetPopped:sum(packetBytes) 10264
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic RandomTestingTopology.H1.eth[0].mac.queue queueingTime:histogram
+field count 101
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	101
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar RandomTestingTopology.H1.eth[0].mac.queue queueLength:max 1
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar RandomTestingTopology.H1.eth[0].mac.queue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar RandomTestingTopology.H1.eth[0].mac.queue packetPushed:count 101
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar RandomTestingTopology.H1.eth[0].mac.queue packetPushed:sum(packetBytes) 10264
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar RandomTestingTopology.H1.eth[0].mac.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar RandomTestingTopology.H1.eth[0].mac.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar RandomTestingTopology.H1.eth[0].mac.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar RandomTestingTopology.H1.eth[0].mac.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar RandomTestingTopology.H1.eth[0].mac "simulated time" 100.5488135023
+scalar RandomTestingTopology.H1.eth[0].mac full-duplex 1
+scalar RandomTestingTopology.H1.eth[0].mac "frames/sec sent" 1.0044872384067
+scalar RandomTestingTopology.H1.eth[0].mac "frames/sec rcvd" 1.0044872384067
+scalar RandomTestingTopology.H1.eth[0].mac "bits/sec sent" 816.63817940645
+scalar RandomTestingTopology.H1.eth[0].mac "bits/sec rcvd" 816.63817940645
+scalar RandomTestingTopology.H1.eth[0].mac "rx channel idle (%)" 100
+scalar RandomTestingTopology.H1.eth[0].mac "rx channel utilization (%)" 0
+scalar RandomTestingTopology.H1.eth[0].mac txPk:count 101
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar RandomTestingTopology.H1.eth[0].mac txPk:sum(packetBytes) 10264
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar RandomTestingTopology.H1.eth[0].mac packetReceivedFromUpper:count 101
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar RandomTestingTopology.H1.eth[0].mac packetReceivedFromUpper:sum(packetBytes) 10246
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.H1.eth[0].mac passedUpPk:count 101
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar RandomTestingTopology.H1.eth[0].mac passedUpPk:sum(packetBytes) 10264
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.H1.eth[0].mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar RandomTestingTopology.H1.eth[0].mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar RandomTestingTopology.H1.eth[0].mac packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar RandomTestingTopology.H1.eth[0].mac packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar RandomTestingTopology.H1.eth[0].mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar RandomTestingTopology.H1.eth[0].mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar RandomTestingTopology.H1.eth[0].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar RandomTestingTopology.H1.eth[0].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar RandomTestingTopology.H1.eth[0].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar RandomTestingTopology.H1.eth[0].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar RandomTestingTopology.H1.eth[0].mac rxPkOk:count 101
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar RandomTestingTopology.H1.eth[0].mac rxPkOk:sum(packetBytes) 10264
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar RandomTestingTopology.H1.eth[0].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar RandomTestingTopology.H1.eth[0].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar RandomTestingTopology.H1.eth[0].encap decapPk:count 101
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar RandomTestingTopology.H1.eth[0].encap decapPk:sum(packetBytes) 8446
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar RandomTestingTopology.H1.eth[0].encap encapPk:count 101
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar RandomTestingTopology.H1.eth[0].encap encapPk:sum(packetBytes) 8428
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar RandomTestingTopology.H1.ipv4.ip packetDropAddressResolutionFailed:count 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar RandomTestingTopology.H1.ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar RandomTestingTopology.H1.ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar RandomTestingTopology.H1.ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar RandomTestingTopology.H1.ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar RandomTestingTopology.H1.ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar RandomTestingTopology.H1.ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar RandomTestingTopology.H1.ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar RandomTestingTopology.H1.ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar RandomTestingTopology.H1.ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar RandomTestingTopology.H1.ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar RandomTestingTopology.H1.ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+scalar RandomTestingTopology.H1.ipv4.arp arpReplySent:count 1
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar RandomTestingTopology.H1.ipv4.arp arpReplySent:sum(packetBytes) 28
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar RandomTestingTopology.H1.ipv4.arp arpRequestSent:count 0
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar RandomTestingTopology.H1.ipv4.arp arpRequestSent:sum(packetBytes) 0
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+scalar RandomTestingTopology.H1.ipv4.arp arpResolutionFailed:count 0
+attr title "ARP failed resolutions, count"
+scalar RandomTestingTopology.H1.ipv4.arp arpResolutionCompleted:count 1
+attr title "ARP completed resolutions, count"
+scalar RandomTestingTopology.H1.ipv4.arp arpResolutionInitiated:count 0
+attr title "ARP initiated resolutions, count"
+scalar RandomTestingTopology.H1.udp packetReceived:count 0
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, count"
+scalar RandomTestingTopology.H1.udp packetReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, sum(packetBytes)"
+scalar RandomTestingTopology.H1.udp packetSent:count 0
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, count"
+scalar RandomTestingTopology.H1.udp packetSent:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, sum(packetBytes)"
+scalar RandomTestingTopology.H1.udp passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed up, count"
+scalar RandomTestingTopology.H1.udp droppedPkWrongPort:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+scalar RandomTestingTopology.H1.udp droppedPkBadChecksum:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+scalar RandomTestingTopology.leaf1.lo[0].lo rcvdPkFromHl:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar RandomTestingTopology.leaf1.lo[0].lo rcvdPkFromHl:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.lo[0].lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar RandomTestingTopology.leaf1.lo[0].lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[0].mac.queue packetPopped:count 37
+attr interpolationmode none
+attr title "packet popped, count"
+scalar RandomTestingTopology.leaf1.eth[0].mac.queue packetPopped:sum(packetBytes) 3736
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic RandomTestingTopology.leaf1.eth[0].mac.queue queueingTime:histogram
+field count 37
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	37
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar RandomTestingTopology.leaf1.eth[0].mac.queue queueLength:max 1
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar RandomTestingTopology.leaf1.eth[0].mac.queue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar RandomTestingTopology.leaf1.eth[0].mac.queue packetPushed:count 37
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar RandomTestingTopology.leaf1.eth[0].mac.queue packetPushed:sum(packetBytes) 3736
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[0].mac.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar RandomTestingTopology.leaf1.eth[0].mac.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[0].mac.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar RandomTestingTopology.leaf1.eth[0].mac.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[0].mac "simulated time" 100.5488135023
+scalar RandomTestingTopology.leaf1.eth[0].mac full-duplex 1
+scalar RandomTestingTopology.leaf1.eth[0].mac "frames/sec sent" 0.36798047347572
+scalar RandomTestingTopology.leaf1.eth[0].mac "frames/sec rcvd" 0.30830796426344
+scalar RandomTestingTopology.leaf1.eth[0].mac "bits/sec sent" 297.24865922277
+scalar RandomTestingTopology.leaf1.eth[0].mac "bits/sec rcvd" 248.55589170555
+scalar RandomTestingTopology.leaf1.eth[0].mac "rx channel idle (%)" 100
+scalar RandomTestingTopology.leaf1.eth[0].mac "rx channel utilization (%)" 0
+scalar RandomTestingTopology.leaf1.eth[0].mac txPk:count 37
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar RandomTestingTopology.leaf1.eth[0].mac txPk:sum(packetBytes) 3736
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[0].mac packetReceivedFromUpper:count 37
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar RandomTestingTopology.leaf1.eth[0].mac packetReceivedFromUpper:sum(packetBytes) 3718
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[0].mac passedUpPk:count 31
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar RandomTestingTopology.leaf1.eth[0].mac passedUpPk:sum(packetBytes) 3124
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[0].mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar RandomTestingTopology.leaf1.eth[0].mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[0].mac packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar RandomTestingTopology.leaf1.eth[0].mac packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[0].mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar RandomTestingTopology.leaf1.eth[0].mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[0].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar RandomTestingTopology.leaf1.eth[0].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar RandomTestingTopology.leaf1.eth[0].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar RandomTestingTopology.leaf1.eth[0].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar RandomTestingTopology.leaf1.eth[0].mac rxPkOk:count 31
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar RandomTestingTopology.leaf1.eth[0].mac rxPkOk:sum(packetBytes) 3124
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[0].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar RandomTestingTopology.leaf1.eth[0].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar RandomTestingTopology.leaf1.eth[0].encap decapPk:count 31
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar RandomTestingTopology.leaf1.eth[0].encap decapPk:sum(packetBytes) 2566
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[0].encap encapPk:count 37
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar RandomTestingTopology.leaf1.eth[0].encap encapPk:sum(packetBytes) 3052
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[1].mac.queue packetPopped:count 31
+attr interpolationmode none
+attr title "packet popped, count"
+scalar RandomTestingTopology.leaf1.eth[1].mac.queue packetPopped:sum(packetBytes) 3124
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic RandomTestingTopology.leaf1.eth[1].mac.queue queueingTime:histogram
+field count 31
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	31
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar RandomTestingTopology.leaf1.eth[1].mac.queue queueLength:max 1
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar RandomTestingTopology.leaf1.eth[1].mac.queue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar RandomTestingTopology.leaf1.eth[1].mac.queue packetPushed:count 31
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar RandomTestingTopology.leaf1.eth[1].mac.queue packetPushed:sum(packetBytes) 3124
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[1].mac.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar RandomTestingTopology.leaf1.eth[1].mac.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[1].mac.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar RandomTestingTopology.leaf1.eth[1].mac.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[1].mac "simulated time" 100.5488135023
+scalar RandomTestingTopology.leaf1.eth[1].mac full-duplex 1
+scalar RandomTestingTopology.leaf1.eth[1].mac "frames/sec sent" 0.30830796426344
+scalar RandomTestingTopology.leaf1.eth[1].mac "frames/sec rcvd" 0.34808963707163
+scalar RandomTestingTopology.leaf1.eth[1].mac "bits/sec sent" 248.55589170555
+scalar RandomTestingTopology.leaf1.eth[1].mac "bits/sec rcvd" 281.01773671703
+scalar RandomTestingTopology.leaf1.eth[1].mac "rx channel idle (%)" 100
+scalar RandomTestingTopology.leaf1.eth[1].mac "rx channel utilization (%)" 0
+scalar RandomTestingTopology.leaf1.eth[1].mac txPk:count 31
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar RandomTestingTopology.leaf1.eth[1].mac txPk:sum(packetBytes) 3124
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[1].mac packetReceivedFromUpper:count 31
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar RandomTestingTopology.leaf1.eth[1].mac packetReceivedFromUpper:sum(packetBytes) 3106
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[1].mac passedUpPk:count 35
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar RandomTestingTopology.leaf1.eth[1].mac passedUpPk:sum(packetBytes) 3532
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[1].mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar RandomTestingTopology.leaf1.eth[1].mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[1].mac packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar RandomTestingTopology.leaf1.eth[1].mac packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[1].mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar RandomTestingTopology.leaf1.eth[1].mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[1].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar RandomTestingTopology.leaf1.eth[1].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar RandomTestingTopology.leaf1.eth[1].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar RandomTestingTopology.leaf1.eth[1].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar RandomTestingTopology.leaf1.eth[1].mac rxPkOk:count 35
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar RandomTestingTopology.leaf1.eth[1].mac rxPkOk:sum(packetBytes) 3532
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[1].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar RandomTestingTopology.leaf1.eth[1].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar RandomTestingTopology.leaf1.eth[1].encap decapPk:count 35
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar RandomTestingTopology.leaf1.eth[1].encap decapPk:sum(packetBytes) 2902
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[1].encap encapPk:count 31
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar RandomTestingTopology.leaf1.eth[1].encap encapPk:sum(packetBytes) 2548
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[2].mac.queue packetPopped:count 36
+attr interpolationmode none
+attr title "packet popped, count"
+scalar RandomTestingTopology.leaf1.eth[2].mac.queue packetPopped:sum(packetBytes) 3596
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic RandomTestingTopology.leaf1.eth[2].mac.queue queueingTime:histogram
+field count 36
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	36
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar RandomTestingTopology.leaf1.eth[2].mac.queue queueLength:max 1
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar RandomTestingTopology.leaf1.eth[2].mac.queue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar RandomTestingTopology.leaf1.eth[2].mac.queue packetPushed:count 36
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar RandomTestingTopology.leaf1.eth[2].mac.queue packetPushed:sum(packetBytes) 3596
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[2].mac.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar RandomTestingTopology.leaf1.eth[2].mac.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[2].mac.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar RandomTestingTopology.leaf1.eth[2].mac.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[2].mac "simulated time" 100.5488135023
+scalar RandomTestingTopology.leaf1.eth[2].mac full-duplex 1
+scalar RandomTestingTopology.leaf1.eth[2].mac "frames/sec sent" 0.35803505527368
+scalar RandomTestingTopology.leaf1.eth[2].mac "frames/sec rcvd" 0.37792589167777
+scalar RandomTestingTopology.leaf1.eth[2].mac "bits/sec sent" 286.10979083648
+scalar RandomTestingTopology.leaf1.eth[2].mac "bits/sec rcvd" 302.34071334222
+scalar RandomTestingTopology.leaf1.eth[2].mac "rx channel idle (%)" 100
+scalar RandomTestingTopology.leaf1.eth[2].mac "rx channel utilization (%)" 0
+scalar RandomTestingTopology.leaf1.eth[2].mac txPk:count 36
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar RandomTestingTopology.leaf1.eth[2].mac txPk:sum(packetBytes) 3596
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[2].mac packetReceivedFromUpper:count 36
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar RandomTestingTopology.leaf1.eth[2].mac packetReceivedFromUpper:sum(packetBytes) 3560
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[2].mac passedUpPk:count 38
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar RandomTestingTopology.leaf1.eth[2].mac passedUpPk:sum(packetBytes) 3800
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[2].mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar RandomTestingTopology.leaf1.eth[2].mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[2].mac packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar RandomTestingTopology.leaf1.eth[2].mac packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[2].mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar RandomTestingTopology.leaf1.eth[2].mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[2].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar RandomTestingTopology.leaf1.eth[2].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar RandomTestingTopology.leaf1.eth[2].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar RandomTestingTopology.leaf1.eth[2].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar RandomTestingTopology.leaf1.eth[2].mac rxPkOk:count 38
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar RandomTestingTopology.leaf1.eth[2].mac rxPkOk:sum(packetBytes) 3800
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[2].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar RandomTestingTopology.leaf1.eth[2].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar RandomTestingTopology.leaf1.eth[2].encap decapPk:count 38
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar RandomTestingTopology.leaf1.eth[2].encap decapPk:sum(packetBytes) 3116
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[2].encap encapPk:count 36
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar RandomTestingTopology.leaf1.eth[2].encap encapPk:sum(packetBytes) 2912
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[3].mac.queue packetPopped:count 101
+attr interpolationmode none
+attr title "packet popped, count"
+scalar RandomTestingTopology.leaf1.eth[3].mac.queue packetPopped:sum(packetBytes) 10264
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic RandomTestingTopology.leaf1.eth[3].mac.queue queueingTime:histogram
+field count 101
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	101
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar RandomTestingTopology.leaf1.eth[3].mac.queue queueLength:max 1
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar RandomTestingTopology.leaf1.eth[3].mac.queue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar RandomTestingTopology.leaf1.eth[3].mac.queue packetPushed:count 101
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar RandomTestingTopology.leaf1.eth[3].mac.queue packetPushed:sum(packetBytes) 10264
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[3].mac.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar RandomTestingTopology.leaf1.eth[3].mac.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[3].mac.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar RandomTestingTopology.leaf1.eth[3].mac.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[3].mac "simulated time" 100.5488135023
+scalar RandomTestingTopology.leaf1.eth[3].mac full-duplex 1
+scalar RandomTestingTopology.leaf1.eth[3].mac "frames/sec sent" 1.0044872384067
+scalar RandomTestingTopology.leaf1.eth[3].mac "frames/sec rcvd" 1.0044872384067
+scalar RandomTestingTopology.leaf1.eth[3].mac "bits/sec sent" 816.63817940645
+scalar RandomTestingTopology.leaf1.eth[3].mac "bits/sec rcvd" 816.63817940645
+scalar RandomTestingTopology.leaf1.eth[3].mac "rx channel idle (%)" 100
+scalar RandomTestingTopology.leaf1.eth[3].mac "rx channel utilization (%)" 0
+scalar RandomTestingTopology.leaf1.eth[3].mac txPk:count 101
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar RandomTestingTopology.leaf1.eth[3].mac txPk:sum(packetBytes) 10264
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[3].mac packetReceivedFromUpper:count 101
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar RandomTestingTopology.leaf1.eth[3].mac packetReceivedFromUpper:sum(packetBytes) 10246
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[3].mac passedUpPk:count 101
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar RandomTestingTopology.leaf1.eth[3].mac passedUpPk:sum(packetBytes) 10264
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[3].mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar RandomTestingTopology.leaf1.eth[3].mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[3].mac packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar RandomTestingTopology.leaf1.eth[3].mac packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[3].mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar RandomTestingTopology.leaf1.eth[3].mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[3].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar RandomTestingTopology.leaf1.eth[3].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar RandomTestingTopology.leaf1.eth[3].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar RandomTestingTopology.leaf1.eth[3].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar RandomTestingTopology.leaf1.eth[3].mac rxPkOk:count 101
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar RandomTestingTopology.leaf1.eth[3].mac rxPkOk:sum(packetBytes) 10264
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[3].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar RandomTestingTopology.leaf1.eth[3].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar RandomTestingTopology.leaf1.eth[3].encap decapPk:count 101
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar RandomTestingTopology.leaf1.eth[3].encap decapPk:sum(packetBytes) 8446
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.eth[3].encap encapPk:count 101
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar RandomTestingTopology.leaf1.eth[3].encap encapPk:sum(packetBytes) 8428
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.ipv4.ip packetDropAddressResolutionFailed:count 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar RandomTestingTopology.leaf1.ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar RandomTestingTopology.leaf1.ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar RandomTestingTopology.leaf1.ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar RandomTestingTopology.leaf1.ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar RandomTestingTopology.leaf1.ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar RandomTestingTopology.leaf1.ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.ipv4.arp arpReplySent:count 2
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar RandomTestingTopology.leaf1.ipv4.arp arpReplySent:sum(packetBytes) 56
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.ipv4.arp arpRequestSent:count 3
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar RandomTestingTopology.leaf1.ipv4.arp arpRequestSent:sum(packetBytes) 84
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+scalar RandomTestingTopology.leaf1.ipv4.arp arpResolutionFailed:count 0
+attr title "ARP failed resolutions, count"
+scalar RandomTestingTopology.leaf1.ipv4.arp arpResolutionCompleted:count 5
+attr title "ARP completed resolutions, count"
+scalar RandomTestingTopology.leaf1.ipv4.arp arpResolutionInitiated:count 3
+attr title "ARP initiated resolutions, count"
+scalar RandomTestingTopology.leaf2.lo[0].lo rcvdPkFromHl:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar RandomTestingTopology.leaf2.lo[0].lo rcvdPkFromHl:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.lo[0].lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar RandomTestingTopology.leaf2.lo[0].lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[0].mac.queue packetPopped:count 32
+attr interpolationmode none
+attr title "packet popped, count"
+scalar RandomTestingTopology.leaf2.eth[0].mac.queue packetPopped:sum(packetBytes) 3188
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic RandomTestingTopology.leaf2.eth[0].mac.queue queueingTime:histogram
+field count 32
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	32
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar RandomTestingTopology.leaf2.eth[0].mac.queue queueLength:max 1
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar RandomTestingTopology.leaf2.eth[0].mac.queue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar RandomTestingTopology.leaf2.eth[0].mac.queue packetPushed:count 32
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar RandomTestingTopology.leaf2.eth[0].mac.queue packetPushed:sum(packetBytes) 3188
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[0].mac.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar RandomTestingTopology.leaf2.eth[0].mac.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[0].mac.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar RandomTestingTopology.leaf2.eth[0].mac.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[0].mac "simulated time" 100.5488135023
+scalar RandomTestingTopology.leaf2.eth[0].mac full-duplex 1
+scalar RandomTestingTopology.leaf2.eth[0].mac "frames/sec sent" 0.31825338246549
+scalar RandomTestingTopology.leaf2.eth[0].mac "frames/sec rcvd" 0.37792589167777
+scalar RandomTestingTopology.leaf2.eth[0].mac "bits/sec sent" 253.647945825
+scalar RandomTestingTopology.leaf2.eth[0].mac "bits/sec rcvd" 302.34071334222
+scalar RandomTestingTopology.leaf2.eth[0].mac "rx channel idle (%)" 100
+scalar RandomTestingTopology.leaf2.eth[0].mac "rx channel utilization (%)" 0
+scalar RandomTestingTopology.leaf2.eth[0].mac txPk:count 32
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar RandomTestingTopology.leaf2.eth[0].mac txPk:sum(packetBytes) 3188
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[0].mac packetReceivedFromUpper:count 32
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar RandomTestingTopology.leaf2.eth[0].mac packetReceivedFromUpper:sum(packetBytes) 3152
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[0].mac passedUpPk:count 38
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar RandomTestingTopology.leaf2.eth[0].mac passedUpPk:sum(packetBytes) 3800
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[0].mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar RandomTestingTopology.leaf2.eth[0].mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[0].mac packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar RandomTestingTopology.leaf2.eth[0].mac packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[0].mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar RandomTestingTopology.leaf2.eth[0].mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[0].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar RandomTestingTopology.leaf2.eth[0].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar RandomTestingTopology.leaf2.eth[0].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar RandomTestingTopology.leaf2.eth[0].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar RandomTestingTopology.leaf2.eth[0].mac rxPkOk:count 38
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar RandomTestingTopology.leaf2.eth[0].mac rxPkOk:sum(packetBytes) 3800
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[0].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar RandomTestingTopology.leaf2.eth[0].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar RandomTestingTopology.leaf2.eth[0].encap decapPk:count 38
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar RandomTestingTopology.leaf2.eth[0].encap decapPk:sum(packetBytes) 3116
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[0].encap encapPk:count 32
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar RandomTestingTopology.leaf2.eth[0].encap encapPk:sum(packetBytes) 2576
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[1].mac.queue packetPopped:count 36
+attr interpolationmode none
+attr title "packet popped, count"
+scalar RandomTestingTopology.leaf2.eth[1].mac.queue packetPopped:sum(packetBytes) 3596
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic RandomTestingTopology.leaf2.eth[1].mac.queue queueingTime:histogram
+field count 36
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	36
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar RandomTestingTopology.leaf2.eth[1].mac.queue queueLength:max 1
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar RandomTestingTopology.leaf2.eth[1].mac.queue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar RandomTestingTopology.leaf2.eth[1].mac.queue packetPushed:count 36
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar RandomTestingTopology.leaf2.eth[1].mac.queue packetPushed:sum(packetBytes) 3596
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[1].mac.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar RandomTestingTopology.leaf2.eth[1].mac.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[1].mac.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar RandomTestingTopology.leaf2.eth[1].mac.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[1].mac "simulated time" 100.5488135023
+scalar RandomTestingTopology.leaf2.eth[1].mac full-duplex 1
+scalar RandomTestingTopology.leaf2.eth[1].mac "frames/sec sent" 0.35803505527368
+scalar RandomTestingTopology.leaf2.eth[1].mac "frames/sec rcvd" 0.31825338246549
+scalar RandomTestingTopology.leaf2.eth[1].mac "bits/sec sent" 286.10979083648
+scalar RandomTestingTopology.leaf2.eth[1].mac "bits/sec rcvd" 253.647945825
+scalar RandomTestingTopology.leaf2.eth[1].mac "rx channel idle (%)" 100
+scalar RandomTestingTopology.leaf2.eth[1].mac "rx channel utilization (%)" 0
+scalar RandomTestingTopology.leaf2.eth[1].mac txPk:count 36
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar RandomTestingTopology.leaf2.eth[1].mac txPk:sum(packetBytes) 3596
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[1].mac packetReceivedFromUpper:count 36
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar RandomTestingTopology.leaf2.eth[1].mac packetReceivedFromUpper:sum(packetBytes) 3560
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[1].mac passedUpPk:count 32
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar RandomTestingTopology.leaf2.eth[1].mac passedUpPk:sum(packetBytes) 3188
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[1].mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar RandomTestingTopology.leaf2.eth[1].mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[1].mac packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar RandomTestingTopology.leaf2.eth[1].mac packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[1].mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar RandomTestingTopology.leaf2.eth[1].mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[1].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar RandomTestingTopology.leaf2.eth[1].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar RandomTestingTopology.leaf2.eth[1].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar RandomTestingTopology.leaf2.eth[1].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar RandomTestingTopology.leaf2.eth[1].mac rxPkOk:count 32
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar RandomTestingTopology.leaf2.eth[1].mac rxPkOk:sum(packetBytes) 3188
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[1].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar RandomTestingTopology.leaf2.eth[1].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar RandomTestingTopology.leaf2.eth[1].encap decapPk:count 32
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar RandomTestingTopology.leaf2.eth[1].encap decapPk:sum(packetBytes) 2612
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[1].encap encapPk:count 36
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar RandomTestingTopology.leaf2.eth[1].encap encapPk:sum(packetBytes) 2912
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[2].mac.queue packetPopped:count 37
+attr interpolationmode none
+attr title "packet popped, count"
+scalar RandomTestingTopology.leaf2.eth[2].mac.queue packetPopped:sum(packetBytes) 3736
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic RandomTestingTopology.leaf2.eth[2].mac.queue queueingTime:histogram
+field count 37
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	37
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar RandomTestingTopology.leaf2.eth[2].mac.queue queueLength:max 1
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar RandomTestingTopology.leaf2.eth[2].mac.queue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar RandomTestingTopology.leaf2.eth[2].mac.queue packetPushed:count 37
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar RandomTestingTopology.leaf2.eth[2].mac.queue packetPushed:sum(packetBytes) 3736
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[2].mac.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar RandomTestingTopology.leaf2.eth[2].mac.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[2].mac.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar RandomTestingTopology.leaf2.eth[2].mac.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[2].mac "simulated time" 100.5488135023
+scalar RandomTestingTopology.leaf2.eth[2].mac full-duplex 1
+scalar RandomTestingTopology.leaf2.eth[2].mac "frames/sec sent" 0.36798047347572
+scalar RandomTestingTopology.leaf2.eth[2].mac "frames/sec rcvd" 0.34808963707163
+scalar RandomTestingTopology.leaf2.eth[2].mac "bits/sec sent" 297.24865922277
+scalar RandomTestingTopology.leaf2.eth[2].mac "bits/sec rcvd" 281.01773671703
+scalar RandomTestingTopology.leaf2.eth[2].mac "rx channel idle (%)" 100
+scalar RandomTestingTopology.leaf2.eth[2].mac "rx channel utilization (%)" 0
+scalar RandomTestingTopology.leaf2.eth[2].mac txPk:count 37
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar RandomTestingTopology.leaf2.eth[2].mac txPk:sum(packetBytes) 3736
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[2].mac packetReceivedFromUpper:count 37
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar RandomTestingTopology.leaf2.eth[2].mac packetReceivedFromUpper:sum(packetBytes) 3718
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[2].mac passedUpPk:count 35
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar RandomTestingTopology.leaf2.eth[2].mac passedUpPk:sum(packetBytes) 3532
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[2].mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar RandomTestingTopology.leaf2.eth[2].mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[2].mac packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar RandomTestingTopology.leaf2.eth[2].mac packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[2].mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar RandomTestingTopology.leaf2.eth[2].mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[2].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar RandomTestingTopology.leaf2.eth[2].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar RandomTestingTopology.leaf2.eth[2].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar RandomTestingTopology.leaf2.eth[2].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar RandomTestingTopology.leaf2.eth[2].mac rxPkOk:count 35
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar RandomTestingTopology.leaf2.eth[2].mac rxPkOk:sum(packetBytes) 3532
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[2].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar RandomTestingTopology.leaf2.eth[2].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar RandomTestingTopology.leaf2.eth[2].encap decapPk:count 35
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar RandomTestingTopology.leaf2.eth[2].encap decapPk:sum(packetBytes) 2902
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[2].encap encapPk:count 37
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar RandomTestingTopology.leaf2.eth[2].encap encapPk:sum(packetBytes) 3052
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[3].mac.queue packetPopped:count 101
+attr interpolationmode none
+attr title "packet popped, count"
+scalar RandomTestingTopology.leaf2.eth[3].mac.queue packetPopped:sum(packetBytes) 10264
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic RandomTestingTopology.leaf2.eth[3].mac.queue queueingTime:histogram
+field count 101
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	101
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar RandomTestingTopology.leaf2.eth[3].mac.queue queueLength:max 1
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar RandomTestingTopology.leaf2.eth[3].mac.queue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar RandomTestingTopology.leaf2.eth[3].mac.queue packetPushed:count 101
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar RandomTestingTopology.leaf2.eth[3].mac.queue packetPushed:sum(packetBytes) 10264
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[3].mac.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar RandomTestingTopology.leaf2.eth[3].mac.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[3].mac.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar RandomTestingTopology.leaf2.eth[3].mac.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[3].mac "simulated time" 100.5488135023
+scalar RandomTestingTopology.leaf2.eth[3].mac full-duplex 1
+scalar RandomTestingTopology.leaf2.eth[3].mac "frames/sec sent" 1.0044872384067
+scalar RandomTestingTopology.leaf2.eth[3].mac "frames/sec rcvd" 1.0044872384067
+scalar RandomTestingTopology.leaf2.eth[3].mac "bits/sec sent" 816.63817940645
+scalar RandomTestingTopology.leaf2.eth[3].mac "bits/sec rcvd" 816.63817940645
+scalar RandomTestingTopology.leaf2.eth[3].mac "rx channel idle (%)" 100
+scalar RandomTestingTopology.leaf2.eth[3].mac "rx channel utilization (%)" 0
+scalar RandomTestingTopology.leaf2.eth[3].mac txPk:count 101
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar RandomTestingTopology.leaf2.eth[3].mac txPk:sum(packetBytes) 10264
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[3].mac packetReceivedFromUpper:count 101
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar RandomTestingTopology.leaf2.eth[3].mac packetReceivedFromUpper:sum(packetBytes) 10246
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[3].mac passedUpPk:count 101
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar RandomTestingTopology.leaf2.eth[3].mac passedUpPk:sum(packetBytes) 10264
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[3].mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar RandomTestingTopology.leaf2.eth[3].mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[3].mac packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar RandomTestingTopology.leaf2.eth[3].mac packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[3].mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar RandomTestingTopology.leaf2.eth[3].mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[3].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar RandomTestingTopology.leaf2.eth[3].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar RandomTestingTopology.leaf2.eth[3].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar RandomTestingTopology.leaf2.eth[3].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar RandomTestingTopology.leaf2.eth[3].mac rxPkOk:count 101
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar RandomTestingTopology.leaf2.eth[3].mac rxPkOk:sum(packetBytes) 10264
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[3].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar RandomTestingTopology.leaf2.eth[3].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar RandomTestingTopology.leaf2.eth[3].encap decapPk:count 101
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar RandomTestingTopology.leaf2.eth[3].encap decapPk:sum(packetBytes) 8446
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.eth[3].encap encapPk:count 101
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar RandomTestingTopology.leaf2.eth[3].encap encapPk:sum(packetBytes) 8428
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.ipv4.ip packetDropAddressResolutionFailed:count 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar RandomTestingTopology.leaf2.ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar RandomTestingTopology.leaf2.ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar RandomTestingTopology.leaf2.ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar RandomTestingTopology.leaf2.ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar RandomTestingTopology.leaf2.ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar RandomTestingTopology.leaf2.ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.ipv4.arp arpReplySent:count 2
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar RandomTestingTopology.leaf2.ipv4.arp arpReplySent:sum(packetBytes) 56
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.ipv4.arp arpRequestSent:count 4
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar RandomTestingTopology.leaf2.ipv4.arp arpRequestSent:sum(packetBytes) 112
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+scalar RandomTestingTopology.leaf2.ipv4.arp arpResolutionFailed:count 0
+attr title "ARP failed resolutions, count"
+scalar RandomTestingTopology.leaf2.ipv4.arp arpResolutionCompleted:count 6
+attr title "ARP completed resolutions, count"
+scalar RandomTestingTopology.leaf2.ipv4.arp arpResolutionInitiated:count 4
+attr title "ARP initiated resolutions, count"
+

@@ -1,0 +1,144 @@
+<config>
+	<interface hosts="**" address="10.x.x.x" netmask="255.x.x.x"/>
+
+	<route hosts="leaf1" destination="H1" netmask="255.255.255.255" gateway="*" interface="eth3" metric="*"/>
+
+	<route hosts="leaf1" destination="H2" netmask="255.255.255.255" gateway="*" interface="eth4" metric="*"/>
+
+	<route hosts="leaf1" destination="H3" netmask="255.255.255.255" gateway="*" interface="eth5" metric="*"/>
+
+	<route hosts="leaf1" destination="H4" netmask="255.255.255.255" gateway="*" interface="eth0" metric="*"/>
+	<route hosts="leaf1" destination="H4" netmask="255.255.255.255" gateway="*" interface="eth1" metric="*"/>
+	<route hosts="leaf1" destination="H4" netmask="255.255.255.255" gateway="*" interface="eth2" metric="*"/>
+
+	<route hosts="leaf1" destination="H5" netmask="255.255.255.255" gateway="*" interface="eth0" metric="*"/>
+	<route hosts="leaf1" destination="H5" netmask="255.255.255.255" gateway="*" interface="eth1" metric="*"/>
+	<route hosts="leaf1" destination="H5" netmask="255.255.255.255" gateway="*" interface="eth2" metric="*"/>
+
+	<route hosts="leaf1" destination="H6" netmask="255.255.255.255" gateway="*" interface="eth0" metric="*"/>
+	<route hosts="leaf1" destination="H6" netmask="255.255.255.255" gateway="*" interface="eth1" metric="*"/>
+	<route hosts="leaf1" destination="H6" netmask="255.255.255.255" gateway="*" interface="eth2" metric="*"/>
+
+	<route hosts="leaf1" destination="H7" netmask="255.255.255.255" gateway="*" interface="eth0" metric="*"/>
+	<route hosts="leaf1" destination="H7" netmask="255.255.255.255" gateway="*" interface="eth1" metric="*"/>
+	<route hosts="leaf1" destination="H7" netmask="255.255.255.255" gateway="*" interface="eth2" metric="*"/>
+
+	<route hosts="leaf1" destination="H8" netmask="255.255.255.255" gateway="*" interface="eth0" metric="*"/>
+	<route hosts="leaf1" destination="H8" netmask="255.255.255.255" gateway="*" interface="eth1" metric="*"/>
+	<route hosts="leaf1" destination="H8" netmask="255.255.255.255" gateway="*" interface="eth2" metric="*"/>
+
+	<route hosts="leaf1" destination="H9" netmask="255.255.255.255" gateway="*" interface="eth0" metric="*"/>
+	<route hosts="leaf1" destination="H9" netmask="255.255.255.255" gateway="*" interface="eth1" metric="*"/>
+	<route hosts="leaf1" destination="H9" netmask="255.255.255.255" gateway="*" interface="eth2" metric="*"/>
+
+	<route hosts="leaf1" destination="H10" netmask="255.255.255.255" gateway="*" interface="eth0" metric="*"/>
+	<route hosts="leaf1" destination="H10" netmask="255.255.255.255" gateway="*" interface="eth1" metric="*"/>
+	<route hosts="leaf1" destination="H10" netmask="255.255.255.255" gateway="*" interface="eth2" metric="*"/>
+
+	<route hosts="leaf2" destination="H1" netmask="255.255.255.255" gateway="*" interface="eth0" metric="*"/>
+	<route hosts="leaf2" destination="H1" netmask="255.255.255.255" gateway="*" interface="eth1" metric="*"/>
+	<route hosts="leaf2" destination="H1" netmask="255.255.255.255" gateway="*" interface="eth2" metric="*"/>
+
+	<route hosts="leaf2" destination="H2" netmask="255.255.255.255" gateway="*" interface="eth0" metric="*"/>
+	<route hosts="leaf2" destination="H2" netmask="255.255.255.255" gateway="*" interface="eth1" metric="*"/>
+	<route hosts="leaf2" destination="H2" netmask="255.255.255.255" gateway="*" interface="eth2" metric="*"/>
+
+	<route hosts="leaf2" destination="H3" netmask="255.255.255.255" gateway="*" interface="eth0" metric="*"/>
+	<route hosts="leaf2" destination="H3" netmask="255.255.255.255" gateway="*" interface="eth1" metric="*"/>
+	<route hosts="leaf2" destination="H3" netmask="255.255.255.255" gateway="*" interface="eth2" metric="*"/>
+
+	<route hosts="leaf2" destination="H4" netmask="255.255.255.255" gateway="*" interface="eth3" metric="*"/>
+
+	<route hosts="leaf2" destination="H5" netmask="255.255.255.255" gateway="*" interface="eth4" metric="*"/>
+
+	<route hosts="leaf2" destination="H6" netmask="255.255.255.255" gateway="*" interface="eth5" metric="*"/>
+
+	<route hosts="leaf2" destination="H7" netmask="255.255.255.255" gateway="*" interface="eth0" metric="*"/>
+	<route hosts="leaf2" destination="H7" netmask="255.255.255.255" gateway="*" interface="eth1" metric="*"/>
+	<route hosts="leaf2" destination="H7" netmask="255.255.255.255" gateway="*" interface="eth2" metric="*"/>
+
+	<route hosts="leaf2" destination="H8" netmask="255.255.255.255" gateway="*" interface="eth0" metric="*"/>
+	<route hosts="leaf2" destination="H8" netmask="255.255.255.255" gateway="*" interface="eth1" metric="*"/>
+	<route hosts="leaf2" destination="H8" netmask="255.255.255.255" gateway="*" interface="eth2" metric="*"/>
+
+	<route hosts="leaf2" destination="H9" netmask="255.255.255.255" gateway="*" interface="eth0" metric="*"/>
+	<route hosts="leaf2" destination="H9" netmask="255.255.255.255" gateway="*" interface="eth1" metric="*"/>
+	<route hosts="leaf2" destination="H9" netmask="255.255.255.255" gateway="*" interface="eth2" metric="*"/>
+
+	<route hosts="leaf2" destination="H10" netmask="255.255.255.255" gateway="*" interface="eth0" metric="*"/>
+	<route hosts="leaf2" destination="H10" netmask="255.255.255.255" gateway="*" interface="eth1" metric="*"/>
+	<route hosts="leaf2" destination="H10" netmask="255.255.255.255" gateway="*" interface="eth2" metric="*"/>
+
+	<route hosts="leaf3" destination="H1" netmask="255.255.255.255" gateway="*" interface="eth0" metric="*"/>
+	<route hosts="leaf3" destination="H1" netmask="255.255.255.255" gateway="*" interface="eth1" metric="*"/>
+	<route hosts="leaf3" destination="H1" netmask="255.255.255.255" gateway="*" interface="eth2" metric="*"/>
+
+	<route hosts="leaf3" destination="H2" netmask="255.255.255.255" gateway="*" interface="eth0" metric="*"/>
+	<route hosts="leaf3" destination="H2" netmask="255.255.255.255" gateway="*" interface="eth1" metric="*"/>
+	<route hosts="leaf3" destination="H2" netmask="255.255.255.255" gateway="*" interface="eth2" metric="*"/>
+
+	<route hosts="leaf3" destination="H3" netmask="255.255.255.255" gateway="*" interface="eth0" metric="*"/>
+	<route hosts="leaf3" destination="H3" netmask="255.255.255.255" gateway="*" interface="eth1" metric="*"/>
+	<route hosts="leaf3" destination="H3" netmask="255.255.255.255" gateway="*" interface="eth2" metric="*"/>
+
+	<route hosts="leaf3" destination="H4" netmask="255.255.255.255" gateway="*" interface="eth0" metric="*"/>
+	<route hosts="leaf3" destination="H4" netmask="255.255.255.255" gateway="*" interface="eth1" metric="*"/>
+	<route hosts="leaf3" destination="H4" netmask="255.255.255.255" gateway="*" interface="eth2" metric="*"/>
+
+	<route hosts="leaf3" destination="H5" netmask="255.255.255.255" gateway="*" interface="eth0" metric="*"/>
+	<route hosts="leaf3" destination="H5" netmask="255.255.255.255" gateway="*" interface="eth1" metric="*"/>
+	<route hosts="leaf3" destination="H5" netmask="255.255.255.255" gateway="*" interface="eth2" metric="*"/>
+
+	<route hosts="leaf3" destination="H6" netmask="255.255.255.255" gateway="*" interface="eth0" metric="*"/>
+	<route hosts="leaf3" destination="H6" netmask="255.255.255.255" gateway="*" interface="eth1" metric="*"/>
+	<route hosts="leaf3" destination="H6" netmask="255.255.255.255" gateway="*" interface="eth2" metric="*"/>
+
+	<route hosts="leaf3" destination="H7" netmask="255.255.255.255" gateway="*" interface="eth3" metric="*"/>
+
+	<route hosts="leaf3" destination="H8" netmask="255.255.255.255" gateway="*" interface="eth4" metric="*"/>
+
+	<route hosts="leaf3" destination="H9" netmask="255.255.255.255" gateway="*" interface="eth5" metric="*"/>
+
+	<route hosts="leaf3" destination="H10" netmask="255.255.255.255" gateway="*" interface="eth0" metric="*"/>
+	<route hosts="leaf3" destination="H10" netmask="255.255.255.255" gateway="*" interface="eth1" metric="*"/>
+	<route hosts="leaf3" destination="H10" netmask="255.255.255.255" gateway="*" interface="eth2" metric="*"/>
+
+	<route hosts="leaf4" destination="H1" netmask="255.255.255.255" gateway="*" interface="eth0" metric="*"/>
+	<route hosts="leaf4" destination="H1" netmask="255.255.255.255" gateway="*" interface="eth1" metric="*"/>
+	<route hosts="leaf4" destination="H1" netmask="255.255.255.255" gateway="*" interface="eth2" metric="*"/>
+
+	<route hosts="leaf4" destination="H2" netmask="255.255.255.255" gateway="*" interface="eth0" metric="*"/>
+	<route hosts="leaf4" destination="H2" netmask="255.255.255.255" gateway="*" interface="eth1" metric="*"/>
+	<route hosts="leaf4" destination="H2" netmask="255.255.255.255" gateway="*" interface="eth2" metric="*"/>
+
+	<route hosts="leaf4" destination="H3" netmask="255.255.255.255" gateway="*" interface="eth0" metric="*"/>
+	<route hosts="leaf4" destination="H3" netmask="255.255.255.255" gateway="*" interface="eth1" metric="*"/>
+	<route hosts="leaf4" destination="H3" netmask="255.255.255.255" gateway="*" interface="eth2" metric="*"/>
+
+	<route hosts="leaf4" destination="H4" netmask="255.255.255.255" gateway="*" interface="eth0" metric="*"/>
+	<route hosts="leaf4" destination="H4" netmask="255.255.255.255" gateway="*" interface="eth1" metric="*"/>
+	<route hosts="leaf4" destination="H4" netmask="255.255.255.255" gateway="*" interface="eth2" metric="*"/>
+
+	<route hosts="leaf4" destination="H5" netmask="255.255.255.255" gateway="*" interface="eth0" metric="*"/>
+	<route hosts="leaf4" destination="H5" netmask="255.255.255.255" gateway="*" interface="eth1" metric="*"/>
+	<route hosts="leaf4" destination="H5" netmask="255.255.255.255" gateway="*" interface="eth2" metric="*"/>
+
+	<route hosts="leaf4" destination="H6" netmask="255.255.255.255" gateway="*" interface="eth0" metric="*"/>
+	<route hosts="leaf4" destination="H6" netmask="255.255.255.255" gateway="*" interface="eth1" metric="*"/>
+	<route hosts="leaf4" destination="H6" netmask="255.255.255.255" gateway="*" interface="eth2" metric="*"/>
+
+	<route hosts="leaf4" destination="H7" netmask="255.255.255.255" gateway="*" interface="eth0" metric="*"/>
+	<route hosts="leaf4" destination="H7" netmask="255.255.255.255" gateway="*" interface="eth1" metric="*"/>
+	<route hosts="leaf4" destination="H7" netmask="255.255.255.255" gateway="*" interface="eth2" metric="*"/>
+
+	<route hosts="leaf4" destination="H8" netmask="255.255.255.255" gateway="*" interface="eth0" metric="*"/>
+	<route hosts="leaf4" destination="H8" netmask="255.255.255.255" gateway="*" interface="eth1" metric="*"/>
+	<route hosts="leaf4" destination="H8" netmask="255.255.255.255" gateway="*" interface="eth2" metric="*"/>
+
+	<route hosts="leaf4" destination="H9" netmask="255.255.255.255" gateway="*" interface="eth0" metric="*"/>
+	<route hosts="leaf4" destination="H9" netmask="255.255.255.255" gateway="*" interface="eth1" metric="*"/>
+	<route hosts="leaf4" destination="H9" netmask="255.255.255.255" gateway="*" interface="eth2" metric="*"/>
+
+	<route hosts="leaf4" destination="H10" netmask="255.255.255.255" gateway="*" interface="eth3" metric="*"/>
+
+</config>
