@@ -1,5 +1,5 @@
 //
-// Generated file, do not edit! Created by nedtool 5.6 from inet/networklayer/ipv6/Ipv6Header.msg.
+// Generated file, do not edit! Created by nedtool 5.6 from ./inet/networklayer/ipv6/Ipv6Header.msg.
 //
 
 #ifndef __INET_IPV6HEADER_M_H
@@ -57,7 +57,7 @@ std::ostream& operator<<(std::ostream& os, Ipv6ExtensionHeader eh);
 // }}
 
 /**
- * Class generated from <tt>inet/networklayer/ipv6/Ipv6Header.msg:44</tt> by nedtool.
+ * Class generated from <tt>.\inet/networklayer/ipv6/Ipv6Header.msg:44</tt> by nedtool.
  * <pre>
  * //
  * // This serves as the base class for all the Ipv6 extension headers.
@@ -106,7 +106,7 @@ inline void doParsimPacking(omnetpp::cCommBuffer *b, const Ipv6ExtensionHeader& 
 inline void doParsimUnpacking(omnetpp::cCommBuffer *b, Ipv6ExtensionHeader& obj) {obj.parsimUnpack(b);}
 
 /**
- * Class generated from <tt>inet/networklayer/ipv6/Ipv6Header.msg:63</tt> by nedtool.
+ * Class generated from <tt>.\inet/networklayer/ipv6/Ipv6Header.msg:63</tt> by nedtool.
  * <pre>
  * //
  * // Ipv6 datagram. RFC 2460 Section 3.

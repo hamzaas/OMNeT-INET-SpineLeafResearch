@@ -1,5 +1,5 @@
 //
-// Generated file, do not edit! Created by nedtool 5.6 from inet/linklayer/ieee8021q/Ieee8021qHeader.msg.
+// Generated file, do not edit! Created by nedtool 5.6 from ./inet/linklayer/ieee8021q/Ieee8021qHeader.msg.
 //
 
 // Disable warnings about unused variables, empty switch stmts, etc:

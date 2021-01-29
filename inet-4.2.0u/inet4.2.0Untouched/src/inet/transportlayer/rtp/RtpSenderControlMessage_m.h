@@ -1,5 +1,5 @@
 //
-// Generated file, do not edit! Created by nedtool 5.6 from inet/transportlayer/rtp/RtpSenderControlMessage.msg.
+// Generated file, do not edit! Created by nedtool 5.6 from ./inet/transportlayer/rtp/RtpSenderControlMessage.msg.
 //
 
 #ifndef __INET__RTP_RTPSENDERCONTROLMESSAGE_M_H
@@ -42,7 +42,7 @@ namespace inet {
 namespace rtp {
 
 /**
- * Enum generated from <tt>inet/transportlayer/rtp/RtpSenderControlMessage.msg:41</tt> by nedtool.
+ * Enum generated from <tt>.\inet/transportlayer/rtp/RtpSenderControlMessage.msg:41</tt> by nedtool.
  * <pre>
  * //
  * // A message of the type ~RtpSenderControlMessage is created by an application to control
@@ -84,7 +84,7 @@ enum RtpSenderControlMessageCommands {
 };
 
 /**
- * Class generated from <tt>inet/transportlayer/rtp/RtpSenderControlMessage.msg:52</tt> by nedtool.
+ * Class generated from <tt>.\inet/transportlayer/rtp/RtpSenderControlMessage.msg:52</tt> by nedtool.
  * <pre>
  * packet RtpSenderControlMessage
  * {

@@ -1,9 +1,7 @@
-inet/applications/ethernet/EtherApp_m.cc inet/applications/ethernet/EtherApp_m.h : \
-	inet/applications/ethernet/EtherApp.msg \
+.\inet/common/packet/chunk/Chunk_m.cc .\inet/common/packet/chunk/Chunk_m.h : \
+	.\inet/common/packet/chunk/Chunk.msg \
 	.\inet/common/INETDefs.msg \
-	.\inet/common/Units.msg \
-	.\inet/common/packet/chunk/Chunk.msg
-inet/applications/ethernet/EtherApp.msg:
+	.\inet/common/Units.msg
+.\inet/common/packet/chunk/Chunk.msg:
 .\inet/common/INETDefs.msg:
 .\inet/common/Units.msg:
-.\inet/common/packet/chunk/Chunk.msg:

@@ -1,5 +1,5 @@
 //
-// Generated file, do not edit! Created by nedtool 5.6 from inet/networklayer/common/IpProtocolId.msg.
+// Generated file, do not edit! Created by nedtool 5.6 from ./inet/networklayer/common/IpProtocolId.msg.
 //
 
 #ifndef __INET_IPPROTOCOLID_M_H
@@ -38,7 +38,7 @@ namespace inet {
 namespace inet {
 
 /**
- * Enum generated from <tt>inet/networklayer/common/IpProtocolId.msg:29</tt> by nedtool.
+ * Enum generated from <tt>.\inet/networklayer/common/IpProtocolId.msg:29</tt> by nedtool.
  * <pre>
  * //
  * // Protocol field: taken from RFC 1700.

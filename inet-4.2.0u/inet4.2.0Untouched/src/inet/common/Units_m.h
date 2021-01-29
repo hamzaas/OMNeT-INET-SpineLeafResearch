@@ -1,5 +1,5 @@
 //
-// Generated file, do not edit! Created by nedtool 5.6 from inet/common/Units.msg.
+// Generated file, do not edit! Created by nedtool 5.6 from ./inet/common/Units.msg.
 //
 
 #ifndef __INET_UNITS_M_H

@@ -1,12 +1,12 @@
 #
-# OMNeT++/OMNEST Makefile for Spine-LeafDCN
+# OMNeT++/OMNEST Makefile for Spine-Leaf-ManualDCN
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -O out -KINETU_PROJ=C:/Users/Ethan/Documents/School/DCN_Research/omnetpp-5.6.2-src-windows/Research/inet-4.2.0u/inet4.2.0Untouched -DINET_IMPORT -I. -I$$\(INETU_PROJ\)/src -L$$\(INETU_PROJ\)/src -lINET$$\(D\)
+#  opp_makemake -f --deep -O out -KINETU_PROJ=../inet-4.2.0u/inet4.2.0Untouched -DINET_IMPORT -I. -I$$\(INETU_PROJ\)/src -L$$\(INETU_PROJ\)/src -lINET$$\(D\)
 #
 
 # Name of target to be created (-o option)
-TARGET = Spine-LeafDCN$(D)$(EXE_SUFFIX)
+TARGET = Spine-Leaf-ManualDCN$(D)$(EXE_SUFFIX)
 TARGET_DIR = .
 
 # User interface (uncomment one) (-u option)
@@ -39,7 +39,7 @@ MSGFILES =
 SMFILES =
 
 # Other makefile variables (-K)
-INETU_PROJ=C:/Users/Ethan/Documents/School/DCN_Research/omnetpp-5.6.2-src-windows/Research/inet-4.2.0u/inet4.2.0Untouched
+INETU_PROJ=../inet-4.2.0u/inet4.2.0Untouched
 
 #------------------------------------------------------------------------------
 

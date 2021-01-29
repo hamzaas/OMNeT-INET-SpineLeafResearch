@@ -1,5 +1,5 @@
 //
-// Generated file, do not edit! Created by nedtool 5.6 from inet/physicallayer/base/packetlevel/NarrowbandReceptionBase.msg.
+// Generated file, do not edit! Created by nedtool 5.6 from ./inet/physicallayer/base/packetlevel/NarrowbandReceptionBase.msg.
 //
 
 // Disable warnings about unused variables, empty switch stmts, etc:

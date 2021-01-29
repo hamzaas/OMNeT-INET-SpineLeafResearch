@@ -1,4 +1,4 @@
-file 8435 1611196896                                            
+file 8221 1611888007                                            
 version 2
 run General-0-20210120-21:41:25-7740
 attr configname General
@@ -29,158 +29,157 @@ vector 0 TcpAppExample.client.ppp[0].ppp transmissionState:vector ETV
 attr interpolationmode sample-hold
 attr source transmissionStateChanged
 attr title "tx state, vector"
+0	6462 98 0 21 0 10.976520646085 5 0 1 2 2
 vector 1 TcpAppExample.server.ppp[0].ppp transmissionState:vector ETV
 attr interpolationmode sample-hold
 attr source transmissionStateChanged
 attr title "tx state, vector"
+1	6560 54 0 14 0 10.976351746085 3 0 1 1 1
 vector 2 TcpAppExample.client.app[0].source packetCreated:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packets created, vector(packetBytes)"
+2	6614 24 2 2 10.976270046085 10.976270046085 1 164 164 164 26896
 vector 3 TcpAppExample.client.tcp.conn-3 tcpRcvQueueBytes:vector ETV
 attr interpolationmode sample-hold
+3	6638 45 4 17 10.976270046085 10.976351846085 2 0 0 0 0
 vector 4 TcpAppExample.client.tcp.conn-3 rcvAdv:vector ETV
 attr interpolationmode sample-hold
+4	6683 83 4 17 10.976270046085 10.976351846085 3 7504 2751582 5510668 15142463315464
 vector 5 TcpAppExample.client.tcp.conn-3 rcvWnd:vector ETV
 attr interpolationmode sample-hold
+5	6766 51 4 17 10.976270046085 10.976351846085 2 7504 7504 15008 112620032
 vector 6 TcpAppExample.client.tcp.conn-3 sndAck:vector ETV
 attr interpolationmode sample-hold
+6	6817 51 4 17 10.976270046085 10.976351846085 2 0 2744078 2744078 7529964070084
 vector 7 TcpAppExample.client.ppp[0].ppp rcvdPkFromHl:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packets received from higher layer, vector(packetBytes)"
+7	6868 48 7 20 10.976270046085 10.976351846085 2 44 204 248 43552
 vector 8 TcpAppExample.client.ppp[0].ppp.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
+8	6916 48 7 20 10.976270046085 10.976351846085 2 44 204 248 43552
 vector 9 TcpAppExample.client.ppp[0].ppp.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
+9	6964 90 7 20 10.976270046085 10.976351846085 4 0 1 2 2
 vector 10 TcpAppExample.client.ppp[0].ppp.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
+10	7054 50 7 20 10.976270046085 10.976351846085 2 44 204 248 43552
 vector 11 TcpAppExample.client.ppp[0].ppp.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
+11	7104 47 7 20 10.976270046085 10.976351846085 2 0 0 0 0
 vector 12 TcpAppExample.client.ppp[0].ppp txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
+12	7151 50 7 20 10.976270046085 10.976351846085 2 51 211 262 47122
 vector 13 TcpAppExample.server.ppp[0].ppp rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
+13	7201 50 9 22 10.976310946085 10.976520746085 2 51 211 262 47122
 vector 14 TcpAppExample.server.ppp[0].ppp passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
+14	7251 50 9 22 10.976310946085 10.976520746085 2 44 204 248 43552
 vector 15 TcpAppExample.server.tcp.conn-0 rcvSeq:vector ETV
 attr interpolationmode sample-hold
+15	7301 30 11 11 10.976310946085 10.976310946085 1 2744067 2744067 2744067 7529903700489
 vector 16 TcpAppExample.server.tcp.conn-0 rcvAck:vector ETV
 attr interpolationmode sample-hold
+16	7331 24 11 11 10.976310946085 10.976310946085 1 0 0 0 0
 vector 17 TcpAppExample.server.tcp.conn-4 rcvAdv:vector ETV
 attr interpolationmode sample-hold
+17	7355 90 11 24 10.976310946085 10.976520746085 3 2751572 2751572 8254716 22713445413552
 vector 18 TcpAppExample.server.tcp.conn-4 sndWnd:vector ETV
 attr interpolationmode sample-hold
+18	7445 54 11 24 10.976310946085 10.976520746085 2 7504 7504 15008 112620032
 vector 19 TcpAppExample.server.tcp.conn-4 tcpRcvQueueBytes:vector ETV
 attr interpolationmode sample-hold
+19	7499 74 11 24 10.976310946085 10.976520746085 3 0 164 164 26896
 vector 20 TcpAppExample.server.tcp.conn-4 rcvWnd:vector ETV
 attr interpolationmode sample-hold
+20	7573 54 11 24 10.976310946085 10.976520746085 2 7340 7504 14844 110185616
 vector 21 TcpAppExample.server.tcp.conn-4 sndAck:vector ETV
 attr interpolationmode sample-hold
+21	7627 60 11 24 10.976310946085 10.976520746085 2 2744068 2744232 5488300 15060718458448
 vector 22 TcpAppExample.server.ppp[0].ppp rcvdPkFromHl:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packets received from higher layer, vector(packetBytes)"
+22	7687 25 13 13 10.976310946085 10.976310946085 1 44 44 44 1936
 vector 23 TcpAppExample.server.ppp[0].ppp.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
+23	7712 25 13 13 10.976310946085 10.976310946085 1 44 44 44 1936
 vector 24 TcpAppExample.server.ppp[0].ppp.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
+24	7737 48 13 13 10.976310946085 10.976310946085 2 0 1 1 1
 vector 25 TcpAppExample.server.ppp[0].ppp.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
+25	7785 25 13 13 10.976310946085 10.976310946085 1 44 44 44 1936
 vector 26 TcpAppExample.server.ppp[0].ppp.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
+26	7810 24 13 13 10.976310946085 10.976310946085 1 0 0 0 0
 vector 27 TcpAppExample.server.ppp[0].ppp txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
+27	7834 25 13 13 10.976310946085 10.976310946085 1 51 51 51 2601
 vector 28 TcpAppExample.client.ppp[0].ppp rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
+28	7859 25 15 15 10.976351846085 10.976351846085 1 51 51 51 2601
 vector 29 TcpAppExample.client.ppp[0].ppp passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
+29	7884 25 15 15 10.976351846085 10.976351846085 1 44 44 44 1936
 vector 30 TcpAppExample.client.tcp.conn-3 rcvSeq:vector ETV
 attr interpolationmode sample-hold
+30	7909 30 17 17 10.976351846085 10.976351846085 1 2744077 2744077 2744077 7529958581929
 vector 31 TcpAppExample.client.tcp.conn-3 rcvAck:vector ETV
 attr interpolationmode sample-hold
+31	7939 30 17 17 10.976351846085 10.976351846085 1 2744068 2744068 2744068 7529909188624
 vector 32 TcpAppExample.client.tcp.conn-3 sndWnd:vector ETV
 attr interpolationmode sample-hold
+32	7969 27 17 17 10.976351846085 10.976351846085 1 7504 7504 7504 56310016
 vector 33 TcpAppExample.client.tcp.conn-3 sndNxt:vector ETV
 attr interpolationmode sample-hold
+33	7996 30 17 17 10.976351846085 10.976351846085 1 2744068 2744068 2744068 7529909188624
 vector 34 TcpAppExample.client.tcp.conn-3 unacked:vector ETV
 attr interpolationmode sample-hold
+34	8026 26 17 17 10.976351846085 10.976351846085 1 164 164 164 26896
 vector 35 TcpAppExample.server.tcp.conn-4 rcvSeq:vector ETV
 attr interpolationmode sample-hold
+35	8052 30 24 24 10.976520746085 10.976520746085 1 2744068 2744068 2744068 7529909188624
 vector 36 TcpAppExample.server.tcp.conn-4 rcvAck:vector ETV
 attr interpolationmode sample-hold
+36	8082 30 24 24 10.976520746085 10.976520746085 1 2744078 2744078 2744078 7529964070084
 vector 37 TcpAppExample.server.tcp.conn-4 unacked:vector ETV
 attr interpolationmode sample-hold
+37	8112 24 24 24 10.976520746085 10.976520746085 1 0 0 0 0
 vector 38 TcpAppExample.server.tcp.conn-4 cwnd:vector ETV
 attr interpolationmode sample-hold
+38	8136 27 24 24 10.976520746085 10.976520746085 1 1072 1072 1072 1149184
 vector 39 TcpAppExample.server.tcp.conn-4 ssthresh:vector ETV
 attr interpolationmode sample-hold
+39	8163 33 24 24 10.976520746085 10.976520746085 1 4294967295 4294967295 4294967295 1.844674406512e+019
 vector 40 TcpAppExample.server.tcp.conn-4 dupAcks:vector ETV
 attr interpolationmode sample-hold
-0	6605 103 0 21 0 10.976520646085 5 0 1 2 2
-1	6708 57 0 14 0 10.976351746085 3 0 1 1 1
-2	6765 25 2 2 10.976270046085 10.976270046085 1 164 164 164 26896
-3	6790 47 4 17 10.976270046085 10.976351846085 2 0 0 0 0
-4	6837 86 4 17 10.976270046085 10.976351846085 3 7504 2751582 5510668 15142463315464
-5	6923 53 4 17 10.976270046085 10.976351846085 2 7504 7504 15008 112620032
-6	6976 53 4 17 10.976270046085 10.976351846085 2 0 2744078 2744078 7529964070084
-7	7029 50 7 20 10.976270046085 10.976351846085 2 44 204 248 43552
-8	7079 50 7 20 10.976270046085 10.976351846085 2 44 204 248 43552
-9	7129 94 7 20 10.976270046085 10.976351846085 4 0 1 2 2
-10	7223 52 7 20 10.976270046085 10.976351846085 2 44 204 248 43552
-11	7275 49 7 20 10.976270046085 10.976351846085 2 0 0 0 0
-12	7324 52 7 20 10.976270046085 10.976351846085 2 51 211 262 47122
-13	7376 52 9 22 10.976310946085 10.976520746085 2 51 211 262 47122
-14	7428 52 9 22 10.976310946085 10.976520746085 2 44 204 248 43552
-15	7480 31 11 11 10.976310946085 10.976310946085 1 2744067 2744067 2744067 7529903700489
-16	7511 25 11 11 10.976310946085 10.976310946085 1 0 0 0 0
-17	7536 93 11 24 10.976310946085 10.976520746085 3 2751572 2751572 8254716 22713445413552
-18	7629 56 11 24 10.976310946085 10.976520746085 2 7504 7504 15008 112620032
-19	7685 77 11 24 10.976310946085 10.976520746085 3 0 164 164 26896
-20	7762 56 11 24 10.976310946085 10.976520746085 2 7340 7504 14844 110185616
-21	7818 62 11 24 10.976310946085 10.976520746085 2 2744068 2744232 5488300 15060718458448
-22	7880 26 13 13 10.976310946085 10.976310946085 1 44 44 44 1936
-23	7906 26 13 13 10.976310946085 10.976310946085 1 44 44 44 1936
-24	7932 50 13 13 10.976310946085 10.976310946085 2 0 1 1 1
-25	7982 26 13 13 10.976310946085 10.976310946085 1 44 44 44 1936
-26	8008 25 13 13 10.976310946085 10.976310946085 1 0 0 0 0
-27	8033 26 13 13 10.976310946085 10.976310946085 1 51 51 51 2601
-28	8059 26 15 15 10.976351846085 10.976351846085 1 51 51 51 2601
-29	8085 26 15 15 10.976351846085 10.976351846085 1 44 44 44 1936
-30	8111 31 17 17 10.976351846085 10.976351846085 1 2744077 2744077 2744077 7529958581929
-31	8142 31 17 17 10.976351846085 10.976351846085 1 2744068 2744068 2744068 7529909188624
-32	8173 28 17 17 10.976351846085 10.976351846085 1 7504 7504 7504 56310016
-33	8201 31 17 17 10.976351846085 10.976351846085 1 2744068 2744068 2744068 7529909188624
-34	8232 27 17 17 10.976351846085 10.976351846085 1 164 164 164 26896
-35	8259 31 24 24 10.976520746085 10.976520746085 1 2744068 2744068 2744068 7529909188624
-36	8290 31 24 24 10.976520746085 10.976520746085 1 2744078 2744078 2744078 7529964070084
-37	8321 25 24 24 10.976520746085 10.976520746085 1 0 0 0 0
-38	8346 28 24 24 10.976520746085 10.976520746085 1 1072 1072 1072 1149184
-39	8374 34 24 24 10.976520746085 10.976520746085 1 4294967295 4294967295 4294967295 1.844674406512e+019
-40	8408 25 24 24 10.976520746085 10.976520746085 1 0 0 0 0
-
+40	8196 25 24 24 10.976520746085 10.976520746085 1 0 0 0 0

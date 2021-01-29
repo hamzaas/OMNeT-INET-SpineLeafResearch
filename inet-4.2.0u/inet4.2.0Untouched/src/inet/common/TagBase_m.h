@@ -1,5 +1,5 @@
 //
-// Generated file, do not edit! Created by nedtool 5.6 from inet/common/TagBase.msg.
+// Generated file, do not edit! Created by nedtool 5.6 from ./inet/common/TagBase.msg.
 //
 
 #ifndef __INET_TAGBASE_M_H
@@ -39,7 +39,7 @@ class TagBase;
 namespace inet {
 
 /**
- * Class generated from <tt>inet/common/TagBase.msg:14</tt> by nedtool.
+ * Class generated from <tt>.\inet/common/TagBase.msg:14</tt> by nedtool.
  * <pre>
  * //
  * // This is an abstract base class that should not be directly added to a message as a tag.

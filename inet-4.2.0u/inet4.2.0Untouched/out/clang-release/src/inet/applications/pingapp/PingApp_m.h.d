@@ -1,5 +1,3 @@
-inet/applications/pingapp/PingApp_m.cc inet/applications/pingapp/PingApp_m.h : \
-	inet/applications/pingapp/PingApp.msg \
+.\inet/common/INETDefs_m.cc .\inet/common/INETDefs_m.h : \
 	.\inet/common/INETDefs.msg
-inet/applications/pingapp/PingApp.msg:
 .\inet/common/INETDefs.msg:

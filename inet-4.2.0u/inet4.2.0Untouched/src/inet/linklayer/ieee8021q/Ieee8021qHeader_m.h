@@ -1,5 +1,5 @@
 //
-// Generated file, do not edit! Created by nedtool 5.6 from inet/linklayer/ieee8021q/Ieee8021qHeader.msg.
+// Generated file, do not edit! Created by nedtool 5.6 from ./inet/linklayer/ieee8021q/Ieee8021qHeader.msg.
 //
 
 #ifndef __INET_IEEE8021QHEADER_M_H
@@ -41,7 +41,7 @@ class Ieee8021qHeader;
 namespace inet {
 
 /**
- * Class generated from <tt>inet/linklayer/ieee8021q/Ieee8021qHeader.msg:22</tt> by nedtool.
+ * Class generated from <tt>.\inet/linklayer/ieee8021q/Ieee8021qHeader.msg:22</tt> by nedtool.
  * <pre>
  * class Ieee8021qHeader extends FieldsChunk
  * {

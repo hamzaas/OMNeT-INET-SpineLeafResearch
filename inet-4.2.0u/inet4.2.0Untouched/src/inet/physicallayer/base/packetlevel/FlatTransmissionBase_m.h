@@ -1,5 +1,5 @@
 //
-// Generated file, do not edit! Created by nedtool 5.6 from inet/physicallayer/base/packetlevel/FlatTransmissionBase.msg.
+// Generated file, do not edit! Created by nedtool 5.6 from ./inet/physicallayer/base/packetlevel/FlatTransmissionBase.msg.
 //
 
 #ifndef __INET__PHYSICALLAYER_FLATTRANSMISSIONBASE_M_H

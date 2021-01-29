@@ -1,5 +1,5 @@
 //
-// Generated file, do not edit! Created by nedtool 5.6 from inet/transportlayer/contract/sctp/SctpCommand.msg.
+// Generated file, do not edit! Created by nedtool 5.6 from ./inet/transportlayer/contract/sctp/SctpCommand.msg.
 //
 
 #ifndef __INET_SCTPCOMMAND_M_H
@@ -71,7 +71,7 @@ typedef std::vector<L3Address> AddressVector;
 // }}
 
 /**
- * Enum generated from <tt>inet/transportlayer/contract/sctp/SctpCommand.msg:45</tt> by nedtool.
+ * Enum generated from <tt>.\inet/transportlayer/contract/sctp/SctpCommand.msg:45</tt> by nedtool.
  * <pre>
  * //
  * // Currently not in use.
@@ -85,7 +85,7 @@ enum SctpErrorCode {
 };
 
 /**
- * Class generated from <tt>inet/transportlayer/contract/sctp/SctpCommand.msg:52</tt> by nedtool.
+ * Class generated from <tt>.\inet/transportlayer/contract/sctp/SctpCommand.msg:52</tt> by nedtool.
  * <pre>
  * class SctpSimpleMessage extends cPacket
  * {
@@ -141,7 +141,7 @@ inline void doParsimPacking(omnetpp::cCommBuffer *b, const SctpSimpleMessage& ob
 inline void doParsimUnpacking(omnetpp::cCommBuffer *b, SctpSimpleMessage& obj) {obj.parsimUnpack(b);}
 
 /**
- * Class generated from <tt>inet/transportlayer/contract/sctp/SctpCommand.msg:60</tt> by nedtool.
+ * Class generated from <tt>.\inet/transportlayer/contract/sctp/SctpCommand.msg:60</tt> by nedtool.
  * <pre>
  * class SctpCommandReq extends TagBase
  * {
@@ -225,7 +225,7 @@ inline void doParsimPacking(omnetpp::cCommBuffer *b, const SctpCommandReq& obj) 
 inline void doParsimUnpacking(omnetpp::cCommBuffer *b, SctpCommandReq& obj) {obj.parsimUnpack(b);}
 
 /**
- * Class generated from <tt>inet/transportlayer/contract/sctp/SctpCommand.msg:76</tt> by nedtool.
+ * Class generated from <tt>.\inet/transportlayer/contract/sctp/SctpCommand.msg:76</tt> by nedtool.
  * <pre>
  * class SctpSendReq extends SctpCommandReq
  * {
@@ -279,7 +279,7 @@ inline void doParsimPacking(omnetpp::cCommBuffer *b, const SctpSendReq& obj) {ob
 inline void doParsimUnpacking(omnetpp::cCommBuffer *b, SctpSendReq& obj) {obj.parsimUnpack(b);}
 
 /**
- * Class generated from <tt>inet/transportlayer/contract/sctp/SctpCommand.msg:85</tt> by nedtool.
+ * Class generated from <tt>.\inet/transportlayer/contract/sctp/SctpCommand.msg:85</tt> by nedtool.
  * <pre>
  * class SctpOpenReq extends SctpCommandReq
  * {
@@ -363,7 +363,7 @@ inline void doParsimPacking(omnetpp::cCommBuffer *b, const SctpOpenReq& obj) {ob
 inline void doParsimUnpacking(omnetpp::cCommBuffer *b, SctpOpenReq& obj) {obj.parsimUnpack(b);}
 
 /**
- * Class generated from <tt>inet/transportlayer/contract/sctp/SctpCommand.msg:101</tt> by nedtool.
+ * Class generated from <tt>.\inet/transportlayer/contract/sctp/SctpCommand.msg:101</tt> by nedtool.
  * <pre>
  * class SctpAvailableReq extends SctpCommandReq
  * {
@@ -401,7 +401,7 @@ inline void doParsimPacking(omnetpp::cCommBuffer *b, const SctpAvailableReq& obj
 inline void doParsimUnpacking(omnetpp::cCommBuffer *b, SctpAvailableReq& obj) {obj.parsimUnpack(b);}
 
 /**
- * Class generated from <tt>inet/transportlayer/contract/sctp/SctpCommand.msg:106</tt> by nedtool.
+ * Class generated from <tt>.\inet/transportlayer/contract/sctp/SctpCommand.msg:106</tt> by nedtool.
  * <pre>
  * class SctpConnectReq extends SctpCommandReq
  * {
@@ -452,7 +452,7 @@ inline void doParsimPacking(omnetpp::cCommBuffer *b, const SctpConnectReq& obj) 
 inline void doParsimUnpacking(omnetpp::cCommBuffer *b, SctpConnectReq& obj) {obj.parsimUnpack(b);}
 
 /**
- * Class generated from <tt>inet/transportlayer/contract/sctp/SctpCommand.msg:114</tt> by nedtool.
+ * Class generated from <tt>.\inet/transportlayer/contract/sctp/SctpCommand.msg:114</tt> by nedtool.
  * <pre>
  * class SctpRcvReq extends SctpCommandReq
  * {
@@ -498,7 +498,7 @@ inline void doParsimPacking(omnetpp::cCommBuffer *b, const SctpRcvReq& obj) {obj
 inline void doParsimUnpacking(omnetpp::cCommBuffer *b, SctpRcvReq& obj) {obj.parsimUnpack(b);}
 
 /**
- * Class generated from <tt>inet/transportlayer/contract/sctp/SctpCommand.msg:121</tt> by nedtool.
+ * Class generated from <tt>.\inet/transportlayer/contract/sctp/SctpCommand.msg:121</tt> by nedtool.
  * <pre>
  * class SctpStatusReq extends SctpCommandReq
  * {
@@ -549,7 +549,7 @@ inline void doParsimPacking(omnetpp::cCommBuffer *b, const SctpStatusReq& obj) {
 inline void doParsimUnpacking(omnetpp::cCommBuffer *b, SctpStatusReq& obj) {obj.parsimUnpack(b);}
 
 /**
- * Class generated from <tt>inet/transportlayer/contract/sctp/SctpCommand.msg:129</tt> by nedtool.
+ * Class generated from <tt>.\inet/transportlayer/contract/sctp/SctpCommand.msg:129</tt> by nedtool.
  * <pre>
  * class SctpResetReq extends SctpCommandReq
  * {
@@ -605,7 +605,7 @@ inline void doParsimPacking(omnetpp::cCommBuffer *b, const SctpResetReq& obj) {o
 inline void doParsimUnpacking(omnetpp::cCommBuffer *b, SctpResetReq& obj) {obj.parsimUnpack(b);}
 
 /**
- * Class generated from <tt>inet/transportlayer/contract/sctp/SctpCommand.msg:137</tt> by nedtool.
+ * Class generated from <tt>.\inet/transportlayer/contract/sctp/SctpCommand.msg:137</tt> by nedtool.
  * <pre>
  * class SctpInfoReq extends SctpCommandReq
  * {
@@ -643,7 +643,7 @@ inline void doParsimPacking(omnetpp::cCommBuffer *b, const SctpInfoReq& obj) {ob
 inline void doParsimUnpacking(omnetpp::cCommBuffer *b, SctpInfoReq& obj) {obj.parsimUnpack(b);}
 
 /**
- * Class generated from <tt>inet/transportlayer/contract/sctp/SctpCommand.msg:142</tt> by nedtool.
+ * Class generated from <tt>.\inet/transportlayer/contract/sctp/SctpCommand.msg:142</tt> by nedtool.
  * <pre>
  * class SctpPathInfoReq extends SctpCommandReq
  * {
@@ -682,7 +682,7 @@ inline void doParsimPacking(omnetpp::cCommBuffer *b, const SctpPathInfoReq& obj)
 inline void doParsimUnpacking(omnetpp::cCommBuffer *b, SctpPathInfoReq& obj) {obj.parsimUnpack(b);}
 
 /**
- * Class generated from <tt>inet/transportlayer/contract/sctp/SctpCommand.msg:147</tt> by nedtool.
+ * Class generated from <tt>.\inet/transportlayer/contract/sctp/SctpCommand.msg:147</tt> by nedtool.
  * <pre>
  * class SctpRtoReq extends SctpCommandReq
  * {
@@ -728,7 +728,7 @@ inline void doParsimPacking(omnetpp::cCommBuffer *b, const SctpRtoReq& obj) {obj
 inline void doParsimUnpacking(omnetpp::cCommBuffer *b, SctpRtoReq& obj) {obj.parsimUnpack(b);}
 
 /**
- * Class generated from <tt>inet/transportlayer/contract/sctp/SctpCommand.msg:154</tt> by nedtool.
+ * Class generated from <tt>.\inet/transportlayer/contract/sctp/SctpCommand.msg:154</tt> by nedtool.
  * <pre>
  * class SctpSendQueueAbatedReq extends SctpCommandReq
  * {
@@ -784,7 +784,7 @@ inline void doParsimPacking(omnetpp::cCommBuffer *b, const SctpSendQueueAbatedRe
 inline void doParsimUnpacking(omnetpp::cCommBuffer *b, SctpSendQueueAbatedReq& obj) {obj.parsimUnpack(b);}
 
 /**
- * Class generated from <tt>inet/transportlayer/contract/sctp/SctpCommand.msg:162</tt> by nedtool.
+ * Class generated from <tt>.\inet/transportlayer/contract/sctp/SctpCommand.msg:162</tt> by nedtool.
  * <pre>
  * class SctpPathInfo extends cNamedObject
  * {

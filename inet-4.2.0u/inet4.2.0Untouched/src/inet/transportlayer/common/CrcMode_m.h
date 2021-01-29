@@ -1,5 +1,5 @@
 //
-// Generated file, do not edit! Created by nedtool 5.6 from inet/transportlayer/common/CrcMode.msg.
+// Generated file, do not edit! Created by nedtool 5.6 from ./inet/transportlayer/common/CrcMode.msg.
 //
 
 #ifndef __INET_CRCMODE_M_H
@@ -38,7 +38,7 @@ namespace inet {
 namespace inet {
 
 /**
- * Enum generated from <tt>inet/transportlayer/common/CrcMode.msg:23</tt> by nedtool.
+ * Enum generated from <tt>.\inet/transportlayer/common/CrcMode.msg:23</tt> by nedtool.
  * <pre>
  * enum CrcMode
  * {

@@ -1,5 +1,5 @@
 //
-// Generated file, do not edit! Created by nedtool 5.6 from inet/common/packet/chunk/Chunk.msg.
+// Generated file, do not edit! Created by nedtool 5.6 from ./inet/common/packet/chunk/Chunk.msg.
 //
 
 #ifndef __INET_CHUNK_M_H

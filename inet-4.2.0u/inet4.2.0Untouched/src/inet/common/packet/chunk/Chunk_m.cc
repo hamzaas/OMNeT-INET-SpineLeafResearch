@@ -1,5 +1,5 @@
 //
-// Generated file, do not edit! Created by nedtool 5.6 from inet/common/packet/chunk/Chunk.msg.
+// Generated file, do not edit! Created by nedtool 5.6 from ./inet/common/packet/chunk/Chunk.msg.
 //
 
 // Disable warnings about unused variables, empty switch stmts, etc:

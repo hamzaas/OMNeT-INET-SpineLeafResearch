@@ -1,5 +1,5 @@
 //
-// Generated file, do not edit! Created by nedtool 5.6 from inet/networklayer/ted/Ted.msg.
+// Generated file, do not edit! Created by nedtool 5.6 from ./inet/networklayer/ted/Ted.msg.
 //
 
 #ifndef __INET_TED_M_H
@@ -46,7 +46,7 @@ typedef std::vector<struct TeLinkStateInfo> TeLinkStateInfoVector;
 // }}
 
 /**
- * Struct generated from inet/networklayer/ted/Ted.msg:29 by nedtool.
+ * Struct generated from .\inet/networklayer/ted/Ted.msg:29 by nedtool.
  */
 struct INET_API TeLinkStateInfo
 {
@@ -72,7 +72,7 @@ inline void doParsimPacking(omnetpp::cCommBuffer *b, const TeLinkStateInfo& obj)
 inline void doParsimUnpacking(omnetpp::cCommBuffer *b, TeLinkStateInfo& obj) { __doUnpacking(b, obj); }
 
 /**
- * Class generated from <tt>inet/networklayer/ted/Ted.msg:51</tt> by nedtool.
+ * Class generated from <tt>.\inet/networklayer/ted/Ted.msg:51</tt> by nedtool.
  * <pre>
  * //
  * // Data structure supplied with NF_TED_CHANGE signal.

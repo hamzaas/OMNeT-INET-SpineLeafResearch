@@ -1,5 +1,5 @@
 //
-// Generated file, do not edit! Created by nedtool 5.6 from inet/common/INETDefs.msg.
+// Generated file, do not edit! Created by nedtool 5.6 from ./inet/common/INETDefs.msg.
 //
 
 #ifndef __INETDEFS_M_H

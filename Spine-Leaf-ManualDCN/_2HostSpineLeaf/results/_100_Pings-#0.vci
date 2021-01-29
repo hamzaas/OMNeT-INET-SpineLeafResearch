@@ -1,4 +1,4 @@
-file 299683 1611260514                                          
+file 289619 1611888005                                          
 version 2
 run _100_Pings-0-20210121-15:21:49-3184
 attr configname _100_Pings
@@ -31,846 +31,845 @@ param **.configurator.config "xmldoc(\"2Host_SpineLeaf_Routing.xml\")"
 vector 0 RandomTestingTopology.H0.app[0] pingTxSeq:vector ETV
 attr interpolationmode none
 attr title "ping tx seq, vector"
+0	34758 2564 1 6294 0.548813502304 99.548813502304 100 0 99 4950 328350
 vector 1 RandomTestingTopology.H0.ipv4.arp arpRequestSent:vector(packetBytes) ETV
 attr source arpRequestSent
 attr title "ARP request sent, vector(packetBytes)"
+1	37322 22 3 3 0.548813502304 0.548813502304 1 28 28 28 784
 vector 2 RandomTestingTopology.H0.eth[0].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
+2	37344 2597 4 6296 0.548813502304 99.548813502304 101 28 84 8428 706384
 vector 3 RandomTestingTopology.H0.eth[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
+3	39941 2697 5 6297 0.548813502304 99.548813502304 101 46 102 10246 1042516
 vector 4 RandomTestingTopology.H0.eth[0].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
+4	42638 2697 5 6297 0.548813502304 99.548813502304 101 64 102 10264 1044496
 vector 5 RandomTestingTopology.H0.eth[0].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
+5	45335 4992 5 6297 0.548813502304 99.548813502304 202 0 1 101 101
 vector 6 RandomTestingTopology.H0.eth[0].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
+6	50327 2697 5 6297 0.548813502304 99.548813502304 101 64 102 10264 1044496
 vector 7 RandomTestingTopology.H0.eth[0].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
+7	53024 2496 5 6297 0.548813502304 99.548813502304 101 0 0 0 0
 vector 8 RandomTestingTopology.H0.eth[0].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
+8	55520 2697 6 6298 0.548819262304 99.548822302304 101 64 102 10264 1044496
 vector 9 RandomTestingTopology.leaf1.eth[3].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
+9	58217 2697 7 6299 0.548819312304 99.548822352304 101 64 102 10264 1044496
 vector 10 RandomTestingTopology.leaf1.eth[3].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
+10	60914 2798 7 6299 0.548819312304 99.548822352304 101 64 102 10264 1044496
 vector 11 RandomTestingTopology.leaf1.eth[3].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
+11	63712 2698 8 6300 0.548819312304 99.548822352304 101 46 84 8446 707716
 vector 12 RandomTestingTopology.leaf1.ipv4.arp arpReplySent:vector(packetBytes) ETV
 attr source arpReplySent
 attr title "ARP replies sent, vector(packetBytes)"
+12	66410 48 9 123 0.548819312304 0.548930512304 2 28 28 56 1568
 vector 13 RandomTestingTopology.leaf1.eth[3].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
+13	66458 2701 10 6346 0.548819312304 99.548875452304 101 28 84 8428 706384
 vector 14 RandomTestingTopology.leaf1.eth[3].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
+14	69159 2801 11 6347 0.548819312304 99.548875452304 101 46 102 10246 1042516
 vector 15 RandomTestingTopology.leaf1.eth[3].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
+15	71960 2801 11 6347 0.548819312304 99.548875452304 101 64 102 10264 1044496
 vector 16 RandomTestingTopology.leaf1.eth[3].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
+16	74761 5200 11 6347 0.548819312304 99.548875452304 202 0 1 101 101
 vector 17 RandomTestingTopology.leaf1.eth[3].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
+17	79961 2801 11 6347 0.548819312304 99.548875452304 101 64 102 10264 1044496
 vector 18 RandomTestingTopology.leaf1.eth[3].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
+18	82762 2600 11 6347 0.548819312304 99.548875452304 101 0 0 0 0
 vector 19 RandomTestingTopology.leaf1.eth[3].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
+19	85362 2801 13 6349 0.548825072304 99.548884252304 101 64 102 10264 1044496
 vector 20 RandomTestingTopology.H0.eth[0].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
+20	88163 2801 14 6350 0.548825122304 99.548884302304 101 64 102 10264 1044496
 vector 21 RandomTestingTopology.H0.eth[0].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
+21	90964 2801 14 6350 0.548825122304 99.548884302304 101 64 102 10264 1044496
 vector 22 RandomTestingTopology.H0.eth[0].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
+22	93765 2701 15 6351 0.548825122304 99.548884302304 101 46 84 8446 707716
 vector 23 RandomTestingTopology.leaf1.ipv4.arp arpRequestSent:vector(packetBytes) ETV
 attr source arpRequestSent
 attr title "ARP request sent, vector(packetBytes)"
+23	96466 74 23 259 0.548833972304 2.548822352304 3 28 28 84 2352
 vector 24 RandomTestingTopology.leaf1.eth[0].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
+24	96540 982 24 6302 0.548833972304 99.548822352304 37 28 84 3052 254800
 vector 25 RandomTestingTopology.leaf1.eth[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
+25	97522 1018 25 6303 0.548833972304 99.548822352304 37 46 102 3718 376660
 vector 26 RandomTestingTopology.leaf1.eth[0].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
+26	98540 1018 25 6303 0.548833972304 99.548822352304 37 64 102 3736 378640
 vector 27 RandomTestingTopology.leaf1.eth[0].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
+27	99558 1890 25 6303 0.548833972304 99.548822352304 74 0 1 37 37
 vector 28 RandomTestingTopology.leaf1.eth[0].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
+28	101448 1018 25 6303 0.548833972304 99.548822352304 37 64 102 3736 378640
 vector 29 RandomTestingTopology.leaf1.eth[0].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
+29	102466 945 25 6303 0.548833972304 99.548822352304 37 0 0 0 0
 vector 30 RandomTestingTopology.leaf1.eth[0].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
+30	103411 1018 27 6305 0.548839732304 99.548831152304 37 64 102 3736 378640
 vector 31 RandomTestingTopology.spine1.eth[0].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
+31	104429 1018 28 6306 0.548839782304 99.548831202304 37 64 102 3736 378640
 vector 32 RandomTestingTopology.spine1.eth[0].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
+32	105447 1018 28 6306 0.548839782304 99.548831202304 37 64 102 3736 378640
 vector 33 RandomTestingTopology.spine1.eth[0].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
+33	106465 982 29 6307 0.548839782304 99.548831202304 37 46 84 3070 256132
 vector 34 RandomTestingTopology.spine1.ipv4.arp arpReplySent:vector(packetBytes) ETV
 attr source arpReplySent
 attr title "ARP replies sent, vector(packetBytes)"
+34	107447 49 30 220 0.548839782304 1.548886802304 2 28 28 56 1568
 vector 35 RandomTestingTopology.spine1.eth[0].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
+35	107496 832 31 6215 0.548839782304 97.548866602304 31 28 84 2548 212464
 vector 36 RandomTestingTopology.spine1.eth[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
+36	108328 862 32 6216 0.548839782304 97.548866602304 31 46 102 3106 314236
 vector 37 RandomTestingTopology.spine1.eth[0].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
+37	109190 862 32 6216 0.548839782304 97.548866602304 31 64 102 3124 316216
 vector 38 RandomTestingTopology.spine1.eth[0].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
+38	110052 1602 32 6216 0.548839782304 97.548866602304 62 0 1 31 31
 vector 39 RandomTestingTopology.spine1.eth[0].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
+39	111654 862 32 6216 0.548839782304 97.548866602304 31 64 102 3124 316216
 vector 40 RandomTestingTopology.spine1.eth[0].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
+40	112516 801 32 6216 0.548839782304 97.548866602304 31 0 0 0 0
 vector 41 RandomTestingTopology.spine1.eth[0].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
+41	113317 862 34 6218 0.548845542304 97.548875402304 31 64 102 3124 316216
 vector 42 RandomTestingTopology.leaf1.eth[0].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
+42	114179 862 35 6219 0.548845592304 97.548875452304 31 64 102 3124 316216
 vector 43 RandomTestingTopology.leaf1.eth[0].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
+43	115041 862 35 6219 0.548845592304 97.548875452304 31 64 102 3124 316216
 vector 44 RandomTestingTopology.leaf1.eth[0].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
+44	115903 832 36 6220 0.548845592304 97.548875452304 31 46 84 2566 213796
 vector 45 RandomTestingTopology.spine1.ipv4.arp arpRequestSent:vector(packetBytes) ETV
 attr source arpRequestSent
 attr title "ARP request sent, vector(packetBytes)"
+45	116735 24 44 44 0.548854442304 0.548854442304 1 28 28 28 784
 vector 46 RandomTestingTopology.spine1.eth[1].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
+46	116759 1007 45 6309 0.548854442304 99.548831202304 38 28 84 3080 255584
 vector 47 RandomTestingTopology.spine1.eth[1].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
+47	117766 1043 46 6310 0.548854442304 99.548831202304 38 46 102 3764 378776
 vector 48 RandomTestingTopology.spine1.eth[1].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
+48	118809 1043 46 6310 0.548854442304 99.548831202304 38 64 102 3800 382736
 vector 49 RandomTestingTopology.spine1.eth[1].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
+49	119852 1938 46 6310 0.548854442304 99.548831202304 76 0 1 38 38
 vector 50 RandomTestingTopology.spine1.eth[1].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
+50	121790 1043 46 6310 0.548854442304 99.548831202304 38 64 102 3800 382736
 vector 51 RandomTestingTopology.spine1.eth[1].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
+51	122833 969 46 6310 0.548854442304 99.548831202304 38 0 0 0 0
 vector 52 RandomTestingTopology.spine1.eth[1].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
+52	123802 1043 48 6312 0.548860202304 99.548840002304 38 64 102 3800 382736
 vector 53 RandomTestingTopology.leaf2.eth[0].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
+53	124845 1043 49 6313 0.548860252304 99.548840052304 38 64 102 3800 382736
 vector 54 RandomTestingTopology.leaf2.eth[0].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
+54	125888 1043 49 6313 0.548860252304 99.548840052304 38 64 102 3800 382736
 vector 55 RandomTestingTopology.leaf2.eth[0].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
+55	126931 1007 50 6314 0.548860252304 99.548840052304 38 46 84 3116 258248
 vector 56 RandomTestingTopology.leaf2.ipv4.arp arpReplySent:vector(packetBytes) ETV
 attr source arpReplySent
 attr title "ARP replies sent, vector(packetBytes)"
+56	127938 49 51 183 0.548860252304 1.548848632304 2 28 28 56 1568
 vector 57 RandomTestingTopology.leaf2.eth[0].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
+57	127987 857 52 6208 0.548860252304 97.548857752304 32 28 84 2576 213248
 vector 58 RandomTestingTopology.leaf2.eth[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
+58	128844 887 53 6209 0.548860252304 97.548857752304 32 46 102 3152 316352
 vector 59 RandomTestingTopology.leaf2.eth[0].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
+59	129731 887 53 6209 0.548860252304 97.548857752304 32 64 102 3188 320312
 vector 60 RandomTestingTopology.leaf2.eth[0].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
+60	130618 1650 53 6209 0.548860252304 97.548857752304 64 0 1 32 32
 vector 61 RandomTestingTopology.leaf2.eth[0].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
+61	132268 887 53 6209 0.548860252304 97.548857752304 32 64 102 3188 320312
 vector 62 RandomTestingTopology.leaf2.eth[0].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
+62	133155 825 53 6209 0.548860252304 97.548857752304 32 0 0 0 0
 vector 63 RandomTestingTopology.leaf2.eth[0].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
+63	133980 887 55 6211 0.548866012304 97.548866552304 32 64 102 3188 320312
 vector 64 RandomTestingTopology.spine1.eth[1].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
+64	134867 887 56 6212 0.548866062304 97.548866602304 32 64 102 3188 320312
 vector 65 RandomTestingTopology.spine1.eth[1].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
+65	135754 887 56 6212 0.548866062304 97.548866602304 32 64 102 3188 320312
 vector 66 RandomTestingTopology.spine1.eth[1].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
+66	136641 857 57 6213 0.548866062304 97.548866602304 32 46 84 2612 215912
 vector 67 RandomTestingTopology.leaf2.ipv4.arp arpRequestSent:vector(packetBytes) ETV
 attr source arpRequestSent
 attr title "ARP request sent, vector(packetBytes)"
+67	137498 98 65 303 0.548874912304 2.548869372304 4 28 28 112 3136
 vector 68 RandomTestingTopology.leaf2.eth[3].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
+68	137596 2699 66 6316 0.548874912304 99.548840052304 101 28 84 8428 706384
 vector 69 RandomTestingTopology.leaf2.eth[3].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
+69	140295 2799 67 6317 0.548874912304 99.548840052304 101 46 102 10246 1042516
 vector 70 RandomTestingTopology.leaf2.eth[3].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
+70	143094 2799 67 6317 0.548874912304 99.548840052304 101 64 102 10264 1044496
 vector 71 RandomTestingTopology.leaf2.eth[3].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
+71	145893 5196 67 6317 0.548874912304 99.548840052304 202 0 1 101 101
 vector 72 RandomTestingTopology.leaf2.eth[3].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
+72	151089 2799 67 6317 0.548874912304 99.548840052304 101 64 102 10264 1044496
 vector 73 RandomTestingTopology.leaf2.eth[3].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
+73	153888 2598 67 6317 0.548874912304 99.548840052304 101 0 0 0 0
 vector 74 RandomTestingTopology.leaf2.eth[3].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
+74	156486 2799 69 6319 0.548880672304 99.548848852304 101 64 102 10264 1044496
 vector 75 RandomTestingTopology.H1.eth[0].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
+75	159285 2799 70 6320 0.548880722304 99.548848902304 101 64 102 10264 1044496
 vector 76 RandomTestingTopology.H1.eth[0].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
+76	162084 2799 70 6320 0.548880722304 99.548848902304 101 64 102 10264 1044496
 vector 77 RandomTestingTopology.H1.eth[0].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
+77	164883 2699 71 6321 0.548880722304 99.548848902304 101 46 84 8446 707716
 vector 78 RandomTestingTopology.H1.ipv4.arp arpReplySent:vector(packetBytes) ETV
 attr source arpReplySent
 attr title "ARP replies sent, vector(packetBytes)"
+78	167582 24 72 72 0.548880722304 0.548880722304 1 28 28 28 784
 vector 79 RandomTestingTopology.H1.eth[0].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
+79	167606 2699 73 6325 0.548880722304 99.548848902304 101 28 84 8428 706384
 vector 80 RandomTestingTopology.H1.eth[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
+80	170305 2799 74 6326 0.548880722304 99.548848902304 101 46 102 10246 1042516
 vector 81 RandomTestingTopology.H1.eth[0].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
+81	173104 2799 74 6326 0.548880722304 99.548848902304 101 64 102 10264 1044496
 vector 82 RandomTestingTopology.H1.eth[0].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
+82	175903 5196 74 6326 0.548880722304 99.548848902304 202 0 1 101 101
 vector 83 RandomTestingTopology.H1.eth[0].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
+83	181099 2799 74 6326 0.548880722304 99.548848902304 101 64 102 10264 1044496
 vector 84 RandomTestingTopology.H1.eth[0].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
+84	183898 2598 74 6326 0.548880722304 99.548848902304 101 0 0 0 0
 vector 85 RandomTestingTopology.H1.eth[0].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
+85	186496 2799 76 6328 0.548886482304 99.548857702304 101 64 102 10264 1044496
 vector 86 RandomTestingTopology.leaf2.eth[3].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
+86	189295 2799 77 6329 0.548886532304 99.548857752304 101 64 102 10264 1044496
 vector 87 RandomTestingTopology.leaf2.eth[3].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
+87	192094 2799 77 6329 0.548886532304 99.548857752304 101 64 102 10264 1044496
 vector 88 RandomTestingTopology.leaf2.eth[3].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
+88	194893 2699 78 6330 0.548886532304 99.548857752304 101 46 84 8446 707716
 vector 89 RandomTestingTopology.leaf2.eth[2].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
+89	197592 981 96 6270 0.548904232304 98.548857752304 37 28 84 3052 254800
 vector 90 RandomTestingTopology.leaf2.eth[2].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
+90	198573 1017 97 6271 0.548904232304 98.548857752304 37 46 102 3718 376660
 vector 91 RandomTestingTopology.leaf2.eth[2].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
+91	199590 1017 97 6271 0.548904232304 98.548857752304 37 64 102 3736 378640
 vector 92 RandomTestingTopology.leaf2.eth[2].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
+92	200607 1888 97 6271 0.548904232304 98.548857752304 74 0 1 37 37
 vector 93 RandomTestingTopology.leaf2.eth[2].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
+93	202495 1017 97 6271 0.548904232304 98.548857752304 37 64 102 3736 378640
 vector 94 RandomTestingTopology.leaf2.eth[2].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
+94	203512 944 97 6271 0.548904232304 98.548857752304 37 0 0 0 0
 vector 95 RandomTestingTopology.leaf2.eth[2].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
+95	204456 1017 99 6273 0.548909992304 98.548866552304 37 64 102 3736 378640
 vector 96 RandomTestingTopology.spine3.eth[1].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
+96	205473 1018 100 6274 0.548910042304 98.548866602304 37 64 102 3736 378640
 vector 97 RandomTestingTopology.spine3.eth[1].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
+97	206491 1018 100 6274 0.548910042304 98.548866602304 37 64 102 3736 378640
 vector 98 RandomTestingTopology.spine3.eth[1].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
+98	207509 982 101 6275 0.548910042304 98.548866602304 37 46 84 3070 256132
 vector 99 RandomTestingTopology.spine3.ipv4.arp arpReplySent:vector(packetBytes) ETV
 attr source arpReplySent
 attr title "ARP replies sent, vector(packetBytes)"
+99	208491 50 102 266 0.548910042304 2.548828162304 2 28 28 56 1568
 vector 100 RandomTestingTopology.spine3.eth[1].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
+100	208541 971 103 6123 0.548910042304 96.548831202304 35 28 84 2884 240688
 vector 101 RandomTestingTopology.spine3.eth[1].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
+101	209512 1005 104 6124 0.548910042304 96.548831202304 35 46 102 3514 355852
 vector 102 RandomTestingTopology.spine3.eth[1].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
+102	210517 1005 104 6124 0.548910042304 96.548831202304 35 64 102 3532 357832
 vector 103 RandomTestingTopology.spine3.eth[1].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
+103	211522 1872 104 6124 0.548910042304 96.548831202304 70 0 1 35 35
 vector 104 RandomTestingTopology.spine3.eth[1].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
+104	213394 1005 104 6124 0.548910042304 96.548831202304 35 64 102 3532 357832
 vector 105 RandomTestingTopology.spine3.eth[1].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
+105	214399 936 104 6124 0.548910042304 96.548831202304 35 0 0 0 0
 vector 106 RandomTestingTopology.spine3.eth[1].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
+106	215335 1005 106 6126 0.548915802304 96.548840002304 35 64 102 3532 357832
 vector 107 RandomTestingTopology.leaf2.eth[2].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
+107	216340 1005 107 6127 0.548915852304 96.548840052304 35 64 102 3532 357832
 vector 108 RandomTestingTopology.leaf2.eth[2].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
+108	217345 1005 107 6127 0.548915852304 96.548840052304 35 64 102 3532 357832
 vector 109 RandomTestingTopology.leaf2.eth[2].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
+109	218350 971 108 6128 0.548915852304 96.548840052304 35 46 84 2902 242020
 vector 110 RandomTestingTopology.spine3.ipv4.arp arpRequestSent:vector(packetBytes) ETV
 attr source arpRequestSent
 attr title "ARP request sent, vector(packetBytes)"
+110	219321 26 116 116 0.548924702304 0.548924702304 1 28 28 28 784
 vector 111 RandomTestingTopology.spine3.eth[0].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
+111	219347 1045 117 6277 0.548924702304 98.548866602304 38 28 84 3080 255584
 vector 112 RandomTestingTopology.spine3.eth[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
+112	220392 1081 118 6278 0.548924702304 98.548866602304 38 46 102 3764 378776
 vector 113 RandomTestingTopology.spine3.eth[0].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
+113	221473 1081 118 6278 0.548924702304 98.548866602304 38 64 102 3800 382736
 vector 114 RandomTestingTopology.spine3.eth[0].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
+114	222554 2014 118 6278 0.548924702304 98.548866602304 76 0 1 38 38
 vector 115 RandomTestingTopology.spine3.eth[0].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
+115	224568 1081 118 6278 0.548924702304 98.548866602304 38 64 102 3800 382736
 vector 116 RandomTestingTopology.spine3.eth[0].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
+116	225649 1007 118 6278 0.548924702304 98.548866602304 38 0 0 0 0
 vector 117 RandomTestingTopology.spine3.eth[0].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
+117	226656 1081 120 6280 0.548930462304 98.548875402304 38 64 102 3800 382736
 vector 118 RandomTestingTopology.leaf1.eth[2].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
+118	227737 1081 121 6281 0.548930512304 98.548875452304 38 64 102 3800 382736
 vector 119 RandomTestingTopology.leaf1.eth[2].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
+119	228818 1081 121 6281 0.548930512304 98.548875452304 38 64 102 3800 382736
 vector 120 RandomTestingTopology.leaf1.eth[2].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
+120	229899 1045 122 6282 0.548930512304 98.548875452304 38 46 84 3116 258248
 vector 121 RandomTestingTopology.leaf1.eth[2].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
+121	230944 997 124 6116 0.548930512304 96.548822352304 36 28 84 2912 241472
 vector 122 RandomTestingTopology.leaf1.eth[2].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
+122	231941 1031 125 6117 0.548930512304 96.548822352304 36 46 102 3560 357968
 vector 123 RandomTestingTopology.leaf1.eth[2].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
+123	232972 1031 125 6117 0.548930512304 96.548822352304 36 64 102 3596 361928
 vector 124 RandomTestingTopology.leaf1.eth[2].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
+124	234003 1922 125 6117 0.548930512304 96.548822352304 72 0 1 36 36
 vector 125 RandomTestingTopology.leaf1.eth[2].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
+125	235925 1031 125 6117 0.548930512304 96.548822352304 36 64 102 3596 361928
 vector 126 RandomTestingTopology.leaf1.eth[2].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
+126	236956 961 125 6117 0.548930512304 96.548822352304 36 0 0 0 0
 vector 127 RandomTestingTopology.leaf1.eth[2].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
+127	237917 1031 127 6119 0.548936272304 96.548831152304 36 64 102 3596 361928
 vector 128 RandomTestingTopology.spine3.eth[0].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
+128	238948 1031 128 6120 0.548936322304 96.548831202304 36 64 102 3596 361928
 vector 129 RandomTestingTopology.spine3.eth[0].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
+129	239979 1031 128 6120 0.548936322304 96.548831202304 36 64 102 3596 361928
 vector 130 RandomTestingTopology.spine3.eth[0].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
+130	241010 997 129 6121 0.548936322304 96.548831202304 36 46 84 2948 244136
 vector 131 RandomTestingTopology.H0.app[0] pingRxSeq:vector ETV
 attr interpolationmode none
 attr title "ping rx seq, vector"
+131	242007 2767 145 6353 0.548954022304 99.548884302304 100 0 99 4950 328350
 vector 132 RandomTestingTopology.H0.app[0] rtt:vector ETV
 attr interpolationmode none
 attr title "ping round-trip time, vector"
 attr unit s
+132	244774 3480 145 6353 0.548954022304 99.548884302304 100 7.08e-005 0.00014052 0.00720782 5.259795076e-007
 vector 133 RandomTestingTopology.leaf1.eth[1].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
+133	248254 862 156 6240 1.548822352304 98.548822352304 31 28 84 2548 212464
 vector 134 RandomTestingTopology.leaf1.eth[1].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
+134	249116 892 157 6241 1.548822352304 98.548822352304 31 46 102 3106 314236
 vector 135 RandomTestingTopology.leaf1.eth[1].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
+135	250008 892 157 6241 1.548822352304 98.548822352304 31 64 102 3124 316216
 vector 136 RandomTestingTopology.leaf1.eth[1].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
+136	250900 1662 157 6241 1.548822352304 98.548822352304 62 0 1 31 31
 vector 137 RandomTestingTopology.leaf1.eth[1].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
+137	252562 892 157 6241 1.548822352304 98.548822352304 31 64 102 3124 316216
 vector 138 RandomTestingTopology.leaf1.eth[1].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
+138	253454 831 157 6241 1.548822352304 98.548822352304 31 0 0 0 0
 vector 139 RandomTestingTopology.leaf1.eth[1].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
+139	254285 892 159 6243 1.548828112304 98.548831152304 31 64 102 3124 316216
 vector 140 RandomTestingTopology.spine2.eth[0].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
+140	255177 892 160 6244 1.548828162304 98.548831202304 31 64 102 3124 316216
 vector 141 RandomTestingTopology.spine2.eth[0].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
+141	256069 892 160 6244 1.548828162304 98.548831202304 31 64 102 3124 316216
 vector 142 RandomTestingTopology.spine2.eth[0].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
+142	256961 862 161 6245 1.548828162304 98.548831202304 31 46 84 2566 213796
 vector 143 RandomTestingTopology.spine2.ipv4.arp arpReplySent:vector(packetBytes) ETV
 attr source arpReplySent
 attr title "ARP replies sent, vector(packetBytes)"
+143	257823 52 162 310 1.548828162304 2.548875182304 2 28 28 56 1568
 vector 144 RandomTestingTopology.spine2.eth[0].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
+144	257875 972 163 6339 1.548828162304 99.548866602304 35 28 84 2884 240688
 vector 145 RandomTestingTopology.spine2.eth[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
+145	258847 1006 164 6340 1.548828162304 99.548866602304 35 46 102 3514 355852
 vector 146 RandomTestingTopology.spine2.eth[0].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
+146	259853 1006 164 6340 1.548828162304 99.548866602304 35 64 102 3532 357832
 vector 147 RandomTestingTopology.spine2.eth[0].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
+147	260859 1874 164 6340 1.548828162304 99.548866602304 70 0 1 35 35
 vector 148 RandomTestingTopology.spine2.eth[0].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
+148	262733 1006 164 6340 1.548828162304 99.548866602304 35 64 102 3532 357832
 vector 149 RandomTestingTopology.spine2.eth[0].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
+149	263739 937 164 6340 1.548828162304 99.548866602304 35 0 0 0 0
 vector 150 RandomTestingTopology.spine2.eth[0].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
+150	264676 1006 166 6342 1.548833922304 99.548875402304 35 64 102 3532 357832
 vector 151 RandomTestingTopology.leaf1.eth[1].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
+151	265682 1006 167 6343 1.548833972304 99.548875452304 35 64 102 3532 357832
 vector 152 RandomTestingTopology.leaf1.eth[1].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
+152	266688 1006 167 6343 1.548833972304 99.548875452304 35 64 102 3532 357832
 vector 153 RandomTestingTopology.leaf1.eth[1].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
+153	267694 972 168 6344 1.548833972304 99.548875452304 35 46 84 2902 242020
 vector 154 RandomTestingTopology.spine2.ipv4.arp arpRequestSent:vector(packetBytes) ETV
 attr source arpRequestSent
 attr title "ARP request sent, vector(packetBytes)"
+154	268666 26 176 176 1.548842822304 1.548842822304 1 28 28 28 784
 vector 155 RandomTestingTopology.spine2.eth[1].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
+155	268692 888 177 6247 1.548842822304 98.548831202304 32 28 84 2576 213248
 vector 156 RandomTestingTopology.spine2.eth[1].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
+156	269580 918 178 6248 1.548842822304 98.548831202304 32 46 102 3152 316352
 vector 157 RandomTestingTopology.spine2.eth[1].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
+157	270498 918 178 6248 1.548842822304 98.548831202304 32 64 102 3188 320312
 vector 158 RandomTestingTopology.spine2.eth[1].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
+158	271416 1712 178 6248 1.548842822304 98.548831202304 64 0 1 32 32
 vector 159 RandomTestingTopology.spine2.eth[1].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
+159	273128 918 178 6248 1.548842822304 98.548831202304 32 64 102 3188 320312
 vector 160 RandomTestingTopology.spine2.eth[1].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
+160	274046 856 178 6248 1.548842822304 98.548831202304 32 0 0 0 0
 vector 161 RandomTestingTopology.spine2.eth[1].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
+161	274902 918 180 6250 1.548848582304 98.548840002304 32 64 102 3188 320312
 vector 162 RandomTestingTopology.leaf2.eth[1].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
+162	275820 918 181 6251 1.548848632304 98.548840052304 32 64 102 3188 320312
 vector 163 RandomTestingTopology.leaf2.eth[1].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
+163	276738 918 181 6251 1.548848632304 98.548840052304 32 64 102 3188 320312
 vector 164 RandomTestingTopology.leaf2.eth[1].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
+164	277656 888 182 6252 1.548848632304 98.548840052304 32 46 84 2612 215912
 vector 165 RandomTestingTopology.leaf2.eth[1].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
+165	278544 998 184 6332 1.548848632304 99.548857752304 36 28 84 2912 241472
 vector 166 RandomTestingTopology.leaf2.eth[1].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
+166	279542 1032 185 6333 1.548848632304 99.548857752304 36 46 102 3560 357968
 vector 167 RandomTestingTopology.leaf2.eth[1].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
+167	280574 1032 185 6333 1.548848632304 99.548857752304 36 64 102 3596 361928
 vector 168 RandomTestingTopology.leaf2.eth[1].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
+168	281606 1924 185 6333 1.548848632304 99.548857752304 72 0 1 36 36
 vector 169 RandomTestingTopology.leaf2.eth[1].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
+169	283530 1032 185 6333 1.548848632304 99.548857752304 36 64 102 3596 361928
 vector 170 RandomTestingTopology.leaf2.eth[1].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
+170	284562 962 185 6333 1.548848632304 99.548857752304 36 0 0 0 0
 vector 171 RandomTestingTopology.leaf2.eth[1].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
+171	285524 1032 187 6335 1.548854392304 99.548866552304 36 64 102 3596 361928
 vector 172 RandomTestingTopology.spine2.eth[1].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
+172	286556 1032 188 6336 1.548854442304 99.548866602304 36 64 102 3596 361928
 vector 173 RandomTestingTopology.spine2.eth[1].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
+173	287588 1032 188 6336 1.548854442304 99.548866602304 36 64 102 3596 361928
 vector 174 RandomTestingTopology.spine2.eth[1].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-0	35457 2664 1 6294 0.548813502304 99.548813502304 100 0 99 4950 328350
-1	38121 23 3 3 0.548813502304 0.548813502304 1 28 28 28 784
-2	38144 2698 4 6296 0.548813502304 99.548813502304 101 28 84 8428 706384
-3	40842 2798 5 6297 0.548813502304 99.548813502304 101 46 102 10246 1042516
-4	43640 2798 5 6297 0.548813502304 99.548813502304 101 64 102 10264 1044496
-5	46438 5194 5 6297 0.548813502304 99.548813502304 202 0 1 101 101
-6	51632 2798 5 6297 0.548813502304 99.548813502304 101 64 102 10264 1044496
-7	54430 2597 5 6297 0.548813502304 99.548813502304 101 0 0 0 0
-8	57027 2798 6 6298 0.548819262304 99.548822302304 101 64 102 10264 1044496
-9	59825 2798 7 6299 0.548819312304 99.548822352304 101 64 102 10264 1044496
-10	62623 2899 7 6299 0.548819312304 99.548822352304 101 64 102 10264 1044496
-11	65522 2799 8 6300 0.548819312304 99.548822352304 101 46 84 8446 707716
-12	68321 50 9 123 0.548819312304 0.548930512304 2 28 28 56 1568
-13	68371 2802 10 6346 0.548819312304 99.548875452304 101 28 84 8428 706384
-14	71173 2902 11 6347 0.548819312304 99.548875452304 101 46 102 10246 1042516
-15	74075 2902 11 6347 0.548819312304 99.548875452304 101 64 102 10264 1044496
-16	76977 5402 11 6347 0.548819312304 99.548875452304 202 0 1 101 101
-17	82379 2902 11 6347 0.548819312304 99.548875452304 101 64 102 10264 1044496
-18	85281 2701 11 6347 0.548819312304 99.548875452304 101 0 0 0 0
-19	87982 2902 13 6349 0.548825072304 99.548884252304 101 64 102 10264 1044496
-20	90884 2902 14 6350 0.548825122304 99.548884302304 101 64 102 10264 1044496
-21	93786 2902 14 6350 0.548825122304 99.548884302304 101 64 102 10264 1044496
-22	96688 2802 15 6351 0.548825122304 99.548884302304 101 46 84 8446 707716
-23	99490 77 23 259 0.548833972304 2.548822352304 3 28 28 84 2352
-24	99567 1019 24 6302 0.548833972304 99.548822352304 37 28 84 3052 254800
-25	100586 1055 25 6303 0.548833972304 99.548822352304 37 46 102 3718 376660
-26	101641 1055 25 6303 0.548833972304 99.548822352304 37 64 102 3736 378640
-27	102696 1964 25 6303 0.548833972304 99.548822352304 74 0 1 37 37
-28	104660 1055 25 6303 0.548833972304 99.548822352304 37 64 102 3736 378640
-29	105715 982 25 6303 0.548833972304 99.548822352304 37 0 0 0 0
-30	106697 1055 27 6305 0.548839732304 99.548831152304 37 64 102 3736 378640
-31	107752 1055 28 6306 0.548839782304 99.548831202304 37 64 102 3736 378640
-32	108807 1055 28 6306 0.548839782304 99.548831202304 37 64 102 3736 378640
-33	109862 1019 29 6307 0.548839782304 99.548831202304 37 46 84 3070 256132
-34	110881 51 30 220 0.548839782304 1.548886802304 2 28 28 56 1568
-35	110932 863 31 6215 0.548839782304 97.548866602304 31 28 84 2548 212464
-36	111795 893 32 6216 0.548839782304 97.548866602304 31 46 102 3106 314236
-37	112688 893 32 6216 0.548839782304 97.548866602304 31 64 102 3124 316216
-38	113581 1664 32 6216 0.548839782304 97.548866602304 62 0 1 31 31
-39	115245 893 32 6216 0.548839782304 97.548866602304 31 64 102 3124 316216
-40	116138 832 32 6216 0.548839782304 97.548866602304 31 0 0 0 0
-41	116970 893 34 6218 0.548845542304 97.548875402304 31 64 102 3124 316216
-42	117863 893 35 6219 0.548845592304 97.548875452304 31 64 102 3124 316216
-43	118756 893 35 6219 0.548845592304 97.548875452304 31 64 102 3124 316216
-44	119649 863 36 6220 0.548845592304 97.548875452304 31 46 84 2566 213796
-45	120512 25 44 44 0.548854442304 0.548854442304 1 28 28 28 784
-46	120537 1045 45 6309 0.548854442304 99.548831202304 38 28 84 3080 255584
-47	121582 1081 46 6310 0.548854442304 99.548831202304 38 46 102 3764 378776
-48	122663 1081 46 6310 0.548854442304 99.548831202304 38 64 102 3800 382736
-49	123744 2014 46 6310 0.548854442304 99.548831202304 76 0 1 38 38
-50	125758 1081 46 6310 0.548854442304 99.548831202304 38 64 102 3800 382736
-51	126839 1007 46 6310 0.548854442304 99.548831202304 38 0 0 0 0
-52	127846 1081 48 6312 0.548860202304 99.548840002304 38 64 102 3800 382736
-53	128927 1081 49 6313 0.548860252304 99.548840052304 38 64 102 3800 382736
-54	130008 1081 49 6313 0.548860252304 99.548840052304 38 64 102 3800 382736
-55	131089 1045 50 6314 0.548860252304 99.548840052304 38 46 84 3116 258248
-56	132134 51 51 183 0.548860252304 1.548848632304 2 28 28 56 1568
-57	132185 889 52 6208 0.548860252304 97.548857752304 32 28 84 2576 213248
-58	133074 919 53 6209 0.548860252304 97.548857752304 32 46 102 3152 316352
-59	133993 919 53 6209 0.548860252304 97.548857752304 32 64 102 3188 320312
-60	134912 1714 53 6209 0.548860252304 97.548857752304 64 0 1 32 32
-61	136626 919 53 6209 0.548860252304 97.548857752304 32 64 102 3188 320312
-62	137545 857 53 6209 0.548860252304 97.548857752304 32 0 0 0 0
-63	138402 919 55 6211 0.548866012304 97.548866552304 32 64 102 3188 320312
-64	139321 919 56 6212 0.548866062304 97.548866602304 32 64 102 3188 320312
-65	140240 919 56 6212 0.548866062304 97.548866602304 32 64 102 3188 320312
-66	141159 889 57 6213 0.548866062304 97.548866602304 32 46 84 2612 215912
-67	142048 102 65 303 0.548874912304 2.548869372304 4 28 28 112 3136
-68	142150 2800 66 6316 0.548874912304 99.548840052304 101 28 84 8428 706384
-69	144950 2900 67 6317 0.548874912304 99.548840052304 101 46 102 10246 1042516
-70	147850 2900 67 6317 0.548874912304 99.548840052304 101 64 102 10264 1044496
-71	150750 5398 67 6317 0.548874912304 99.548840052304 202 0 1 101 101
-72	156148 2900 67 6317 0.548874912304 99.548840052304 101 64 102 10264 1044496
-73	159048 2699 67 6317 0.548874912304 99.548840052304 101 0 0 0 0
-74	161747 2900 69 6319 0.548880672304 99.548848852304 101 64 102 10264 1044496
-75	164647 2900 70 6320 0.548880722304 99.548848902304 101 64 102 10264 1044496
-76	167547 2900 70 6320 0.548880722304 99.548848902304 101 64 102 10264 1044496
-77	170447 2800 71 6321 0.548880722304 99.548848902304 101 46 84 8446 707716
-78	173247 25 72 72 0.548880722304 0.548880722304 1 28 28 28 784
-79	173272 2800 73 6325 0.548880722304 99.548848902304 101 28 84 8428 706384
-80	176072 2900 74 6326 0.548880722304 99.548848902304 101 46 102 10246 1042516
-81	178972 2900 74 6326 0.548880722304 99.548848902304 101 64 102 10264 1044496
-82	181872 5398 74 6326 0.548880722304 99.548848902304 202 0 1 101 101
-83	187270 2900 74 6326 0.548880722304 99.548848902304 101 64 102 10264 1044496
-84	190170 2699 74 6326 0.548880722304 99.548848902304 101 0 0 0 0
-85	192869 2900 76 6328 0.548886482304 99.548857702304 101 64 102 10264 1044496
-86	195769 2900 77 6329 0.548886532304 99.548857752304 101 64 102 10264 1044496
-87	198669 2900 77 6329 0.548886532304 99.548857752304 101 64 102 10264 1044496
-88	201569 2800 78 6330 0.548886532304 99.548857752304 101 46 84 8446 707716
-89	204369 1018 96 6270 0.548904232304 98.548857752304 37 28 84 3052 254800
-90	205387 1054 97 6271 0.548904232304 98.548857752304 37 46 102 3718 376660
-91	206441 1054 97 6271 0.548904232304 98.548857752304 37 64 102 3736 378640
-92	207495 1962 97 6271 0.548904232304 98.548857752304 74 0 1 37 37
-93	209457 1054 97 6271 0.548904232304 98.548857752304 37 64 102 3736 378640
-94	210511 981 97 6271 0.548904232304 98.548857752304 37 0 0 0 0
-95	211492 1054 99 6273 0.548909992304 98.548866552304 37 64 102 3736 378640
-96	212546 1055 100 6274 0.548910042304 98.548866602304 37 64 102 3736 378640
-97	213601 1055 100 6274 0.548910042304 98.548866602304 37 64 102 3736 378640
-98	214656 1019 101 6275 0.548910042304 98.548866602304 37 46 84 3070 256132
-99	215675 52 102 266 0.548910042304 2.548828162304 2 28 28 56 1568
-100	215727 1006 103 6123 0.548910042304 96.548831202304 35 28 84 2884 240688
-101	216733 1040 104 6124 0.548910042304 96.548831202304 35 46 102 3514 355852
-102	217773 1040 104 6124 0.548910042304 96.548831202304 35 64 102 3532 357832
-103	218813 1942 104 6124 0.548910042304 96.548831202304 70 0 1 35 35
-104	220755 1040 104 6124 0.548910042304 96.548831202304 35 64 102 3532 357832
-105	221795 971 104 6124 0.548910042304 96.548831202304 35 0 0 0 0
-106	222766 1040 106 6126 0.548915802304 96.548840002304 35 64 102 3532 357832
-107	223806 1040 107 6127 0.548915852304 96.548840052304 35 64 102 3532 357832
-108	224846 1040 107 6127 0.548915852304 96.548840052304 35 64 102 3532 357832
-109	225886 1006 108 6128 0.548915852304 96.548840052304 35 46 84 2902 242020
-110	226892 27 116 116 0.548924702304 0.548924702304 1 28 28 28 784
-111	226919 1083 117 6277 0.548924702304 98.548866602304 38 28 84 3080 255584
-112	228002 1119 118 6278 0.548924702304 98.548866602304 38 46 102 3764 378776
-113	229121 1119 118 6278 0.548924702304 98.548866602304 38 64 102 3800 382736
-114	230240 2090 118 6278 0.548924702304 98.548866602304 76 0 1 38 38
-115	232330 1119 118 6278 0.548924702304 98.548866602304 38 64 102 3800 382736
-116	233449 1045 118 6278 0.548924702304 98.548866602304 38 0 0 0 0
-117	234494 1119 120 6280 0.548930462304 98.548875402304 38 64 102 3800 382736
-118	235613 1119 121 6281 0.548930512304 98.548875452304 38 64 102 3800 382736
-119	236732 1119 121 6281 0.548930512304 98.548875452304 38 64 102 3800 382736
-120	237851 1083 122 6282 0.548930512304 98.548875452304 38 46 84 3116 258248
-121	238934 1033 124 6116 0.548930512304 96.548822352304 36 28 84 2912 241472
-122	239967 1067 125 6117 0.548930512304 96.548822352304 36 46 102 3560 357968
-123	241034 1067 125 6117 0.548930512304 96.548822352304 36 64 102 3596 361928
-124	242101 1994 125 6117 0.548930512304 96.548822352304 72 0 1 36 36
-125	244095 1067 125 6117 0.548930512304 96.548822352304 36 64 102 3596 361928
-126	245162 997 125 6117 0.548930512304 96.548822352304 36 0 0 0 0
-127	246159 1067 127 6119 0.548936272304 96.548831152304 36 64 102 3596 361928
-128	247226 1067 128 6120 0.548936322304 96.548831202304 36 64 102 3596 361928
-129	248293 1067 128 6120 0.548936322304 96.548831202304 36 64 102 3596 361928
-130	249360 1033 129 6121 0.548936322304 96.548831202304 36 46 84 2948 244136
-131	250393 2867 145 6353 0.548954022304 99.548884302304 100 0 99 4950 328350
-132	253260 3580 145 6353 0.548954022304 99.548884302304 100 7.08e-005 0.00014052 0.00720782 5.259795076e-007
-133	256840 893 156 6240 1.548822352304 98.548822352304 31 28 84 2548 212464
-134	257733 923 157 6241 1.548822352304 98.548822352304 31 46 102 3106 314236
-135	258656 923 157 6241 1.548822352304 98.548822352304 31 64 102 3124 316216
-136	259579 1724 157 6241 1.548822352304 98.548822352304 62 0 1 31 31
-137	261303 923 157 6241 1.548822352304 98.548822352304 31 64 102 3124 316216
-138	262226 862 157 6241 1.548822352304 98.548822352304 31 0 0 0 0
-139	263088 923 159 6243 1.548828112304 98.548831152304 31 64 102 3124 316216
-140	264011 923 160 6244 1.548828162304 98.548831202304 31 64 102 3124 316216
-141	264934 923 160 6244 1.548828162304 98.548831202304 31 64 102 3124 316216
-142	265857 893 161 6245 1.548828162304 98.548831202304 31 46 84 2566 213796
-143	266750 54 162 310 1.548828162304 2.548875182304 2 28 28 56 1568
-144	266804 1007 163 6339 1.548828162304 99.548866602304 35 28 84 2884 240688
-145	267811 1041 164 6340 1.548828162304 99.548866602304 35 46 102 3514 355852
-146	268852 1041 164 6340 1.548828162304 99.548866602304 35 64 102 3532 357832
-147	269893 1944 164 6340 1.548828162304 99.548866602304 70 0 1 35 35
-148	271837 1041 164 6340 1.548828162304 99.548866602304 35 64 102 3532 357832
-149	272878 972 164 6340 1.548828162304 99.548866602304 35 0 0 0 0
-150	273850 1041 166 6342 1.548833922304 99.548875402304 35 64 102 3532 357832
-151	274891 1041 167 6343 1.548833972304 99.548875452304 35 64 102 3532 357832
-152	275932 1041 167 6343 1.548833972304 99.548875452304 35 64 102 3532 357832
-153	276973 1007 168 6344 1.548833972304 99.548875452304 35 46 84 2902 242020
-154	277980 27 176 176 1.548842822304 1.548842822304 1 28 28 28 784
-155	278007 920 177 6247 1.548842822304 98.548831202304 32 28 84 2576 213248
-156	278927 950 178 6248 1.548842822304 98.548831202304 32 46 102 3152 316352
-157	279877 950 178 6248 1.548842822304 98.548831202304 32 64 102 3188 320312
-158	280827 1776 178 6248 1.548842822304 98.548831202304 64 0 1 32 32
-159	282603 950 178 6248 1.548842822304 98.548831202304 32 64 102 3188 320312
-160	283553 888 178 6248 1.548842822304 98.548831202304 32 0 0 0 0
-161	284441 950 180 6250 1.548848582304 98.548840002304 32 64 102 3188 320312
-162	285391 950 181 6251 1.548848632304 98.548840052304 32 64 102 3188 320312
-163	286341 950 181 6251 1.548848632304 98.548840052304 32 64 102 3188 320312
-164	287291 920 182 6252 1.548848632304 98.548840052304 32 46 84 2612 215912
-165	288211 1034 184 6332 1.548848632304 99.548857752304 36 28 84 2912 241472
-166	289245 1068 185 6333 1.548848632304 99.548857752304 36 46 102 3560 357968
-167	290313 1068 185 6333 1.548848632304 99.548857752304 36 64 102 3596 361928
-168	291381 1996 185 6333 1.548848632304 99.548857752304 72 0 1 36 36
-169	293377 1068 185 6333 1.548848632304 99.548857752304 36 64 102 3596 361928
-170	294445 998 185 6333 1.548848632304 99.548857752304 36 0 0 0 0
-171	295443 1068 187 6335 1.548854392304 99.548866552304 36 64 102 3596 361928
-172	296511 1068 188 6336 1.548854442304 99.548866602304 36 64 102 3596 361928
-173	297579 1068 188 6336 1.548854442304 99.548866602304 36 64 102 3596 361928
-174	298647 1034 189 6337 1.548854442304 99.548866602304 36 46 84 2948 244136
-
+174	288620 999 189 6337 1.548854442304 99.548866602304 36 46 84 2948 244136

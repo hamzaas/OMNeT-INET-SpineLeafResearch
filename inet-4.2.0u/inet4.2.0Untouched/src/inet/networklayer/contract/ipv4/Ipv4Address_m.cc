@@ -1,5 +1,5 @@
 //
-// Generated file, do not edit! Created by nedtool 5.6 from inet/networklayer/contract/ipv4/Ipv4Address.msg.
+// Generated file, do not edit! Created by nedtool 5.6 from ./inet/networklayer/contract/ipv4/Ipv4Address.msg.
 //
 
 // Disable warnings about unused variables, empty switch stmts, etc:

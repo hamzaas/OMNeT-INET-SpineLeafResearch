@@ -1,5 +1,5 @@
 //
-// Generated file, do not edit! Created by nedtool 5.6 from inet/networklayer/rsvpte/RsvpPacket.msg.
+// Generated file, do not edit! Created by nedtool 5.6 from ./inet/networklayer/rsvpte/RsvpPacket.msg.
 //
 
 #ifndef __INET_RSVPPACKET_M_H
@@ -50,7 +50,7 @@ namespace inet {
 // }}
 
 /**
- * Enum generated from <tt>inet/networklayer/rsvpte/RsvpPacket.msg:27</tt> by nedtool.
+ * Enum generated from <tt>.\inet/networklayer/rsvpte/RsvpPacket.msg:27</tt> by nedtool.
  * <pre>
  * enum RsvpConstants
  * {
@@ -75,7 +75,7 @@ enum RsvpConstants {
 };
 
 /**
- * Class generated from <tt>inet/networklayer/rsvpte/RsvpPacket.msg:41</tt> by nedtool.
+ * Class generated from <tt>.\inet/networklayer/rsvpte/RsvpPacket.msg:41</tt> by nedtool.
  * <pre>
  * //
  * // RSVP message common part
@@ -116,7 +116,7 @@ inline void doParsimPacking(omnetpp::cCommBuffer *b, const RsvpMessage& obj) {ob
 inline void doParsimUnpacking(omnetpp::cCommBuffer *b, RsvpMessage& obj) {obj.parsimUnpack(b);}
 
 /**
- * Class generated from <tt>inet/networklayer/rsvpte/RsvpPacket.msg:49</tt> by nedtool.
+ * Class generated from <tt>.\inet/networklayer/rsvpte/RsvpPacket.msg:49</tt> by nedtool.
  * <pre>
  * //
  * // FIXME missing documentation

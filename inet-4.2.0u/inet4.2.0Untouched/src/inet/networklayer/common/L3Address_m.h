@@ -1,5 +1,5 @@
 //
-// Generated file, do not edit! Created by nedtool 5.6 from inet/networklayer/common/L3Address.msg.
+// Generated file, do not edit! Created by nedtool 5.6 from ./inet/networklayer/common/L3Address.msg.
 //
 
 #ifndef __INET_L3ADDRESS_M_H

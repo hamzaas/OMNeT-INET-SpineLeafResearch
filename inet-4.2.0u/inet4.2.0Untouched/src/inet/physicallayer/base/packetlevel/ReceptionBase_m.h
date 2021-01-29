@@ -1,5 +1,5 @@
 //
-// Generated file, do not edit! Created by nedtool 5.6 from inet/physicallayer/base/packetlevel/ReceptionBase.msg.
+// Generated file, do not edit! Created by nedtool 5.6 from ./inet/physicallayer/base/packetlevel/ReceptionBase.msg.
 //
 
 #ifndef __INET__PHYSICALLAYER_RECEPTIONBASE_M_H
