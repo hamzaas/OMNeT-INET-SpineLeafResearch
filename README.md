@@ -23,7 +23,7 @@ Code for SpineLeaf DCN implemented in Omnetpp and INET.
 5) Once you have imported both projects into OMNet++. Confirm that Spine-Leaf-ManualDCN is referencing inetu. Right click Spine-LeafDCN, then go to
       properties > project references, and make sure inetu is checked.
       
-####### From here you can either run in the GUI or follow the below steps to run from command line. ########
+ From here you can either run in the GUI or follow the below steps to run from command line.
 
 6) Another thing you need to check is in Spine-LeafDCN > _XHost_SpineLeaf > XHost_SpineLeaf.ini and make sure that the "**.configurator.config = xmldoc" value
       is set to the command line option. Just simply comment out the GUI value and comment in the commmand line value. Should be the line adjacent.
