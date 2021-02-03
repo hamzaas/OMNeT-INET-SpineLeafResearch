@@ -4,9 +4,9 @@
   C:\Users\Ethan\Documents\School\DCN_Research\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled_release.h \
   inet/routing/ospfv3/process/Ospfv3Area.cc \
   inet/routing/ospfv3/process/Ospfv3Area.h inet/common/INETDefs.h \
-  inet/common/precompiled_release.h inet/opp_defines.h inet/features.h \
-  inet/common/Compat.h inet/common/InitStages.h \
-  inet/networklayer/contract/ipv4/Ipv4Address.h \
+  inet/common/precompiled_release.h inet/common/precompiled.h \
+  inet/opp_defines.h inet/features.h inet/common/Compat.h \
+  inet/common/InitStages.h inet/networklayer/contract/ipv4/Ipv4Address.h \
   inet/routing/ospfv3/Ospfv3Packet_m.h inet/common/INETDefs_m.h \
   inet/common/packet/chunk/Chunk_m.h inet/common/Units_m.h \
   inet/common/Units.h inet/common/INETMath.h \
@@ -70,6 +70,8 @@ inet/routing/ospfv3/process/Ospfv3Area.h:
 inet/common/INETDefs.h:
 
 inet/common/precompiled_release.h:
+
+inet/common/precompiled.h:
 
 inet/opp_defines.h:
 

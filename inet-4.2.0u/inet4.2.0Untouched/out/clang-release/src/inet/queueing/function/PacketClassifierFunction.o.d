@@ -5,8 +5,8 @@
   inet/queueing/function/PacketClassifierFunction.cc \
   inet/linklayer/common/UserPriorityTag_m.h inet/common/INETDefs_m.h \
   inet/common/INETDefs.h inet/common/precompiled_release.h \
-  inet/opp_defines.h inet/features.h inet/common/Compat.h \
-  inet/common/InitStages.h inet/common/TagBase_m.h \
+  inet/common/precompiled.h inet/opp_defines.h inet/features.h \
+  inet/common/Compat.h inet/common/InitStages.h inet/common/TagBase_m.h \
   inet/queueing/function/PacketClassifierFunction.h \
   inet/queueing/contract/IPacketClassifierFunction.h \
   inet/common/packet/Packet.h inet/common/packet/chunk/BitsChunk.h \
@@ -33,6 +33,8 @@ inet/common/INETDefs_m.h:
 inet/common/INETDefs.h:
 
 inet/common/precompiled_release.h:
+
+inet/common/precompiled.h:
 
 inet/opp_defines.h:
 

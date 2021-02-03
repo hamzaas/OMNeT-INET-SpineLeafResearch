@@ -6,8 +6,8 @@
   inet/queueing/tokengenerator/TimeBasedTokenGenerator.h \
   inet/queueing/base/TokenGeneratorBase.h inet/common/StringFormat.h \
   inet/common/INETDefs.h inet/common/precompiled_release.h \
-  inet/opp_defines.h inet/features.h inet/common/Compat.h \
-  inet/common/InitStages.h \
+  inet/common/precompiled.h inet/opp_defines.h inet/features.h \
+  inet/common/Compat.h inet/common/InitStages.h \
   inet/queueing/contract/IPacketQueueingElement.h \
   inet/common/packet/Packet.h inet/common/packet/chunk/BitsChunk.h \
   inet/common/packet/chunk/Chunk.h inet/common/MemoryInputStream.h \
@@ -45,6 +45,8 @@ inet/common/StringFormat.h:
 inet/common/INETDefs.h:
 
 inet/common/precompiled_release.h:
+
+inet/common/precompiled.h:
 
 inet/opp_defines.h:
 

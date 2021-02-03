@@ -5,8 +5,9 @@
   inet/physicallayer/contract/packetlevel/IRadioSignal.cc \
   inet/physicallayer/contract/packetlevel/IRadioSignal.h \
   inet/common/geometry/common/Coord.h inet/common/INETDefs.h \
-  inet/common/precompiled_release.h inet/opp_defines.h inet/features.h \
-  inet/common/Compat.h inet/common/InitStages.h inet/common/INETMath.h \
+  inet/common/precompiled_release.h inet/common/precompiled.h \
+  inet/opp_defines.h inet/features.h inet/common/Compat.h \
+  inet/common/InitStages.h inet/common/INETMath.h \
   inet/common/math/Functions.h inet/common/math/PrimitiveFunctions.h \
   inet/common/math/FunctionBase.h inet/common/math/IFunction.h \
   inet/common/math/Domain.h inet/common/math/Interval.h \
@@ -33,6 +34,8 @@ inet/common/geometry/common/Coord.h:
 inet/common/INETDefs.h:
 
 inet/common/precompiled_release.h:
+
+inet/common/precompiled.h:
 
 inet/opp_defines.h:
 

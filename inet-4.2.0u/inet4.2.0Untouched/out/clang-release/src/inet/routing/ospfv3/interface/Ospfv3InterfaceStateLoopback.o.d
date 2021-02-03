@@ -5,9 +5,9 @@
   inet/routing/ospfv3/interface/Ospfv3InterfaceStateLoopback.cc \
   inet/routing/ospfv3/Ospfv3Timers.h \
   inet/routing/ospfv3/interface/Ospfv3Interface.h inet/common/INETDefs.h \
-  inet/common/precompiled_release.h inet/opp_defines.h inet/features.h \
-  inet/common/Compat.h inet/common/InitStages.h \
-  inet/common/ModuleAccess.h \
+  inet/common/precompiled_release.h inet/common/precompiled.h \
+  inet/opp_defines.h inet/features.h inet/common/Compat.h \
+  inet/common/InitStages.h inet/common/ModuleAccess.h \
   inet/networklayer/contract/IInterfaceTable.h \
   inet/networklayer/common/InterfaceEntry.h \
   inet/common/packet/tag/TagSet.h inet/common/Simsignals.h \
@@ -77,6 +77,8 @@ inet/routing/ospfv3/interface/Ospfv3Interface.h:
 inet/common/INETDefs.h:
 
 inet/common/precompiled_release.h:
+
+inet/common/precompiled.h:
 
 inet/opp_defines.h:
 

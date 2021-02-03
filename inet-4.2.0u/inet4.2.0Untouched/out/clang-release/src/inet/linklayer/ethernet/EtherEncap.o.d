@@ -5,8 +5,8 @@
   inet/linklayer/ethernet/EtherEncap.cc \
   inet/applications/common/SocketTag_m.h inet/common/INETDefs_m.h \
   inet/common/INETDefs.h inet/common/precompiled_release.h \
-  inet/opp_defines.h inet/features.h inet/common/Compat.h \
-  inet/common/InitStages.h inet/common/TagBase_m.h \
+  inet/common/precompiled.h inet/opp_defines.h inet/features.h \
+  inet/common/Compat.h inet/common/InitStages.h inet/common/TagBase_m.h \
   inet/common/INETUtils.h inet/common/IProtocolRegistrationListener.h \
   inet/common/Protocol.h inet/common/ProtocolTag_m.h \
   inet/common/Protocol_m.h inet/common/packet/chunk/Chunk_m.h \
@@ -67,6 +67,8 @@ inet/common/INETDefs_m.h:
 inet/common/INETDefs.h:
 
 inet/common/precompiled_release.h:
+
+inet/common/precompiled.h:
 
 inet/opp_defines.h:
 

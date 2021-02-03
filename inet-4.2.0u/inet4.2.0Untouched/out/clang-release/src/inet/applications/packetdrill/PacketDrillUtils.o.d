@@ -5,8 +5,8 @@
   inet/applications/packetdrill/PacketDrillUtils.cc \
   inet/applications/packetdrill/PacketDrillUtils.h \
   inet/common/INETDefs.h inet/common/precompiled_release.h \
-  inet/opp_defines.h inet/features.h inet/common/Compat.h \
-  inet/common/InitStages.h \
+  inet/common/precompiled.h inet/opp_defines.h inet/features.h \
+  inet/common/Compat.h inet/common/InitStages.h \
   C:/Users/Ethan/Documents/School/DCN_Research/omnetpp-5.6.2-src-windows/omnetpp-5.6.2/include\omnetpp/platdep/sockets.h \
   inet/networklayer/common/L3Address.h \
   inet/linklayer/common/MacAddress.h \
@@ -74,6 +74,8 @@ inet/applications/packetdrill/PacketDrillUtils.h:
 inet/common/INETDefs.h:
 
 inet/common/precompiled_release.h:
+
+inet/common/precompiled.h:
 
 inet/opp_defines.h:
 

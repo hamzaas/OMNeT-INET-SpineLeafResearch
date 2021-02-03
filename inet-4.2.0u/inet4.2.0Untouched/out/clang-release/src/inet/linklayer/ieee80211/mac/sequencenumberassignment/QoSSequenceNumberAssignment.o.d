@@ -5,8 +5,9 @@
   inet/linklayer/ieee80211/mac/sequencenumberassignment/QoSSequenceNumberAssignment.cc \
   inet/linklayer/ieee80211/mac/sequencenumberassignment/QoSSequenceNumberAssignment.h \
   inet/linklayer/common/MacAddress.h inet/common/INETDefs.h \
-  inet/common/precompiled_release.h inet/opp_defines.h inet/features.h \
-  inet/common/Compat.h inet/common/InitStages.h \
+  inet/common/precompiled_release.h inet/common/precompiled.h \
+  inet/opp_defines.h inet/features.h inet/common/Compat.h \
+  inet/common/InitStages.h \
   inet/linklayer/ieee80211/mac/common/SequenceControlField.h \
   inet/linklayer/ieee80211/mac/common/Ieee80211Defs.h \
   inet/linklayer/ieee80211/mac/Ieee80211Frame_m.h \
@@ -42,6 +43,8 @@ inet/linklayer/common/MacAddress.h:
 inet/common/INETDefs.h:
 
 inet/common/precompiled_release.h:
+
+inet/common/precompiled.h:
 
 inet/opp_defines.h:
 

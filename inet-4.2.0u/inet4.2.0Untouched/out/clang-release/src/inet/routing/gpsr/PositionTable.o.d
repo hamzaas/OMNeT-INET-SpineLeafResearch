@@ -4,9 +4,10 @@
   C:\Users\Ethan\Documents\School\DCN_Research\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled_release.h \
   inet/routing/gpsr/PositionTable.cc inet/routing/gpsr/PositionTable.h \
   inet/common/INETDefs.h inet/common/precompiled_release.h \
-  inet/opp_defines.h inet/features.h inet/common/Compat.h \
-  inet/common/InitStages.h inet/common/geometry/common/Coord.h \
-  inet/common/INETMath.h inet/networklayer/common/L3Address.h \
+  inet/common/precompiled.h inet/opp_defines.h inet/features.h \
+  inet/common/Compat.h inet/common/InitStages.h \
+  inet/common/geometry/common/Coord.h inet/common/INETMath.h \
+  inet/networklayer/common/L3Address.h \
   inet/linklayer/common/MacAddress.h \
   inet/networklayer/common/ModuleIdAddress.h \
   inet/networklayer/common/ModulePathAddress.h \
@@ -25,6 +26,8 @@ inet/routing/gpsr/PositionTable.h:
 inet/common/INETDefs.h:
 
 inet/common/precompiled_release.h:
+
+inet/common/precompiled.h:
 
 inet/opp_defines.h:
 

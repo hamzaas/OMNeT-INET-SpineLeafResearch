@@ -5,8 +5,8 @@
   inet/routing/ospfv2/interface/Ospfv2InterfaceStateLoopback.cc \
   inet/routing/ospfv2/interface/Ospfv2InterfaceStateDown.h \
   inet/common/INETDefs.h inet/common/precompiled_release.h \
-  inet/opp_defines.h inet/features.h inet/common/Compat.h \
-  inet/common/InitStages.h \
+  inet/common/precompiled.h inet/opp_defines.h inet/features.h \
+  inet/common/Compat.h inet/common/InitStages.h \
   inet/routing/ospfv2/interface/Ospfv2InterfaceState.h \
   inet/routing/ospfv2/interface/Ospfv2Interface.h \
   inet/common/packet/Packet.h inet/common/packet/chunk/BitsChunk.h \
@@ -61,6 +61,8 @@ inet/routing/ospfv2/interface/Ospfv2InterfaceStateDown.h:
 inet/common/INETDefs.h:
 
 inet/common/precompiled_release.h:
+
+inet/common/precompiled.h:
 
 inet/opp_defines.h:
 

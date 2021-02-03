@@ -5,8 +5,8 @@
   inet/linklayer/ieee80211/llc/Ieee80211LlcLpd.cc \
   inet/common/ProtocolGroup.h inet/common/Protocol.h \
   inet/common/INETDefs.h inet/common/precompiled_release.h \
-  inet/opp_defines.h inet/features.h inet/common/Compat.h \
-  inet/common/InitStages.h \
+  inet/common/precompiled.h inet/opp_defines.h inet/features.h \
+  inet/common/Compat.h inet/common/InitStages.h \
   inet/linklayer/ieee80211/llc/Ieee80211LlcLpd.h \
   inet/common/packet/Packet.h inet/common/packet/chunk/BitsChunk.h \
   inet/common/packet/chunk/Chunk.h inet/common/MemoryInputStream.h \
@@ -50,6 +50,8 @@ inet/common/Protocol.h:
 inet/common/INETDefs.h:
 
 inet/common/precompiled_release.h:
+
+inet/common/precompiled.h:
 
 inet/opp_defines.h:
 

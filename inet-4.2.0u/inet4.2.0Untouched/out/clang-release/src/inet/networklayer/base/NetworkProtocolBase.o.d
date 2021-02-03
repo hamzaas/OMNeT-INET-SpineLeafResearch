@@ -5,8 +5,8 @@
   inet/networklayer/base/NetworkProtocolBase.cc \
   inet/applications/common/SocketTag_m.h inet/common/INETDefs_m.h \
   inet/common/INETDefs.h inet/common/precompiled_release.h \
-  inet/opp_defines.h inet/features.h inet/common/Compat.h \
-  inet/common/InitStages.h inet/common/TagBase_m.h \
+  inet/common/precompiled.h inet/opp_defines.h inet/features.h \
+  inet/common/Compat.h inet/common/InitStages.h inet/common/TagBase_m.h \
   inet/common/INETUtils.h inet/common/ModuleAccess.h \
   inet/networklayer/contract/IInterfaceTable.h \
   inet/networklayer/common/InterfaceEntry.h \
@@ -59,6 +59,8 @@ inet/common/INETDefs_m.h:
 inet/common/INETDefs.h:
 
 inet/common/precompiled_release.h:
+
+inet/common/precompiled.h:
 
 inet/opp_defines.h:
 

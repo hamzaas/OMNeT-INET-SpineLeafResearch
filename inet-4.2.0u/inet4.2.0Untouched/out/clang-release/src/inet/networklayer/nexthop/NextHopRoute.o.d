@@ -5,8 +5,9 @@
   inet/networklayer/nexthop/NextHopRoute.cc \
   inet/networklayer/nexthop/NextHopInterfaceData.h \
   inet/common/INETDefs.h inet/common/precompiled_release.h \
-  inet/opp_defines.h inet/features.h inet/common/Compat.h \
-  inet/common/InitStages.h inet/networklayer/common/InterfaceEntry.h \
+  inet/common/precompiled.h inet/opp_defines.h inet/features.h \
+  inet/common/Compat.h inet/common/InitStages.h \
+  inet/networklayer/common/InterfaceEntry.h \
   inet/common/packet/tag/TagSet.h inet/common/Simsignals.h \
   inet/common/Simsignals_m.h inet/common/INETDefs_m.h \
   inet/linklayer/common/MacAddress.h \
@@ -33,6 +34,8 @@ inet/networklayer/nexthop/NextHopInterfaceData.h:
 inet/common/INETDefs.h:
 
 inet/common/precompiled_release.h:
+
+inet/common/precompiled.h:
 
 inet/opp_defines.h:
 

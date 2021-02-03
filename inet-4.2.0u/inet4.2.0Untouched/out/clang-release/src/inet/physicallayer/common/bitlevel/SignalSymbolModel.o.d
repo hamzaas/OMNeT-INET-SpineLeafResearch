@@ -6,8 +6,9 @@
   inet/physicallayer/common/bitlevel/SignalSymbolModel.h \
   inet/physicallayer/contract/bitlevel/ISignalSymbolModel.h \
   inet/physicallayer/contract/bitlevel/ISymbol.h inet/common/INETDefs.h \
-  inet/common/precompiled_release.h inet/opp_defines.h inet/features.h \
-  inet/common/Compat.h inet/common/InitStages.h \
+  inet/common/precompiled_release.h inet/common/precompiled.h \
+  inet/opp_defines.h inet/features.h inet/common/Compat.h \
+  inet/common/InitStages.h \
   inet/physicallayer/contract/packetlevel/IModulation.h \
   inet/physicallayer/contract/packetlevel/IPrintableObject.h \
   inet/physicallayer/base/packetlevel/PhysicalLayerDefs.h \
@@ -28,6 +29,8 @@ inet/physicallayer/contract/bitlevel/ISymbol.h:
 inet/common/INETDefs.h:
 
 inet/common/precompiled_release.h:
+
+inet/common/precompiled.h:
 
 inet/opp_defines.h:
 

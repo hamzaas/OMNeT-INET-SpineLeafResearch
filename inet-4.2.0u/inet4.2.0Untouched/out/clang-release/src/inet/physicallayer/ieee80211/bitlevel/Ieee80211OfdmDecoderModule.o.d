@@ -5,8 +5,8 @@
   inet/physicallayer/ieee80211/bitlevel/Ieee80211OfdmDecoderModule.cc \
   inet/physicallayer/ieee80211/bitlevel/Ieee80211OfdmDecoderModule.h \
   inet/common/INETDefs.h inet/common/precompiled_release.h \
-  inet/opp_defines.h inet/features.h inet/common/Compat.h \
-  inet/common/InitStages.h \
+  inet/common/precompiled.h inet/opp_defines.h inet/features.h \
+  inet/common/Compat.h inet/common/InitStages.h \
   inet/physicallayer/common/bitlevel/AdditiveScrambler.h \
   inet/common/BitVector.h inet/common/ShortBitVector.h \
   inet/physicallayer/common/bitlevel/AdditiveScrambling.h \
@@ -58,6 +58,8 @@ inet/physicallayer/ieee80211/bitlevel/Ieee80211OfdmDecoderModule.h:
 inet/common/INETDefs.h:
 
 inet/common/precompiled_release.h:
+
+inet/common/precompiled.h:
 
 inet/opp_defines.h:
 

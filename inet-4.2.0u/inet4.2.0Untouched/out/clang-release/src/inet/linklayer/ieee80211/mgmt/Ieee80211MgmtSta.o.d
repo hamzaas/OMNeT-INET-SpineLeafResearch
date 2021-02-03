@@ -4,9 +4,9 @@
   C:\Users\Ethan\Documents\School\DCN_Research\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled_release.h \
   inet/linklayer/ieee80211/mgmt/Ieee80211MgmtSta.cc \
   inet/common/INETUtils.h inet/common/INETDefs.h \
-  inet/common/precompiled_release.h inet/opp_defines.h inet/features.h \
-  inet/common/Compat.h inet/common/InitStages.h \
-  inet/common/ModuleAccess.h \
+  inet/common/precompiled_release.h inet/common/precompiled.h \
+  inet/opp_defines.h inet/features.h inet/common/Compat.h \
+  inet/common/InitStages.h inet/common/ModuleAccess.h \
   inet/networklayer/contract/IInterfaceTable.h \
   inet/networklayer/common/InterfaceEntry.h \
   inet/common/packet/tag/TagSet.h inet/common/Simsignals.h \
@@ -137,6 +137,8 @@ inet/common/INETUtils.h:
 inet/common/INETDefs.h:
 
 inet/common/precompiled_release.h:
+
+inet/common/precompiled.h:
 
 inet/opp_defines.h:
 

@@ -4,9 +4,9 @@
   C:\Users\Ethan\Documents\School\DCN_Research\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled_release.h \
   inet/applications/sctpapp/SctpClient.cc \
   inet/applications/sctpapp/SctpClient.h inet/common/INETDefs.h \
-  inet/common/precompiled_release.h inet/opp_defines.h inet/features.h \
-  inet/common/Compat.h inet/common/InitStages.h \
-  inet/common/lifecycle/LifecycleUnsupported.h \
+  inet/common/precompiled_release.h inet/common/precompiled.h \
+  inet/opp_defines.h inet/features.h inet/common/Compat.h \
+  inet/common/InitStages.h inet/common/lifecycle/LifecycleUnsupported.h \
   inet/common/lifecycle/ILifecycle.h \
   inet/common/lifecycle/LifecycleOperation.h \
   inet/transportlayer/contract/sctp/SctpSocket.h \
@@ -77,6 +77,8 @@ inet/applications/sctpapp/SctpClient.h:
 inet/common/INETDefs.h:
 
 inet/common/precompiled_release.h:
+
+inet/common/precompiled.h:
 
 inet/opp_defines.h:
 

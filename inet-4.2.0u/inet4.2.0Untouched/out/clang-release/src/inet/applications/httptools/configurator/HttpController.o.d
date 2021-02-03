@@ -5,8 +5,8 @@
   inet/applications/httptools/configurator/HttpController.cc \
   inet/applications/httptools/configurator/HttpController.h \
   inet/common/INETDefs.h inet/common/precompiled_release.h \
-  inet/opp_defines.h inet/features.h inet/common/Compat.h \
-  inet/common/InitStages.h inet/common/INETMath.h \
+  inet/common/precompiled.h inet/opp_defines.h inet/features.h \
+  inet/common/Compat.h inet/common/InitStages.h inet/common/INETMath.h \
   inet/applications/httptools/common/HttpEventMessages_m.h \
   inet/common/INETDefs_m.h \
   inet/applications/httptools/common/HttpRandom.h \
@@ -46,6 +46,8 @@ inet/applications/httptools/configurator/HttpController.h:
 inet/common/INETDefs.h:
 
 inet/common/precompiled_release.h:
+
+inet/common/precompiled.h:
 
 inet/opp_defines.h:
 

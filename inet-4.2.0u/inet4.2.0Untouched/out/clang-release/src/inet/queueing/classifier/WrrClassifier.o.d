@@ -4,8 +4,9 @@
   C:\Users\Ethan\Documents\School\DCN_Research\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled_release.h \
   inet/queueing/classifier/WrrClassifier.cc inet/common/INETUtils.h \
   inet/common/INETDefs.h inet/common/precompiled_release.h \
-  inet/opp_defines.h inet/features.h inet/common/Compat.h \
-  inet/common/InitStages.h inet/queueing/classifier/WrrClassifier.h \
+  inet/common/precompiled.h inet/opp_defines.h inet/features.h \
+  inet/common/Compat.h inet/common/InitStages.h \
+  inet/queueing/classifier/WrrClassifier.h \
   inet/queueing/base/PacketClassifierBase.h \
   inet/queueing/base/PassivePacketSinkBase.h \
   inet/queueing/base/PacketSinkBase.h \
@@ -38,6 +39,8 @@ inet/common/INETUtils.h:
 inet/common/INETDefs.h:
 
 inet/common/precompiled_release.h:
+
+inet/common/precompiled.h:
 
 inet/opp_defines.h:
 

@@ -5,8 +5,8 @@
   inet/routing/ospfv3/interface/Ospfv3InterfaceState.cc \
   inet/routing/ospfv3/interface/Ospfv3InterfaceState.h \
   inet/common/INETDefs.h inet/common/precompiled_release.h \
-  inet/opp_defines.h inet/features.h inet/common/Compat.h \
-  inet/common/InitStages.h \
+  inet/common/precompiled.h inet/opp_defines.h inet/features.h \
+  inet/common/Compat.h inet/common/InitStages.h \
   inet/routing/ospfv3/interface/Ospfv3Interface.h \
   inet/common/ModuleAccess.h \
   inet/networklayer/contract/IInterfaceTable.h \
@@ -76,6 +76,8 @@ inet/routing/ospfv3/interface/Ospfv3InterfaceState.h:
 inet/common/INETDefs.h:
 
 inet/common/precompiled_release.h:
+
+inet/common/precompiled.h:
 
 inet/opp_defines.h:
 

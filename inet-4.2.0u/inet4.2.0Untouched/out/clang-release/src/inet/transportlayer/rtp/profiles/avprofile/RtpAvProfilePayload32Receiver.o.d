@@ -5,8 +5,9 @@
   inet/transportlayer/rtp/profiles/avprofile/RtpAvProfilePayload32Receiver.cc \
   inet/transportlayer/rtp/profiles/avprofile/RtpAvProfilePayload32Receiver.h \
   inet/common/INETDefs.h inet/common/precompiled_release.h \
-  inet/opp_defines.h inet/features.h inet/common/Compat.h \
-  inet/common/InitStages.h inet/transportlayer/rtp/RtpPayloadReceiver.h \
+  inet/common/precompiled.h inet/opp_defines.h inet/features.h \
+  inet/common/Compat.h inet/common/InitStages.h \
+  inet/transportlayer/rtp/RtpPayloadReceiver.h \
   inet/common/packet/Packet.h inet/common/packet/chunk/BitsChunk.h \
   inet/common/packet/chunk/Chunk.h inet/common/MemoryInputStream.h \
   inet/common/Units.h inet/common/INETMath.h \
@@ -37,6 +38,8 @@ inet/transportlayer/rtp/profiles/avprofile/RtpAvProfilePayload32Receiver.h:
 inet/common/INETDefs.h:
 
 inet/common/precompiled_release.h:
+
+inet/common/precompiled.h:
 
 inet/opp_defines.h:
 

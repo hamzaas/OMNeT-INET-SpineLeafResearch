@@ -5,8 +5,9 @@
   inet/transportlayer/tcp/flavours/TcpSegmentTransmitInfoList.cc \
   inet/transportlayer/tcp/flavours/TcpSegmentTransmitInfoList.h \
   inet/common/INETDefs.h inet/common/precompiled_release.h \
-  inet/opp_defines.h inet/features.h inet/common/Compat.h \
-  inet/common/InitStages.h inet/transportlayer/tcp/flavours/TcpBaseAlg.h \
+  inet/common/precompiled.h inet/opp_defines.h inet/features.h \
+  inet/common/Compat.h inet/common/InitStages.h \
+  inet/transportlayer/tcp/flavours/TcpBaseAlg.h \
   inet/transportlayer/tcp/TcpAlgorithm.h \
   inet/transportlayer/tcp/TcpConnection.h \
   inet/networklayer/common/L3Address.h \
@@ -61,6 +62,8 @@ inet/transportlayer/tcp/flavours/TcpSegmentTransmitInfoList.h:
 inet/common/INETDefs.h:
 
 inet/common/precompiled_release.h:
+
+inet/common/precompiled.h:
 
 inet/opp_defines.h:
 

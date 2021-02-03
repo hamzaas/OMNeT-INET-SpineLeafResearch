@@ -5,8 +5,8 @@
   inet/routing/ospfv2/messagehandler/LinkStateAcknowledgementHandler.cc \
   inet/routing/ospfv2/messagehandler/LinkStateAcknowledgementHandler.h \
   inet/common/INETDefs.h inet/common/precompiled_release.h \
-  inet/opp_defines.h inet/features.h inet/common/Compat.h \
-  inet/common/InitStages.h \
+  inet/common/precompiled.h inet/opp_defines.h inet/features.h \
+  inet/common/Compat.h inet/common/InitStages.h \
   inet/routing/ospfv2/messagehandler/IMessageHandler.h \
   inet/common/packet/Packet.h inet/common/packet/chunk/BitsChunk.h \
   inet/common/packet/chunk/Chunk.h inet/common/MemoryInputStream.h \
@@ -64,6 +64,8 @@ inet/routing/ospfv2/messagehandler/LinkStateAcknowledgementHandler.h:
 inet/common/INETDefs.h:
 
 inet/common/precompiled_release.h:
+
+inet/common/precompiled.h:
 
 inet/opp_defines.h:
 

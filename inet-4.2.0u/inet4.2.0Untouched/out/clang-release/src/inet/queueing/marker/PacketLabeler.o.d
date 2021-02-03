@@ -5,8 +5,8 @@
   inet/queueing/marker/PacketLabeler.cc \
   inet/queueing/common/LabelsTag_m.h inet/common/INETDefs_m.h \
   inet/common/INETDefs.h inet/common/precompiled_release.h \
-  inet/opp_defines.h inet/features.h inet/common/Compat.h \
-  inet/common/InitStages.h inet/common/TagBase_m.h \
+  inet/common/precompiled.h inet/opp_defines.h inet/features.h \
+  inet/common/Compat.h inet/common/InitStages.h inet/common/TagBase_m.h \
   inet/queueing/marker/PacketLabeler.h \
   inet/queueing/base/PacketLabelerBase.h \
   inet/queueing/base/PacketMarkerBase.h \
@@ -45,6 +45,8 @@ inet/common/INETDefs_m.h:
 inet/common/INETDefs.h:
 
 inet/common/precompiled_release.h:
+
+inet/common/precompiled.h:
 
 inet/opp_defines.h:
 

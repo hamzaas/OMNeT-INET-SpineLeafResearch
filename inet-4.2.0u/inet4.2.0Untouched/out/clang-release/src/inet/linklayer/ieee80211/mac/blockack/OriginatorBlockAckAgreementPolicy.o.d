@@ -8,8 +8,8 @@
   inet/linklayer/ieee80211/mac/channelaccess/Edcaf.h \
   inet/linklayer/ieee80211/mac/common/AccessCategory.h \
   inet/common/INETDefs.h inet/common/precompiled_release.h \
-  inet/opp_defines.h inet/features.h inet/common/Compat.h \
-  inet/common/InitStages.h \
+  inet/common/precompiled.h inet/opp_defines.h inet/features.h \
+  inet/common/Compat.h inet/common/InitStages.h \
   inet/linklayer/ieee80211/mac/common/ModeSetListener.h \
   inet/physicallayer/ieee80211/mode/Ieee80211ModeSet.h \
   inet/common/DelayedInitializer.h \
@@ -168,6 +168,8 @@ inet/linklayer/ieee80211/mac/common/AccessCategory.h:
 inet/common/INETDefs.h:
 
 inet/common/precompiled_release.h:
+
+inet/common/precompiled.h:
 
 inet/opp_defines.h:
 

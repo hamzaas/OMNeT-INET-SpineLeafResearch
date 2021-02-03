@@ -5,8 +5,8 @@
   inet/applications/httptools/browser/HttpBrowserBase.cc \
   inet/applications/httptools/browser/HttpBrowserBase.h \
   inet/common/INETDefs.h inet/common/precompiled_release.h \
-  inet/opp_defines.h inet/features.h inet/common/Compat.h \
-  inet/common/InitStages.h \
+  inet/common/precompiled.h inet/opp_defines.h inet/features.h \
+  inet/common/Compat.h inet/common/InitStages.h \
   inet/applications/httptools/common/HttpNodeBase.h \
   inet/common/lifecycle/LifecycleUnsupported.h \
   inet/common/lifecycle/ILifecycle.h \
@@ -54,6 +54,8 @@ inet/applications/httptools/browser/HttpBrowserBase.h:
 inet/common/INETDefs.h:
 
 inet/common/precompiled_release.h:
+
+inet/common/precompiled.h:
 
 inet/opp_defines.h:
 

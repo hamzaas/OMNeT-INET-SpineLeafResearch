@@ -3,7 +3,7 @@ last-configname=Traffic_1
 last-runnumber=0
 
 [RunModeProfiles]
-run-playback-speed=1.0715193052376064
+run-playback-speed=20.417379446695296
 run-min-playback-speed=0.01
 run-max-playback-speed=100
 run-min-animation-speed=nan

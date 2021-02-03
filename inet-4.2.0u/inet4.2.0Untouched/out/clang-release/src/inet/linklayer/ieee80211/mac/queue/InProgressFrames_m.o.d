@@ -5,10 +5,10 @@
   inet/linklayer/ieee80211/mac/queue/InProgressFrames_m.cc \
   inet/linklayer/ieee80211/mac/queue/InProgressFrames_m.h \
   inet/common/INETDefs_m.h inet/common/INETDefs.h \
-  inet/common/precompiled_release.h inet/opp_defines.h inet/features.h \
-  inet/common/Compat.h inet/common/InitStages.h \
-  inet/common/packet/Packet_m.h inet/common/Units_m.h \
-  inet/common/Units.h inet/common/INETMath.h \
+  inet/common/precompiled_release.h inet/common/precompiled.h \
+  inet/opp_defines.h inet/features.h inet/common/Compat.h \
+  inet/common/InitStages.h inet/common/packet/Packet_m.h \
+  inet/common/Units_m.h inet/common/Units.h inet/common/INETMath.h \
   inet/common/packet/chunk/Chunk_m.h \
   inet/common/packet/chunk/BitCountChunk.h \
   inet/common/packet/chunk/Chunk.h inet/common/MemoryInputStream.h \
@@ -51,6 +51,8 @@ inet/common/INETDefs_m.h:
 inet/common/INETDefs.h:
 
 inet/common/precompiled_release.h:
+
+inet/common/precompiled.h:
 
 inet/opp_defines.h:
 

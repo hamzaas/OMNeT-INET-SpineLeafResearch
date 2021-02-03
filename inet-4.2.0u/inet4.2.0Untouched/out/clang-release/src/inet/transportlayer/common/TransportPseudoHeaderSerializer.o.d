@@ -4,8 +4,9 @@
   C:\Users\Ethan\Documents\School\DCN_Research\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled_release.h \
   inet/transportlayer/common/TransportPseudoHeaderSerializer.cc \
   inet/common/Protocol.h inet/common/INETDefs.h \
-  inet/common/precompiled_release.h inet/opp_defines.h inet/features.h \
-  inet/common/Compat.h inet/common/InitStages.h \
+  inet/common/precompiled_release.h inet/common/precompiled.h \
+  inet/opp_defines.h inet/features.h inet/common/Compat.h \
+  inet/common/InitStages.h \
   inet/common/packet/serializer/ChunkSerializerRegistry.h \
   inet/common/packet/serializer/ChunkSerializer.h \
   inet/common/MemoryInputStream.h inet/common/Units.h \
@@ -45,6 +46,8 @@ inet/common/Protocol.h:
 inet/common/INETDefs.h:
 
 inet/common/precompiled_release.h:
+
+inet/common/precompiled.h:
 
 inet/opp_defines.h:
 

@@ -4,8 +4,8 @@
   C:\Users\Ethan\Documents\School\DCN_Research\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled_release.h \
   inet/common/scenario/ScenarioManager.cc inet/common/INETUtils.h \
   inet/common/INETDefs.h inet/common/precompiled_release.h \
-  inet/opp_defines.h inet/features.h inet/common/Compat.h \
-  inet/common/InitStages.h inet/common/XMLUtils.h \
+  inet/common/precompiled.h inet/opp_defines.h inet/features.h \
+  inet/common/Compat.h inet/common/InitStages.h inet/common/XMLUtils.h \
   inet/networklayer/contract/ipv4/Ipv4Address.h \
   inet/common/lifecycle/LifecycleOperation.h \
   inet/common/lifecycle/ModuleOperations.h \
@@ -25,6 +25,8 @@ inet/common/INETUtils.h:
 inet/common/INETDefs.h:
 
 inet/common/precompiled_release.h:
+
+inet/common/precompiled.h:
 
 inet/opp_defines.h:
 

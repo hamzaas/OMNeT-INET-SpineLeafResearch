@@ -6,8 +6,9 @@
   inet/physicallayer/ieee80211/mode/Ieee80211OfdmModulation.h \
   inet/physicallayer/base/packetlevel/ApskModulationBase.h \
   inet/common/ShortBitVector.h inet/common/INETDefs.h \
-  inet/common/precompiled_release.h inet/opp_defines.h inet/features.h \
-  inet/common/Compat.h inet/common/InitStages.h \
+  inet/common/precompiled_release.h inet/common/precompiled.h \
+  inet/opp_defines.h inet/features.h inet/common/Compat.h \
+  inet/common/InitStages.h \
   inet/physicallayer/apskradio/bitlevel/ApskSymbol.h \
   inet/physicallayer/contract/bitlevel/ISymbol.h \
   inet/physicallayer/contract/packetlevel/IApskModulation.h \
@@ -38,6 +39,8 @@ inet/common/ShortBitVector.h:
 inet/common/INETDefs.h:
 
 inet/common/precompiled_release.h:
+
+inet/common/precompiled.h:
 
 inet/opp_defines.h:
 

@@ -6,8 +6,9 @@
   inet/applications/httptools/server/HttpServerBase.h \
   inet/applications/httptools/common/HttpNodeBase.h \
   inet/common/INETDefs.h inet/common/precompiled_release.h \
-  inet/opp_defines.h inet/features.h inet/common/Compat.h \
-  inet/common/InitStages.h inet/common/lifecycle/LifecycleUnsupported.h \
+  inet/common/precompiled.h inet/opp_defines.h inet/features.h \
+  inet/common/Compat.h inet/common/InitStages.h \
+  inet/common/lifecycle/LifecycleUnsupported.h \
   inet/common/lifecycle/ILifecycle.h \
   inet/common/lifecycle/LifecycleOperation.h inet/common/packet/Packet.h \
   inet/common/packet/chunk/BitsChunk.h inet/common/packet/chunk/Chunk.h \
@@ -55,6 +56,8 @@ inet/applications/httptools/common/HttpNodeBase.h:
 inet/common/INETDefs.h:
 
 inet/common/precompiled_release.h:
+
+inet/common/precompiled.h:
 
 inet/opp_defines.h:
 
