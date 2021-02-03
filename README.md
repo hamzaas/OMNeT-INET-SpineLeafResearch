@@ -3,7 +3,7 @@
 Code for SpineLeaf DCN implemented in Omnetpp and INET.
 
 
-########### Installing and Running ###########
+### Installing and Running ###
 
 1) First step is to install OMNet++ version 5.6.2. We used the windows version, but other operating systems should work as well.
       You can install here: https://omnetpp.org/download/. Make sure it is 5.6.2 before preceding.
@@ -23,7 +23,7 @@ Code for SpineLeaf DCN implemented in Omnetpp and INET.
 5) Once you have imported both projects into OMNet++. Confirm that Spine-Leaf-ManualDCN is referencing inetu. Right click Spine-LeafDCN, then go to
       properties > project references, and make sure inetu is checked.
       
-### From here you can either run in the GUI or follow the below steps to run from command line.
+####### From here you can either run in the GUI or follow the below steps to run from command line. ########
 
 6) Another thing you need to check is in Spine-LeafDCN > _XHost_SpineLeaf > XHost_SpineLeaf.ini and make sure that the "**.configurator.config = xmldoc" value
       is set to the command line option. Just simply comment out the GUI value and comment in the commmand line value. Should be the line adjacent.
@@ -38,7 +38,7 @@ Code for SpineLeaf DCN implemented in Omnetpp and INET.
       ./Spine-LeafDCN.exe -u Cmdenv -f _XHostSpineLeaf/XHost_SpineLeaf.ini -c Traffic_1
       
       
-############# Useful links ###############
+### Useful links ####
 
 1) OMNeT++ user Manual : https://doc.omnetpp.org/omnetpp4/manual/usman.html
 2) INET User Guide : https://inet.omnetpp.org/docs/users-guide/
