@@ -1,15 +1,15 @@
-file 1796 1611800413                                            
+file 1796 1612376594                                            
 version 2
-run BurstyTraffic-0-20210127-21:20:11-8308
+run BurstyTraffic-0-20210203-13:23:12-2404
 attr configname BurstyTraffic
-attr datetime 20210127-21:20:11
+attr datetime 20210203-13:23:12
 attr experiment BurstyTraffic
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvarsf ""
 attr measurement ""
 attr network TcpAppExample
-attr processid 8308
+attr processid 2404
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -36,9 +36,10 @@ vector 0 TcpAppExample.client.ppp[0].ppp transmissionState:vector ETV
 attr interpolationmode sample-hold
 attr source transmissionStateChanged
 attr title "tx state, vector"
-0	1776 9 0 0 0 0 1 0 0 0 0
 vector 1 TcpAppExample.server.ppp[0].ppp transmissionState:vector ETV
 attr interpolationmode sample-hold
 attr source transmissionStateChanged
 attr title "tx state, vector"
-1	1785 11 0 0 0 0 1 0 0 0 0
+0	1776 9 0 0 0 0 1 0 0 0 0
+1	1785 9 0 0 0 0 1 0 0 0 0
+

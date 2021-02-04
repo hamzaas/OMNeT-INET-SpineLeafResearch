@@ -208,7 +208,8 @@ void TcpSessionApp::parseScript(const char *script)
             s++;
 
         if (!isdigit(*s))
-            throw cRuntimeError("Syntax error in script: number of bytes expected");
+            throw cRuntimeError(s);
+            //throw cRuntimeError("Syntax error in script: number of bytes expected");
 
         long numBytes = strtol(s, nullptr, 10);
 

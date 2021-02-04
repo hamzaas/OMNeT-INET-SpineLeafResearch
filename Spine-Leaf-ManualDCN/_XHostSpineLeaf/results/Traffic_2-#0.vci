@@ -1,0 +1,1396 @@
+file 76124 1612409480                                           
+version 2
+run Traffic_2-0-20210203-22:29:58-14676
+attr configname Traffic_2
+attr datetime 20210203-22:29:58
+attr experiment Traffic_2
+attr inifile XHost_SpineLeaf.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network XHost_SpineLeaf_Network
+attr processid 14676
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.borderLeaf.**.packetCapacity 5
+param **.leaf[*].**.packetCapacity 5
+param **.spine[*].**.packetCapacity 5
+param **.leaf[0].H[0].numApps 1
+param **.border.numApps 1
+param **.border.app[0].typename "\"TcpSinkApp\""
+param **.leaf[0].H[0].app[0].typename "\"TcpSessionApp\""
+param **.leaf[0].H[0].app[0].connectAddress "\"border\""
+param **.leaf[0].H[0].app[0].sendScript "\"5 2;\""
+param **.leaf[0].H[0].app[0].tSend 0
+param **.leaf[0].H[0].app[0].sendBytes 0
+param **.LanVisualizer.interfaceTableVisualizer.displayInterfaceTables true
+param **.LanVisualizer.interfaceTableVisualizer.displayWiredInterfacesAtConnections false
+param **.LanVisualizer.interfaceTableVisualizer.nodeFilter "\"not (*topOfRack or *H*)\""
+param **.LanVisualizer.interfaceTableVisualizer.placementPriority 2
+param **.LanVisualizer.interfaceTableVisualizer.format "\"%N %\\\\%n/%l%\\\\%m\""
+param **.LanVisualizer.packetDropVisualizer.displayPacketDrops true
+param **.LanVisualizer.packetDropVisualizer.labelFormat "\"%n/reason: %r\""
+param **.LanVisualizer.packetDropVisualizer.fadeOutTime 10s
+param **.LeafVisualizer.interfaceTableVisualizer.displayInterfaceTables true
+param **.LeafVisualizer.interfaceTableVisualizer.displayWiredInterfacesAtConnections false
+param **.LeafVisualizer.interfaceTableVisualizer.placementPriority 2
+param **.LeafVisualizer.interfaceTableVisualizer.format "\"%N %\\\\%n/%l%\\\\%m\""
+param **.configurator.config "xmldoc(\"XHost_SpineLeaf_Routing.xml\")"
+
+vector 0 XHost_SpineLeaf_Network.leaf[0].H[0].tcp.conn-2 tcpRcvQueueBytes:vector ETV
+attr interpolationmode sample-hold
+vector 1 XHost_SpineLeaf_Network.leaf[0].H[0].tcp.conn-2 rcvAdv:vector ETV
+attr interpolationmode sample-hold
+vector 2 XHost_SpineLeaf_Network.leaf[0].H[0].tcp.conn-2 rcvWnd:vector ETV
+attr interpolationmode sample-hold
+vector 3 XHost_SpineLeaf_Network.leaf[0].H[0].tcp.conn-2 sndAck:vector ETV
+attr interpolationmode sample-hold
+vector 4 XHost_SpineLeaf_Network.leaf[0].H[0].ipv4.arp arpRequestSent:vector(packetBytes) ETV
+attr source arpRequestSent
+attr title "ARP request sent, vector(packetBytes)"
+vector 5 XHost_SpineLeaf_Network.leaf[0].H[0].eth[0].encap encapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, vector(packetBytes)"
+vector 6 XHost_SpineLeaf_Network.leaf[0].H[0].eth[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 7 XHost_SpineLeaf_Network.leaf[0].H[0].eth[0].mac.queue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 8 XHost_SpineLeaf_Network.leaf[0].H[0].eth[0].mac.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 9 XHost_SpineLeaf_Network.leaf[0].H[0].eth[0].mac.queue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 10 XHost_SpineLeaf_Network.leaf[0].H[0].eth[0].mac.queue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 11 XHost_SpineLeaf_Network.leaf[0].H[0].eth[0].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, vector(packetBytes)"
+vector 12 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[5].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 13 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[5].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 14 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[5].encap decapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, vector(packetBytes)"
+vector 15 XHost_SpineLeaf_Network.leaf[0].topOfRack.ipv4.arp arpReplySent:vector(packetBytes) ETV
+attr source arpReplySent
+attr title "ARP replies sent, vector(packetBytes)"
+vector 16 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[5].encap encapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, vector(packetBytes)"
+vector 17 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[5].mac packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 18 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[5].mac.queue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 19 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[5].mac.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 20 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[5].mac.queue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 21 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[5].mac.queue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 22 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[5].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, vector(packetBytes)"
+vector 23 XHost_SpineLeaf_Network.leaf[0].H[0].eth[0].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 24 XHost_SpineLeaf_Network.leaf[0].H[0].eth[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 25 XHost_SpineLeaf_Network.leaf[0].H[0].eth[0].encap decapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, vector(packetBytes)"
+vector 26 XHost_SpineLeaf_Network.leaf[0].topOfRack.ipv4.arp arpRequestSent:vector(packetBytes) ETV
+attr source arpRequestSent
+attr title "ARP request sent, vector(packetBytes)"
+vector 27 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[1].encap encapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, vector(packetBytes)"
+vector 28 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[1].mac packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 29 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[1].mac.queue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 30 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[1].mac.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 31 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[1].mac.queue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 32 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[1].mac.queue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 33 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[1].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, vector(packetBytes)"
+vector 34 XHost_SpineLeaf_Network.spine[1].eth[1].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 35 XHost_SpineLeaf_Network.spine[1].eth[1].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 36 XHost_SpineLeaf_Network.spine[1].eth[1].encap decapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, vector(packetBytes)"
+vector 37 XHost_SpineLeaf_Network.spine[1].ipv4.arp arpReplySent:vector(packetBytes) ETV
+attr source arpReplySent
+attr title "ARP replies sent, vector(packetBytes)"
+vector 38 XHost_SpineLeaf_Network.spine[1].eth[1].encap encapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, vector(packetBytes)"
+vector 39 XHost_SpineLeaf_Network.spine[1].eth[1].mac packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 40 XHost_SpineLeaf_Network.spine[1].eth[1].mac.queue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 41 XHost_SpineLeaf_Network.spine[1].eth[1].mac.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 42 XHost_SpineLeaf_Network.spine[1].eth[1].mac.queue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 43 XHost_SpineLeaf_Network.spine[1].eth[1].mac.queue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 44 XHost_SpineLeaf_Network.spine[1].eth[1].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, vector(packetBytes)"
+vector 45 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[1].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 46 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[1].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 47 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[1].encap decapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, vector(packetBytes)"
+vector 48 XHost_SpineLeaf_Network.spine[1].ipv4.arp arpRequestSent:vector(packetBytes) ETV
+attr source arpRequestSent
+attr title "ARP request sent, vector(packetBytes)"
+vector 49 XHost_SpineLeaf_Network.spine[1].eth[0].encap encapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, vector(packetBytes)"
+vector 50 XHost_SpineLeaf_Network.spine[1].eth[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 51 XHost_SpineLeaf_Network.spine[1].eth[0].mac.queue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 52 XHost_SpineLeaf_Network.spine[1].eth[0].mac.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 53 XHost_SpineLeaf_Network.spine[1].eth[0].mac.queue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 54 XHost_SpineLeaf_Network.spine[1].eth[0].mac.queue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 55 XHost_SpineLeaf_Network.spine[1].eth[0].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, vector(packetBytes)"
+vector 56 XHost_SpineLeaf_Network.borderLeaf.eth[1].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 57 XHost_SpineLeaf_Network.borderLeaf.eth[1].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 58 XHost_SpineLeaf_Network.borderLeaf.eth[1].encap decapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, vector(packetBytes)"
+vector 59 XHost_SpineLeaf_Network.borderLeaf.ipv4.arp arpReplySent:vector(packetBytes) ETV
+attr source arpReplySent
+attr title "ARP replies sent, vector(packetBytes)"
+vector 60 XHost_SpineLeaf_Network.borderLeaf.eth[1].encap encapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, vector(packetBytes)"
+vector 61 XHost_SpineLeaf_Network.borderLeaf.eth[1].mac packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 62 XHost_SpineLeaf_Network.borderLeaf.eth[1].mac.queue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 63 XHost_SpineLeaf_Network.borderLeaf.eth[1].mac.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 64 XHost_SpineLeaf_Network.borderLeaf.eth[1].mac.queue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 65 XHost_SpineLeaf_Network.borderLeaf.eth[1].mac.queue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 66 XHost_SpineLeaf_Network.borderLeaf.eth[1].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, vector(packetBytes)"
+vector 67 XHost_SpineLeaf_Network.spine[1].eth[0].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 68 XHost_SpineLeaf_Network.spine[1].eth[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 69 XHost_SpineLeaf_Network.spine[1].eth[0].encap decapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, vector(packetBytes)"
+vector 70 XHost_SpineLeaf_Network.borderLeaf.ipv4.arp arpRequestSent:vector(packetBytes) ETV
+attr source arpRequestSent
+attr title "ARP request sent, vector(packetBytes)"
+vector 71 XHost_SpineLeaf_Network.borderLeaf.eth[5].encap encapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, vector(packetBytes)"
+vector 72 XHost_SpineLeaf_Network.borderLeaf.eth[5].mac packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 73 XHost_SpineLeaf_Network.borderLeaf.eth[5].mac.queue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 74 XHost_SpineLeaf_Network.borderLeaf.eth[5].mac.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 75 XHost_SpineLeaf_Network.borderLeaf.eth[5].mac.queue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 76 XHost_SpineLeaf_Network.borderLeaf.eth[5].mac.queue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 77 XHost_SpineLeaf_Network.borderLeaf.eth[5].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, vector(packetBytes)"
+vector 78 XHost_SpineLeaf_Network.border.eth[0].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 79 XHost_SpineLeaf_Network.border.eth[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 80 XHost_SpineLeaf_Network.border.eth[0].encap decapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, vector(packetBytes)"
+vector 81 XHost_SpineLeaf_Network.border.ipv4.arp arpReplySent:vector(packetBytes) ETV
+attr source arpReplySent
+attr title "ARP replies sent, vector(packetBytes)"
+vector 82 XHost_SpineLeaf_Network.border.eth[0].encap encapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, vector(packetBytes)"
+vector 83 XHost_SpineLeaf_Network.border.eth[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 84 XHost_SpineLeaf_Network.border.eth[0].mac.queue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 85 XHost_SpineLeaf_Network.border.eth[0].mac.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 86 XHost_SpineLeaf_Network.border.eth[0].mac.queue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 87 XHost_SpineLeaf_Network.border.eth[0].mac.queue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 88 XHost_SpineLeaf_Network.border.eth[0].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, vector(packetBytes)"
+vector 89 XHost_SpineLeaf_Network.borderLeaf.eth[5].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 90 XHost_SpineLeaf_Network.borderLeaf.eth[5].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 91 XHost_SpineLeaf_Network.borderLeaf.eth[5].encap decapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, vector(packetBytes)"
+vector 92 XHost_SpineLeaf_Network.border.tcp.conn-0 rcvSeq:vector ETV
+attr interpolationmode sample-hold
+vector 93 XHost_SpineLeaf_Network.border.tcp.conn-0 rcvAck:vector ETV
+attr interpolationmode sample-hold
+vector 94 XHost_SpineLeaf_Network.border.tcp.conn-3 rcvAdv:vector ETV
+attr interpolationmode sample-hold
+vector 95 XHost_SpineLeaf_Network.border.tcp.conn-3 sndWnd:vector ETV
+attr interpolationmode sample-hold
+vector 96 XHost_SpineLeaf_Network.border.tcp.conn-3 tcpRcvQueueBytes:vector ETV
+attr interpolationmode sample-hold
+vector 97 XHost_SpineLeaf_Network.border.tcp.conn-3 rcvWnd:vector ETV
+attr interpolationmode sample-hold
+vector 98 XHost_SpineLeaf_Network.border.tcp.conn-3 sndAck:vector ETV
+attr interpolationmode sample-hold
+vector 99 XHost_SpineLeaf_Network.borderLeaf.eth[2].encap encapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, vector(packetBytes)"
+vector 100 XHost_SpineLeaf_Network.borderLeaf.eth[2].mac packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 101 XHost_SpineLeaf_Network.borderLeaf.eth[2].mac.queue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 102 XHost_SpineLeaf_Network.borderLeaf.eth[2].mac.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 103 XHost_SpineLeaf_Network.borderLeaf.eth[2].mac.queue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 104 XHost_SpineLeaf_Network.borderLeaf.eth[2].mac.queue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 105 XHost_SpineLeaf_Network.borderLeaf.eth[2].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, vector(packetBytes)"
+vector 106 XHost_SpineLeaf_Network.spine[2].eth[0].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 107 XHost_SpineLeaf_Network.spine[2].eth[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 108 XHost_SpineLeaf_Network.spine[2].eth[0].encap decapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, vector(packetBytes)"
+vector 109 XHost_SpineLeaf_Network.spine[2].ipv4.arp arpReplySent:vector(packetBytes) ETV
+attr source arpReplySent
+attr title "ARP replies sent, vector(packetBytes)"
+vector 110 XHost_SpineLeaf_Network.spine[2].eth[0].encap encapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, vector(packetBytes)"
+vector 111 XHost_SpineLeaf_Network.spine[2].eth[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 112 XHost_SpineLeaf_Network.spine[2].eth[0].mac.queue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 113 XHost_SpineLeaf_Network.spine[2].eth[0].mac.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 114 XHost_SpineLeaf_Network.spine[2].eth[0].mac.queue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 115 XHost_SpineLeaf_Network.spine[2].eth[0].mac.queue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 116 XHost_SpineLeaf_Network.spine[2].eth[0].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, vector(packetBytes)"
+vector 117 XHost_SpineLeaf_Network.borderLeaf.eth[2].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 118 XHost_SpineLeaf_Network.borderLeaf.eth[2].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 119 XHost_SpineLeaf_Network.borderLeaf.eth[2].encap decapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, vector(packetBytes)"
+vector 120 XHost_SpineLeaf_Network.spine[2].ipv4.arp arpRequestSent:vector(packetBytes) ETV
+attr source arpRequestSent
+attr title "ARP request sent, vector(packetBytes)"
+vector 121 XHost_SpineLeaf_Network.spine[2].eth[1].encap encapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, vector(packetBytes)"
+vector 122 XHost_SpineLeaf_Network.spine[2].eth[1].mac packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 123 XHost_SpineLeaf_Network.spine[2].eth[1].mac.queue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 124 XHost_SpineLeaf_Network.spine[2].eth[1].mac.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 125 XHost_SpineLeaf_Network.spine[2].eth[1].mac.queue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 126 XHost_SpineLeaf_Network.spine[2].eth[1].mac.queue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 127 XHost_SpineLeaf_Network.spine[2].eth[1].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, vector(packetBytes)"
+vector 128 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[2].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 129 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[2].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 130 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[2].encap decapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, vector(packetBytes)"
+vector 131 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[2].encap encapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, vector(packetBytes)"
+vector 132 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[2].mac packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 133 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[2].mac.queue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 134 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[2].mac.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 135 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[2].mac.queue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 136 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[2].mac.queue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 137 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[2].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, vector(packetBytes)"
+vector 138 XHost_SpineLeaf_Network.spine[2].eth[1].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 139 XHost_SpineLeaf_Network.spine[2].eth[1].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 140 XHost_SpineLeaf_Network.spine[2].eth[1].encap decapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, vector(packetBytes)"
+vector 141 XHost_SpineLeaf_Network.leaf[0].H[0].tcp.conn-2 rcvSeq:vector ETV
+attr interpolationmode sample-hold
+vector 142 XHost_SpineLeaf_Network.leaf[0].H[0].tcp.conn-2 rcvAck:vector ETV
+attr interpolationmode sample-hold
+vector 143 XHost_SpineLeaf_Network.leaf[0].H[0].tcp.conn-2 sndWnd:vector ETV
+attr interpolationmode sample-hold
+vector 144 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[0].encap encapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, vector(packetBytes)"
+vector 145 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 146 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[0].mac.queue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 147 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[0].mac.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 148 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[0].mac.queue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 149 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[0].mac.queue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 150 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[0].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, vector(packetBytes)"
+vector 151 XHost_SpineLeaf_Network.spine[0].eth[1].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 152 XHost_SpineLeaf_Network.spine[0].eth[1].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 153 XHost_SpineLeaf_Network.spine[0].eth[1].encap decapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, vector(packetBytes)"
+vector 154 XHost_SpineLeaf_Network.spine[0].ipv4.arp arpReplySent:vector(packetBytes) ETV
+attr source arpReplySent
+attr title "ARP replies sent, vector(packetBytes)"
+vector 155 XHost_SpineLeaf_Network.spine[0].eth[1].encap encapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, vector(packetBytes)"
+vector 156 XHost_SpineLeaf_Network.spine[0].eth[1].mac packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 157 XHost_SpineLeaf_Network.spine[0].eth[1].mac.queue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 158 XHost_SpineLeaf_Network.spine[0].eth[1].mac.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 159 XHost_SpineLeaf_Network.spine[0].eth[1].mac.queue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 160 XHost_SpineLeaf_Network.spine[0].eth[1].mac.queue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 161 XHost_SpineLeaf_Network.spine[0].eth[1].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, vector(packetBytes)"
+vector 162 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[0].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 163 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 164 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[0].encap decapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, vector(packetBytes)"
+vector 165 XHost_SpineLeaf_Network.spine[0].ipv4.arp arpRequestSent:vector(packetBytes) ETV
+attr source arpRequestSent
+attr title "ARP request sent, vector(packetBytes)"
+vector 166 XHost_SpineLeaf_Network.spine[0].eth[0].encap encapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, vector(packetBytes)"
+vector 167 XHost_SpineLeaf_Network.spine[0].eth[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 168 XHost_SpineLeaf_Network.spine[0].eth[0].mac.queue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 169 XHost_SpineLeaf_Network.spine[0].eth[0].mac.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 170 XHost_SpineLeaf_Network.spine[0].eth[0].mac.queue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 171 XHost_SpineLeaf_Network.spine[0].eth[0].mac.queue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 172 XHost_SpineLeaf_Network.spine[0].eth[0].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, vector(packetBytes)"
+vector 173 XHost_SpineLeaf_Network.borderLeaf.eth[0].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 174 XHost_SpineLeaf_Network.borderLeaf.eth[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 175 XHost_SpineLeaf_Network.borderLeaf.eth[0].encap decapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, vector(packetBytes)"
+vector 176 XHost_SpineLeaf_Network.borderLeaf.eth[0].encap encapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, vector(packetBytes)"
+vector 177 XHost_SpineLeaf_Network.borderLeaf.eth[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 178 XHost_SpineLeaf_Network.borderLeaf.eth[0].mac.queue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 179 XHost_SpineLeaf_Network.borderLeaf.eth[0].mac.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 180 XHost_SpineLeaf_Network.borderLeaf.eth[0].mac.queue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 181 XHost_SpineLeaf_Network.borderLeaf.eth[0].mac.queue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 182 XHost_SpineLeaf_Network.borderLeaf.eth[0].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, vector(packetBytes)"
+vector 183 XHost_SpineLeaf_Network.spine[0].eth[0].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 184 XHost_SpineLeaf_Network.spine[0].eth[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 185 XHost_SpineLeaf_Network.spine[0].eth[0].encap decapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, vector(packetBytes)"
+vector 186 XHost_SpineLeaf_Network.border.tcp.conn-3 rcvSeq:vector ETV
+attr interpolationmode sample-hold
+vector 187 XHost_SpineLeaf_Network.border.tcp.conn-3 rcvAck:vector ETV
+attr interpolationmode sample-hold
+vector 188 XHost_SpineLeaf_Network.border.tcp.conn-3 unacked:vector ETV
+attr interpolationmode sample-hold
+vector 189 XHost_SpineLeaf_Network.leaf[0].H[0].app[0] packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, vector(packetBytes)"
+vector 190 XHost_SpineLeaf_Network.leaf[0].H[0].tcp.conn-2 unacked:vector ETV
+attr interpolationmode sample-hold
+vector 191 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[4].encap encapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, vector(packetBytes)"
+vector 192 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[4].mac packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 193 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[4].mac.queue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 194 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[4].mac.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 195 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[4].mac.queue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 196 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[4].mac.queue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 197 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[4].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, vector(packetBytes)"
+vector 198 XHost_SpineLeaf_Network.spine[4].eth[1].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 199 XHost_SpineLeaf_Network.spine[4].eth[1].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 200 XHost_SpineLeaf_Network.spine[4].eth[1].encap decapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, vector(packetBytes)"
+vector 201 XHost_SpineLeaf_Network.spine[4].ipv4.arp arpReplySent:vector(packetBytes) ETV
+attr source arpReplySent
+attr title "ARP replies sent, vector(packetBytes)"
+vector 202 XHost_SpineLeaf_Network.spine[4].eth[1].encap encapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, vector(packetBytes)"
+vector 203 XHost_SpineLeaf_Network.spine[4].eth[1].mac packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 204 XHost_SpineLeaf_Network.spine[4].eth[1].mac.queue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 205 XHost_SpineLeaf_Network.spine[4].eth[1].mac.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 206 XHost_SpineLeaf_Network.spine[4].eth[1].mac.queue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 207 XHost_SpineLeaf_Network.spine[4].eth[1].mac.queue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 208 XHost_SpineLeaf_Network.spine[4].eth[1].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, vector(packetBytes)"
+vector 209 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[4].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 210 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[4].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 211 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[4].encap decapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, vector(packetBytes)"
+vector 212 XHost_SpineLeaf_Network.spine[4].ipv4.arp arpRequestSent:vector(packetBytes) ETV
+attr source arpRequestSent
+attr title "ARP request sent, vector(packetBytes)"
+vector 213 XHost_SpineLeaf_Network.spine[4].eth[0].encap encapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, vector(packetBytes)"
+vector 214 XHost_SpineLeaf_Network.spine[4].eth[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 215 XHost_SpineLeaf_Network.spine[4].eth[0].mac.queue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 216 XHost_SpineLeaf_Network.spine[4].eth[0].mac.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 217 XHost_SpineLeaf_Network.spine[4].eth[0].mac.queue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 218 XHost_SpineLeaf_Network.spine[4].eth[0].mac.queue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 219 XHost_SpineLeaf_Network.spine[4].eth[0].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, vector(packetBytes)"
+vector 220 XHost_SpineLeaf_Network.borderLeaf.eth[4].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 221 XHost_SpineLeaf_Network.borderLeaf.eth[4].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 222 XHost_SpineLeaf_Network.borderLeaf.eth[4].encap decapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, vector(packetBytes)"
+vector 223 XHost_SpineLeaf_Network.borderLeaf.eth[4].encap encapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, vector(packetBytes)"
+vector 224 XHost_SpineLeaf_Network.borderLeaf.eth[4].mac packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 225 XHost_SpineLeaf_Network.borderLeaf.eth[4].mac.queue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 226 XHost_SpineLeaf_Network.borderLeaf.eth[4].mac.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 227 XHost_SpineLeaf_Network.borderLeaf.eth[4].mac.queue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 228 XHost_SpineLeaf_Network.borderLeaf.eth[4].mac.queue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 229 XHost_SpineLeaf_Network.borderLeaf.eth[4].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, vector(packetBytes)"
+vector 230 XHost_SpineLeaf_Network.spine[4].eth[0].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 231 XHost_SpineLeaf_Network.spine[4].eth[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 232 XHost_SpineLeaf_Network.spine[4].eth[0].encap decapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, vector(packetBytes)"
+vector 233 XHost_SpineLeaf_Network.border.tcp.conn-3 dupAcks:vector ETV
+attr interpolationmode sample-hold
+vector 234 XHost_SpineLeaf_Network.border.app[0].thread_3 packetReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, vector(packetBytes)"
+vector 235 XHost_SpineLeaf_Network.border.app[0].thread_3 endToEndDelay:vector ETV
+attr interpolationmode none
+attr source dataAge(packetReceived)
+attr title "end-to-end delay, vector"
+attr unit s
+vector 236 XHost_SpineLeaf_Network.border.app[0] packetReceived:vector(packetBytes) ETV
+attr checkSignals false
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, vector(packetBytes)"
+vector 237 XHost_SpineLeaf_Network.border.app[0] endToEndDelay:vector ETV
+attr checkSignals false
+attr interpolationmode none
+attr source dataAge(packetReceived)
+attr title "end-to-end delay, vector"
+attr unit s
+vector 238 XHost_SpineLeaf_Network.borderLeaf.eth[3].encap encapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, vector(packetBytes)"
+vector 239 XHost_SpineLeaf_Network.borderLeaf.eth[3].mac packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 240 XHost_SpineLeaf_Network.borderLeaf.eth[3].mac.queue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 241 XHost_SpineLeaf_Network.borderLeaf.eth[3].mac.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 242 XHost_SpineLeaf_Network.borderLeaf.eth[3].mac.queue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 243 XHost_SpineLeaf_Network.borderLeaf.eth[3].mac.queue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 244 XHost_SpineLeaf_Network.leaf[0].H[0].tcp.conn-2 rtt:vector ETV
+attr interpolationmode sample-hold
+vector 245 XHost_SpineLeaf_Network.leaf[0].H[0].tcp.conn-2 srtt:vector ETV
+attr interpolationmode sample-hold
+vector 246 XHost_SpineLeaf_Network.leaf[0].H[0].tcp.conn-2 rttvar:vector ETV
+attr interpolationmode sample-hold
+vector 247 XHost_SpineLeaf_Network.leaf[0].H[0].tcp.conn-2 rto:vector ETV
+attr interpolationmode sample-hold
+vector 248 XHost_SpineLeaf_Network.leaf[0].H[0].tcp.conn-2 cwnd:vector ETV
+attr interpolationmode sample-hold
+vector 249 XHost_SpineLeaf_Network.leaf[0].H[0].tcp.conn-2 ssthresh:vector ETV
+attr interpolationmode sample-hold
+vector 250 XHost_SpineLeaf_Network.leaf[0].H[0].tcp.conn-2 dupAcks:vector ETV
+attr interpolationmode sample-hold
+vector 251 XHost_SpineLeaf_Network.borderLeaf.eth[3].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, vector(packetBytes)"
+vector 252 XHost_SpineLeaf_Network.spine[3].eth[0].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 253 XHost_SpineLeaf_Network.spine[3].eth[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 254 XHost_SpineLeaf_Network.spine[3].eth[0].encap decapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, vector(packetBytes)"
+vector 255 XHost_SpineLeaf_Network.spine[3].ipv4.arp arpReplySent:vector(packetBytes) ETV
+attr source arpReplySent
+attr title "ARP replies sent, vector(packetBytes)"
+vector 256 XHost_SpineLeaf_Network.spine[3].eth[0].encap encapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, vector(packetBytes)"
+vector 257 XHost_SpineLeaf_Network.spine[3].eth[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 258 XHost_SpineLeaf_Network.spine[3].eth[0].mac.queue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 259 XHost_SpineLeaf_Network.spine[3].eth[0].mac.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 260 XHost_SpineLeaf_Network.spine[3].eth[0].mac.queue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 261 XHost_SpineLeaf_Network.spine[3].eth[0].mac.queue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 262 XHost_SpineLeaf_Network.spine[3].eth[0].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, vector(packetBytes)"
+vector 263 XHost_SpineLeaf_Network.borderLeaf.eth[3].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 264 XHost_SpineLeaf_Network.borderLeaf.eth[3].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 265 XHost_SpineLeaf_Network.borderLeaf.eth[3].encap decapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, vector(packetBytes)"
+vector 266 XHost_SpineLeaf_Network.spine[3].ipv4.arp arpRequestSent:vector(packetBytes) ETV
+attr source arpRequestSent
+attr title "ARP request sent, vector(packetBytes)"
+vector 267 XHost_SpineLeaf_Network.spine[3].eth[1].encap encapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, vector(packetBytes)"
+vector 268 XHost_SpineLeaf_Network.spine[3].eth[1].mac packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 269 XHost_SpineLeaf_Network.spine[3].eth[1].mac.queue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 270 XHost_SpineLeaf_Network.spine[3].eth[1].mac.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 271 XHost_SpineLeaf_Network.spine[3].eth[1].mac.queue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 272 XHost_SpineLeaf_Network.spine[3].eth[1].mac.queue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 273 XHost_SpineLeaf_Network.spine[3].eth[1].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, vector(packetBytes)"
+vector 274 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[3].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 275 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[3].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 276 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[3].encap decapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, vector(packetBytes)"
+vector 277 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[3].encap encapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, vector(packetBytes)"
+vector 278 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[3].mac packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 279 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[3].mac.queue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 280 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[3].mac.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 281 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[3].mac.queue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 282 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[3].mac.queue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 283 XHost_SpineLeaf_Network.leaf[0].topOfRack.eth[3].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, vector(packetBytes)"
+vector 284 XHost_SpineLeaf_Network.spine[3].eth[1].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 285 XHost_SpineLeaf_Network.spine[3].eth[1].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 286 XHost_SpineLeaf_Network.spine[3].eth[1].encap decapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, vector(packetBytes)"
+vector 287 XHost_SpineLeaf_Network.border.tcp.conn-3 cwnd:vector ETV
+attr interpolationmode sample-hold
+vector 288 XHost_SpineLeaf_Network.border.tcp.conn-3 ssthresh:vector ETV
+attr interpolationmode sample-hold
+96	58689 102 88 315 1.00006972 5.0000532 5 0 0 0 0
+233	58791 65 287 466 5.00004648 5.00014126 3 0 0 0 0
+188	58856 65 205 466 1.00016268 5.00014126 3 0 1 1 1
+187	58921 107 205 466 1.00016268 5.00014126 4 250018 250019 1000073 250036501333
+186	59028 107 205 466 1.00016268 5.00014126 4 250001 250004 1000009 250004500027
+98	59135 101 88 315 1.00006972 5.0000532 4 250001 250004 1000012 250006000042
+94	59236 126 88 315 1.00006972 5.0000532 5 257505 257508 1287533 331548245227
+97	59362 93 88 315 1.00006972 5.0000532 4 7504 7504 30016 225240064
+95	59455 71 88 466 1.00006972 5.00014126 3 7504 7504 22512 168930048
+288	59526 31 466 466 5.00014126 5.00014126 1 4294967295 4294967295 4294967295 1.844674406512e+019
+287	59557 25 466 466 5.00014126 5.00014126 1 1072 1072 1072 1149184
+235	59582 31 288 288 5.00004648 5.00004648 1 4.648e-005 4.648e-005 4.648e-005 2.1603904e-009
+234	59613 22 288 288 5.00004648 5.00004648 1 2 2 2 4
+0	59635 69 3 421 1 5.0001064 5 0 0 0 0
+250	59704 65 360 421 5.00006972 5.0001064 3 0 0 0 0
+190	59769 70 211 380 5 5.00007644 4 0 3 6 14
+142	59839 106 146 421 1.0001162 5.0001064 4 250001 250004 1000012 250006000042
+141	59945 106 146 421 1.0001162 5.0001064 4 250017 250018 1000071 250035501261
+3	60051 89 3 421 1 5.0001064 5 0 250019 1000073 250036501333
+1	60140 116 3 421 1 5.0001064 6 7504 257523 1295115 331644727481
+2	60256 84 3 421 1 5.0001064 5 7504 7504 37520 281550080
+143	60340 74 146 380 1.0001162 5.00007644 3 7504 7504 22512 168930048
+247	60414 32 360 360 5.00006972 5.00006972 1 2.625043575 2.625043575 2.625043575 6.8908537706488
+246	60446 32 360 360 5.00006972 5.00006972 1 0.656258715 0.656258715 0.656258715 0.43067550101345
+245	60478 31 360 360 5.00006972 5.00006972 1 8.715e-006 8.715e-006 8.715e-006 7.5951225e-011
+244	60509 31 360 360 5.00006972 5.00006972 1 6.972e-005 6.972e-005 6.972e-005 4.8608784e-009
+249	60540 62 360 380 5.00006972 5.00007644 2 4294967295 4294967295 8589934590 3.6893488130239e+019
+248	60602 50 360 380 5.00006972 5.00007644 2 1072 1608 2680 3734848
+4	60652 10 4 4 1 1 1 28 28 28 784
+5	60662 94 5 424 1 5.0001064 6 28 44 234 9284
+6	60756 94 6 425 1 5.0001064 6 46 62 342 19652
+7	60850 94 6 425 1 5.0001064 6 64 64 384 24576
+8	60944 185 6 425 1 5.0001064 12 0 1 6 6
+9	61129 103 6 425 1 5.0001064 6 64 64 384 24576
+10	61232 111 6 425 1 5.0001064 6 0 6.72e-006 6.72e-006 4.51584e-011
+11	61343 129 7 427 1.00000576 5.00011216 6 64 64 384 24576
+12	61472 129 8 428 1.00000581 5.00011221 6 64 64 384 24576
+13	61601 129 8 428 1.00000581 5.00011221 6 64 64 384 24576
+14	61730 129 9 429 1.00000581 5.00011221 6 46 46 276 12696
+15	61859 65 10 399 1.00000581 5.00008897 3 28 28 84 2352
+16	61924 109 11 414 1.00000581 5.00010059 5 28 44 192 7520
+17	62033 109 12 415 1.00000581 5.00010059 5 46 62 282 16052
+18	62142 109 12 415 1.00000581 5.00010059 5 64 64 320 20480
+19	62251 208 12 415 1.00000581 5.00010059 10 0 1 5 5
+20	62459 109 12 415 1.00000581 5.00010059 5 64 64 320 20480
+21	62568 104 12 415 1.00000581 5.00010059 5 0 0 0 0
+22	62672 109 14 417 1.00001157 5.00010635 5 64 64 320 20480
+23	62781 107 15 418 1.00001162 5.0001064 5 64 64 320 20480
+24	62888 107 15 418 1.00001162 5.0001064 5 64 64 320 20480
+25	62995 107 16 419 1.00001162 5.0001064 5 46 46 230 10580
+26	63102 87 24 430 1.00001743 5.00011221 4 28 28 112 3136
+27	63189 42 25 39 1.00001743 1.00002905 2 28 44 72 2720
+28	63231 42 26 40 1.00001743 1.00002905 2 46 62 108 5960
+29	63273 42 26 40 1.00001743 1.00002905 2 64 64 128 8192
+30	63315 80 26 40 1.00001743 1.00002905 4 0 1 2 2
+31	63395 42 26 40 1.00001743 1.00002905 2 64 64 128 8192
+32	63437 40 26 40 1.00001743 1.00002905 2 0 0 0 0
+33	63477 42 28 42 1.00002319 1.00003481 2 64 64 128 8192
+34	63519 42 29 43 1.00002324 1.00003486 2 64 64 128 8192
+35	63561 42 29 43 1.00002324 1.00003486 2 64 64 128 8192
+36	63603 42 30 44 1.00002324 1.00003486 2 46 46 92 4232
+37	63645 21 31 31 1.00002324 1.00002324 1 28 28 28 784
+38	63666 21 32 32 1.00002324 1.00002324 1 28 28 28 784
+39	63687 21 33 33 1.00002324 1.00002324 1 46 46 46 2116
+40	63708 21 33 33 1.00002324 1.00002324 1 64 64 64 4096
+41	63729 40 33 33 1.00002324 1.00002324 2 0 1 1 1
+42	63769 21 33 33 1.00002324 1.00002324 1 64 64 64 4096
+43	63790 20 33 33 1.00002324 1.00002324 1 0 0 0 0
+44	63810 19 35 35 1.000029 1.000029 1 64 64 64 4096
+45	63829 21 36 36 1.00002905 1.00002905 1 64 64 64 4096
+46	63850 21 36 36 1.00002905 1.00002905 1 64 64 64 4096
+47	63871 21 37 37 1.00002905 1.00002905 1 46 46 46 2116
+48	63892 21 45 45 1.00003486 1.00003486 1 28 28 28 784
+49	63913 42 46 60 1.00003486 1.00004648 2 28 44 72 2720
+50	63955 42 47 61 1.00003486 1.00004648 2 46 62 108 5960
+51	63997 42 47 61 1.00003486 1.00004648 2 64 64 128 8192
+52	64039 80 47 61 1.00003486 1.00004648 4 0 1 2 2
+53	64119 42 47 61 1.00003486 1.00004648 2 64 64 128 8192
+54	64161 40 47 61 1.00003486 1.00004648 2 0 0 0 0
+55	64201 42 49 63 1.00004062 1.00005224 2 64 64 128 8192
+56	64243 42 50 64 1.00004067 1.00005229 2 64 64 128 8192
+57	64285 42 50 64 1.00004067 1.00005229 2 64 64 128 8192
+58	64327 42 51 65 1.00004067 1.00005229 2 46 46 92 4232
+59	64369 65 52 258 1.00004067 5.00002905 3 28 28 84 2352
+60	64434 21 53 53 1.00004067 1.00004067 1 28 28 28 784
+61	64455 21 54 54 1.00004067 1.00004067 1 46 46 46 2116
+62	64476 21 54 54 1.00004067 1.00004067 1 64 64 64 4096
+63	64497 40 54 54 1.00004067 1.00004067 2 0 1 1 1
+64	64537 21 54 54 1.00004067 1.00004067 1 64 64 64 4096
+65	64558 20 54 54 1.00004067 1.00004067 1 0 0 0 0
+66	64578 21 56 56 1.00004643 1.00004643 1 64 64 64 4096
+67	64599 21 57 57 1.00004648 1.00004648 1 64 64 64 4096
+68	64620 21 57 57 1.00004648 1.00004648 1 64 64 64 4096
+69	64641 21 58 58 1.00004648 1.00004648 1 46 46 46 2116
+70	64662 64 66 352 1.00005229 5.00006573 3 28 28 84 2352
+71	64726 130 67 459 1.00005229 5.00013545 6 28 44 234 9284
+72	64856 130 68 460 1.00005229 5.00013545 6 46 62 342 19652
+73	64986 130 68 460 1.00005229 5.00013545 6 64 64 384 24576
+74	65116 248 68 460 1.00005229 5.00013545 12 0 1 6 6
+75	65364 130 68 460 1.00005229 5.00013545 6 64 64 384 24576
+76	65494 124 68 460 1.00005229 5.00013545 6 0 0 0 0
+77	65618 130 70 462 1.00005805 5.00014121 6 64 64 384 24576
+78	65748 128 71 463 1.0000581 5.00014126 6 64 64 384 24576
+79	65876 128 71 463 1.0000581 5.00014126 6 64 64 384 24576
+80	66004 128 72 464 1.0000581 5.00014126 6 46 46 276 12696
+81	66132 20 73 73 1.0000581 1.0000581 1 28 28 28 784
+82	66152 105 74 318 1.0000581 5.0000532 5 28 44 192 7520
+83	66257 105 75 319 1.0000581 5.0000532 5 46 62 282 16052
+84	66362 105 75 319 1.0000581 5.0000532 5 64 64 320 20480
+85	66467 201 75 334 1.0000581 5.00005992 10 0 1 5 5
+86	66668 106 75 334 1.0000581 5.00005992 5 64 64 320 20480
+87	66774 109 75 334 1.0000581 5.00005992 5 0 6.72e-006 6.72e-006 4.51584e-011
+88	66883 108 77 348 1.00006386 5.00006568 5 64 64 320 20480
+89	66991 108 78 349 1.00006391 5.00006573 5 64 64 320 20480
+90	67099 108 78 349 1.00006391 5.00006573 5 64 64 320 20480
+91	67207 108 79 351 1.00006391 5.00006573 5 46 46 230 10580
+92	67315 25 88 88 1.00006972 1.00006972 1 250000 250000 250000 62500000000
+93	67340 20 88 88 1.00006972 1.00006972 1 0 0 0 0
+99	67360 87 97 332 1.00007553 5.00005901 4 28 44 152 5920
+100	67447 91 98 333 1.00007553 5.00005901 4 46 62 224 12688
+101	67538 91 98 333 1.00007553 5.00005901 4 64 64 256 16384
+102	67629 174 98 333 1.00007553 5.00005901 8 0 1 4 4
+103	67803 91 98 333 1.00007553 5.00005901 4 64 64 256 16384
+104	67894 87 98 333 1.00007553 5.00005901 4 0 0 0 0
+105	67981 92 100 341 1.00008129 5.00006477 4 64 64 256 16384
+106	68073 91 101 342 1.00008134 5.00006482 4 64 64 256 16384
+107	68164 91 101 342 1.00008134 5.00006482 4 64 64 256 16384
+108	68255 91 102 344 1.00008134 5.00006482 4 46 46 184 8464
+109	68346 46 103 437 1.00008134 5.00011802 2 28 28 56 1568
+110	68392 46 104 452 1.00008134 5.00012964 2 28 40 68 2384
+111	68438 46 105 453 1.00008134 5.00012964 2 46 58 104 5480
+112	68484 46 105 453 1.00008134 5.00012964 2 64 64 128 8192
+113	68530 88 105 453 1.00008134 5.00012964 4 0 1 2 2
+114	68618 46 105 453 1.00008134 5.00012964 2 64 64 128 8192
+115	68664 44 105 453 1.00008134 5.00012964 2 0 0 0 0
+116	68708 44 107 455 1.0000871 5.0001354 2 64 64 128 8192
+117	68752 46 108 456 1.00008715 5.00013545 2 64 64 128 8192
+118	68798 46 108 456 1.00008715 5.00013545 2 64 64 128 8192
+119	68844 46 109 457 1.00008715 5.00013545 2 46 46 92 4232
+120	68890 23 117 117 1.00009296 1.00009296 1 28 28 28 784
+121	68913 114 118 438 1.00009296 5.00011802 5 28 44 180 6704
+122	69027 114 119 439 1.00009296 5.00011802 5 46 62 270 14804
+123	69141 114 119 439 1.00009296 5.00011802 5 64 64 320 20480
+124	69255 218 119 439 1.00009296 5.00011802 10 0 1 5 5
+125	69473 114 119 439 1.00009296 5.00011802 5 64 64 320 20480
+126	69587 109 119 439 1.00009296 5.00011802 5 0 0 0 0
+127	69696 115 121 441 1.00009872 5.00012378 5 64 64 320 20480
+128	69811 115 122 442 1.00009877 5.00012383 5 64 64 320 20480
+129	69926 115 122 442 1.00009877 5.00012383 5 64 64 320 20480
+130	70041 115 123 443 1.00009877 5.00012383 5 46 46 230 10580
+131	70156 69 125 445 1.00009877 5.00012383 3 28 40 96 3168
+132	70225 69 126 446 1.00009877 5.00012383 3 46 58 150 7596
+133	70294 69 126 446 1.00009877 5.00012383 3 64 64 192 12288
+134	70363 132 126 446 1.00009877 5.00012383 6 0 1 3 3
+135	70495 69 126 446 1.00009877 5.00012383 3 64 64 192 12288
+136	70564 66 126 446 1.00009877 5.00012383 3 0 0 0 0
+137	70630 69 128 448 1.00010453 5.00012959 3 64 64 192 12288
+138	70699 69 129 449 1.00010458 5.00012964 3 64 64 192 12288
+139	70768 69 129 449 1.00010458 5.00012964 3 64 64 192 12288
+140	70837 69 130 450 1.00010458 5.00012964 3 46 46 138 6348
+144	70906 46 156 170 1.00012201 1.00013363 2 28 40 68 2384
+145	70952 46 157 171 1.00012201 1.00013363 2 46 58 104 5480
+146	70998 46 157 171 1.00012201 1.00013363 2 64 64 128 8192
+147	71044 88 157 171 1.00012201 1.00013363 4 0 1 2 2
+148	71132 46 157 171 1.00012201 1.00013363 2 64 64 128 8192
+149	71178 44 157 171 1.00012201 1.00013363 2 0 0 0 0
+150	71222 46 159 173 1.00012777 1.00013939 2 64 64 128 8192
+151	71268 46 160 174 1.00012782 1.00013944 2 64 64 128 8192
+152	71314 46 160 174 1.00012782 1.00013944 2 64 64 128 8192
+153	71360 46 161 175 1.00012782 1.00013944 2 46 46 92 4232
+154	71406 23 162 162 1.00012782 1.00012782 1 28 28 28 784
+155	71429 23 163 163 1.00012782 1.00012782 1 28 28 28 784
+156	71452 23 164 164 1.00012782 1.00012782 1 46 46 46 2116
+157	71475 23 164 164 1.00012782 1.00012782 1 64 64 64 4096
+158	71498 44 164 164 1.00012782 1.00012782 2 0 1 1 1
+159	71542 23 164 164 1.00012782 1.00012782 1 64 64 64 4096
+160	71565 22 164 164 1.00012782 1.00012782 1 0 0 0 0
+161	71587 23 166 166 1.00013358 1.00013358 1 64 64 64 4096
+162	71610 23 167 167 1.00013363 1.00013363 1 64 64 64 4096
+163	71633 23 167 167 1.00013363 1.00013363 1 64 64 64 4096
+164	71656 23 168 168 1.00013363 1.00013363 1 46 46 46 2116
+165	71679 23 176 176 1.00013944 1.00013944 1 28 28 28 784
+166	71702 46 177 191 1.00013944 1.00015106 2 28 40 68 2384
+167	71748 46 178 192 1.00013944 1.00015106 2 46 58 104 5480
+168	71794 46 178 192 1.00013944 1.00015106 2 64 64 128 8192
+169	71840 88 178 192 1.00013944 1.00015106 4 0 1 2 2
+170	71928 46 178 192 1.00013944 1.00015106 2 64 64 128 8192
+171	71974 44 178 192 1.00013944 1.00015106 2 0 0 0 0
+172	72018 45 180 194 1.0001452 1.00015682 2 64 64 128 8192
+173	72063 46 181 195 1.00014525 1.00015687 2 64 64 128 8192
+174	72109 46 181 195 1.00014525 1.00015687 2 64 64 128 8192
+175	72155 46 182 196 1.00014525 1.00015687 2 46 46 92 4232
+176	72201 23 184 184 1.00014525 1.00014525 1 28 28 28 784
+177	72224 23 185 185 1.00014525 1.00014525 1 46 46 46 2116
+178	72247 23 185 185 1.00014525 1.00014525 1 64 64 64 4096
+179	72270 44 185 185 1.00014525 1.00014525 2 0 1 1 1
+180	72314 23 185 185 1.00014525 1.00014525 1 64 64 64 4096
+181	72337 22 185 185 1.00014525 1.00014525 1 0 0 0 0
+182	72359 23 187 187 1.00015101 1.00015101 1 64 64 64 4096
+183	72382 23 188 188 1.00015106 1.00015106 1 64 64 64 4096
+184	72405 23 188 188 1.00015106 1.00015106 1 64 64 64 4096
+185	72428 23 189 189 1.00015106 1.00015106 1 46 46 46 2116
+189	72451 13 210 210 5 5 1 2 2 2 4
+191	72464 69 224 244 5.00000581 5.00001743 3 28 42 110 4148
+192	72533 69 225 246 5.00000581 5.00001743 3 46 60 164 9080
+193	72602 69 225 246 5.00000581 5.00001743 3 64 64 192 12288
+194	72671 132 225 254 5.00000581 5.00002415 6 0 1 3 3
+195	72803 69 225 254 5.00000581 5.00002415 3 64 64 192 12288
+196	72872 74 225 254 5.00000581 5.00002415 3 0 6.72e-006 6.72e-006 4.51584e-011
+197	72946 69 227 261 5.00001157 5.00002991 3 64 64 192 12288
+198	73015 69 228 262 5.00001162 5.00002996 3 64 64 192 12288
+199	73084 69 228 262 5.00001162 5.00002996 3 64 64 192 12288
+200	73153 69 229 264 5.00001162 5.00002996 3 46 46 138 6348
+201	73222 23 230 230 5.00001162 5.00001162 1 28 28 28 784
+202	73245 23 231 231 5.00001162 5.00001162 1 28 28 28 784
+203	73268 23 232 232 5.00001162 5.00001162 1 46 46 46 2116
+204	73291 23 232 232 5.00001162 5.00001162 1 64 64 64 4096
+205	73314 44 232 232 5.00001162 5.00001162 2 0 1 1 1
+206	73358 23 232 232 5.00001162 5.00001162 1 64 64 64 4096
+207	73381 22 232 232 5.00001162 5.00001162 1 0 0 0 0
+208	73403 23 239 239 5.00001738 5.00001738 1 64 64 64 4096
+209	73426 23 240 240 5.00001743 5.00001743 1 64 64 64 4096
+210	73449 23 240 240 5.00001743 5.00001743 1 64 64 64 4096
+211	73472 23 241 241 5.00001743 5.00001743 1 46 46 46 2116
+212	73495 23 251 251 5.00002324 5.00002324 1 28 28 28 784
+213	73518 69 252 272 5.00002324 5.00003486 3 28 42 110 4148
+214	73587 69 253 274 5.00002324 5.00003486 3 46 60 164 9080
+215	73656 69 253 274 5.00002324 5.00003486 3 64 64 192 12288
+216	73725 132 253 282 5.00002324 5.00004158 6 0 1 3 3
+217	73857 69 253 282 5.00002324 5.00004158 3 64 64 192 12288
+218	73926 74 253 282 5.00002324 5.00004158 3 0 6.72e-006 6.72e-006 4.51584e-011
+219	74000 67 255 292 5.000029 5.00004734 3 64 64 192 12288
+220	74067 69 256 293 5.00002905 5.00004739 3 64 64 192 12288
+221	74136 69 256 293 5.00002905 5.00004739 3 64 64 192 12288
+222	74205 69 257 295 5.00002905 5.00004739 3 46 46 138 6348
+223	74274 23 259 259 5.00002905 5.00002905 1 28 28 28 784
+224	74297 23 260 260 5.00002905 5.00002905 1 46 46 46 2116
+225	74320 23 260 260 5.00002905 5.00002905 1 64 64 64 4096
+226	74343 44 260 260 5.00002905 5.00002905 2 0 1 1 1
+227	74387 23 260 260 5.00002905 5.00002905 1 64 64 64 4096
+228	74410 22 260 260 5.00002905 5.00002905 1 0 0 0 0
+229	74432 23 267 267 5.00003481 5.00003481 1 64 64 64 4096
+230	74455 23 268 268 5.00003486 5.00003486 1 64 64 64 4096
+231	74478 23 268 268 5.00003486 5.00003486 1 64 64 64 4096
+232	74501 23 269 269 5.00003486 5.00003486 1 46 46 46 2116
+236	74524 22 288 288 5.00004648 5.00004648 1 2 2 2 4
+237	74546 31 288 288 5.00004648 5.00004648 1 4.648e-005 4.648e-005 4.648e-005 2.1603904e-009
+238	74577 46 353 386 5.00006573 5.00007735 2 28 40 68 2384
+239	74623 46 354 387 5.00006573 5.00007735 2 46 58 104 5480
+240	74669 46 354 387 5.00006573 5.00007735 2 64 64 128 8192
+241	74715 88 354 387 5.00006573 5.00007735 4 0 1 2 2
+242	74803 46 354 387 5.00006573 5.00007735 2 64 64 128 8192
+243	74849 44 354 387 5.00006573 5.00007735 2 0 0 0 0
+251	74893 46 368 389 5.00007149 5.00008311 2 64 64 128 8192
+252	74939 46 369 390 5.00007154 5.00008316 2 64 64 128 8192
+253	74985 46 369 390 5.00007154 5.00008316 2 64 64 128 8192
+254	75031 46 371 391 5.00007154 5.00008316 2 46 46 92 4232
+255	75077 23 372 372 5.00007154 5.00007154 1 28 28 28 784
+256	75100 23 373 373 5.00007154 5.00007154 1 28 28 28 784
+257	75123 23 374 374 5.00007154 5.00007154 1 46 46 46 2116
+258	75146 23 374 374 5.00007154 5.00007154 1 64 64 64 4096
+259	75169 44 374 374 5.00007154 5.00007154 2 0 1 1 1
+260	75213 23 374 374 5.00007154 5.00007154 1 64 64 64 4096
+261	75236 22 374 374 5.00007154 5.00007154 1 0 0 0 0
+262	75258 22 381 381 5.0000773 5.0000773 1 64 64 64 4096
+263	75280 23 382 382 5.00007735 5.00007735 1 64 64 64 4096
+264	75303 23 382 382 5.00007735 5.00007735 1 64 64 64 4096
+265	75326 23 384 384 5.00007735 5.00007735 1 46 46 46 2116
+266	75349 23 392 392 5.00008316 5.00008316 1 28 28 28 784
+267	75372 46 393 407 5.00008316 5.00009478 2 28 40 68 2384
+268	75418 46 394 408 5.00008316 5.00009478 2 46 58 104 5480
+269	75464 46 394 408 5.00008316 5.00009478 2 64 64 128 8192
+270	75510 88 394 408 5.00008316 5.00009478 4 0 1 2 2
+271	75598 46 394 408 5.00008316 5.00009478 2 64 64 128 8192
+272	75644 44 394 408 5.00008316 5.00009478 2 0 0 0 0
+273	75688 46 396 410 5.00008892 5.00010054 2 64 64 128 8192
+274	75734 46 397 411 5.00008897 5.00010059 2 64 64 128 8192
+275	75780 46 397 411 5.00008897 5.00010059 2 64 64 128 8192
+276	75826 46 398 412 5.00008897 5.00010059 2 46 46 92 4232
+277	75872 23 400 400 5.00008897 5.00008897 1 28 28 28 784
+278	75895 23 401 401 5.00008897 5.00008897 1 46 46 46 2116
+279	75918 23 401 401 5.00008897 5.00008897 1 64 64 64 4096
+280	75941 44 401 401 5.00008897 5.00008897 2 0 1 1 1
+281	75985 23 401 401 5.00008897 5.00008897 1 64 64 64 4096
+282	76008 22 401 401 5.00008897 5.00008897 1 0 0 0 0
+283	76030 23 403 403 5.00009473 5.00009473 1 64 64 64 4096
+284	76053 23 404 404 5.00009478 5.00009478 1 64 64 64 4096
+285	76076 23 404 404 5.00009478 5.00009478 1 64 64 64 4096
+286	76099 23 405 405 5.00009478 5.00009478 1 46 46 46 2116
+
