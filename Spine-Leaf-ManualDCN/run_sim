@@ -5,7 +5,7 @@
 echo 'Starting Simulation'
 
 #Running the simulation
-./Spine-LeafDCN.exe -u Cmdenv -f _XHostSpineLeaf/XHost_SpineLeaf.ini -c Traffic_1
+./Spine-LeafDCN.exe -u Cmdenv -f _XHostSpineLeaf/ini_generated.ini -c scriptTraffic
 
 #Converting results to .csv file
 echo 'Converting results file.'
