@@ -1,19 +1,27 @@
 #!/bin/bash
 
+
+# Building topology info and saving input
+cd ../Python\ Scripts
+py RouterConfigurator.py
+
+# Creating Traffic based on topology input
+py SendScript.py < input.txt
+
 # Script to run simulation and display graphs.
-
 echo 'Starting Simulation'
+cd ../Spine-Leaf-ManualDCN
 
-#Running the simulation
+# Running the simulation
 ./Spine-LeafDCN.exe -u Cmdenv -f _XHostSpineLeaf/XHost_SpineLeaf.ini -c Traffic_1
 
-#Converting results to .csv file
+# Converting results to .csv file
 echo 'Converting results file.'
 
 cd ./_XHostSpineLeaf/results
 scavetool x *.sca -o results.csv
 
-#Running python script to display graphs
+# Running python script to display graphs
 echo 'Running graphing script.'
 
 cd ../../../
