@@ -1,4 +1,4 @@
-file 356273 1611260587                                          
+file 344853 1611888005                                          
 version 2
 run Ping-0-20210121-15:23:00-2976
 attr configname Ping
@@ -31,2387 +31,2387 @@ param **.configurator.config "xmldoc(\"10Host_SpineLeaf_Routing.xml\")"
 vector 0 spineLeafNetwork.H4.app[0] pingTxSeq:vector ETV
 attr interpolationmode none
 attr title "ping tx seq, vector"
-0	94774 247 1 5937 0.423654796788 9.423654796788 10 0 9 45 285
+0	92853 237 1 5937 0.423654796788 9.423654796788 10 0 9 45 285
 vector 1 spineLeafNetwork.H4.ipv4.arp arpRequestSent:vector(packetBytes) ETV
 attr source arpRequestSent
 attr title "ARP request sent, vector(packetBytes)"
-1	95021 23 3 3 0.423654796788 0.423654796788 1 28 28 28 784
+1	93090 22 3 3 0.423654796788 0.423654796788 1 28 28 28 784
 vector 2 spineLeafNetwork.H4.eth[0].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-2	95044 281 4 5939 0.423654796788 9.423654796788 11 28 84 868 71344
+2	93112 270 4 5939 0.423654796788 9.423654796788 11 28 84 868 71344
 vector 3 spineLeafNetwork.H4.eth[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-3	95325 291 5 5940 0.423654796788 9.423654796788 11 46 102 1066 106156
+3	93382 280 5 5940 0.423654796788 9.423654796788 11 46 102 1066 106156
 vector 4 spineLeafNetwork.H4.eth[0].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-4	95616 291 5 5940 0.423654796788 9.423654796788 11 64 102 1084 108136
+4	93662 280 5 5940 0.423654796788 9.423654796788 11 64 102 1084 108136
 vector 5 spineLeafNetwork.H4.eth[0].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-5	95907 540 5 5940 0.423654796788 9.423654796788 22 0 1 11 11
+5	93942 518 5 5940 0.423654796788 9.423654796788 22 0 1 11 11
 vector 6 spineLeafNetwork.H4.eth[0].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-6	96447 291 5 5940 0.423654796788 9.423654796788 11 64 102 1084 108136
+6	94460 280 5 5940 0.423654796788 9.423654796788 11 64 102 1084 108136
 vector 7 spineLeafNetwork.H4.eth[0].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-7	96738 270 5 5940 0.423654796788 9.423654796788 11 0 0 0 0
+7	94740 259 5 5940 0.423654796788 9.423654796788 11 0 0 0 0
 vector 8 spineLeafNetwork.H4.eth[0].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-8	97008 291 6 5941 0.423660556788 9.423663596788 11 64 102 1084 108136
+8	94999 280 6 5941 0.423660556788 9.423663596788 11 64 102 1084 108136
 vector 9 spineLeafNetwork.leaf2.eth[3].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-9	97299 291 7 5942 0.423660606788 9.423663646788 11 64 102 1084 108136
+9	95279 280 7 5942 0.423660606788 9.423663646788 11 64 102 1084 108136
 vector 10 spineLeafNetwork.leaf2.eth[3].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-10	97590 302 7 5942 0.423660606788 9.423663646788 11 64 102 1084 108136
+10	95559 291 7 5942 0.423660606788 9.423663646788 11 64 102 1084 108136
 vector 11 spineLeafNetwork.leaf2.eth[3].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-11	97892 292 8 5943 0.423660606788 9.423663646788 11 46 84 886 72676
+11	95850 281 8 5943 0.423660606788 9.423663646788 11 46 84 886 72676
 vector 12 spineLeafNetwork.leaf2.ipv4.arp arpReplySent:vector(packetBytes) ETV
 attr source arpReplySent
 attr title "ARP replies sent, vector(packetBytes)"
-12	98184 128 9 902 0.423660606788 0.847333887257 5 28 28 140 3920
+12	96131 123 9 902 0.423660606788 0.847333887257 5 28 28 140 3920
 vector 13 spineLeafNetwork.leaf2.eth[3].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-13	98312 294 10 5990 0.423660606788 9.423716746788 11 28 84 868 71344
+13	96254 283 10 5990 0.423660606788 9.423716746788 11 28 84 868 71344
 vector 14 spineLeafNetwork.leaf2.eth[3].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-14	98606 304 11 5991 0.423660606788 9.423716746788 11 46 102 1066 106156
+14	96537 293 11 5991 0.423660606788 9.423716746788 11 46 102 1066 106156
 vector 15 spineLeafNetwork.leaf2.eth[3].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-15	98910 304 11 5991 0.423660606788 9.423716746788 11 64 102 1084 108136
+15	96830 293 11 5991 0.423660606788 9.423716746788 11 64 102 1084 108136
 vector 16 spineLeafNetwork.leaf2.eth[3].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-16	99214 566 11 5991 0.423660606788 9.423716746788 22 0 1 11 11
+16	97123 544 11 5991 0.423660606788 9.423716746788 22 0 1 11 11
 vector 17 spineLeafNetwork.leaf2.eth[3].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-17	99780 304 11 5991 0.423660606788 9.423716746788 11 64 102 1084 108136
+17	97667 293 11 5991 0.423660606788 9.423716746788 11 64 102 1084 108136
 vector 18 spineLeafNetwork.leaf2.eth[3].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-18	100084 283 11 5991 0.423660606788 9.423716746788 11 0 0 0 0
+18	97960 272 11 5991 0.423660606788 9.423716746788 11 0 0 0 0
 vector 19 spineLeafNetwork.leaf2.eth[3].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-19	100367 304 13 5993 0.423666366788 9.423725546788 11 64 102 1084 108136
+19	98232 293 13 5993 0.423666366788 9.423725546788 11 64 102 1084 108136
 vector 20 spineLeafNetwork.H4.eth[0].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-20	100671 304 14 5994 0.423666416788 9.423725596788 11 64 102 1084 108136
+20	98525 293 14 5994 0.423666416788 9.423725596788 11 64 102 1084 108136
 vector 21 spineLeafNetwork.H4.eth[0].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-21	100975 304 14 5994 0.423666416788 9.423725596788 11 64 102 1084 108136
+21	98818 293 14 5994 0.423666416788 9.423725596788 11 64 102 1084 108136
 vector 22 spineLeafNetwork.H4.eth[0].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-22	101279 294 15 5995 0.423666416788 9.423725596788 11 46 84 886 72676
+22	99111 283 15 5995 0.423666416788 9.423725596788 11 46 84 886 72676
 vector 23 spineLeafNetwork.leaf2.ipv4.arp arpRequestSent:vector(packetBytes) ETV
 attr source arpRequestSent
 attr title "ARP request sent, vector(packetBytes)"
-23	101573 78 23 1040 0.423675266788 1.423663646788 3 28 28 84 2352
+23	99394 75 23 1040 0.423675266788 1.423663646788 3 28 28 84 2352
 vector 24 spineLeafNetwork.leaf2.eth[2].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-24	101651 293 24 6397 0.423675266788 9.847260587257 11 28 84 868 71344
+24	99469 282 24 6397 0.423675266788 9.847260587257 11 28 84 868 71344
 vector 25 spineLeafNetwork.leaf2.eth[2].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-25	101944 303 25 6398 0.423675266788 9.847260587257 11 46 102 1066 106156
+25	99751 292 25 6398 0.423675266788 9.847260587257 11 46 102 1066 106156
 vector 26 spineLeafNetwork.leaf2.eth[2].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-26	102247 303 25 6398 0.423675266788 9.847260587257 11 64 102 1084 108136
+26	100043 292 25 6398 0.423675266788 9.847260587257 11 64 102 1084 108136
 vector 27 spineLeafNetwork.leaf2.eth[2].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-27	102550 564 25 6398 0.423675266788 9.847260587257 22 0 1 11 11
+27	100335 542 25 6398 0.423675266788 9.847260587257 22 0 1 11 11
 vector 28 spineLeafNetwork.leaf2.eth[2].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-28	103114 303 25 6398 0.423675266788 9.847260587257 11 64 102 1084 108136
+28	100877 292 25 6398 0.423675266788 9.847260587257 11 64 102 1084 108136
 vector 29 spineLeafNetwork.leaf2.eth[2].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-29	103417 282 25 6398 0.423675266788 9.847260587257 11 0 0 0 0
+29	101169 271 25 6398 0.423675266788 9.847260587257 11 0 0 0 0
 vector 30 spineLeafNetwork.leaf2.eth[2].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-30	103699 303 27 6400 0.423681026788 9.847269387257 11 64 102 1084 108136
+30	101440 292 27 6400 0.423681026788 9.847269387257 11 64 102 1084 108136
 vector 31 spineLeafNetwork.spine3.eth[1].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-31	104002 303 28 6401 0.423681076788 9.847269437257 11 64 102 1084 108136
+31	101732 292 28 6401 0.423681076788 9.847269437257 11 64 102 1084 108136
 vector 32 spineLeafNetwork.spine3.eth[1].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-32	104305 303 28 6401 0.423681076788 9.847269437257 11 64 102 1084 108136
+32	102024 292 28 6401 0.423681076788 9.847269437257 11 64 102 1084 108136
 vector 33 spineLeafNetwork.spine3.eth[1].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-33	104608 293 29 6402 0.423681076788 9.847269437257 11 46 84 886 72676
+33	102316 282 29 6402 0.423681076788 9.847269437257 11 46 84 886 72676
 vector 34 spineLeafNetwork.spine3.ipv4.arp arpReplySent:vector(packetBytes) ETV
 attr source arpReplySent
 attr title "ARP replies sent, vector(packetBytes)"
-34	104901 315 30 4861 0.423681076788 7.544933237383 12 28 28 336 9408
+34	102598 303 30 4861 0.423681076788 7.544933237383 12 28 28 336 9408
 vector 35 spineLeafNetwork.spine3.eth[1].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-35	105216 214 31 5265 0.423681076788 7.847304837257 8 28 84 616 50176
+35	102901 206 31 5265 0.423681076788 7.847304837257 8 28 84 616 50176
 vector 36 spineLeafNetwork.spine3.eth[1].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-36	105430 221 32 5266 0.423681076788 7.847304837257 8 46 102 760 74944
+36	103107 213 32 5266 0.423681076788 7.847304837257 8 46 102 760 74944
 vector 37 spineLeafNetwork.spine3.eth[1].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-37	105651 221 32 5266 0.423681076788 7.847304837257 8 64 102 778 76924
+37	103320 213 32 5266 0.423681076788 7.847304837257 8 64 102 778 76924
 vector 38 spineLeafNetwork.spine3.eth[1].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-38	105872 412 32 5266 0.423681076788 7.847304837257 16 0 1 8 8
+38	103533 396 32 5266 0.423681076788 7.847304837257 16 0 1 8 8
 vector 39 spineLeafNetwork.spine3.eth[1].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-39	106284 221 32 5266 0.423681076788 7.847304837257 8 64 102 778 76924
+39	103929 213 32 5266 0.423681076788 7.847304837257 8 64 102 778 76924
 vector 40 spineLeafNetwork.spine3.eth[1].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-40	106505 206 32 5266 0.423681076788 7.847304837257 8 0 0 0 0
+40	104142 198 32 5266 0.423681076788 7.847304837257 8 0 0 0 0
 vector 41 spineLeafNetwork.spine3.eth[1].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-41	106711 221 34 5268 0.423686836788 7.847313637257 8 64 102 778 76924
+41	104340 213 34 5268 0.423686836788 7.847313637257 8 64 102 778 76924
 vector 42 spineLeafNetwork.leaf2.eth[2].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-42	106932 221 35 5269 0.423686886788 7.847313687257 8 64 102 778 76924
+42	104553 213 35 5269 0.423686886788 7.847313687257 8 64 102 778 76924
 vector 43 spineLeafNetwork.leaf2.eth[2].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-43	107153 221 35 5269 0.423686886788 7.847313687257 8 64 102 778 76924
+43	104766 213 35 5269 0.423686886788 7.847313687257 8 64 102 778 76924
 vector 44 spineLeafNetwork.leaf2.eth[2].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-44	107374 214 36 5270 0.423686886788 7.847313687257 8 46 84 634 51508
+44	104979 206 36 5270 0.423686886788 7.847313687257 8 46 84 634 51508
 vector 45 spineLeafNetwork.spine3.ipv4.arp arpRequestSent:vector(packetBytes) ETV
 attr source arpRequestSent
 attr title "ARP request sent, vector(packetBytes)"
-45	107588 51 44 354 0.423695736788 0.548913082304 2 28 28 56 1568
+45	105185 49 44 354 0.423695736788 0.548913082304 2 28 28 56 1568
 vector 46 spineLeafNetwork.spine3.eth[3].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-46	107639 1200 45 6404 0.423695736788 9.847269437257 45 28 84 3220 254800
+46	105234 1155 45 6404 0.423695736788 9.847269437257 45 28 84 3220 254800
 vector 47 spineLeafNetwork.spine3.eth[3].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-47	108839 1235 46 6405 0.423695736788 9.847269437257 45 46 102 4030 385300
+47	106389 1190 46 6405 0.423695736788 9.847269437257 45 46 102 4030 385300
 vector 48 spineLeafNetwork.spine3.eth[3].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-48	110074 1235 46 6405 0.423695736788 9.847269437257 45 64 102 4210 405100
+48	107579 1190 46 6405 0.423695736788 9.847269437257 45 64 102 4210 405100
 vector 49 spineLeafNetwork.spine3.eth[3].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-49	111309 2310 46 6405 0.423695736788 9.847269437257 90 0 1 45 45
+49	108769 2220 46 6405 0.423695736788 9.847269437257 90 0 1 45 45
 vector 50 spineLeafNetwork.spine3.eth[3].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-50	113619 1235 46 6405 0.423695736788 9.847269437257 45 64 102 4210 405100
+50	110989 1190 46 6405 0.423695736788 9.847269437257 45 64 102 4210 405100
 vector 51 spineLeafNetwork.spine3.eth[3].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-51	114854 1155 46 6405 0.423695736788 9.847269437257 45 0 0 0 0
+51	112179 1110 46 6405 0.423695736788 9.847269437257 45 0 0 0 0
 vector 52 spineLeafNetwork.spine3.eth[3].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-52	116009 1235 48 6407 0.423701496788 9.847278237257 45 64 102 4210 405100
+52	113289 1190 48 6407 0.423701496788 9.847278237257 45 64 102 4210 405100
 vector 53 spineLeafNetwork.leaf4.eth[2].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-53	117244 1235 49 6408 0.423701546788 9.847278287257 45 64 102 4210 405100
+53	114479 1190 49 6408 0.423701546788 9.847278287257 45 64 102 4210 405100
 vector 54 spineLeafNetwork.leaf4.eth[2].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-54	118479 1235 49 6408 0.423701546788 9.847278287257 45 64 102 4210 405100
+54	115669 1190 49 6408 0.423701546788 9.847278287257 45 64 102 4210 405100
 vector 55 spineLeafNetwork.leaf4.eth[2].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-55	119714 1200 50 6409 0.423701546788 9.847278287257 45 46 84 3400 268120
+55	116859 1155 50 6409 0.423701546788 9.847278287257 45 46 84 3400 268120
 vector 56 spineLeafNetwork.leaf4.ipv4.arp arpReplySent:vector(packetBytes) ETV
 attr source arpReplySent
 attr title "ARP replies sent, vector(packetBytes)"
-56	120914 51 51 303 0.423701546788 0.548860252304 2 28 28 56 1568
+56	118014 49 51 303 0.423701546788 0.548860252304 2 28 28 56 1568
 vector 57 spineLeafNetwork.leaf4.eth[2].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-57	120965 1119 52 6365 0.423701546788 9.84430999409 42 28 84 2968 233632
+57	118063 1077 52 6365 0.423701546788 9.84430999409 42 28 84 2968 233632
 vector 58 spineLeafNetwork.leaf4.eth[2].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-58	122084 1151 53 6366 0.423701546788 9.84430999409 42 46 102 3724 354088
+58	119140 1109 53 6366 0.423701546788 9.84430999409 42 46 102 3724 354088
 vector 59 spineLeafNetwork.leaf4.eth[2].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-59	123235 1151 53 6366 0.423701546788 9.84430999409 42 64 102 3904 373888
+59	120249 1109 53 6366 0.423701546788 9.84430999409 42 64 102 3904 373888
 vector 60 spineLeafNetwork.leaf4.eth[2].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-60	124386 2154 53 6366 0.423701546788 9.84430999409 84 0 1 42 42
+60	121358 2070 53 6366 0.423701546788 9.84430999409 84 0 1 42 42
 vector 61 spineLeafNetwork.leaf4.eth[2].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-61	126540 1151 53 6366 0.423701546788 9.84430999409 42 64 102 3904 373888
+61	123428 1109 53 6366 0.423701546788 9.84430999409 42 64 102 3904 373888
 vector 62 spineLeafNetwork.leaf4.eth[2].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-62	127691 1077 53 6366 0.423701546788 9.84430999409 42 0 0 0 0
+62	124537 1035 53 6366 0.423701546788 9.84430999409 42 0 0 0 0
 vector 63 spineLeafNetwork.leaf4.eth[2].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-63	128768 1151 55 6368 0.423707306788 9.84431879409 42 64 102 3904 373888
+63	125572 1109 55 6368 0.423707306788 9.84431879409 42 64 102 3904 373888
 vector 64 spineLeafNetwork.spine3.eth[3].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-64	129919 1151 56 6369 0.423707356788 9.84431884409 42 64 102 3904 373888
+64	126681 1109 56 6369 0.423707356788 9.84431884409 42 64 102 3904 373888
 vector 65 spineLeafNetwork.spine3.eth[3].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-65	131070 1151 56 6369 0.423707356788 9.84431884409 42 64 102 3904 373888
+65	127790 1109 56 6369 0.423707356788 9.84431884409 42 64 102 3904 373888
 vector 66 spineLeafNetwork.spine3.eth[3].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-66	132221 1119 57 6370 0.423707356788 9.84431884409 42 46 84 3148 246952
+66	128899 1077 57 6370 0.423707356788 9.84431884409 42 46 84 3148 246952
 vector 67 spineLeafNetwork.leaf4.ipv4.arp arpRequestSent:vector(packetBytes) ETV
 attr source arpRequestSent
 attr title "ARP request sent, vector(packetBytes)"
-67	133340 741 65 5320 0.423716206788 7.857989869849 28 28 28 784 21952
+67	129976 713 65 5320 0.423716206788 7.857989869849 28 28 28 784 21952
 vector 68 spineLeafNetwork.leaf4.eth[3].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-68	134081 2435 66 6474 0.423716206788 9.857972169849 91 28 84 7588 635824
+68	130689 2344 66 6474 0.423716206788 9.857972169849 91 28 84 7588 635824
 vector 69 spineLeafNetwork.leaf4.eth[3].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-69	136516 2525 67 6475 0.423716206788 9.857972169849 91 46 102 9226 938476
+69	133033 2434 67 6475 0.423716206788 9.857972169849 91 46 102 9226 938476
 vector 70 spineLeafNetwork.leaf4.eth[3].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-70	139041 2525 67 6475 0.423716206788 9.857972169849 91 64 102 9244 940456
+70	135467 2434 67 6475 0.423716206788 9.857972169849 91 64 102 9244 940456
 vector 71 spineLeafNetwork.leaf4.eth[3].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-71	141566 4688 67 6475 0.423716206788 9.857972169849 182 0 1 91 91
+71	137901 4506 67 6475 0.423716206788 9.857972169849 182 0 1 91 91
 vector 72 spineLeafNetwork.leaf4.eth[3].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-72	146254 2525 67 6475 0.423716206788 9.857972169849 91 64 102 9244 940456
+72	142407 2434 67 6475 0.423716206788 9.857972169849 91 64 102 9244 940456
 vector 73 spineLeafNetwork.leaf4.eth[3].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-73	148779 2344 67 6475 0.423716206788 9.857972169849 91 0 0 0 0
+73	144841 2253 67 6475 0.423716206788 9.857972169849 91 0 0 0 0
 vector 74 spineLeafNetwork.leaf4.eth[3].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-74	151123 2525 69 6477 0.423721966788 9.857980969849 91 64 102 9244 940456
+74	147094 2434 69 6477 0.423721966788 9.857980969849 91 64 102 9244 940456
 vector 75 spineLeafNetwork.H10.eth[0].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-75	153648 2525 70 6478 0.423722016788 9.857981019849 91 64 102 9244 940456
+75	149528 2434 70 6478 0.423722016788 9.857981019849 91 64 102 9244 940456
 vector 76 spineLeafNetwork.H10.eth[0].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-76	156173 2525 70 6478 0.423722016788 9.857981019849 91 64 102 9244 940456
+76	151962 2434 70 6478 0.423722016788 9.857981019849 91 64 102 9244 940456
 vector 77 spineLeafNetwork.H10.eth[0].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-77	158698 2435 71 6479 0.423722016788 9.857981019849 91 46 84 7606 637156
+77	154396 2344 71 6479 0.423722016788 9.857981019849 91 46 84 7606 637156
 vector 78 spineLeafNetwork.H10.ipv4.arp arpReplySent:vector(packetBytes) ETV
 attr source arpReplySent
 attr title "ARP replies sent, vector(packetBytes)"
-78	161133 25 72 72 0.423722016788 0.423722016788 1 28 28 28 784
+78	156740 24 72 72 0.423722016788 0.423722016788 1 28 28 28 784
 vector 79 spineLeafNetwork.H10.eth[0].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-79	161158 2435 73 6484 0.423722016788 9.857981019849 91 28 84 7588 635824
+79	156764 2344 73 6484 0.423722016788 9.857981019849 91 28 84 7588 635824
 vector 80 spineLeafNetwork.H10.eth[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-80	163593 2525 74 6485 0.423722016788 9.857981019849 91 46 102 9226 938476
+80	159108 2434 74 6485 0.423722016788 9.857981019849 91 46 102 9226 938476
 vector 81 spineLeafNetwork.H10.eth[0].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-81	166118 2525 74 6485 0.423722016788 9.857981019849 91 64 102 9244 940456
+81	161542 2434 74 6485 0.423722016788 9.857981019849 91 64 102 9244 940456
 vector 82 spineLeafNetwork.H10.eth[0].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-82	168643 4688 74 6485 0.423722016788 9.857981019849 182 0 1 91 91
+82	163976 4506 74 6485 0.423722016788 9.857981019849 182 0 1 91 91
 vector 83 spineLeafNetwork.H10.eth[0].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-83	173331 2525 74 6485 0.423722016788 9.857981019849 91 64 102 9244 940456
+83	168482 2434 74 6485 0.423722016788 9.857981019849 91 64 102 9244 940456
 vector 84 spineLeafNetwork.H10.eth[0].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-84	175856 2344 74 6485 0.423722016788 9.857981019849 91 0 0 0 0
+84	170916 2253 74 6485 0.423722016788 9.857981019849 91 0 0 0 0
 vector 85 spineLeafNetwork.H10.eth[0].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-85	178200 2525 76 6487 0.423727776788 9.857989819849 91 64 102 9244 940456
+85	173169 2434 76 6487 0.423727776788 9.857989819849 91 64 102 9244 940456
 vector 86 spineLeafNetwork.leaf4.eth[3].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-86	180725 2525 77 6488 0.423727826788 9.857989869849 91 64 102 9244 940456
+86	175603 2434 77 6488 0.423727826788 9.857989869849 91 64 102 9244 940456
 vector 87 spineLeafNetwork.leaf4.eth[3].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-87	183250 2525 77 6488 0.423727826788 9.857989869849 91 64 102 9244 940456
+87	178037 2434 77 6488 0.423727826788 9.857989869849 91 64 102 9244 940456
 vector 88 spineLeafNetwork.leaf4.eth[3].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-88	185775 2435 78 6489 0.423727826788 9.857989869849 91 46 84 7606 637156
+88	180471 2344 78 6489 0.423727826788 9.857989869849 91 46 84 7606 637156
 vector 89 spineLeafNetwork.leaf4.eth[1].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-89	188210 987 96 6491 0.423745526788 9.857989869849 37 28 84 2604 204624
+89	182815 950 96 6491 0.423745526788 9.857989869849 37 28 84 2604 204624
 vector 90 spineLeafNetwork.leaf4.eth[1].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-90	189197 1015 97 6492 0.423745526788 9.857989869849 37 46 102 3270 310356
+90	183765 978 97 6492 0.423745526788 9.857989869849 37 46 102 3270 310356
 vector 91 spineLeafNetwork.leaf4.eth[1].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-91	190212 1015 97 6492 0.423745526788 9.857989869849 37 64 102 3432 328176
+91	184743 978 97 6492 0.423745526788 9.857989869849 37 64 102 3432 328176
 vector 92 spineLeafNetwork.leaf4.eth[1].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-92	191227 1900 97 6492 0.423745526788 9.857989869849 74 0 1 37 37
+92	185721 1826 97 6492 0.423745526788 9.857989869849 74 0 1 37 37
 vector 93 spineLeafNetwork.leaf4.eth[1].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-93	193127 1015 97 6492 0.423745526788 9.857989869849 37 64 102 3432 328176
+93	187547 978 97 6492 0.423745526788 9.857989869849 37 64 102 3432 328176
 vector 94 spineLeafNetwork.leaf4.eth[1].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-94	194142 950 97 6492 0.423745526788 9.857989869849 37 0 0 0 0
+94	188525 913 97 6492 0.423745526788 9.857989869849 37 0 0 0 0
 vector 95 spineLeafNetwork.leaf4.eth[1].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-95	195092 1015 99 6494 0.423751286788 9.857998669849 37 64 102 3432 328176
+95	189438 978 99 6494 0.423751286788 9.857998669849 37 64 102 3432 328176
 vector 96 spineLeafNetwork.spine2.eth[3].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-96	196107 1016 100 6495 0.423751336788 9.857998719849 37 64 102 3432 328176
+96	190416 979 100 6495 0.423751336788 9.857998719849 37 64 102 3432 328176
 vector 97 spineLeafNetwork.spine2.eth[3].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-97	197123 1016 100 6495 0.423751336788 9.857998719849 37 64 102 3432 328176
+97	191395 979 100 6495 0.423751336788 9.857998719849 37 64 102 3432 328176
 vector 98 spineLeafNetwork.spine2.eth[3].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-98	198139 988 101 6496 0.423751336788 9.857998719849 37 46 84 2766 216612
+98	192374 951 101 6496 0.423751336788 9.857998719849 37 46 84 2766 216612
 vector 99 spineLeafNetwork.spine2.ipv4.arp arpReplySent:vector(packetBytes) ETV
 attr source arpReplySent
 attr title "ARP replies sent, vector(packetBytes)"
-99	199127 316 102 5327 0.423751336788 7.857995679849 12 28 28 336 9408
+99	193325 304 102 5327 0.423751336788 7.857995679849 12 28 28 336 9408
 vector 100 spineLeafNetwork.spine2.eth[3].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-100	199443 1023 103 6341 0.423751336788 9.84428344409 37 28 84 2604 204624
+100	193629 986 103 6341 0.423751336788 9.84428344409 37 28 84 2604 204624
 vector 101 spineLeafNetwork.spine2.eth[3].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-101	200466 1051 104 6342 0.423751336788 9.84428344409 37 46 102 3270 310356
+101	194615 1014 104 6342 0.423751336788 9.84428344409 37 46 102 3270 310356
 vector 102 spineLeafNetwork.spine2.eth[3].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-102	201517 1051 104 6342 0.423751336788 9.84428344409 37 64 102 3432 328176
+102	195629 1014 104 6342 0.423751336788 9.84428344409 37 64 102 3432 328176
 vector 103 spineLeafNetwork.spine2.eth[3].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-103	202568 1972 104 6342 0.423751336788 9.84428344409 74 0 1 37 37
+103	196643 1898 104 6342 0.423751336788 9.84428344409 74 0 1 37 37
 vector 104 spineLeafNetwork.spine2.eth[3].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-104	204540 1051 104 6342 0.423751336788 9.84428344409 37 64 102 3432 328176
+104	198541 1014 104 6342 0.423751336788 9.84428344409 37 64 102 3432 328176
 vector 105 spineLeafNetwork.spine2.eth[3].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-105	205591 986 104 6342 0.423751336788 9.84428344409 37 0 0 0 0
+105	199555 949 104 6342 0.423751336788 9.84428344409 37 0 0 0 0
 vector 106 spineLeafNetwork.spine2.eth[3].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-106	206577 1051 106 6344 0.423757096788 9.84429224409 37 64 102 3432 328176
+106	200504 1014 106 6344 0.423757096788 9.84429224409 37 64 102 3432 328176
 vector 107 spineLeafNetwork.leaf4.eth[1].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-107	207628 1051 107 6345 0.423757146788 9.84429229409 37 64 102 3432 328176
+107	201518 1014 107 6345 0.423757146788 9.84429229409 37 64 102 3432 328176
 vector 108 spineLeafNetwork.leaf4.eth[1].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-108	208679 1051 107 6345 0.423757146788 9.84429229409 37 64 102 3432 328176
+108	202532 1014 107 6345 0.423757146788 9.84429229409 37 64 102 3432 328176
 vector 109 spineLeafNetwork.leaf4.eth[1].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-109	209730 1023 108 6346 0.423757146788 9.84429229409 37 46 84 2766 216612
+109	203546 986 108 6346 0.423757146788 9.84429229409 37 46 84 2766 216612
 vector 110 spineLeafNetwork.spine2.ipv4.arp arpRequestSent:vector(packetBytes) ETV
 attr source arpRequestSent
 attr title "ARP request sent, vector(packetBytes)"
-110	210753 27 116 116 0.423765996788 0.423765996788 1 28 28 28 784
+110	204532 26 116 116 0.423765996788 0.423765996788 1 28 28 28 784
 vector 111 spineLeafNetwork.spine2.eth[1].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-111	210780 388 117 5857 0.423765996788 8.847304837257 14 28 84 1064 86240
+111	204558 374 117 5857 0.423765996788 8.847304837257 14 28 84 1064 86240
 vector 112 spineLeafNetwork.spine2.eth[1].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-112	211168 400 118 5858 0.423765996788 8.847304837257 14 46 102 1316 129080
+112	204932 386 118 5858 0.423765996788 8.847304837257 14 46 102 1316 129080
 vector 113 spineLeafNetwork.spine2.eth[1].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-113	211568 400 118 5858 0.423765996788 8.847304837257 14 64 102 1352 133040
+113	205318 386 118 5858 0.423765996788 8.847304837257 14 64 102 1352 133040
 vector 114 spineLeafNetwork.spine2.eth[1].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-114	211968 748 118 5858 0.423765996788 8.847304837257 28 0 1 14 14
+114	205704 720 118 5858 0.423765996788 8.847304837257 28 0 1 14 14
 vector 115 spineLeafNetwork.spine2.eth[1].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-115	212716 400 118 5858 0.423765996788 8.847304837257 14 64 102 1352 133040
+115	206424 386 118 5858 0.423765996788 8.847304837257 14 64 102 1352 133040
 vector 116 spineLeafNetwork.spine2.eth[1].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-116	213116 374 118 5858 0.423765996788 8.847304837257 14 0 0 0 0
+116	206810 360 118 5858 0.423765996788 8.847304837257 14 0 0 0 0
 vector 117 spineLeafNetwork.spine2.eth[1].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-117	213490 400 120 5860 0.423771756788 8.847313637257 14 64 102 1352 133040
+117	207170 386 120 5860 0.423771756788 8.847313637257 14 64 102 1352 133040
 vector 118 spineLeafNetwork.leaf2.eth[1].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-118	213890 400 121 5861 0.423771806788 8.847313687257 14 64 102 1352 133040
+118	207556 386 121 5861 0.423771806788 8.847313687257 14 64 102 1352 133040
 vector 119 spineLeafNetwork.leaf2.eth[1].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-119	214290 400 121 5861 0.423771806788 8.847313687257 14 64 102 1352 133040
+119	207942 386 121 5861 0.423771806788 8.847313687257 14 64 102 1352 133040
 vector 120 spineLeafNetwork.leaf2.eth[1].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-120	214690 388 122 5862 0.423771806788 8.847313687257 14 46 84 1100 88904
+120	208328 374 122 5862 0.423771806788 8.847313687257 14 46 84 1100 88904
 vector 121 spineLeafNetwork.leaf2.eth[1].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-121	215078 360 124 6008 0.423771806788 9.544892027383 13 28 84 980 79184
+121	208702 347 124 6008 0.423771806788 9.544892027383 13 28 84 980 79184
 vector 122 spineLeafNetwork.leaf2.eth[1].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-122	215438 371 125 6009 0.423771806788 9.544892027383 13 46 102 1214 118676
+122	209049 358 125 6009 0.423771806788 9.544892027383 13 46 102 1214 118676
 vector 123 spineLeafNetwork.leaf2.eth[1].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-123	215809 371 125 6009 0.423771806788 9.544892027383 13 64 102 1250 122636
+123	209407 358 125 6009 0.423771806788 9.544892027383 13 64 102 1250 122636
 vector 124 spineLeafNetwork.leaf2.eth[1].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-124	216180 694 125 6009 0.423771806788 9.544892027383 26 0 1 13 13
+124	209765 668 125 6009 0.423771806788 9.544892027383 26 0 1 13 13
 vector 125 spineLeafNetwork.leaf2.eth[1].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-125	216874 371 125 6009 0.423771806788 9.544892027383 13 64 102 1250 122636
+125	210433 358 125 6009 0.423771806788 9.544892027383 13 64 102 1250 122636
 vector 126 spineLeafNetwork.leaf2.eth[1].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-126	217245 347 125 6009 0.423771806788 9.544892027383 13 0 0 0 0
+126	210791 334 125 6009 0.423771806788 9.544892027383 13 0 0 0 0
 vector 127 spineLeafNetwork.leaf2.eth[1].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-127	217592 371 127 6011 0.423777566788 9.544900827383 13 64 102 1250 122636
+127	211125 358 127 6011 0.423777566788 9.544900827383 13 64 102 1250 122636
 vector 128 spineLeafNetwork.spine2.eth[1].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-128	217963 371 128 6012 0.423777616788 9.544900877383 13 64 102 1250 122636
+128	211483 358 128 6012 0.423777616788 9.544900877383 13 64 102 1250 122636
 vector 129 spineLeafNetwork.spine2.eth[1].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-129	218334 371 128 6012 0.423777616788 9.544900877383 13 64 102 1250 122636
+129	211841 358 128 6012 0.423777616788 9.544900877383 13 64 102 1250 122636
 vector 130 spineLeafNetwork.spine2.eth[1].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-130	218705 360 129 6013 0.423777616788 9.544900877383 13 46 84 1016 81848
+130	212199 347 129 6013 0.423777616788 9.544900877383 13 46 84 1016 81848
 vector 131 spineLeafNetwork.H4.app[0] pingRxSeq:vector ETV
 attr interpolationmode none
 attr title "ping rx seq, vector"
-131	219065 269 145 5997 0.423795316788 9.423725596788 10 0 9 45 285
+131	212546 259 145 5997 0.423795316788 9.423725596788 10 0 9 45 285
 vector 132 spineLeafNetwork.H4.app[0] rtt:vector ETV
 attr interpolationmode none
 attr title "ping round-trip time, vector"
 attr unit s
-132	219334 353 145 5997 0.423795316788 9.423725596788 10 7.08e-005 0.00014052 0.00081258 7.02008796e-008
+132	212805 343 145 5997 0.423795316788 9.423725596788 10 7.08e-005 0.00014052 0.00081258 7.02008796e-008
 vector 133 spineLeafNetwork.H6.app[0] pingTxSeq:vector ETV
 attr interpolationmode none
 attr title "ping tx seq, vector"
-133	219687 269 148 6000 0.544883177383 9.544883177383 10 0 9 45 285
+133	213148 259 148 6000 0.544883177383 9.544883177383 10 0 9 45 285
 vector 134 spineLeafNetwork.H6.ipv4.arp arpRequestSent:vector(packetBytes) ETV
 attr source arpRequestSent
 attr title "ARP request sent, vector(packetBytes)"
-134	219956 27 150 150 0.544883177383 0.544883177383 1 28 28 28 784
+134	213407 26 150 150 0.544883177383 0.544883177383 1 28 28 28 784
 vector 135 spineLeafNetwork.H6.eth[0].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-135	219983 306 151 6002 0.544883177383 9.544883177383 11 28 84 868 71344
+135	213433 295 151 6002 0.544883177383 9.544883177383 11 28 84 868 71344
 vector 136 spineLeafNetwork.H6.eth[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-136	220289 316 152 6003 0.544883177383 9.544883177383 11 46 102 1066 106156
+136	213728 305 152 6003 0.544883177383 9.544883177383 11 46 102 1066 106156
 vector 137 spineLeafNetwork.H6.eth[0].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-137	220605 316 152 6003 0.544883177383 9.544883177383 11 64 102 1084 108136
+137	214033 305 152 6003 0.544883177383 9.544883177383 11 64 102 1084 108136
 vector 138 spineLeafNetwork.H6.eth[0].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-138	220921 590 152 6003 0.544883177383 9.544883177383 22 0 1 11 11
+138	214338 568 152 6003 0.544883177383 9.544883177383 22 0 1 11 11
 vector 139 spineLeafNetwork.H6.eth[0].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-139	221511 316 152 6003 0.544883177383 9.544883177383 11 64 102 1084 108136
+139	214906 305 152 6003 0.544883177383 9.544883177383 11 64 102 1084 108136
 vector 140 spineLeafNetwork.H6.eth[0].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-140	221827 295 152 6003 0.544883177383 9.544883177383 11 0 0 0 0
+140	215211 284 152 6003 0.544883177383 9.544883177383 11 0 0 0 0
 vector 141 spineLeafNetwork.H6.eth[0].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-141	222122 316 153 6004 0.544888937383 9.544891977383 11 64 102 1084 108136
+141	215495 305 153 6004 0.544888937383 9.544891977383 11 64 102 1084 108136
 vector 142 spineLeafNetwork.leaf2.eth[5].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-142	222438 316 154 6005 0.544888987383 9.544892027383 11 64 102 1084 108136
+142	215800 305 154 6005 0.544888987383 9.544892027383 11 64 102 1084 108136
 vector 143 spineLeafNetwork.leaf2.eth[5].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-143	222754 316 154 6005 0.544888987383 9.544892027383 11 64 102 1084 108136
+143	216105 305 154 6005 0.544888987383 9.544892027383 11 64 102 1084 108136
 vector 144 spineLeafNetwork.leaf2.eth[5].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-144	223070 306 155 6006 0.544888987383 9.544892027383 11 46 84 886 72676
+144	216410 295 155 6006 0.544888987383 9.544892027383 11 46 84 886 72676
 vector 145 spineLeafNetwork.leaf2.eth[5].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-145	223376 306 157 6053 0.544888987383 9.544945127383 11 28 84 868 71344
+145	216705 295 157 6053 0.544888987383 9.544945127383 11 28 84 868 71344
 vector 146 spineLeafNetwork.leaf2.eth[5].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-146	223682 316 158 6054 0.544888987383 9.544945127383 11 46 102 1066 106156
+146	217000 305 158 6054 0.544888987383 9.544945127383 11 46 102 1066 106156
 vector 147 spineLeafNetwork.leaf2.eth[5].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-147	223998 316 158 6054 0.544888987383 9.544945127383 11 64 102 1084 108136
+147	217305 305 158 6054 0.544888987383 9.544945127383 11 64 102 1084 108136
 vector 148 spineLeafNetwork.leaf2.eth[5].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-148	224314 590 158 6054 0.544888987383 9.544945127383 22 0 1 11 11
+148	217610 568 158 6054 0.544888987383 9.544945127383 22 0 1 11 11
 vector 149 spineLeafNetwork.leaf2.eth[5].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-149	224904 316 158 6054 0.544888987383 9.544945127383 11 64 102 1084 108136
+149	218178 305 158 6054 0.544888987383 9.544945127383 11 64 102 1084 108136
 vector 150 spineLeafNetwork.leaf2.eth[5].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-150	225220 295 158 6054 0.544888987383 9.544945127383 11 0 0 0 0
+150	218483 284 158 6054 0.544888987383 9.544945127383 11 0 0 0 0
 vector 151 spineLeafNetwork.leaf2.eth[5].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-151	225515 316 160 6056 0.544894747383 9.544953927383 11 64 102 1084 108136
+151	218767 305 160 6056 0.544894747383 9.544953927383 11 64 102 1084 108136
 vector 152 spineLeafNetwork.H6.eth[0].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-152	225831 316 161 6057 0.544894797383 9.544953977383 11 64 102 1084 108136
+152	219072 305 161 6057 0.544894797383 9.544953977383 11 64 102 1084 108136
 vector 153 spineLeafNetwork.H6.eth[0].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-153	226147 316 161 6057 0.544894797383 9.544953977383 11 64 102 1084 108136
+153	219377 305 161 6057 0.544894797383 9.544953977383 11 64 102 1084 108136
 vector 154 spineLeafNetwork.H6.eth[0].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-154	226463 306 162 6058 0.544894797383 9.544953977383 11 46 84 886 72676
+154	219682 295 162 6058 0.544894797383 9.544953977383 11 46 84 886 72676
 vector 155 spineLeafNetwork.H6.app[0] pingRxSeq:vector ETV
 attr interpolationmode none
 attr title "ping rx seq, vector"
-155	226769 269 250 6060 0.544988837383 9.544953977383 10 0 9 45 285
+155	219977 259 250 6060 0.544988837383 9.544953977383 10 0 9 45 285
 vector 156 spineLeafNetwork.H6.app[0] rtt:vector ETV
 attr interpolationmode none
 attr title "ping round-trip time, vector"
 attr unit s
-156	227038 352 250 6060 0.544988837383 9.544953977383 10 7.08e-005 0.00010566 0.0007661 5.98386284e-008
+156	220236 342 250 6060 0.544988837383 9.544953977383 10 7.08e-005 0.00010566 0.0007661 5.98386284e-008
 vector 157 spineLeafNetwork.H2.app[0] pingTxSeq:vector ETV
 attr interpolationmode none
 attr title "ping tx seq, vector"
-157	227390 269 253 6063 0.548813502304 9.548813502304 10 0 9 45 285
+157	220578 259 253 6063 0.548813502304 9.548813502304 10 0 9 45 285
 vector 158 spineLeafNetwork.H2.ipv4.arp arpRequestSent:vector(packetBytes) ETV
 attr source arpRequestSent
 attr title "ARP request sent, vector(packetBytes)"
-158	227659 27 255 255 0.548813502304 0.548813502304 1 28 28 28 784
+158	220837 26 255 255 0.548813502304 0.548813502304 1 28 28 28 784
 vector 159 spineLeafNetwork.H2.eth[0].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-159	227686 306 256 6065 0.548813502304 9.548813502304 11 28 84 868 71344
+159	220863 295 256 6065 0.548813502304 9.548813502304 11 28 84 868 71344
 vector 160 spineLeafNetwork.H2.eth[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-160	227992 316 257 6066 0.548813502304 9.548813502304 11 46 102 1066 106156
+160	221158 305 257 6066 0.548813502304 9.548813502304 11 46 102 1066 106156
 vector 161 spineLeafNetwork.H2.eth[0].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-161	228308 316 257 6066 0.548813502304 9.548813502304 11 64 102 1084 108136
+161	221463 305 257 6066 0.548813502304 9.548813502304 11 64 102 1084 108136
 vector 162 spineLeafNetwork.H2.eth[0].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-162	228624 590 257 6066 0.548813502304 9.548813502304 22 0 1 11 11
+162	221768 568 257 6066 0.548813502304 9.548813502304 22 0 1 11 11
 vector 163 spineLeafNetwork.H2.eth[0].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-163	229214 316 257 6066 0.548813502304 9.548813502304 11 64 102 1084 108136
+163	222336 305 257 6066 0.548813502304 9.548813502304 11 64 102 1084 108136
 vector 164 spineLeafNetwork.H2.eth[0].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-164	229530 295 257 6066 0.548813502304 9.548813502304 11 0 0 0 0
+164	222641 284 257 6066 0.548813502304 9.548813502304 11 0 0 0 0
 vector 165 spineLeafNetwork.H2.eth[0].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-165	229825 316 258 6067 0.548819262304 9.548822302304 11 64 102 1084 108136
+165	222925 305 258 6067 0.548819262304 9.548822302304 11 64 102 1084 108136
 vector 166 spineLeafNetwork.leaf1.eth[4].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-166	230141 316 259 6068 0.548819312304 9.548822352304 11 64 102 1084 108136
+166	223230 305 259 6068 0.548819312304 9.548822352304 11 64 102 1084 108136
 vector 167 spineLeafNetwork.leaf1.eth[4].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-167	230457 316 259 6068 0.548819312304 9.548822352304 11 64 102 1084 108136
+167	223535 305 259 6068 0.548819312304 9.548822352304 11 64 102 1084 108136
 vector 168 spineLeafNetwork.leaf1.eth[4].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-168	230773 306 260 6069 0.548819312304 9.548822352304 11 46 84 886 72676
+168	223840 295 260 6069 0.548819312304 9.548822352304 11 46 84 886 72676
 vector 169 spineLeafNetwork.leaf1.ipv4.arp arpReplySent:vector(packetBytes) ETV
 attr source arpReplySent
 attr title "ARP replies sent, vector(packetBytes)"
-169	231079 108 261 617 0.548819312304 0.715195174972 4 28 28 112 3136
+169	224135 104 261 617 0.548819312304 0.715195174972 4 28 28 112 3136
 vector 170 spineLeafNetwork.leaf1.eth[4].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-170	231187 306 262 6116 0.548819312304 9.548875452304 11 28 84 868 71344
+170	224239 295 262 6116 0.548819312304 9.548875452304 11 28 84 868 71344
 vector 171 spineLeafNetwork.leaf1.eth[4].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-171	231493 316 263 6117 0.548819312304 9.548875452304 11 46 102 1066 106156
+171	224534 305 263 6117 0.548819312304 9.548875452304 11 46 102 1066 106156
 vector 172 spineLeafNetwork.leaf1.eth[4].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-172	231809 316 263 6117 0.548819312304 9.548875452304 11 64 102 1084 108136
+172	224839 305 263 6117 0.548819312304 9.548875452304 11 64 102 1084 108136
 vector 173 spineLeafNetwork.leaf1.eth[4].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-173	232125 590 263 6117 0.548819312304 9.548875452304 22 0 1 11 11
+173	225144 568 263 6117 0.548819312304 9.548875452304 22 0 1 11 11
 vector 174 spineLeafNetwork.leaf1.eth[4].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-174	232715 316 263 6117 0.548819312304 9.548875452304 11 64 102 1084 108136
+174	225712 305 263 6117 0.548819312304 9.548875452304 11 64 102 1084 108136
 vector 175 spineLeafNetwork.leaf1.eth[4].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-175	233031 295 263 6117 0.548819312304 9.548875452304 11 0 0 0 0
+175	226017 284 263 6117 0.548819312304 9.548875452304 11 0 0 0 0
 vector 176 spineLeafNetwork.leaf1.eth[4].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-176	233326 316 265 6119 0.548825072304 9.548884252304 11 64 102 1084 108136
+176	226301 305 265 6119 0.548825072304 9.548884252304 11 64 102 1084 108136
 vector 177 spineLeafNetwork.H2.eth[0].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-177	233642 316 266 6120 0.548825122304 9.548884302304 11 64 102 1084 108136
+177	226606 305 266 6120 0.548825122304 9.548884302304 11 64 102 1084 108136
 vector 178 spineLeafNetwork.H2.eth[0].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-178	233958 316 266 6120 0.548825122304 9.548884302304 11 64 102 1084 108136
+178	226911 305 266 6120 0.548825122304 9.548884302304 11 64 102 1084 108136
 vector 179 spineLeafNetwork.H2.eth[0].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-179	234274 306 267 6121 0.548825122304 9.548884302304 11 46 84 886 72676
+179	227216 295 267 6121 0.548825122304 9.548884302304 11 46 84 886 72676
 vector 180 spineLeafNetwork.leaf1.ipv4.arp arpRequestSent:vector(packetBytes) ETV
 attr source arpRequestSent
 attr title "ARP request sent, vector(packetBytes)"
-180	234580 81 275 631 0.548833972304 0.715209834972 3 28 28 84 2352
+180	227511 78 275 631 0.548833972304 0.715209834972 3 28 28 84 2352
 vector 181 spineLeafNetwork.leaf1.eth[0].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-181	234661 250 276 5101 0.548833972304 7.715198214972 9 28 84 700 57232
+181	227589 241 276 5101 0.548833972304 7.715198214972 9 28 84 700 57232
 vector 182 spineLeafNetwork.leaf1.eth[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-182	234911 258 277 5102 0.548833972304 7.715198214972 9 46 102 862 85348
+182	227830 249 277 5102 0.548833972304 7.715198214972 9 46 102 862 85348
 vector 183 spineLeafNetwork.leaf1.eth[0].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-183	235169 258 277 5102 0.548833972304 7.715198214972 9 64 102 880 87328
+183	228079 249 277 5102 0.548833972304 7.715198214972 9 64 102 880 87328
 vector 184 spineLeafNetwork.leaf1.eth[0].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-184	235427 482 277 5102 0.548833972304 7.715198214972 18 0 1 9 9
+184	228328 464 277 5102 0.548833972304 7.715198214972 18 0 1 9 9
 vector 185 spineLeafNetwork.leaf1.eth[0].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-185	235909 258 277 5102 0.548833972304 7.715198214972 9 64 102 880 87328
+185	228792 249 277 5102 0.548833972304 7.715198214972 9 64 102 880 87328
 vector 186 spineLeafNetwork.leaf1.eth[0].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-186	236167 241 277 5102 0.548833972304 7.715198214972 9 0 0 0 0
+186	229041 232 277 5102 0.548833972304 7.715198214972 9 0 0 0 0
 vector 187 spineLeafNetwork.leaf1.eth[0].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-187	236408 258 279 5104 0.548839732304 7.715207014972 9 64 102 880 87328
+187	229273 249 279 5104 0.548839732304 7.715207014972 9 64 102 880 87328
 vector 188 spineLeafNetwork.spine1.eth[0].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-188	236666 258 280 5105 0.548839782304 7.715207064972 9 64 102 880 87328
+188	229522 249 280 5105 0.548839782304 7.715207064972 9 64 102 880 87328
 vector 189 spineLeafNetwork.spine1.eth[0].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-189	236924 258 280 5105 0.548839782304 7.715207064972 9 64 102 880 87328
+189	229771 249 280 5105 0.548839782304 7.715207064972 9 64 102 880 87328
 vector 190 spineLeafNetwork.spine1.eth[0].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-190	237182 250 281 5106 0.548839782304 7.715207064972 9 46 84 718 58564
+190	230020 241 281 5106 0.548839782304 7.715207064972 9 46 84 718 58564
 vector 191 spineLeafNetwork.spine1.ipv4.arp arpReplySent:vector(packetBytes) ETV
 attr source arpReplySent
 attr title "ARP replies sent, vector(packetBytes)"
-191	237432 332 282 4595 0.548839782304 6.84431580409 12 28 28 336 9408
+191	230261 320 282 4595 0.548839782304 6.84431580409 12 28 28 336 9408
 vector 192 spineLeafNetwork.spine1.eth[0].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-192	237764 251 283 6109 0.548839782304 9.548866602304 9 28 84 700 57232
+192	230581 242 283 6109 0.548839782304 9.548866602304 9 28 84 700 57232
 vector 193 spineLeafNetwork.spine1.eth[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-193	238015 259 284 6110 0.548839782304 9.548866602304 9 46 102 862 85348
+193	230823 250 284 6110 0.548839782304 9.548866602304 9 46 102 862 85348
 vector 194 spineLeafNetwork.spine1.eth[0].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-194	238274 259 284 6110 0.548839782304 9.548866602304 9 64 102 880 87328
+194	231073 250 284 6110 0.548839782304 9.548866602304 9 64 102 880 87328
 vector 195 spineLeafNetwork.spine1.eth[0].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-195	238533 484 284 6110 0.548839782304 9.548866602304 18 0 1 9 9
+195	231323 466 284 6110 0.548839782304 9.548866602304 18 0 1 9 9
 vector 196 spineLeafNetwork.spine1.eth[0].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-196	239017 259 284 6110 0.548839782304 9.548866602304 9 64 102 880 87328
+196	231789 250 284 6110 0.548839782304 9.548866602304 9 64 102 880 87328
 vector 197 spineLeafNetwork.spine1.eth[0].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-197	239276 242 284 6110 0.548839782304 9.548866602304 9 0 0 0 0
+197	232039 233 284 6110 0.548839782304 9.548866602304 9 0 0 0 0
 vector 198 spineLeafNetwork.spine1.eth[0].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-198	239518 259 286 6112 0.548845542304 9.548875402304 9 64 102 880 87328
+198	232272 250 286 6112 0.548845542304 9.548875402304 9 64 102 880 87328
 vector 199 spineLeafNetwork.leaf1.eth[0].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-199	239777 259 287 6113 0.548845592304 9.548875452304 9 64 102 880 87328
+199	232522 250 287 6113 0.548845592304 9.548875452304 9 64 102 880 87328
 vector 200 spineLeafNetwork.leaf1.eth[0].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-200	240036 259 287 6113 0.548845592304 9.548875452304 9 64 102 880 87328
+200	232772 250 287 6113 0.548845592304 9.548875452304 9 64 102 880 87328
 vector 201 spineLeafNetwork.leaf1.eth[0].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-201	240295 251 288 6114 0.548845592304 9.548875452304 9 46 84 718 58564
+201	233022 242 288 6114 0.548845592304 9.548875452304 9 46 84 718 58564
 vector 202 spineLeafNetwork.spine1.ipv4.arp arpRequestSent:vector(packetBytes) ETV
 attr source arpRequestSent
 attr title "ARP request sent, vector(packetBytes)"
-202	240546 82 296 1001 0.548854442304 0.858021959849 3 28 28 84 2352
+202	233264 79 296 1001 0.548854442304 0.858021959849 3 28 28 84 2352
 vector 203 spineLeafNetwork.spine1.eth[3].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-203	240628 1029 297 6467 0.548854442304 9.857963319849 37 28 84 2548 198352
+203	233343 992 297 6467 0.548854442304 9.857963319849 37 28 84 2548 198352
 vector 204 spineLeafNetwork.spine1.eth[3].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-204	241657 1056 298 6468 0.548854442304 9.857963319849 37 46 102 3214 302068
+204	234335 1019 298 6468 0.548854442304 9.857963319849 37 46 102 3214 302068
 vector 205 spineLeafNetwork.spine1.eth[3].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-205	242713 1056 298 6468 0.548854442304 9.857963319849 37 64 102 3394 321868
+205	235354 1019 298 6468 0.548854442304 9.857963319849 37 64 102 3394 321868
 vector 206 spineLeafNetwork.spine1.eth[3].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-206	243769 1984 298 6468 0.548854442304 9.857963319849 74 0 1 37 37
+206	236373 1910 298 6468 0.548854442304 9.857963319849 74 0 1 37 37
 vector 207 spineLeafNetwork.spine1.eth[3].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-207	245753 1056 298 6468 0.548854442304 9.857963319849 37 64 102 3394 321868
+207	238283 1019 298 6468 0.548854442304 9.857963319849 37 64 102 3394 321868
 vector 208 spineLeafNetwork.spine1.eth[3].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-208	246809 992 298 6468 0.548854442304 9.857963319849 37 0 0 0 0
+208	239302 955 298 6468 0.548854442304 9.857963319849 37 0 0 0 0
 vector 209 spineLeafNetwork.spine1.eth[3].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-209	247801 1056 300 6470 0.548860202304 9.857972119849 37 64 102 3394 321868
+209	240257 1019 300 6470 0.548860202304 9.857972119849 37 64 102 3394 321868
 vector 210 spineLeafNetwork.leaf4.eth[0].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-210	248857 1056 301 6471 0.548860252304 9.857972169849 37 64 102 3394 321868
+210	241276 1019 301 6471 0.548860252304 9.857972169849 37 64 102 3394 321868
 vector 211 spineLeafNetwork.leaf4.eth[0].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-211	249913 1056 301 6471 0.548860252304 9.857972169849 37 64 102 3394 321868
+211	242295 1019 301 6471 0.548860252304 9.857972169849 37 64 102 3394 321868
 vector 212 spineLeafNetwork.leaf4.eth[0].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-212	250969 1029 302 6472 0.548860252304 9.857972169849 37 46 84 2728 211672
+212	243314 992 302 6472 0.548860252304 9.857972169849 37 46 84 2728 211672
 vector 213 spineLeafNetwork.leaf4.eth[0].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-213	251998 1112 304 6428 0.548860252304 9.847295987257 40 28 84 2800 219520
+213	244306 1072 304 6428 0.548860252304 9.847295987257 40 28 84 2800 219520
 vector 214 spineLeafNetwork.leaf4.eth[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-214	253110 1142 305 6429 0.548860252304 9.847295987257 40 46 102 3520 333280
+214	245378 1102 305 6429 0.548860252304 9.847295987257 40 46 102 3520 333280
 vector 215 spineLeafNetwork.leaf4.eth[0].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-215	254252 1142 305 6429 0.548860252304 9.847295987257 40 64 102 3700 353080
+215	246480 1102 305 6429 0.548860252304 9.847295987257 40 64 102 3700 353080
 vector 216 spineLeafNetwork.leaf4.eth[0].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-216	255394 2144 305 6429 0.548860252304 9.847295987257 80 0 1 40 40
+216	247582 2064 305 6429 0.548860252304 9.847295987257 80 0 1 40 40
 vector 217 spineLeafNetwork.leaf4.eth[0].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-217	257538 1142 305 6429 0.548860252304 9.847295987257 40 64 102 3700 353080
+217	249646 1102 305 6429 0.548860252304 9.847295987257 40 64 102 3700 353080
 vector 218 spineLeafNetwork.leaf4.eth[0].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-218	258680 1072 305 6429 0.548860252304 9.847295987257 40 0 0 0 0
+218	250748 1032 305 6429 0.548860252304 9.847295987257 40 0 0 0 0
 vector 219 spineLeafNetwork.leaf4.eth[0].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-219	259752 1142 307 6431 0.548866012304 9.847304787257 40 64 102 3700 353080
+219	251780 1102 307 6431 0.548866012304 9.847304787257 40 64 102 3700 353080
 vector 220 spineLeafNetwork.spine1.eth[3].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-220	260894 1142 308 6432 0.548866062304 9.847304837257 40 64 102 3700 353080
+220	252882 1102 308 6432 0.548866062304 9.847304837257 40 64 102 3700 353080
 vector 221 spineLeafNetwork.spine1.eth[3].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-221	262036 1142 308 6432 0.548866062304 9.847304837257 40 64 102 3700 353080
+221	253984 1102 308 6432 0.548866062304 9.847304837257 40 64 102 3700 353080
 vector 222 spineLeafNetwork.spine1.eth[3].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-222	263178 1113 309 6433 0.548866062304 9.847304837257 40 46 84 2980 232840
+222	255086 1073 309 6433 0.548866062304 9.847304837257 40 46 84 2980 232840
 vector 223 spineLeafNetwork.spine3.eth[0].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-223	264291 415 355 6309 0.548913082304 9.715242464972 15 28 84 1148 93296
+223	256159 400 355 6309 0.548913082304 9.715242464972 15 28 84 1148 93296
 vector 224 spineLeafNetwork.spine3.eth[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-224	264706 428 356 6310 0.548913082304 9.715242464972 15 46 102 1418 139484
+224	256559 413 356 6310 0.548913082304 9.715242464972 15 46 102 1418 139484
 vector 225 spineLeafNetwork.spine3.eth[0].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-225	265134 428 356 6310 0.548913082304 9.715242464972 15 64 102 1454 143444
+225	256972 413 356 6310 0.548913082304 9.715242464972 15 64 102 1454 143444
 vector 226 spineLeafNetwork.spine3.eth[0].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-226	265562 800 356 6310 0.548913082304 9.715242464972 30 0 1 15 15
+226	257385 770 356 6310 0.548913082304 9.715242464972 30 0 1 15 15
 vector 227 spineLeafNetwork.spine3.eth[0].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-227	266362 428 356 6310 0.548913082304 9.715242464972 15 64 102 1454 143444
+227	258155 413 356 6310 0.548913082304 9.715242464972 15 64 102 1454 143444
 vector 228 spineLeafNetwork.spine3.eth[0].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-228	266790 400 356 6310 0.548913082304 9.715242464972 15 0 0 0 0
+228	258568 385 356 6310 0.548913082304 9.715242464972 15 0 0 0 0
 vector 229 spineLeafNetwork.spine3.eth[0].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-229	267190 428 358 6312 0.548918842304 9.715251264972 15 64 102 1454 143444
+229	258953 413 358 6312 0.548918842304 9.715251264972 15 64 102 1454 143444
 vector 230 spineLeafNetwork.leaf1.eth[2].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-230	267618 428 359 6313 0.548918892304 9.715251314972 15 64 102 1454 143444
+230	259366 413 359 6313 0.548918892304 9.715251314972 15 64 102 1454 143444
 vector 231 spineLeafNetwork.leaf1.eth[2].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-231	268046 428 359 6313 0.548918892304 9.715251314972 15 64 102 1454 143444
+231	259779 413 359 6313 0.548918892304 9.715251314972 15 64 102 1454 143444
 vector 232 spineLeafNetwork.leaf1.eth[2].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-232	268474 415 360 6314 0.548918892304 9.715251314972 15 46 84 1184 95960
+232	260192 400 360 6314 0.548918892304 9.715251314972 15 46 84 1184 95960
 vector 233 spineLeafNetwork.leaf1.eth[2].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-233	268889 389 362 6208 0.548918892304 9.623572546397 14 28 84 1064 86240
+233	260592 375 362 6208 0.548918892304 9.623572546397 14 28 84 1064 86240
 vector 234 spineLeafNetwork.leaf1.eth[2].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-234	269278 401 363 6209 0.548918892304 9.623572546397 14 46 102 1316 129080
+234	260967 387 363 6209 0.548918892304 9.623572546397 14 46 102 1316 129080
 vector 235 spineLeafNetwork.leaf1.eth[2].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-235	269679 401 363 6209 0.548918892304 9.623572546397 14 64 102 1352 133040
+235	261354 387 363 6209 0.548918892304 9.623572546397 14 64 102 1352 133040
 vector 236 spineLeafNetwork.leaf1.eth[2].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-236	270080 750 363 6209 0.548918892304 9.623572546397 28 0 1 14 14
+236	261741 722 363 6209 0.548918892304 9.623572546397 28 0 1 14 14
 vector 237 spineLeafNetwork.leaf1.eth[2].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-237	270830 401 363 6209 0.548918892304 9.623572546397 14 64 102 1352 133040
+237	262463 387 363 6209 0.548918892304 9.623572546397 14 64 102 1352 133040
 vector 238 spineLeafNetwork.leaf1.eth[2].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-238	271231 375 363 6209 0.548918892304 9.623572546397 14 0 0 0 0
+238	262850 361 363 6209 0.548918892304 9.623572546397 14 0 0 0 0
 vector 239 spineLeafNetwork.leaf1.eth[2].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-239	271606 401 365 6211 0.548924652304 9.623581346397 14 64 102 1352 133040
+239	263211 387 365 6211 0.548924652304 9.623581346397 14 64 102 1352 133040
 vector 240 spineLeafNetwork.spine3.eth[0].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-240	272007 401 366 6212 0.548924702304 9.623581396397 14 64 102 1352 133040
+240	263598 387 366 6212 0.548924702304 9.623581396397 14 64 102 1352 133040
 vector 241 spineLeafNetwork.spine3.eth[0].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-241	272408 401 366 6212 0.548924702304 9.623581396397 14 64 102 1352 133040
+241	263985 387 366 6212 0.548924702304 9.623581396397 14 64 102 1352 133040
 vector 242 spineLeafNetwork.spine3.eth[0].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-242	272809 389 367 6213 0.548924702304 9.623581396397 14 46 84 1100 88904
+242	264372 375 367 6213 0.548924702304 9.623581396397 14 46 84 1100 88904
 vector 243 spineLeafNetwork.H2.app[0] pingRxSeq:vector ETV
 attr interpolationmode none
 attr title "ping rx seq, vector"
-243	273198 269 383 6123 0.548942402304 9.548884302304 10 0 9 45 285
+243	264747 259 383 6123 0.548942402304 9.548884302304 10 0 9 45 285
 vector 244 spineLeafNetwork.H2.app[0] rtt:vector ETV
 attr interpolationmode none
 attr title "ping round-trip time, vector"
 attr unit s
-244	273467 351 383 6123 0.548942402304 9.548884302304 10 7.08e-005 0.0001289 0.00078934 6.52898028e-008
+244	265006 341 383 6123 0.548942402304 9.548884302304 10 7.08e-005 0.0001289 0.00078934 6.52898028e-008
 vector 245 spineLeafNetwork.H9.app[0] pingTxSeq:vector ETV
 attr interpolationmode none
 attr title "ping tx seq, vector"
-245	273818 269 386 6126 0.592844616389 9.592844616389 10 0 9 45 285
+245	265347 259 386 6126 0.592844616389 9.592844616389 10 0 9 45 285
 vector 246 spineLeafNetwork.H9.ipv4.arp arpRequestSent:vector(packetBytes) ETV
 attr source arpRequestSent
 attr title "ARP request sent, vector(packetBytes)"
-246	274087 27 388 388 0.592844616389 0.592844616389 1 28 28 28 784
+246	265606 26 388 388 0.592844616389 0.592844616389 1 28 28 28 784
 vector 247 spineLeafNetwork.H9.eth[0].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-247	274114 306 389 6128 0.592844616389 9.592844616389 11 28 84 868 71344
+247	265632 295 389 6128 0.592844616389 9.592844616389 11 28 84 868 71344
 vector 248 spineLeafNetwork.H9.eth[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-248	274420 316 390 6129 0.592844616389 9.592844616389 11 46 102 1066 106156
+248	265927 305 390 6129 0.592844616389 9.592844616389 11 46 102 1066 106156
 vector 249 spineLeafNetwork.H9.eth[0].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-249	274736 316 390 6129 0.592844616389 9.592844616389 11 64 102 1084 108136
+249	266232 305 390 6129 0.592844616389 9.592844616389 11 64 102 1084 108136
 vector 250 spineLeafNetwork.H9.eth[0].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-250	275052 590 390 6129 0.592844616389 9.592844616389 22 0 1 11 11
+250	266537 568 390 6129 0.592844616389 9.592844616389 22 0 1 11 11
 vector 251 spineLeafNetwork.H9.eth[0].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-251	275642 316 390 6129 0.592844616389 9.592844616389 11 64 102 1084 108136
+251	267105 305 390 6129 0.592844616389 9.592844616389 11 64 102 1084 108136
 vector 252 spineLeafNetwork.H9.eth[0].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-252	275958 295 390 6129 0.592844616389 9.592844616389 11 0 0 0 0
+252	267410 284 390 6129 0.592844616389 9.592844616389 11 0 0 0 0
 vector 253 spineLeafNetwork.H9.eth[0].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-253	276253 316 391 6130 0.592850376389 9.592853416389 11 64 102 1084 108136
+253	267694 305 391 6130 0.592850376389 9.592853416389 11 64 102 1084 108136
 vector 254 spineLeafNetwork.leaf3.eth[5].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-254	276569 316 392 6131 0.592850426389 9.592853466389 11 64 102 1084 108136
+254	267999 305 392 6131 0.592850426389 9.592853466389 11 64 102 1084 108136
 vector 255 spineLeafNetwork.leaf3.eth[5].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-255	276885 316 392 6131 0.592850426389 9.592853466389 11 64 102 1084 108136
+255	268304 305 392 6131 0.592850426389 9.592853466389 11 64 102 1084 108136
 vector 256 spineLeafNetwork.leaf3.eth[5].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-256	277201 306 393 6132 0.592850426389 9.592853466389 11 46 84 886 72676
+256	268609 295 393 6132 0.592850426389 9.592853466389 11 46 84 886 72676
 vector 257 spineLeafNetwork.leaf3.ipv4.arp arpReplySent:vector(packetBytes) ETV
 attr source arpReplySent
 attr title "ARP replies sent, vector(packetBytes)"
-257	277507 108 394 1008 0.592850426389 0.858027769849 4 28 28 112 3136
+257	268904 104 394 1008 0.592850426389 0.858027769849 4 28 28 112 3136
 vector 258 spineLeafNetwork.leaf3.eth[5].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-258	277615 306 395 6179 0.592850426389 9.592906566389 11 28 84 868 71344
+258	269008 295 395 6179 0.592850426389 9.592906566389 11 28 84 868 71344
 vector 259 spineLeafNetwork.leaf3.eth[5].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-259	277921 316 396 6180 0.592850426389 9.592906566389 11 46 102 1066 106156
+259	269303 305 396 6180 0.592850426389 9.592906566389 11 46 102 1066 106156
 vector 260 spineLeafNetwork.leaf3.eth[5].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-260	278237 316 396 6180 0.592850426389 9.592906566389 11 64 102 1084 108136
+260	269608 305 396 6180 0.592850426389 9.592906566389 11 64 102 1084 108136
 vector 261 spineLeafNetwork.leaf3.eth[5].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-261	278553 590 396 6180 0.592850426389 9.592906566389 22 0 1 11 11
+261	269913 568 396 6180 0.592850426389 9.592906566389 22 0 1 11 11
 vector 262 spineLeafNetwork.leaf3.eth[5].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-262	279143 316 396 6180 0.592850426389 9.592906566389 11 64 102 1084 108136
+262	270481 305 396 6180 0.592850426389 9.592906566389 11 64 102 1084 108136
 vector 263 spineLeafNetwork.leaf3.eth[5].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-263	279459 295 396 6180 0.592850426389 9.592906566389 11 0 0 0 0
+263	270786 284 396 6180 0.592850426389 9.592906566389 11 0 0 0 0
 vector 264 spineLeafNetwork.leaf3.eth[5].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-264	279754 316 398 6182 0.592856186389 9.592915366389 11 64 102 1084 108136
+264	271070 305 398 6182 0.592856186389 9.592915366389 11 64 102 1084 108136
 vector 265 spineLeafNetwork.H9.eth[0].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-265	280070 316 399 6183 0.592856236389 9.592915416389 11 64 102 1084 108136
+265	271375 305 399 6183 0.592856236389 9.592915416389 11 64 102 1084 108136
 vector 266 spineLeafNetwork.H9.eth[0].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-266	280386 316 399 6183 0.592856236389 9.592915416389 11 64 102 1084 108136
+266	271680 305 399 6183 0.592856236389 9.592915416389 11 64 102 1084 108136
 vector 267 spineLeafNetwork.H9.eth[0].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-267	280702 306 400 6184 0.592856236389 9.592915416389 11 46 84 886 72676
+267	271985 295 400 6184 0.592856236389 9.592915416389 11 46 84 886 72676
 vector 268 spineLeafNetwork.leaf3.ipv4.arp arpRequestSent:vector(packetBytes) ETV
 attr source arpRequestSent
 attr title "ARP request sent, vector(packetBytes)"
-268	281008 81 408 1257 0.592865086389 1.592853466389 3 28 28 84 2352
+268	272280 78 408 1257 0.592865086389 1.592853466389 3 28 28 84 2352
 vector 269 spineLeafNetwork.leaf3.eth[2].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-269	281089 386 409 6134 0.592865086389 9.592853466389 14 28 84 1120 92512
+269	272358 372 409 6134 0.592865086389 9.592853466389 14 28 84 1120 92512
 vector 270 spineLeafNetwork.leaf3.eth[2].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-270	281475 399 410 6135 0.592865086389 9.592853466389 14 46 102 1372 137368
+270	272730 385 410 6135 0.592865086389 9.592853466389 14 46 102 1372 137368
 vector 271 spineLeafNetwork.leaf3.eth[2].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-271	281874 399 410 6135 0.592865086389 9.592853466389 14 64 102 1390 139348
+271	273115 385 410 6135 0.592865086389 9.592853466389 14 64 102 1390 139348
 vector 272 spineLeafNetwork.leaf3.eth[2].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-272	282273 744 410 6135 0.592865086389 9.592853466389 28 0 1 14 14
+272	273500 716 410 6135 0.592865086389 9.592853466389 28 0 1 14 14
 vector 273 spineLeafNetwork.leaf3.eth[2].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-273	283017 399 410 6135 0.592865086389 9.592853466389 14 64 102 1390 139348
+273	274216 385 410 6135 0.592865086389 9.592853466389 14 64 102 1390 139348
 vector 274 spineLeafNetwork.leaf3.eth[2].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-274	283416 372 410 6135 0.592865086389 9.592853466389 14 0 0 0 0
+274	274601 358 410 6135 0.592865086389 9.592853466389 14 0 0 0 0
 vector 275 spineLeafNetwork.leaf3.eth[2].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-275	283788 399 412 6137 0.592870846389 9.592862266389 14 64 102 1390 139348
+275	274959 385 412 6137 0.592870846389 9.592862266389 14 64 102 1390 139348
 vector 276 spineLeafNetwork.spine3.eth[2].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-276	284187 399 413 6138 0.592870896389 9.592862316389 14 64 102 1390 139348
+276	275344 385 413 6138 0.592870896389 9.592862316389 14 64 102 1390 139348
 vector 277 spineLeafNetwork.spine3.eth[2].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-277	284586 399 413 6138 0.592870896389 9.592862316389 14 64 102 1390 139348
+277	275729 385 413 6138 0.592870896389 9.592862316389 14 64 102 1390 139348
 vector 278 spineLeafNetwork.spine3.eth[2].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-278	284985 386 414 6139 0.592870896389 9.592862316389 14 46 84 1138 93844
+278	276114 372 414 6139 0.592870896389 9.592862316389 14 46 84 1138 93844
 vector 279 spineLeafNetwork.spine3.eth[2].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-279	285371 358 416 6372 0.592870896389 9.84431884409 13 28 84 1036 85456
+279	276486 345 416 6372 0.592870896389 9.84431884409 13 28 84 1036 85456
 vector 280 spineLeafNetwork.spine3.eth[2].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-280	285729 370 417 6373 0.592870896389 9.84431884409 13 46 102 1270 126964
+280	276831 357 417 6373 0.592870896389 9.84431884409 13 46 102 1270 126964
 vector 281 spineLeafNetwork.spine3.eth[2].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-281	286099 370 417 6373 0.592870896389 9.84431884409 13 64 102 1288 128944
+281	277188 357 417 6373 0.592870896389 9.84431884409 13 64 102 1288 128944
 vector 282 spineLeafNetwork.spine3.eth[2].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-282	286469 690 417 6373 0.592870896389 9.84431884409 26 0 1 13 13
+282	277545 664 417 6373 0.592870896389 9.84431884409 26 0 1 13 13
 vector 283 spineLeafNetwork.spine3.eth[2].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-283	287159 370 417 6373 0.592870896389 9.84431884409 13 64 102 1288 128944
+283	278209 357 417 6373 0.592870896389 9.84431884409 13 64 102 1288 128944
 vector 284 spineLeafNetwork.spine3.eth[2].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-284	287529 345 417 6373 0.592870896389 9.84431884409 13 0 0 0 0
+284	278566 332 417 6373 0.592870896389 9.84431884409 13 0 0 0 0
 vector 285 spineLeafNetwork.spine3.eth[2].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-285	287874 370 419 6375 0.592876656389 9.84432764409 13 64 102 1288 128944
+285	278898 357 419 6375 0.592876656389 9.84432764409 13 64 102 1288 128944
 vector 286 spineLeafNetwork.leaf3.eth[2].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-286	288244 370 420 6376 0.592876706389 9.84432769409 13 64 102 1288 128944
+286	279255 357 420 6376 0.592876706389 9.84432769409 13 64 102 1288 128944
 vector 287 spineLeafNetwork.leaf3.eth[2].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-287	288614 370 420 6376 0.592876706389 9.84432769409 13 64 102 1288 128944
+287	279612 357 420 6376 0.592876706389 9.84432769409 13 64 102 1288 128944
 vector 288 spineLeafNetwork.leaf3.eth[2].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-288	288984 358 421 6377 0.592876706389 9.84432769409 13 46 84 1054 86788
+288	279969 345 421 6377 0.592876706389 9.84432769409 13 46 84 1054 86788
 vector 289 spineLeafNetwork.H9.app[0] pingRxSeq:vector ETV
 attr interpolationmode none
 attr title "ping rx seq, vector"
-289	289342 269 488 6186 0.592950276389 9.592915416389 10 0 9 45 285
+289	280314 259 488 6186 0.592950276389 9.592915416389 10 0 9 45 285
 vector 290 spineLeafNetwork.H9.app[0] rtt:vector ETV
 attr interpolationmode none
 attr title "ping round-trip time, vector"
 attr unit s
-290	289611 352 488 6186 0.592950276389 9.592915416389 10 7.08e-005 0.00010566 0.00077772 6.18890936e-008
+290	280573 342 488 6186 0.592950276389 9.592915416389 10 7.08e-005 0.00010566 0.00077772 6.18890936e-008
 vector 291 spineLeafNetwork.H10.app[0] pingTxSeq:vector ETV
 attr interpolationmode none
 attr title "ping tx seq, vector"
-291	289963 269 491 6189 0.602763370378 9.602763370378 10 0 9 45 285
+291	280915 259 491 6189 0.602763370378 9.602763370378 10 0 9 45 285
 vector 292 spineLeafNetwork.H10.lo[0].lo rcvdPkFromHl:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packets received from higher layer, vector(packetBytes)"
-292	290232 558 494 6196 0.602763370378 9.602763370378 20 84 84 1680 141120
+292	281174 538 494 6196 0.602763370378 9.602763370378 20 84 84 1680 141120
 vector 293 spineLeafNetwork.H10.lo[0].lo passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-293	290790 558 494 6196 0.602763370378 9.602763370378 20 84 84 1680 141120
+293	281712 538 494 6196 0.602763370378 9.602763370378 20 84 84 1680 141120
 vector 294 spineLeafNetwork.H10.app[0] pingRxSeq:vector ETV
 attr interpolationmode none
 attr title "ping rx seq, vector"
-294	291348 269 501 6198 0.602763370378 9.602763370378 10 0 9 45 285
+294	282250 259 501 6198 0.602763370378 9.602763370378 10 0 9 45 285
 vector 295 spineLeafNetwork.H1.app[0] pingTxSeq:vector ETV
 attr interpolationmode none
 attr title "ping tx seq, vector"
-295	291617 269 503 6200 0.623563696397 9.623563696397 10 0 9 45 285
+295	282509 259 503 6200 0.623563696397 9.623563696397 10 0 9 45 285
 vector 296 spineLeafNetwork.H1.ipv4.arp arpRequestSent:vector(packetBytes) ETV
 attr source arpRequestSent
 attr title "ARP request sent, vector(packetBytes)"
-296	291886 27 505 505 0.623563696397 0.623563696397 1 28 28 28 784
+296	282768 26 505 505 0.623563696397 0.623563696397 1 28 28 28 784
 vector 297 spineLeafNetwork.H1.eth[0].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-297	291913 306 506 6202 0.623563696397 9.623563696397 11 28 84 868 71344
+297	282794 295 506 6202 0.623563696397 9.623563696397 11 28 84 868 71344
 vector 298 spineLeafNetwork.H1.eth[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-298	292219 316 507 6203 0.623563696397 9.623563696397 11 46 102 1066 106156
+298	283089 305 507 6203 0.623563696397 9.623563696397 11 46 102 1066 106156
 vector 299 spineLeafNetwork.H1.eth[0].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-299	292535 316 507 6203 0.623563696397 9.623563696397 11 64 102 1084 108136
+299	283394 305 507 6203 0.623563696397 9.623563696397 11 64 102 1084 108136
 vector 300 spineLeafNetwork.H1.eth[0].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-300	292851 590 507 6203 0.623563696397 9.623563696397 22 0 1 11 11
+300	283699 568 507 6203 0.623563696397 9.623563696397 22 0 1 11 11
 vector 301 spineLeafNetwork.H1.eth[0].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-301	293441 316 507 6203 0.623563696397 9.623563696397 11 64 102 1084 108136
+301	284267 305 507 6203 0.623563696397 9.623563696397 11 64 102 1084 108136
 vector 302 spineLeafNetwork.H1.eth[0].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-302	293757 295 507 6203 0.623563696397 9.623563696397 11 0 0 0 0
+302	284572 284 507 6203 0.623563696397 9.623563696397 11 0 0 0 0
 vector 303 spineLeafNetwork.H1.eth[0].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-303	294052 316 508 6204 0.623569456397 9.623572496397 11 64 102 1084 108136
+303	284856 305 508 6204 0.623569456397 9.623572496397 11 64 102 1084 108136
 vector 304 spineLeafNetwork.leaf1.eth[3].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-304	294368 316 509 6205 0.623569506397 9.623572546397 11 64 102 1084 108136
+304	285161 305 509 6205 0.623569506397 9.623572546397 11 64 102 1084 108136
 vector 305 spineLeafNetwork.leaf1.eth[3].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-305	294684 316 509 6205 0.623569506397 9.623572546397 11 64 102 1084 108136
+305	285466 305 509 6205 0.623569506397 9.623572546397 11 64 102 1084 108136
 vector 306 spineLeafNetwork.leaf1.eth[3].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-306	295000 306 510 6206 0.623569506397 9.623572546397 11 46 84 886 72676
+306	285771 295 510 6206 0.623569506397 9.623572546397 11 46 84 886 72676
 vector 307 spineLeafNetwork.leaf1.eth[3].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-307	295306 306 512 6253 0.623569506397 9.623625646397 11 28 84 868 71344
+307	286066 295 512 6253 0.623569506397 9.623625646397 11 28 84 868 71344
 vector 308 spineLeafNetwork.leaf1.eth[3].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-308	295612 316 513 6254 0.623569506397 9.623625646397 11 46 102 1066 106156
+308	286361 305 513 6254 0.623569506397 9.623625646397 11 46 102 1066 106156
 vector 309 spineLeafNetwork.leaf1.eth[3].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-309	295928 316 513 6254 0.623569506397 9.623625646397 11 64 102 1084 108136
+309	286666 305 513 6254 0.623569506397 9.623625646397 11 64 102 1084 108136
 vector 310 spineLeafNetwork.leaf1.eth[3].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-310	296244 590 513 6254 0.623569506397 9.623625646397 22 0 1 11 11
+310	286971 568 513 6254 0.623569506397 9.623625646397 22 0 1 11 11
 vector 311 spineLeafNetwork.leaf1.eth[3].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-311	296834 316 513 6254 0.623569506397 9.623625646397 11 64 102 1084 108136
+311	287539 305 513 6254 0.623569506397 9.623625646397 11 64 102 1084 108136
 vector 312 spineLeafNetwork.leaf1.eth[3].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-312	297150 295 513 6254 0.623569506397 9.623625646397 11 0 0 0 0
+312	287844 284 513 6254 0.623569506397 9.623625646397 11 0 0 0 0
 vector 313 spineLeafNetwork.leaf1.eth[3].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-313	297445 316 515 6256 0.623575266397 9.623634446397 11 64 102 1084 108136
+313	288128 305 515 6256 0.623575266397 9.623634446397 11 64 102 1084 108136
 vector 314 spineLeafNetwork.H1.eth[0].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-314	297761 316 516 6257 0.623575316397 9.623634496397 11 64 102 1084 108136
+314	288433 305 516 6257 0.623575316397 9.623634496397 11 64 102 1084 108136
 vector 315 spineLeafNetwork.H1.eth[0].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-315	298077 316 516 6257 0.623575316397 9.623634496397 11 64 102 1084 108136
+315	288738 305 516 6257 0.623575316397 9.623634496397 11 64 102 1084 108136
 vector 316 spineLeafNetwork.H1.eth[0].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-316	298393 306 517 6258 0.623575316397 9.623634496397 11 46 84 886 72676
+316	289043 295 517 6258 0.623575316397 9.623634496397 11 46 84 886 72676
 vector 317 spineLeafNetwork.leaf1.eth[1].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-317	298699 306 526 6271 0.623584166397 9.715198214972 11 28 84 868 71344
+317	289338 295 526 6271 0.623584166397 9.715198214972 11 28 84 868 71344
 vector 318 spineLeafNetwork.leaf1.eth[1].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-318	299005 316 527 6272 0.623584166397 9.715198214972 11 46 102 1066 106156
+318	289633 305 527 6272 0.623584166397 9.715198214972 11 46 102 1066 106156
 vector 319 spineLeafNetwork.leaf1.eth[1].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-319	299321 316 527 6272 0.623584166397 9.715198214972 11 64 102 1084 108136
+319	289938 305 527 6272 0.623584166397 9.715198214972 11 64 102 1084 108136
 vector 320 spineLeafNetwork.leaf1.eth[1].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-320	299637 590 527 6272 0.623584166397 9.715198214972 22 0 1 11 11
+320	290243 568 527 6272 0.623584166397 9.715198214972 22 0 1 11 11
 vector 321 spineLeafNetwork.leaf1.eth[1].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-321	300227 316 527 6272 0.623584166397 9.715198214972 11 64 102 1084 108136
+321	290811 305 527 6272 0.623584166397 9.715198214972 11 64 102 1084 108136
 vector 322 spineLeafNetwork.leaf1.eth[1].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-322	300543 295 527 6272 0.623584166397 9.715198214972 11 0 0 0 0
+322	291116 284 527 6272 0.623584166397 9.715198214972 11 0 0 0 0
 vector 323 spineLeafNetwork.leaf1.eth[1].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-323	300838 316 529 6274 0.623589926397 9.715207014972 11 64 102 1084 108136
+323	291400 305 529 6274 0.623589926397 9.715207014972 11 64 102 1084 108136
 vector 324 spineLeafNetwork.spine2.eth[0].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-324	301154 316 530 6275 0.623589976397 9.715207064972 11 64 102 1084 108136
+324	291705 305 530 6275 0.623589976397 9.715207064972 11 64 102 1084 108136
 vector 325 spineLeafNetwork.spine2.eth[0].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-325	301470 316 530 6275 0.623589976397 9.715207064972 11 64 102 1084 108136
+325	292010 305 530 6275 0.623589976397 9.715207064972 11 64 102 1084 108136
 vector 326 spineLeafNetwork.spine2.eth[0].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-326	301786 306 531 6276 0.623589976397 9.715207064972 11 46 84 886 72676
+326	292315 295 531 6276 0.623589976397 9.715207064972 11 46 84 886 72676
 vector 327 spineLeafNetwork.spine2.eth[0].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-327	302092 279 533 5731 0.623589976397 8.715242464972 10 28 84 784 64288
+327	292610 269 533 5731 0.623589976397 8.715242464972 10 28 84 784 64288
 vector 328 spineLeafNetwork.spine2.eth[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-328	302371 288 534 5732 0.623589976397 8.715242464972 10 46 102 964 95752
+328	292879 278 534 5732 0.623589976397 8.715242464972 10 46 102 964 95752
 vector 329 spineLeafNetwork.spine2.eth[0].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-329	302659 288 534 5732 0.623589976397 8.715242464972 10 64 102 982 97732
+329	293157 278 534 5732 0.623589976397 8.715242464972 10 64 102 982 97732
 vector 330 spineLeafNetwork.spine2.eth[0].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-330	302947 538 534 5732 0.623589976397 8.715242464972 20 0 1 10 10
+330	293435 518 534 5732 0.623589976397 8.715242464972 20 0 1 10 10
 vector 331 spineLeafNetwork.spine2.eth[0].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-331	303485 288 534 5732 0.623589976397 8.715242464972 10 64 102 982 97732
+331	293953 278 534 5732 0.623589976397 8.715242464972 10 64 102 982 97732
 vector 332 spineLeafNetwork.spine2.eth[0].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-332	303773 269 534 5732 0.623589976397 8.715242464972 10 0 0 0 0
+332	294231 259 534 5732 0.623589976397 8.715242464972 10 0 0 0 0
 vector 333 spineLeafNetwork.spine2.eth[0].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-333	304042 288 536 5734 0.623595736397 8.715251264972 10 64 102 982 97732
+333	294490 278 536 5734 0.623595736397 8.715251264972 10 64 102 982 97732
 vector 334 spineLeafNetwork.leaf1.eth[1].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-334	304330 288 537 5735 0.623595786397 8.715251314972 10 64 102 982 97732
+334	294768 278 537 5735 0.623595786397 8.715251314972 10 64 102 982 97732
 vector 335 spineLeafNetwork.leaf1.eth[1].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-335	304618 288 537 5735 0.623595786397 8.715251314972 10 64 102 982 97732
+335	295046 278 537 5735 0.623595786397 8.715251314972 10 64 102 982 97732
 vector 336 spineLeafNetwork.leaf1.eth[1].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-336	304906 279 538 5736 0.623595786397 8.715251314972 10 46 84 802 65620
+336	295324 269 538 5736 0.623595786397 8.715251314972 10 46 84 802 65620
 vector 337 spineLeafNetwork.H1.app[0] pingRxSeq:vector ETV
 attr interpolationmode none
 attr title "ping rx seq, vector"
-337	305185 269 606 6260 0.623669356397 9.623634496397 10 0 9 45 285
+337	295593 259 606 6260 0.623669356397 9.623634496397 10 0 9 45 285
 vector 338 spineLeafNetwork.H1.app[0] rtt:vector ETV
 attr interpolationmode none
 attr title "ping round-trip time, vector"
 attr unit s
-338	305454 352 606 6260 0.623669356397 9.623634496397 10 7.08e-005 0.00010566 0.0007661 5.98386284e-008
+338	295852 342 606 6260 0.623669356397 9.623634496397 10 7.08e-005 0.00010566 0.0007661 5.98386284e-008
 vector 339 spineLeafNetwork.H3.app[0] pingTxSeq:vector ETV
 attr interpolationmode none
 attr title "ping tx seq, vector"
-339	305806 269 609 6263 0.715189364972 9.715189364972 10 0 9 45 285
+339	296194 259 609 6263 0.715189364972 9.715189364972 10 0 9 45 285
 vector 340 spineLeafNetwork.H3.ipv4.arp arpRequestSent:vector(packetBytes) ETV
 attr source arpRequestSent
 attr title "ARP request sent, vector(packetBytes)"
-340	306075 27 611 611 0.715189364972 0.715189364972 1 28 28 28 784
+340	296453 26 611 611 0.715189364972 0.715189364972 1 28 28 28 784
 vector 341 spineLeafNetwork.H3.eth[0].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-341	306102 306 612 6265 0.715189364972 9.715189364972 11 28 84 868 71344
+341	296479 295 612 6265 0.715189364972 9.715189364972 11 28 84 868 71344
 vector 342 spineLeafNetwork.H3.eth[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-342	306408 316 613 6266 0.715189364972 9.715189364972 11 46 102 1066 106156
+342	296774 305 613 6266 0.715189364972 9.715189364972 11 46 102 1066 106156
 vector 343 spineLeafNetwork.H3.eth[0].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-343	306724 316 613 6266 0.715189364972 9.715189364972 11 64 102 1084 108136
+343	297079 305 613 6266 0.715189364972 9.715189364972 11 64 102 1084 108136
 vector 344 spineLeafNetwork.H3.eth[0].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-344	307040 590 613 6266 0.715189364972 9.715189364972 22 0 1 11 11
+344	297384 568 613 6266 0.715189364972 9.715189364972 22 0 1 11 11
 vector 345 spineLeafNetwork.H3.eth[0].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-345	307630 316 613 6266 0.715189364972 9.715189364972 11 64 102 1084 108136
+345	297952 305 613 6266 0.715189364972 9.715189364972 11 64 102 1084 108136
 vector 346 spineLeafNetwork.H3.eth[0].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-346	307946 295 613 6266 0.715189364972 9.715189364972 11 0 0 0 0
+346	298257 284 613 6266 0.715189364972 9.715189364972 11 0 0 0 0
 vector 347 spineLeafNetwork.H3.eth[0].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-347	308241 316 614 6267 0.715195124972 9.715198164972 11 64 102 1084 108136
+347	298541 305 614 6267 0.715195124972 9.715198164972 11 64 102 1084 108136
 vector 348 spineLeafNetwork.leaf1.eth[5].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-348	308557 316 615 6268 0.715195174972 9.715198214972 11 64 102 1084 108136
+348	298846 305 615 6268 0.715195174972 9.715198214972 11 64 102 1084 108136
 vector 349 spineLeafNetwork.leaf1.eth[5].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-349	308873 316 615 6268 0.715195174972 9.715198214972 11 64 102 1084 108136
+349	299151 305 615 6268 0.715195174972 9.715198214972 11 64 102 1084 108136
 vector 350 spineLeafNetwork.leaf1.eth[5].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-350	309189 306 616 6269 0.715195174972 9.715198214972 11 46 84 886 72676
+350	299456 295 616 6269 0.715195174972 9.715198214972 11 46 84 886 72676
 vector 351 spineLeafNetwork.leaf1.eth[5].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-351	309495 306 618 6316 0.715195174972 9.715251314972 11 28 84 868 71344
+351	299751 295 618 6316 0.715195174972 9.715251314972 11 28 84 868 71344
 vector 352 spineLeafNetwork.leaf1.eth[5].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-352	309801 316 619 6317 0.715195174972 9.715251314972 11 46 102 1066 106156
+352	300046 305 619 6317 0.715195174972 9.715251314972 11 46 102 1066 106156
 vector 353 spineLeafNetwork.leaf1.eth[5].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-353	310117 316 619 6317 0.715195174972 9.715251314972 11 64 102 1084 108136
+353	300351 305 619 6317 0.715195174972 9.715251314972 11 64 102 1084 108136
 vector 354 spineLeafNetwork.leaf1.eth[5].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-354	310433 590 619 6317 0.715195174972 9.715251314972 22 0 1 11 11
+354	300656 568 619 6317 0.715195174972 9.715251314972 22 0 1 11 11
 vector 355 spineLeafNetwork.leaf1.eth[5].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-355	311023 316 619 6317 0.715195174972 9.715251314972 11 64 102 1084 108136
+355	301224 305 619 6317 0.715195174972 9.715251314972 11 64 102 1084 108136
 vector 356 spineLeafNetwork.leaf1.eth[5].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-356	311339 295 619 6317 0.715195174972 9.715251314972 11 0 0 0 0
+356	301529 284 619 6317 0.715195174972 9.715251314972 11 0 0 0 0
 vector 357 spineLeafNetwork.leaf1.eth[5].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-357	311634 316 621 6319 0.715200934972 9.715260114972 11 64 102 1084 108136
+357	301813 305 621 6319 0.715200934972 9.715260114972 11 64 102 1084 108136
 vector 358 spineLeafNetwork.H3.eth[0].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-358	311950 316 622 6320 0.715200984972 9.715260164972 11 64 102 1084 108136
+358	302118 305 622 6320 0.715200984972 9.715260164972 11 64 102 1084 108136
 vector 359 spineLeafNetwork.H3.eth[0].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-359	312266 316 622 6320 0.715200984972 9.715260164972 11 64 102 1084 108136
+359	302423 305 622 6320 0.715200984972 9.715260164972 11 64 102 1084 108136
 vector 360 spineLeafNetwork.H3.eth[0].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-360	312582 306 623 6321 0.715200984972 9.715260164972 11 46 84 886 72676
+360	302728 295 623 6321 0.715200984972 9.715260164972 11 46 84 886 72676
 vector 361 spineLeafNetwork.H3.app[0] pingRxSeq:vector ETV
 attr interpolationmode none
 attr title "ping rx seq, vector"
-361	312888 269 712 6323 0.715295024972 9.715260164972 10 0 9 45 285
+361	303023 259 712 6323 0.715295024972 9.715260164972 10 0 9 45 285
 vector 362 spineLeafNetwork.H3.app[0] rtt:vector ETV
 attr interpolationmode none
 attr title "ping round-trip time, vector"
 attr unit s
-362	313157 352 712 6323 0.715295024972 9.715260164972 10 7.08e-005 0.00010566 0.0007661 5.98386284e-008
+362	303282 342 712 6323 0.715295024972 9.715260164972 10 7.08e-005 0.00010566 0.0007661 5.98386284e-008
 vector 363 spineLeafNetwork.H7.app[0] pingTxSeq:vector ETV
 attr interpolationmode none
 attr title "ping tx seq, vector"
-363	313509 259 715 6326 0.84426574409 9.84426574409 10 0 9 45 285
+363	303624 249 715 6326 0.84426574409 9.84426574409 10 0 9 45 285
 vector 364 spineLeafNetwork.H7.ipv4.arp arpRequestSent:vector(packetBytes) ETV
 attr source arpRequestSent
 attr title "ARP request sent, vector(packetBytes)"
-364	313768 26 717 717 0.84426574409 0.84426574409 1 28 28 28 784
+364	303873 25 717 717 0.84426574409 0.84426574409 1 28 28 28 784
 vector 365 spineLeafNetwork.H7.eth[0].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-365	313794 295 718 6328 0.84426574409 9.84426574409 11 28 84 868 71344
+365	303898 284 718 6328 0.84426574409 9.84426574409 11 28 84 868 71344
 vector 366 spineLeafNetwork.H7.eth[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-366	314089 305 719 6329 0.84426574409 9.84426574409 11 46 102 1066 106156
+366	304182 294 719 6329 0.84426574409 9.84426574409 11 46 102 1066 106156
 vector 367 spineLeafNetwork.H7.eth[0].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-367	314394 305 719 6329 0.84426574409 9.84426574409 11 64 102 1084 108136
+367	304476 294 719 6329 0.84426574409 9.84426574409 11 64 102 1084 108136
 vector 368 spineLeafNetwork.H7.eth[0].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-368	314699 568 719 6329 0.84426574409 9.84426574409 22 0 1 11 11
+368	304770 546 719 6329 0.84426574409 9.84426574409 22 0 1 11 11
 vector 369 spineLeafNetwork.H7.eth[0].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-369	315267 305 719 6329 0.84426574409 9.84426574409 11 64 102 1084 108136
+369	305316 294 719 6329 0.84426574409 9.84426574409 11 64 102 1084 108136
 vector 370 spineLeafNetwork.H7.eth[0].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-370	315572 284 719 6329 0.84426574409 9.84426574409 11 0 0 0 0
+370	305610 273 719 6329 0.84426574409 9.84426574409 11 0 0 0 0
 vector 371 spineLeafNetwork.H7.eth[0].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-371	315856 305 720 6330 0.84427150409 9.84427454409 11 64 102 1084 108136
+371	305883 294 720 6330 0.84427150409 9.84427454409 11 64 102 1084 108136
 vector 372 spineLeafNetwork.leaf3.eth[3].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-372	316161 305 721 6331 0.84427155409 9.84427459409 11 64 102 1084 108136
+372	306177 294 721 6331 0.84427155409 9.84427459409 11 64 102 1084 108136
 vector 373 spineLeafNetwork.leaf3.eth[3].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-373	316466 305 721 6331 0.84427155409 9.84427459409 11 64 102 1084 108136
+373	306471 294 721 6331 0.84427155409 9.84427459409 11 64 102 1084 108136
 vector 374 spineLeafNetwork.leaf3.eth[3].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-374	316771 295 722 6332 0.84427155409 9.84427459409 11 46 84 886 72676
+374	306765 284 722 6332 0.84427155409 9.84427459409 11 46 84 886 72676
 vector 375 spineLeafNetwork.leaf3.eth[3].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-375	317066 295 724 6379 0.84427155409 9.84432769409 11 28 84 868 71344
+375	307049 284 724 6379 0.84427155409 9.84432769409 11 28 84 868 71344
 vector 376 spineLeafNetwork.leaf3.eth[3].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-376	317361 305 725 6380 0.84427155409 9.84432769409 11 46 102 1066 106156
+376	307333 294 725 6380 0.84427155409 9.84432769409 11 46 102 1066 106156
 vector 377 spineLeafNetwork.leaf3.eth[3].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-377	317666 305 725 6380 0.84427155409 9.84432769409 11 64 102 1084 108136
+377	307627 294 725 6380 0.84427155409 9.84432769409 11 64 102 1084 108136
 vector 378 spineLeafNetwork.leaf3.eth[3].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-378	317971 568 725 6380 0.84427155409 9.84432769409 22 0 1 11 11
+378	307921 546 725 6380 0.84427155409 9.84432769409 22 0 1 11 11
 vector 379 spineLeafNetwork.leaf3.eth[3].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-379	318539 305 725 6380 0.84427155409 9.84432769409 11 64 102 1084 108136
+379	308467 294 725 6380 0.84427155409 9.84432769409 11 64 102 1084 108136
 vector 380 spineLeafNetwork.leaf3.eth[3].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-380	318844 284 725 6380 0.84427155409 9.84432769409 11 0 0 0 0
+380	308761 273 725 6380 0.84427155409 9.84432769409 11 0 0 0 0
 vector 381 spineLeafNetwork.leaf3.eth[3].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-381	319128 305 727 6382 0.84427731409 9.84433649409 11 64 102 1084 108136
+381	309034 294 727 6382 0.84427731409 9.84433649409 11 64 102 1084 108136
 vector 382 spineLeafNetwork.H7.eth[0].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-382	319433 305 728 6383 0.84427736409 9.84433654409 11 64 102 1084 108136
+382	309328 294 728 6383 0.84427736409 9.84433654409 11 64 102 1084 108136
 vector 383 spineLeafNetwork.H7.eth[0].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-383	319738 305 728 6383 0.84427736409 9.84433654409 11 64 102 1084 108136
+383	309622 294 728 6383 0.84427736409 9.84433654409 11 64 102 1084 108136
 vector 384 spineLeafNetwork.H7.eth[0].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-384	320043 295 729 6384 0.84427736409 9.84433654409 11 46 84 886 72676
+384	309916 284 729 6384 0.84427736409 9.84433654409 11 46 84 886 72676
 vector 385 spineLeafNetwork.leaf3.eth[1].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-385	320338 216 738 6334 0.84428621409 9.84427459409 8 28 84 616 50176
+385	310200 208 738 6334 0.84428621409 9.84427459409 8 28 84 616 50176
 vector 386 spineLeafNetwork.leaf3.eth[1].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-386	320554 223 739 6335 0.84428621409 9.84427459409 8 46 102 760 74944
+386	310408 215 739 6335 0.84428621409 9.84427459409 8 46 102 760 74944
 vector 387 spineLeafNetwork.leaf3.eth[1].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-387	320777 223 739 6335 0.84428621409 9.84427459409 8 64 102 778 76924
+387	310623 215 739 6335 0.84428621409 9.84427459409 8 64 102 778 76924
 vector 388 spineLeafNetwork.leaf3.eth[1].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-388	321000 416 739 6335 0.84428621409 9.84427459409 16 0 1 8 8
+388	310838 400 739 6335 0.84428621409 9.84427459409 16 0 1 8 8
 vector 389 spineLeafNetwork.leaf3.eth[1].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-389	321416 223 739 6335 0.84428621409 9.84427459409 8 64 102 778 76924
+389	311238 215 739 6335 0.84428621409 9.84427459409 8 64 102 778 76924
 vector 390 spineLeafNetwork.leaf3.eth[1].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-390	321639 208 739 6335 0.84428621409 9.84427459409 8 0 0 0 0
+390	311453 200 739 6335 0.84428621409 9.84427459409 8 0 0 0 0
 vector 391 spineLeafNetwork.leaf3.eth[1].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-391	321847 223 741 6337 0.84429197409 9.84428339409 8 64 102 778 76924
+391	311653 215 741 6337 0.84429197409 9.84428339409 8 64 102 778 76924
 vector 392 spineLeafNetwork.spine2.eth[2].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-392	322070 223 742 6338 0.84429202409 9.84428344409 8 64 102 778 76924
+392	311868 215 742 6338 0.84429202409 9.84428344409 8 64 102 778 76924
 vector 393 spineLeafNetwork.spine2.eth[2].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-393	322293 223 742 6338 0.84429202409 9.84428344409 8 64 102 778 76924
+393	312083 215 742 6338 0.84429202409 9.84428344409 8 64 102 778 76924
 vector 394 spineLeafNetwork.spine2.eth[2].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-394	322516 216 743 6339 0.84429202409 9.84428344409 8 46 84 634 51508
+394	312298 208 743 6339 0.84429202409 9.84428344409 8 46 84 634 51508
 vector 395 spineLeafNetwork.spine2.eth[2].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-395	322732 217 745 6498 0.84429202409 9.857998719849 8 28 84 616 50176
+395	312506 209 745 6498 0.84429202409 9.857998719849 8 28 84 616 50176
 vector 396 spineLeafNetwork.spine2.eth[2].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-396	322949 224 746 6499 0.84429202409 9.857998719849 8 46 102 760 74944
+396	312715 216 746 6499 0.84429202409 9.857998719849 8 46 102 760 74944
 vector 397 spineLeafNetwork.spine2.eth[2].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-397	323173 224 746 6499 0.84429202409 9.857998719849 8 64 102 778 76924
+397	312931 216 746 6499 0.84429202409 9.857998719849 8 64 102 778 76924
 vector 398 spineLeafNetwork.spine2.eth[2].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-398	323397 418 746 6499 0.84429202409 9.857998719849 16 0 1 8 8
+398	313147 402 746 6499 0.84429202409 9.857998719849 16 0 1 8 8
 vector 399 spineLeafNetwork.spine2.eth[2].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-399	323815 224 746 6499 0.84429202409 9.857998719849 8 64 102 778 76924
+399	313549 216 746 6499 0.84429202409 9.857998719849 8 64 102 778 76924
 vector 400 spineLeafNetwork.spine2.eth[2].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-400	324039 209 746 6499 0.84429202409 9.857998719849 8 0 0 0 0
+400	313765 201 746 6499 0.84429202409 9.857998719849 8 0 0 0 0
 vector 401 spineLeafNetwork.spine2.eth[2].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-401	324248 224 748 6501 0.84429778409 9.858007519849 8 64 102 778 76924
+401	313966 216 748 6501 0.84429778409 9.858007519849 8 64 102 778 76924
 vector 402 spineLeafNetwork.leaf3.eth[1].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-402	324472 224 749 6502 0.84429783409 9.858007569849 8 64 102 778 76924
+402	314182 216 749 6502 0.84429783409 9.858007569849 8 64 102 778 76924
 vector 403 spineLeafNetwork.leaf3.eth[1].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-403	324696 224 749 6502 0.84429783409 9.858007569849 8 64 102 778 76924
+403	314398 216 749 6502 0.84429783409 9.858007569849 8 64 102 778 76924
 vector 404 spineLeafNetwork.leaf3.eth[1].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-404	324920 217 750 6503 0.84429783409 9.858007569849 8 46 84 634 51508
+404	314614 209 750 6503 0.84429783409 9.858007569849 8 46 84 634 51508
 vector 405 spineLeafNetwork.H7.app[0] pingRxSeq:vector ETV
 attr interpolationmode none
 attr title "ping rx seq, vector"
-405	325137 259 818 6386 0.84437140409 9.84433654409 10 0 9 45 285
+405	314823 249 818 6386 0.84437140409 9.84433654409 10 0 9 45 285
 vector 406 spineLeafNetwork.H7.app[0] rtt:vector ETV
 attr interpolationmode none
 attr title "ping round-trip time, vector"
 attr unit s
-406	325396 342 818 6386 0.84437140409 9.84433654409 10 7.08e-005 0.00010566 0.0007661 5.98386284e-008
+406	315072 332 818 6386 0.84437140409 9.84433654409 10 7.08e-005 0.00010566 0.0007661 5.98386284e-008
 vector 407 spineLeafNetwork.H5.app[0] pingTxSeq:vector ETV
 attr interpolationmode none
 attr title "ping tx seq, vector"
-407	325738 269 821 6389 0.847251737257 9.847251737257 10 0 9 45 285
+407	315404 259 821 6389 0.847251737257 9.847251737257 10 0 9 45 285
 vector 408 spineLeafNetwork.H5.ipv4.arp arpRequestSent:vector(packetBytes) ETV
 attr source arpRequestSent
 attr title "ARP request sent, vector(packetBytes)"
-408	326007 27 823 823 0.847251737257 0.847251737257 1 28 28 28 784
+408	315663 26 823 823 0.847251737257 0.847251737257 1 28 28 28 784
 vector 409 spineLeafNetwork.H5.eth[0].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-409	326034 306 824 6391 0.847251737257 9.847251737257 11 28 84 868 71344
+409	315689 295 824 6391 0.847251737257 9.847251737257 11 28 84 868 71344
 vector 410 spineLeafNetwork.H5.eth[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-410	326340 316 825 6392 0.847251737257 9.847251737257 11 46 102 1066 106156
+410	315984 305 825 6392 0.847251737257 9.847251737257 11 46 102 1066 106156
 vector 411 spineLeafNetwork.H5.eth[0].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-411	326656 316 825 6392 0.847251737257 9.847251737257 11 64 102 1084 108136
+411	316289 305 825 6392 0.847251737257 9.847251737257 11 64 102 1084 108136
 vector 412 spineLeafNetwork.H5.eth[0].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-412	326972 590 825 6392 0.847251737257 9.847251737257 22 0 1 11 11
+412	316594 568 825 6392 0.847251737257 9.847251737257 22 0 1 11 11
 vector 413 spineLeafNetwork.H5.eth[0].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-413	327562 316 825 6392 0.847251737257 9.847251737257 11 64 102 1084 108136
+413	317162 305 825 6392 0.847251737257 9.847251737257 11 64 102 1084 108136
 vector 414 spineLeafNetwork.H5.eth[0].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-414	327878 295 825 6392 0.847251737257 9.847251737257 11 0 0 0 0
+414	317467 284 825 6392 0.847251737257 9.847251737257 11 0 0 0 0
 vector 415 spineLeafNetwork.H5.eth[0].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-415	328173 316 826 6393 0.847257497257 9.847260537257 11 64 102 1084 108136
+415	317751 305 826 6393 0.847257497257 9.847260537257 11 64 102 1084 108136
 vector 416 spineLeafNetwork.leaf2.eth[4].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-416	328489 316 827 6394 0.847257547257 9.847260587257 11 64 102 1084 108136
+416	318056 305 827 6394 0.847257547257 9.847260587257 11 64 102 1084 108136
 vector 417 spineLeafNetwork.leaf2.eth[4].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-417	328805 316 827 6394 0.847257547257 9.847260587257 11 64 102 1084 108136
+417	318361 305 827 6394 0.847257547257 9.847260587257 11 64 102 1084 108136
 vector 418 spineLeafNetwork.leaf2.eth[4].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-418	329121 306 828 6395 0.847257547257 9.847260587257 11 46 84 886 72676
+418	318666 295 828 6395 0.847257547257 9.847260587257 11 46 84 886 72676
 vector 419 spineLeafNetwork.leaf2.eth[4].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-419	329427 306 830 6442 0.847257547257 9.847313687257 11 28 84 868 71344
+419	318961 295 830 6442 0.847257547257 9.847313687257 11 28 84 868 71344
 vector 420 spineLeafNetwork.leaf2.eth[4].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-420	329733 316 831 6443 0.847257547257 9.847313687257 11 46 102 1066 106156
+420	319256 305 831 6443 0.847257547257 9.847313687257 11 46 102 1066 106156
 vector 421 spineLeafNetwork.leaf2.eth[4].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-421	330049 316 831 6443 0.847257547257 9.847313687257 11 64 102 1084 108136
+421	319561 305 831 6443 0.847257547257 9.847313687257 11 64 102 1084 108136
 vector 422 spineLeafNetwork.leaf2.eth[4].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-422	330365 590 831 6443 0.847257547257 9.847313687257 22 0 1 11 11
+422	319866 568 831 6443 0.847257547257 9.847313687257 22 0 1 11 11
 vector 423 spineLeafNetwork.leaf2.eth[4].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-423	330955 316 831 6443 0.847257547257 9.847313687257 11 64 102 1084 108136
+423	320434 305 831 6443 0.847257547257 9.847313687257 11 64 102 1084 108136
 vector 424 spineLeafNetwork.leaf2.eth[4].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-424	331271 295 831 6443 0.847257547257 9.847313687257 11 0 0 0 0
+424	320739 284 831 6443 0.847257547257 9.847313687257 11 0 0 0 0
 vector 425 spineLeafNetwork.leaf2.eth[4].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-425	331566 316 833 6445 0.847263307257 9.847322487257 11 64 102 1084 108136
+425	321023 305 833 6445 0.847263307257 9.847322487257 11 64 102 1084 108136
 vector 426 spineLeafNetwork.H5.eth[0].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-426	331882 316 834 6446 0.847263357257 9.847322537257 11 64 102 1084 108136
+426	321328 305 834 6446 0.847263357257 9.847322537257 11 64 102 1084 108136
 vector 427 spineLeafNetwork.H5.eth[0].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-427	332198 316 834 6446 0.847263357257 9.847322537257 11 64 102 1084 108136
+427	321633 305 834 6446 0.847263357257 9.847322537257 11 64 102 1084 108136
 vector 428 spineLeafNetwork.H5.eth[0].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-428	332514 306 835 6447 0.847263357257 9.847322537257 11 46 84 886 72676
+428	321938 295 835 6447 0.847263357257 9.847322537257 11 46 84 886 72676
 vector 429 spineLeafNetwork.spine1.eth[1].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-429	332820 362 896 6435 0.847328077257 9.847304837257 13 28 84 980 79184
+429	322233 349 896 6435 0.847328077257 9.847304837257 13 28 84 980 79184
 vector 430 spineLeafNetwork.spine1.eth[1].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-430	333182 373 897 6436 0.847328077257 9.847304837257 13 46 102 1214 118676
+430	322582 360 897 6436 0.847328077257 9.847304837257 13 46 102 1214 118676
 vector 431 spineLeafNetwork.spine1.eth[1].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-431	333555 373 897 6436 0.847328077257 9.847304837257 13 64 102 1250 122636
+431	322942 360 897 6436 0.847328077257 9.847304837257 13 64 102 1250 122636
 vector 432 spineLeafNetwork.spine1.eth[1].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-432	333928 698 897 6436 0.847328077257 9.847304837257 26 0 1 13 13
+432	323302 672 897 6436 0.847328077257 9.847304837257 26 0 1 13 13
 vector 433 spineLeafNetwork.spine1.eth[1].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-433	334626 373 897 6436 0.847328077257 9.847304837257 13 64 102 1250 122636
+433	323974 360 897 6436 0.847328077257 9.847304837257 13 64 102 1250 122636
 vector 434 spineLeafNetwork.spine1.eth[1].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-434	334999 349 897 6436 0.847328077257 9.847304837257 13 0 0 0 0
+434	324334 336 897 6436 0.847328077257 9.847304837257 13 0 0 0 0
 vector 435 spineLeafNetwork.spine1.eth[1].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-435	335348 373 899 6438 0.847333837257 9.847313637257 13 64 102 1250 122636
+435	324670 360 899 6438 0.847333837257 9.847313637257 13 64 102 1250 122636
 vector 436 spineLeafNetwork.leaf2.eth[0].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-436	335721 373 900 6439 0.847333887257 9.847313687257 13 64 102 1250 122636
+436	325030 360 900 6439 0.847333887257 9.847313687257 13 64 102 1250 122636
 vector 437 spineLeafNetwork.leaf2.eth[0].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-437	336094 373 900 6439 0.847333887257 9.847313687257 13 64 102 1250 122636
+437	325390 360 900 6439 0.847333887257 9.847313687257 13 64 102 1250 122636
 vector 438 spineLeafNetwork.leaf2.eth[0].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-438	336467 362 901 6440 0.847333887257 9.847313687257 13 46 84 1016 81848
+438	325750 349 901 6440 0.847333887257 9.847313687257 13 46 84 1016 81848
 vector 439 spineLeafNetwork.leaf2.eth[0].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-439	336829 307 903 5430 0.847333887257 8.544892027383 11 28 84 812 65072
+439	326099 296 903 5430 0.847333887257 8.544892027383 11 28 84 812 65072
 vector 440 spineLeafNetwork.leaf2.eth[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-440	337136 316 904 5431 0.847333887257 8.544892027383 11 46 102 1010 97868
+440	326395 305 904 5431 0.847333887257 8.544892027383 11 46 102 1010 97868
 vector 441 spineLeafNetwork.leaf2.eth[0].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-441	337452 316 904 5431 0.847333887257 8.544892027383 11 64 102 1046 101828
+441	326700 305 904 5431 0.847333887257 8.544892027383 11 64 102 1046 101828
 vector 442 spineLeafNetwork.leaf2.eth[0].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-442	337768 592 904 5431 0.847333887257 8.544892027383 22 0 1 11 11
+442	327005 570 904 5431 0.847333887257 8.544892027383 22 0 1 11 11
 vector 443 spineLeafNetwork.leaf2.eth[0].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-443	338360 316 904 5431 0.847333887257 8.544892027383 11 64 102 1046 101828
+443	327575 305 904 5431 0.847333887257 8.544892027383 11 64 102 1046 101828
 vector 444 spineLeafNetwork.leaf2.eth[0].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-444	338676 296 904 5431 0.847333887257 8.544892027383 11 0 0 0 0
+444	327880 285 904 5431 0.847333887257 8.544892027383 11 0 0 0 0
 vector 445 spineLeafNetwork.leaf2.eth[0].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-445	338972 316 906 5433 0.847339647257 8.544900827383 11 64 102 1046 101828
+445	328165 305 906 5433 0.847339647257 8.544900827383 11 64 102 1046 101828
 vector 446 spineLeafNetwork.spine1.eth[1].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-446	339288 316 907 5434 0.847339697257 8.544900877383 11 64 102 1046 101828
+446	328470 305 907 5434 0.847339697257 8.544900877383 11 64 102 1046 101828
 vector 447 spineLeafNetwork.spine1.eth[1].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-447	339604 316 907 5434 0.847339697257 8.544900877383 11 64 102 1046 101828
+447	328775 305 907 5434 0.847339697257 8.544900877383 11 64 102 1046 101828
 vector 448 spineLeafNetwork.spine1.eth[1].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-448	339920 307 908 5435 0.847339697257 8.544900877383 11 46 84 848 67736
+448	329080 296 908 5435 0.847339697257 8.544900877383 11 46 84 848 67736
 vector 449 spineLeafNetwork.H5.app[0] pingRxSeq:vector ETV
 attr interpolationmode none
 attr title "ping rx seq, vector"
-449	340227 269 924 6449 0.847357397257 9.847322537257 10 0 9 45 285
+449	329376 259 924 6449 0.847357397257 9.847322537257 10 0 9 45 285
 vector 450 spineLeafNetwork.H5.app[0] rtt:vector ETV
 attr interpolationmode none
 attr title "ping round-trip time, vector"
 attr unit s
-450	340496 352 924 6449 0.847357397257 9.847322537257 10 7.08e-005 0.00010566 0.0007661 5.98386284e-008
+450	329635 342 924 6449 0.847357397257 9.847322537257 10 7.08e-005 0.00010566 0.0007661 5.98386284e-008
 vector 451 spineLeafNetwork.H8.app[0] pingTxSeq:vector ETV
 attr interpolationmode none
 attr title "ping tx seq, vector"
-451	340848 269 927 6452 0.857945619849 9.857945619849 10 0 9 45 285
+451	329977 259 927 6452 0.857945619849 9.857945619849 10 0 9 45 285
 vector 452 spineLeafNetwork.H8.ipv4.arp arpRequestSent:vector(packetBytes) ETV
 attr source arpRequestSent
 attr title "ARP request sent, vector(packetBytes)"
-452	341117 27 929 929 0.857945619849 0.857945619849 1 28 28 28 784
+452	330236 26 929 929 0.857945619849 0.857945619849 1 28 28 28 784
 vector 453 spineLeafNetwork.H8.eth[0].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-453	341144 306 930 6454 0.857945619849 9.857945619849 11 28 84 868 71344
+453	330262 295 930 6454 0.857945619849 9.857945619849 11 28 84 868 71344
 vector 454 spineLeafNetwork.H8.eth[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-454	341450 316 931 6455 0.857945619849 9.857945619849 11 46 102 1066 106156
+454	330557 305 931 6455 0.857945619849 9.857945619849 11 46 102 1066 106156
 vector 455 spineLeafNetwork.H8.eth[0].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-455	341766 316 931 6455 0.857945619849 9.857945619849 11 64 102 1084 108136
+455	330862 305 931 6455 0.857945619849 9.857945619849 11 64 102 1084 108136
 vector 456 spineLeafNetwork.H8.eth[0].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-456	342082 590 931 6455 0.857945619849 9.857945619849 22 0 1 11 11
+456	331167 568 931 6455 0.857945619849 9.857945619849 22 0 1 11 11
 vector 457 spineLeafNetwork.H8.eth[0].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-457	342672 316 931 6455 0.857945619849 9.857945619849 11 64 102 1084 108136
+457	331735 305 931 6455 0.857945619849 9.857945619849 11 64 102 1084 108136
 vector 458 spineLeafNetwork.H8.eth[0].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-458	342988 295 931 6455 0.857945619849 9.857945619849 11 0 0 0 0
+458	332040 284 931 6455 0.857945619849 9.857945619849 11 0 0 0 0
 vector 459 spineLeafNetwork.H8.eth[0].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-459	343283 316 932 6456 0.857951379849 9.857954419849 11 64 102 1084 108136
+459	332324 305 932 6456 0.857951379849 9.857954419849 11 64 102 1084 108136
 vector 460 spineLeafNetwork.leaf3.eth[4].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-460	343599 316 933 6457 0.857951429849 9.857954469849 11 64 102 1084 108136
+460	332629 305 933 6457 0.857951429849 9.857954469849 11 64 102 1084 108136
 vector 461 spineLeafNetwork.leaf3.eth[4].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-461	343915 316 933 6457 0.857951429849 9.857954469849 11 64 102 1084 108136
+461	332934 305 933 6457 0.857951429849 9.857954469849 11 64 102 1084 108136
 vector 462 spineLeafNetwork.leaf3.eth[4].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-462	344231 306 934 6458 0.857951429849 9.857954469849 11 46 84 886 72676
+462	333239 295 934 6458 0.857951429849 9.857954469849 11 46 84 886 72676
 vector 463 spineLeafNetwork.leaf3.eth[4].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-463	344537 307 936 6505 0.857951429849 9.858007569849 11 28 84 868 71344
+463	333534 296 936 6505 0.857951429849 9.858007569849 11 28 84 868 71344
 vector 464 spineLeafNetwork.leaf3.eth[4].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-464	344844 317 937 6506 0.857951429849 9.858007569849 11 46 102 1066 106156
+464	333830 306 937 6506 0.857951429849 9.858007569849 11 46 102 1066 106156
 vector 465 spineLeafNetwork.leaf3.eth[4].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-465	345161 317 937 6506 0.857951429849 9.858007569849 11 64 102 1084 108136
+465	334136 306 937 6506 0.857951429849 9.858007569849 11 64 102 1084 108136
 vector 466 spineLeafNetwork.leaf3.eth[4].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-466	345478 592 937 6506 0.857951429849 9.858007569849 22 0 1 11 11
+466	334442 570 937 6506 0.857951429849 9.858007569849 22 0 1 11 11
 vector 467 spineLeafNetwork.leaf3.eth[4].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-467	346070 317 937 6506 0.857951429849 9.858007569849 11 64 102 1084 108136
+467	335012 306 937 6506 0.857951429849 9.858007569849 11 64 102 1084 108136
 vector 468 spineLeafNetwork.leaf3.eth[4].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-468	346387 296 937 6506 0.857951429849 9.858007569849 11 0 0 0 0
+468	335318 285 937 6506 0.857951429849 9.858007569849 11 0 0 0 0
 vector 469 spineLeafNetwork.leaf3.eth[4].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-469	346683 317 939 6508 0.857957189849 9.858016369849 11 64 102 1084 108136
+469	335603 306 939 6508 0.857957189849 9.858016369849 11 64 102 1084 108136
 vector 470 spineLeafNetwork.H8.eth[0].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-470	347000 317 940 6509 0.857957239849 9.858016419849 11 64 102 1084 108136
+470	335909 306 940 6509 0.857957239849 9.858016419849 11 64 102 1084 108136
 vector 471 spineLeafNetwork.H8.eth[0].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-471	347317 317 940 6509 0.857957239849 9.858016419849 11 64 102 1084 108136
+471	336215 306 940 6509 0.857957239849 9.858016419849 11 64 102 1084 108136
 vector 472 spineLeafNetwork.H8.eth[0].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-472	347634 307 941 6510 0.857957239849 9.858016419849 11 46 84 886 72676
+472	336521 296 941 6510 0.857957239849 9.858016419849 11 46 84 886 72676
 vector 473 spineLeafNetwork.spine1.eth[2].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-473	347941 362 1002 6172 0.858021959849 9.592897716389 13 28 84 980 79184
+473	336817 349 1002 6172 0.858021959849 9.592897716389 13 28 84 980 79184
 vector 474 spineLeafNetwork.spine1.eth[2].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-474	348303 373 1003 6173 0.858021959849 9.592897716389 13 46 102 1214 118676
+474	337166 360 1003 6173 0.858021959849 9.592897716389 13 46 102 1214 118676
 vector 475 spineLeafNetwork.spine1.eth[2].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-475	348676 373 1003 6173 0.858021959849 9.592897716389 13 64 102 1250 122636
+475	337526 360 1003 6173 0.858021959849 9.592897716389 13 64 102 1250 122636
 vector 476 spineLeafNetwork.spine1.eth[2].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-476	349049 698 1003 6173 0.858021959849 9.592897716389 26 0 1 13 13
+476	337886 672 1003 6173 0.858021959849 9.592897716389 26 0 1 13 13
 vector 477 spineLeafNetwork.spine1.eth[2].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-477	349747 373 1003 6173 0.858021959849 9.592897716389 13 64 102 1250 122636
+477	338558 360 1003 6173 0.858021959849 9.592897716389 13 64 102 1250 122636
 vector 478 spineLeafNetwork.spine1.eth[2].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-478	350120 349 1003 6173 0.858021959849 9.592897716389 13 0 0 0 0
+478	338918 336 1003 6173 0.858021959849 9.592897716389 13 0 0 0 0
 vector 479 spineLeafNetwork.spine1.eth[2].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-479	350469 373 1005 6175 0.858027719849 9.592906516389 13 64 102 1250 122636
+479	339254 360 1005 6175 0.858027719849 9.592906516389 13 64 102 1250 122636
 vector 480 spineLeafNetwork.leaf3.eth[0].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-480	350842 373 1006 6176 0.858027769849 9.592906566389 13 64 102 1250 122636
+480	339614 360 1006 6176 0.858027769849 9.592906566389 13 64 102 1250 122636
 vector 481 spineLeafNetwork.leaf3.eth[0].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-481	351215 373 1006 6176 0.858027769849 9.592906566389 13 64 102 1250 122636
+481	339974 360 1006 6176 0.858027769849 9.592906566389 13 64 102 1250 122636
 vector 482 spineLeafNetwork.leaf3.eth[0].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-482	351588 362 1007 6177 0.858027769849 9.592906566389 13 46 84 1016 81848
+482	340334 349 1007 6177 0.858027769849 9.592906566389 13 46 84 1016 81848
 vector 483 spineLeafNetwork.leaf3.eth[0].encap encapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, vector(packetBytes)"
-483	351950 334 1009 6460 0.858027769849 9.857954469849 12 28 84 896 72128
+483	340683 322 1009 6460 0.858027769849 9.857954469849 12 28 84 896 72128
 vector 484 spineLeafNetwork.leaf3.eth[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetReceivedFromUpper
 attr title "packet bytes from higher layer, vector(packetBytes)"
-484	352284 344 1010 6461 0.858027769849 9.857954469849 12 46 102 1112 108272
+484	341005 332 1010 6461 0.858027769849 9.857954469849 12 46 102 1112 108272
 vector 485 spineLeafNetwork.leaf3.eth[0].mac.queue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
-485	352628 344 1010 6461 0.858027769849 9.857954469849 12 64 102 1148 112232
+485	341337 332 1010 6461 0.858027769849 9.857954469849 12 64 102 1148 112232
 vector 486 spineLeafNetwork.leaf3.eth[0].mac.queue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
-486	352972 644 1010 6461 0.858027769849 9.857954469849 24 0 1 12 12
+486	341669 620 1010 6461 0.858027769849 9.857954469849 24 0 1 12 12
 vector 487 spineLeafNetwork.leaf3.eth[0].mac.queue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
-487	353616 344 1010 6461 0.858027769849 9.857954469849 12 64 102 1148 112232
+487	342289 332 1010 6461 0.858027769849 9.857954469849 12 64 102 1148 112232
 vector 488 spineLeafNetwork.leaf3.eth[0].mac.queue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
-488	353960 322 1010 6461 0.858027769849 9.857954469849 12 0 0 0 0
+488	342621 310 1010 6461 0.858027769849 9.857954469849 12 0 0 0 0
 vector 489 spineLeafNetwork.leaf3.eth[0].mac txPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToLower
 attr title "packets transmitted, vector(packetBytes)"
-489	354282 344 1012 6463 0.858033529849 9.857963269849 12 64 102 1148 112232
+489	342931 332 1012 6463 0.858033529849 9.857963269849 12 64 102 1148 112232
 vector 490 spineLeafNetwork.spine1.eth[2].mac rxPkOk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, vector(packetBytes)"
-490	354626 344 1013 6464 0.858033579849 9.857963319849 12 64 102 1148 112232
+490	343263 332 1013 6464 0.858033579849 9.857963319849 12 64 102 1148 112232
 vector 491 spineLeafNetwork.spine1.eth[2].mac passedUpPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, vector(packetBytes)"
-491	354970 344 1013 6464 0.858033579849 9.857963319849 12 64 102 1148 112232
+491	343595 332 1013 6464 0.858033579849 9.857963319849 12 64 102 1148 112232
 vector 492 spineLeafNetwork.spine1.eth[2].encap decapPk:vector(packetBytes) ETV
 attr interpolationmode none
 attr source decapPk
 attr title "packets decapsulated, vector(packetBytes)"
-492	355314 334 1014 6465 0.858033579849 9.857963319849 12 46 84 932 74792
+492	343927 322 1014 6465 0.858033579849 9.857963319849 12 46 84 932 74792
 vector 493 spineLeafNetwork.H8.app[0] pingRxSeq:vector ETV
 attr interpolationmode none
 attr title "ping rx seq, vector"
-493	355648 270 1030 6512 0.858051279849 9.858016419849 10 0 9 45 285
+493	344249 260 1030 6512 0.858051279849 9.858016419849 10 0 9 45 285
 vector 494 spineLeafNetwork.H8.app[0] rtt:vector ETV
 attr interpolationmode none
 attr title "ping round-trip time, vector"
 attr unit s
-494	355918 355 1030 6512 0.858051279849 9.858016419849 10 7.08e-005 0.00010566 0.0007661 5.98386284e-008
+494	344509 344 1030 6512 0.858051279849 9.858016419849 10 7.08e-005 0.00010566 0.0007661 5.98386284e-008
