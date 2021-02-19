@@ -45,6 +45,9 @@ ini_base_file = open('iniBase.ini', 'r')
 write_configs(new_ini_file, ini_base_file)
 new_ini_file.write('\n\n#Generate Traffic through SendScript.py\n')
 
+print("Enter the number of Spines: ")
+NUM_SPINES = int(input())
+
 print("Enter the number of leaves: ")
 NUM_LEAFS = int(input())
 
