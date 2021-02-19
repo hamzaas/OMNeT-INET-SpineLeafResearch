@@ -1,5 +1,5 @@
-.\inet/networklayer/ipv6/Ipv6Header_m.cc .\inet/networklayer/ipv6/Ipv6Header_m.h : \
-	.\inet/networklayer/ipv6/Ipv6Header.msg \
+inet/networklayer/ipv6/Ipv6ExtHeaderTag_m.cc inet/networklayer/ipv6/Ipv6ExtHeaderTag_m.h : \
+	inet/networklayer/ipv6/Ipv6ExtHeaderTag.msg \
 	.\inet/common/INETDefs.msg \
 	.\inet/common/Protocol.msg \
 	.\inet/common/ProtocolTag.msg \
@@ -9,8 +9,9 @@
 	.\inet/networklayer/common/IpProtocolId.msg \
 	.\inet/networklayer/common/L3Address.msg \
 	.\inet/networklayer/contract/NetworkHeaderBase.msg \
-	.\inet/networklayer/contract/ipv6/Ipv6Address.msg
-.\inet/networklayer/ipv6/Ipv6Header.msg:
+	.\inet/networklayer/contract/ipv6/Ipv6Address.msg \
+	.\inet/networklayer/ipv6/Ipv6Header.msg
+inet/networklayer/ipv6/Ipv6ExtHeaderTag.msg:
 .\inet/common/INETDefs.msg:
 .\inet/common/Protocol.msg:
 .\inet/common/ProtocolTag.msg:
@@ -21,3 +22,4 @@
 .\inet/networklayer/common/L3Address.msg:
 .\inet/networklayer/contract/NetworkHeaderBase.msg:
 .\inet/networklayer/contract/ipv6/Ipv6Address.msg:
+.\inet/networklayer/ipv6/Ipv6Header.msg:

@@ -5,11 +5,10 @@ APPLICATION_PERCENTAGE = 0.2
 INTER_INTRA_PERCENTAGE = 2
 MICE_ELEPHANT_PERCENTAGE = 2
 ON_OFF_PERCENTAGE = 2
-MAX_SECONDS = 500
+MAX_SECONDS = 3600 
 MICE_MIN = 100
 MICE_MAX = 300
 ELEPHANT_MIN = 1400
-
 ELEPHANT_MAX = 1500
 
 
@@ -26,6 +25,7 @@ def write_connect_address(new_ini, connect_app, connect_address):
 
 
 def write_applications(new_ini, num_apps):
+    new_ini.write("\n[Config scriptTraffic]\n")
     new_ini.write("#Number of apps for all hosts\n")
     new_ini.write("**.leaf[*].H[*].numApps = " + str(num_apps) + "\n\n")
     new_ini.write("#TcpSinkApp for all hosts (to handle any incoming packets)\n")
@@ -43,7 +43,7 @@ ini_base_file = open('iniBase.ini', 'r')
 
 # Writing configs and new lines
 write_configs(new_ini_file, ini_base_file)
-new_ini_file.write('\n\n#Generate Traffic through SendScript.py')
+new_ini_file.write('\n\n#Generate Traffic through SendScript.py\n')
 
 print("Enter the number of leaves: ")
 NUM_LEAFS = int(input())

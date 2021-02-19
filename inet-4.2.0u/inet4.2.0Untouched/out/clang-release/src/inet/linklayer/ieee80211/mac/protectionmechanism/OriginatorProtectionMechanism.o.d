@@ -1,16 +1,15 @@
 ../out/clang-release/src/inet/linklayer/ieee80211/mac/protectionmechanism/OriginatorProtectionMechanism.o: \
-  C:/Users\Ethan\Documents\School\DCN_Research\omnetpp-5.6.2-src-windows\omnetpp-5.6.2\include\omnetpp.h \
-  C:\Users\Ethan\Documents\School\DCN_Research\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled.h \
-  C:\Users\Ethan\Documents\School\DCN_Research\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled_release.h \
+  C:/Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\omnetpp-5.6.2\include\omnetpp.h \
+  C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled.h \
+  C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled_release.h \
   inet/linklayer/ieee80211/mac/protectionmechanism/OriginatorProtectionMechanism.cc \
   inet/linklayer/ieee80211/mac/coordinationfunction/Dcf.h \
   inet/linklayer/ieee80211/mac/channelaccess/Dcaf.h \
   inet/linklayer/ieee80211/mac/common/ModeSetListener.h \
   inet/physicallayer/ieee80211/mode/Ieee80211ModeSet.h \
   inet/common/DelayedInitializer.h inet/common/INETDefs.h \
-  inet/common/precompiled_release.h inet/common/precompiled.h \
-  inet/opp_defines.h inet/features.h inet/common/Compat.h \
-  inet/common/InitStages.h \
+  inet/common/precompiled_release.h inet/opp_defines.h inet/features.h \
+  inet/common/Compat.h inet/common/InitStages.h \
   inet/physicallayer/ieee80211/mode/IIeee80211Mode.h \
   inet/physicallayer/contract/packetlevel/IModulation.h \
   inet/physicallayer/contract/packetlevel/IPrintableObject.h \
@@ -134,9 +133,9 @@
   inet/linklayer/ieee80211/mac/protectionmechanism/OriginatorProtectionMechanism.h \
   inet/linklayer/ieee80211/mac/rateselection/RateSelection.h
 
-C:\Users\Ethan\Documents\School\DCN_Research\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled.h:
+C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled.h:
 
-C:\Users\Ethan\Documents\School\DCN_Research\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled_release.h:
+C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled_release.h:
 
 inet/linklayer/ieee80211/mac/protectionmechanism/OriginatorProtectionMechanism.cc:
 
@@ -153,8 +152,6 @@ inet/common/DelayedInitializer.h:
 inet/common/INETDefs.h:
 
 inet/common/precompiled_release.h:
-
-inet/common/precompiled.h:
 
 inet/opp_defines.h:
 

@@ -1,16 +1,15 @@
 ../out/clang-release/src/inet/physicallayer/pathloss/FreeSpacePathLoss.o: \
-  C:/Users\Ethan\Documents\School\DCN_Research\omnetpp-5.6.2-src-windows\omnetpp-5.6.2\include\omnetpp.h \
-  C:\Users\Ethan\Documents\School\DCN_Research\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled.h \
-  C:\Users\Ethan\Documents\School\DCN_Research\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled_release.h \
+  C:/Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\omnetpp-5.6.2\include\omnetpp.h \
+  C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled.h \
+  C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled_release.h \
   inet/physicallayer/pathloss/FreeSpacePathLoss.cc \
   inet/physicallayer/pathloss/FreeSpacePathLoss.h \
   inet/physicallayer/base/packetlevel/PathLossBase.h \
   inet/physicallayer/contract/packetlevel/IPathLoss.h \
   inet/physicallayer/contract/packetlevel/IArrival.h \
   inet/common/geometry/common/Coord.h inet/common/INETDefs.h \
-  inet/common/precompiled_release.h inet/common/precompiled.h \
-  inet/opp_defines.h inet/features.h inet/common/Compat.h \
-  inet/common/InitStages.h inet/common/INETMath.h \
+  inet/common/precompiled_release.h inet/opp_defines.h inet/features.h \
+  inet/common/Compat.h inet/common/InitStages.h inet/common/INETMath.h \
   inet/common/geometry/common/Quaternion.h \
   inet/common/geometry/common/EulerAngles.h inet/common/Units.h \
   inet/physicallayer/contract/packetlevel/IPrintableObject.h \
@@ -36,9 +35,9 @@
   inet/physicallayer/contract/bitlevel/ISignalAnalogModel.h \
   inet/physicallayer/contract/packetlevel/IAntennaGain.h
 
-C:\Users\Ethan\Documents\School\DCN_Research\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled.h:
+C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled.h:
 
-C:\Users\Ethan\Documents\School\DCN_Research\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled_release.h:
+C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled_release.h:
 
 inet/physicallayer/pathloss/FreeSpacePathLoss.cc:
 
@@ -55,8 +54,6 @@ inet/common/geometry/common/Coord.h:
 inet/common/INETDefs.h:
 
 inet/common/precompiled_release.h:
-
-inet/common/precompiled.h:
 
 inet/opp_defines.h:
 

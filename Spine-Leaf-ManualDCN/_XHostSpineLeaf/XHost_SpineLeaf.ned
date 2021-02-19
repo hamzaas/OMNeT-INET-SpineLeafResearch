@@ -28,8 +28,8 @@ network XHost_SpineLeaf_Network
 {
     parameters:
         int numSpines = 5;	// Number of spines in a Lan
-        int numLeafs = 8;		// Number of leaf modules in a Lan
-        int hostPerLeaf = 2;	// Number of hosts in a leaf module
+        int numLeafs = 5;		// Number of leaf modules in a Lan
+        int hostPerLeaf = 5;	// Number of hosts in a leaf module
 
         //** If hostPerLeaf moved to moduleLeaf then each leaf could have different # of hosts.
         @display("i=device/lan-bus;bgb=755,333");
