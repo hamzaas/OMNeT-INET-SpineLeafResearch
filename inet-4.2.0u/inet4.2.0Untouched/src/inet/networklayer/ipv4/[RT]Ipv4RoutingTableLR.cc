@@ -423,32 +423,33 @@ Ipv4Route *Ipv4RoutingTableLR::findBestMatchingRoute(const Ipv4Address& dest) co
 //    }
 
     // find best match (one with longest prefix)
-    // default route has zero prefix length, so (if exists) it'll be selected as last resort
-    Ipv4Route *bestRoute = nullptr;
-    for (auto e : routes) {
-        if (e->isValid()) {
-            if (Ipv4Address::maskedAddrAreEqual(dest, e->getDestination(), e->getNetmask()) && (e->getDestination().getInt() != 0x0A000080) && (e->getDestination().getInt() != 0x0A000000)) {
-                bestRoute = const_cast<Ipv4Route *>(e);
-                if (routingCache.count(dest) == 0) {
-                    std::vector<Ipv4Route *> temp;
-                    temp.push_back(bestRoute);
-                    routingCache.insert(std::pair<Ipv4Address, std::vector<Ipv4Route *>> (dest, temp));
-                }
-                else {
-                    //Check for duplicates before insert
-                    bool duplicateFound = false;
-                    for (auto ve : routingCache[dest]){
-                        if(ve->getInterface() == bestRoute->getInterface()){
-                            duplicateFound = true;
-                            break;
-                        }
+        // default route has zero prefix length, so (if exists) it'll be selected as last resort
+        Ipv4Route *bestRoute = nullptr;
+        for (auto e : routes) {
+            if (e->isValid()) {
+                //                                            && (e->getDestination().getInt() != 0x0A000080)                       10.0.0.128                                      10.0.0.0
+                if (Ipv4Address::maskedAddrAreEqual(dest, e->getDestination(), e->getNetmask()) && (e->getDestination().getInt() != 0x0A000080) && (e->getDestination().getInt() != 0x0A000000)) {
+                    bestRoute = const_cast<Ipv4Route *>(e);
+                    if (routingCache.count(dest) == 0) {
+                        std::vector<Ipv4Route *> temp;
+                        temp.push_back(bestRoute);
+                        routingCache.insert(std::pair<Ipv4Address, std::vector<Ipv4Route *>> (dest, temp));
                     }
-                    if(!duplicateFound)
-                        routingCache[dest].push_back(bestRoute);
+                    else {
+                        //Check for duplicates before insert
+                        bool duplicateFound = false;
+                        for (auto ve : routingCache[dest]){
+                            if(ve->getInterface() == bestRoute->getInterface()){
+                                duplicateFound = true;
+                                break;
+                            }
+                        }
+                        if(!duplicateFound)
+                            routingCache[dest].push_back(bestRoute);
+                    }
                 }
             }
         }
-    }
 
     //---- Testing ------
     for(int j = 0; j != routingCache[dest].size(); j++)

@@ -1,5 +1,11 @@
 <config>
-	<interface hosts="**" address="10.x.x.x" netmask="255.x.x.x"/>
+	<interface hosts="leaf[0].**" address="10.1.0.x" netmask="255.255.255.x"/>
+	<interface hosts="leaf[1].**" address="10.1.1.x" netmask="255.255.255.x"/>
+	<interface hosts="leaf[2].**" address="10.1.2.x" netmask="255.255.255.x"/>
+	<interface hosts="leaf[3].**" address="10.1.3.x" netmask="255.255.255.x"/>
+	<interface hosts="leaf[4].**" address="10.1.4.x" netmask="255.255.255.x"/>
+	  
+	<interface hosts="**" address="10.1.x.x" netmask="255.255.x.x"/>
 
 	<!-- Self Routes -->
 	<route hosts="leaf[0].topOfRack" destination="leaf[0].H[0]" netmask="255.255.255.255" gateway="*" interface="eth5" metric="*"/>
