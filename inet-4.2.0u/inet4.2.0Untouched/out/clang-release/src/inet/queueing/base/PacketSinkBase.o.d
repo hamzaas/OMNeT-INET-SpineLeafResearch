@@ -1,7 +1,7 @@
 ../out/clang-release/src/inet/queueing/base/PacketSinkBase.o: \
   C:/Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\omnetpp-5.6.2\include\omnetpp.h \
-  C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled.h \
-  C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled_release.h \
+  C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\OMNeT-INET-SpineLeafResearch\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled.h \
+  C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\OMNeT-INET-SpineLeafResearch\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled_release.h \
   inet/queueing/base/PacketSinkBase.cc \
   inet/queueing/base/PacketSinkBase.h \
   inet/queueing/base/PacketProcessorBase.h inet/common/packet/Packet.h \
@@ -23,9 +23,9 @@
   inet/common/Simsignals.h inet/common/Simsignals_m.h \
   inet/common/INETDefs_m.h inet/common/StringFormat.h
 
-C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled.h:
+C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\OMNeT-INET-SpineLeafResearch\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled.h:
 
-C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled_release.h:
+C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\OMNeT-INET-SpineLeafResearch\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled_release.h:
 
 inet/queueing/base/PacketSinkBase.cc:
 

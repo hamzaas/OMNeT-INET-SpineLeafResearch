@@ -1,7 +1,7 @@
 ../out/clang-release/src/inet/linklayer/ppp/PppHeaderSerializer.o: \
   C:/Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\omnetpp-5.6.2\include\omnetpp.h \
-  C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled.h \
-  C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled_release.h \
+  C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\OMNeT-INET-SpineLeafResearch\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled.h \
+  C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\OMNeT-INET-SpineLeafResearch\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled_release.h \
   inet/linklayer/ppp/PppHeaderSerializer.cc \
   inet/common/packet/serializer/ChunkSerializerRegistry.h \
   inet/common/packet/serializer/ChunkSerializer.h \
@@ -28,9 +28,9 @@
   inet/linklayer/ppp/PppHeaderSerializer.h \
   inet/common/packet/serializer/FieldsChunkSerializer.h
 
-C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled.h:
+C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\OMNeT-INET-SpineLeafResearch\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled.h:
 
-C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled_release.h:
+C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\OMNeT-INET-SpineLeafResearch\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled_release.h:
 
 inet/linklayer/ppp/PppHeaderSerializer.cc:
 

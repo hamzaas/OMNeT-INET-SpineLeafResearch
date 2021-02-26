@@ -1,7 +1,7 @@
 ../out/clang-release/src/inet/linklayer/ieee80211/mac/contract/IFrameSequenceHandler.o: \
   C:/Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\omnetpp-5.6.2\include\omnetpp.h \
-  C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled.h \
-  C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled_release.h \
+  C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\OMNeT-INET-SpineLeafResearch\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled.h \
+  C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\OMNeT-INET-SpineLeafResearch\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled_release.h \
   inet/linklayer/ieee80211/mac/contract/IFrameSequenceHandler.cc \
   inet/linklayer/ieee80211/mac/contract/IFrameSequenceHandler.h \
   inet/common/INETDefs.h inet/common/precompiled_release.h \
@@ -19,9 +19,9 @@
   inet/common/TemporarySharedPtr.h inet/common/packet/chunk/BytesChunk.h \
   inet/common/packet/tag/TagSet.h
 
-C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled.h:
+C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\OMNeT-INET-SpineLeafResearch\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled.h:
 
-C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled_release.h:
+C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\OMNeT-INET-SpineLeafResearch\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled_release.h:
 
 inet/linklayer/ieee80211/mac/contract/IFrameSequenceHandler.cc:
 

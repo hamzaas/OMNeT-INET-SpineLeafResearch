@@ -1,7 +1,7 @@
 ../out/clang-release/src/inet/physicallayer/unitdisk/UnitDiskListening.o: \
   C:/Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\omnetpp-5.6.2\include\omnetpp.h \
-  C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled.h \
-  C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled_release.h \
+  C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\OMNeT-INET-SpineLeafResearch\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled.h \
+  C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\OMNeT-INET-SpineLeafResearch\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled_release.h \
   inet/physicallayer/unitdisk/UnitDiskListening.cc \
   inet/physicallayer/unitdisk/UnitDiskListening.h \
   inet/physicallayer/base/packetlevel/ListeningBase.h \
@@ -13,9 +13,9 @@
   inet/physicallayer/base/packetlevel/PhysicalLayerDefs.h \
   inet/common/Units.h
 
-C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled.h:
+C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\OMNeT-INET-SpineLeafResearch\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled.h:
 
-C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled_release.h:
+C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\OMNeT-INET-SpineLeafResearch\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled_release.h:
 
 inet/physicallayer/unitdisk/UnitDiskListening.cc:
 

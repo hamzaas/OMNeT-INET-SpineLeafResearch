@@ -1,7 +1,7 @@
 ../out/clang-release/src/inet/physicallayer/ieee80211/packetlevel/errormodel/Ieee80211NistErrorModel.o: \
   C:/Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\omnetpp-5.6.2\include\omnetpp.h \
-  C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled.h \
-  C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled_release.h \
+  C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\OMNeT-INET-SpineLeafResearch\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled.h \
+  C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\OMNeT-INET-SpineLeafResearch\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled_release.h \
   inet/physicallayer/ieee80211/packetlevel/errormodel/Ieee80211NistErrorModel.cc \
   inet/physicallayer/ieee80211/mode/Ieee80211DsssMode.h \
   inet/physicallayer/ieee80211/mode/Ieee80211ModeBase.h \
@@ -88,9 +88,9 @@
   inet/physicallayer/modulation/QbpskModulation.h \
   inet/physicallayer/modulation/QpskModulation.h
 
-C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled.h:
+C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\OMNeT-INET-SpineLeafResearch\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled.h:
 
-C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\Research\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled_release.h:
+C:\Users\Ethan\Documents\School\DCNResearch\omnetpp-5.6.2-src-windows\OMNeT-INET-SpineLeafResearch\inet-4.2.0u\inet4.2.0Untouched\src\inet\common\precompiled_release.h:
 
 inet/physicallayer/ieee80211/packetlevel/errormodel/Ieee80211NistErrorModel.cc:
 

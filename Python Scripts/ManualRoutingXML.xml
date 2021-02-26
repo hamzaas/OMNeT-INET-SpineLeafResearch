@@ -1,6 +1,4 @@
 <config>
-	<interface hosts="**" address="10.x.x.x" netmask="255.x.x.x"/>
-
 	<!-- Self Routes -->
 	<route hosts="leaf[0].topOfRack" destination="leaf[0].H[0]" netmask="255.255.255.255" gateway="*" interface="eth5" metric="*"/>
 

@@ -32,7 +32,9 @@ def writeBorderSelfRoute(file, numSpines):
 def writeRoutes(fileName, numLeaves, numSpines, hostsPerLeaf):
     file = open(fileName, 'w')
     file.write('<config>\n');
-    file.write('\t<interface hosts="**" address="10.x.x.x" netmask="255.x.x.x"/>\n\n')
+    #Ip address and Vlans
+    #for leaf in range(numLeaves + 1):
+    #    file.write('\t<interface hosts="**" address="10.x.x.x" netmask="255.x.x.x"/>\n\n')
 
     # Loop for all leaves
     for leaf in range(numLeaves + 1):

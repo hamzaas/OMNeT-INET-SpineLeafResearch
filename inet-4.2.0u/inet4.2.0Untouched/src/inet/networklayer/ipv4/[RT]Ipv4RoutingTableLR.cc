@@ -22,6 +22,8 @@
 #include <algorithm>
 #include <sstream>
 #include <random>
+#include <stdio.h>
+#include <string.h>
 
 #include "inet/common/INETUtils.h"
 #include "inet/common/ModuleAccess.h"
@@ -427,13 +429,20 @@ Ipv4Route *Ipv4RoutingTableLR::findBestMatchingRoute(const Ipv4Address& dest) co
         Ipv4Route *bestRoute = nullptr;
         for (auto e : routes) {
             if (e->isValid()) {
-                //                                            && (e->getDestination().getInt() != 0x0A000080)                       10.0.0.128                                      10.0.0.0
-                if (Ipv4Address::maskedAddrAreEqual(dest, e->getDestination(), e->getNetmask()) && (e->getDestination().getInt() != 0x0A000080) && (e->getDestination().getInt() != 0x0A000000)) {
+                //                                                                                                                  10.0.0.0
+                if (Ipv4Address::maskedAddrAreEqual(dest, e->getDestination(), e->getNetmask()) && (e->getDestination().getInt() != 0x0A000000)) {
+                    int vlanOfSelf = (routerId.getInt() << 16) >> 24;
+                    int vlanOfDest = (e->getDestination().getInt() << 16) >> 24;
+
                     bestRoute = const_cast<Ipv4Route *>(e);
                     if (routingCache.count(dest) == 0) {
                         std::vector<Ipv4Route *> temp;
                         temp.push_back(bestRoute);
                         routingCache.insert(std::pair<Ipv4Address, std::vector<Ipv4Route *>> (dest, temp));
+                    }
+                    else if ((vlanOfSelf != vlanOfDest) && e->getInterface()->getInterfaceId() == 101){
+                        //do nothing.
+                        //This is to catch those "loopback" addresses.
                     }
                     else {
                         //Check for duplicates before insert
@@ -453,7 +462,7 @@ Ipv4Route *Ipv4RoutingTableLR::findBestMatchingRoute(const Ipv4Address& dest) co
 
     //---- Testing ------
     for(int j = 0; j != routingCache[dest].size(); j++)
-        EV << "\n***\n***\tDest: " << dest << ", "<< routingCache[dest].at(j) << "\n***";
+        EV << "\n***\n***\tDest: " << dest << ", destination :) : " << routingCache[dest].at(j)->getDestination() << ", "<< routingCache[dest].at(j) << "\n***";
     //-------------------
 
     //Uniform random Distrubition
