@@ -28,13 +28,21 @@ def writeBorderSelfRoute(file, numSpines):
     file.write('\t<route hosts="borderLeaf" destination="' + 'border"' +
                ' netmask="255.255.255.255" gateway="*" interface=' '"eth' + str(numSpines) + '"' + ' metric="*"/>\n')
 
+def writeVLANS(file, max):
+    for lan in range(max):
+        file.write('\t<interface hosts="leaf[' + str(lan) + '].**" address="10.0.' + str(lan + 1) + '.x" netmask="255.255.255.x"/>\n')
+
+    file.write('\n\t<interface hosts="**" address="10.0.' + str(max + 1) + '.x" netmask="255.255.255.x"/>\n\n')
 
 def writeRoutes(fileName, numLeaves, numSpines, hostsPerLeaf):
     file = open(fileName, 'w')
-    file.write('<config>\n');
+    file.write('<config>\n\n');
     #Ip address and Vlans
     #for leaf in range(numLeaves + 1):
     #    file.write('\t<interface hosts="**" address="10.x.x.x" netmask="255.x.x.x"/>\n\n')
+
+    writeVLANS(file, numLeaves)
+
 
     # Loop for all leaves
     for leaf in range(numLeaves + 1):
