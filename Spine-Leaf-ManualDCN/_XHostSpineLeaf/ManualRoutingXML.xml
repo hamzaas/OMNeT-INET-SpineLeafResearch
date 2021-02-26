@@ -5,9 +5,8 @@
 	<interface hosts="leaf[2].**" address="10.0.3.x" netmask="255.255.255.x"/>
 	<interface hosts="leaf[3].**" address="10.0.4.x" netmask="255.255.255.x"/>
 	<interface hosts="leaf[4].**" address="10.0.5.x" netmask="255.255.255.x"/>
-	
-	<interface hosts="**" address="10.0.6.x" netmask="255.255.255.x"/>
 
+	<interface hosts="**" address="10.0.6.x" netmask="255.255.255.x"/>
 
 	<!-- Self Routes -->
 	<route hosts="leaf[0].topOfRack" destination="leaf[0].H[0]" netmask="255.255.255.255" gateway="*" interface="eth5" metric="*"/>

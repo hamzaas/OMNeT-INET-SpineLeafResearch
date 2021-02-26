@@ -4,8 +4,8 @@
 # Building topology info and saving input
 cd ../Python\ Scripts
 py RouterConfigurator.py
-#rm ../Spine-Leaf-ManualDCN/_XHostSpineLeaf/ManualRoutingXML.xml
-#mv ManualRoutingXML.xml ../Spine-Leaf-ManualDCN/_XHostSpineLeaf/ManualRoutingXML.xml
+rm ../Spine-Leaf-ManualDCN/_XHostSpineLeaf/ManualRoutingXML.xml
+mv ManualRoutingXML.xml ../Spine-Leaf-ManualDCN/_XHostSpineLeaf/ManualRoutingXML.xml
 
 # Creating Traffic based on topology input
 py SendScript.py < input.txt
