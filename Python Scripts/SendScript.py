@@ -5,7 +5,7 @@ APPLICATION_PERCENTAGE = 0.2
 INTER_INTRA_PERCENTAGE = 2
 MICE_ELEPHANT_PERCENTAGE = 2
 ON_OFF_PERCENTAGE = 2
-MAX_SECONDS = 3600 
+MAX_SECONDS = 4000
 MICE_MIN = 100
 MICE_MAX = 300
 ELEPHANT_MIN = 1400
@@ -36,10 +36,18 @@ def write_applications(new_ini, num_apps):
     new_ini.write("**.leaf[*].H[*].app[1..].sendBytes = 0\n\n")
 
 
+def writeToMap(map, key):
+    if key in map:
+        map[key] += 1
+    else:
+        map[key] = 1
+
+
 # Main Calls
 
 new_ini_file = open('ini_generated.ini', 'w')
 ini_base_file = open('iniBase.ini', 'r')
+size_map = {}
 
 # Writing configs and new lines
 write_configs(new_ini_file, ini_base_file)
@@ -97,7 +105,6 @@ for i in range(NUM_LEAFS):
                 write_connect_address(new_ini_file, current_app, connect_address)
                 app_list.append(current_app)
 
-
 new_ini_file.write("\n")
 
 for app in app_list:
@@ -106,11 +113,41 @@ for app in app_list:
         on_off = int(random.random() * ON_OFF_PERCENTAGE)
         if on_off == 0:
             rand_flow = int(random.random() * MICE_ELEPHANT_PERCENTAGE)
+
+            # Mice Flow
             if rand_flow == 0:
-                rand_size = int((random.random() * (MICE_MAX - MICE_MIN)) + MICE_MIN)
+                # Focusing more data on MICE_MIN 60% chance
+                rand_mice_min = int(random.random() * 100)
+                temp_max = MICE_MAX
+
+                if rand_mice_min <= 80:
+                    temp_max = MICE_MIN + (MICE_MAX - MICE_MIN) * 0.03
+                else:
+                    temp_max = MICE_MIN + (MICE_MAX - MICE_MIN) * random.random()
+
+                rand_size = int((random.random() * (temp_max - MICE_MIN)) + MICE_MIN)
                 send_script_string = send_script_string + " " + str(second) + " " + str(rand_size) + ";"
+                writeToMap(size_map, rand_size)
+
+            # Elephant Flow
             else:
-                rand_size = int((random.random() * (ELEPHANT_MAX - ELEPHANT_MIN)) + ELEPHANT_MIN)
+                rand_ele_distro = int(random.random() * 100)
+                temp_min = ELEPHANT_MIN
+
+                if rand_ele_distro <= 40:
+                    temp_min = ELEPHANT_MIN + int((ELEPHANT_MAX - ELEPHANT_MIN) * (random.random()))
+                elif 60 < rand_ele_distro < 100:
+                    temp_min = ELEPHANT_MIN + int((ELEPHANT_MAX - ELEPHANT_MIN) * 0.96)
+
+                rand_size = int((random.random() * (ELEPHANT_MAX - temp_min)) + temp_min)
                 send_script_string = send_script_string + " " + str(second) + " " + str(rand_size) + ";"
+                writeToMap(size_map, rand_size)
 
     write_send_script(new_ini_file, send_script_string.strip(), app)
+
+# Writing frequency data to file
+size_file = open('size_freq.txt', 'w')
+size_file.write("Size(Bytes),Frequency\n")
+
+for key in size_map:
+    size_file.write(str(key) + "," + str(size_map[key]) + "\n")
