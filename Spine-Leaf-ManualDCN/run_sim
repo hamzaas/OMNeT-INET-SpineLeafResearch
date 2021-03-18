@@ -7,6 +7,9 @@ py RouterConfigurator.py
 rm ../Spine-Leaf-ManualDCN/_XHostSpineLeaf/ManualRoutingXML.xml
 mv ManualRoutingXML.xml ../Spine-Leaf-ManualDCN/_XHostSpineLeaf/ManualRoutingXML.xml
 
+#Creating New .ned file
+py nedConfigurator.py
+
 # Creating Traffic based on topology input
 py SendScript.py < input.txt
 rm ../Spine-Leaf-ManualDCN/_XHostSpineLeaf/ini_generated.ini
@@ -29,4 +32,6 @@ scavetool x *.sca -o results.csv
 echo 'Running graphing script.'
 
 cd ../../../
+pwd
 py ResultsAnalysis.py
+py ResultsAnalysisVec.py
