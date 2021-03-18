@@ -1,0 +1,68 @@
+        //** If hostPerLeaf moved to moduleLeaf then each leaf could have different # of hosts.
+        @display("i=device/lan-bus;bgb=755,333");
+    types:
+        module Leaf
+        {
+            parameters:
+
+                @display("i=device/server2;bgb=757,229");
+            gates:
+                inout leafDoor[];
+            submodules:
+                topOfRack: LeafRouter {
+                    @display("p=147,53");
+                }
+                H[hostPerLeaf]: StandardHost {
+                    @display("p=147,140,r,50");
+                }
+                LeafVisualizer: IntegratedCanvasVisualizer {
+                    @display("p=39,40");
+                    interfaceTableVisualizer.textColor = "white";
+                    interfaceTableVisualizer.displayBackground = true;
+                    interfaceTableVisualizer.backgroundColor = "black";
+                }
+            connections:
+                // Establishes connection between topOfRack and outside the module
+                for i=0..numSpines-1 {
+                    topOfRack.ethg++ <--> leafDoor++;
+                }
+                // Connects all hosts in leaf to topOfRack
+                for k=0..hostPerLeaf-1 {
+                    H[k].ethg++ <--> Eth100M <--> topOfRack.ethg++;
+                }
+        }
+    submodules:
+        spine[numSpines]: Router {
+            @display("p=203,51,r,100");
+        }
+        border: StandardHost {
+            @display("p=155,241");
+        }
+        leaf[numLeafs]: Leaf {
+            @display("p=237,163,r,100;i=device/server2");
+        }
+        LanVisualizer: IntegratedCanvasVisualizer {
+            @display("p=39,49");
+            interfaceTableVisualizer.textColor = "white";
+            interfaceTableVisualizer.displayBackground = true;
+            interfaceTableVisualizer.backgroundColor = "black";
+        }
+        borderLeaf: LeafRouter {
+            @display("p=155,162");
+        }
+        configurator: Ipv4NetworkConfigurator {
+            @display("p=38.15625,138.75");
+        }
+    connections:
+        // Connects all spines to the borderRouter
+        for i=0..numSpines-1 {
+            spine[i].ethg++ <--> Eth100M <--> borderLeaf.ethg++;
+        }
+        // Connects all spines to all leafs
+        for i=0..numSpines-1, for k=0..numLeafs-1 {
+            spine[i].ethg++ <--> Eth100M <--> leaf[k].leafDoor++;
+        }
+        // Connects borderRouter to lanDoor
+        borderLeaf.ethg++ <--> Eth100M <--> border.ethg++;
+}
+
