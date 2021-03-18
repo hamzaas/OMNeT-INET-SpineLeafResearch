@@ -16,7 +16,8 @@ spines = spines[spines.name.str.match('bits\/sec rcvd')]
 
 #Displaying bar graph
 fig = px.bar(spines, x='module', y='value')
-fig.show()
+fig.write_html('router_distribution.html', auto_open=True)
+#fig.show()
 
 
 # Matplotlib option (Bad pacing).
