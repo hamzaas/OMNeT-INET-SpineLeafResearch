@@ -1,4 +1,4 @@
-# <img src="" width="24" height="24"> OMNeT-INET-SpineLeafResearch
+# <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/aa3243c0ea7db39fefed4da6b20e6ef688795c79/images/routerlogo.png" width="24" height="24"> OMNeT-INET-SpineLeafResearch
 
 Table of Contents
 - [Introduction](#introduction)
