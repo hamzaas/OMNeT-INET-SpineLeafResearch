@@ -1,4 +1,4 @@
-# <img src="https://cdn.freebiesupply.com/logos/large/2x/eclipse-11-logo-png-transparent.png" width="24" height="24"> Eclipse Integrated Development Environment (IDE) 2020-03
+# <img src="" width="24" height="24"> OMNeT-INET-SpineLeafResearch
 
 Table of Contents
 - [Introduction](#introduction)
@@ -53,27 +53,18 @@ Running the simulation.
 
 5. Click the button for the appropriate version of Eclipse you need.
     - *Note:* If unsure, the "Eclipse IDE for Java Developers" will suffice for most cases.
-<p align="center">
-    <img src="https://user-images.githubusercontent.com/10245426/78837277-b32de580-79c1-11ea-9c71-dc26d1b5fa00.png">
-</p>
 
 6. Click the large Install Button.<br/>
-    - *Note:* Choose a different installation path here if desired. You can also choose to uncheck "create start menu entry" or "create desktop shortcut" options if desired.
-<p align="center">
-    <img src="https://user-images.githubusercontent.com/10245426/78836707-a52b9500-79c0-11ea-9807-505172e4cc5c.png">
-</p>                                                                                                
+    - *Note:* Choose a different installation path here if desired. You can also choose to uncheck "create start menu entry" or "create desktop shortcut" options if desired.                                                                                               
     
 7. Wait for the installation to finish.<br/>
-<p align="center">
-    <img src="https://user-images.githubusercontent.com/10245426/78837339-d5bffe80-79c1-11ea-8348-83e58fd9f01b.png">
-</p>
 
 You may now use Eclipse however you wish. If you selected "create desktop shortcut" then you can find the Eclipse icon on your desktop which can be used to launch the application. Otherwise, you may have to open the path which you installed the application to and launch from there by opening "eclipse.exe".
 
 ## FAQs<a name ="faq"></a>
 
  - How can I tell if I have Java installed?
-    - Open the command prompt (*Note:* This can be done by pressing <img src="https://user-images.githubusercontent.com/10245426/78837365-e2445700-79c1-11ea-88f0-3e50289fc44f.png" height="32" width="32"> + R then running "cmd").
+    - Open the command prompt (*Note:* This can be done by pressing  + R then running "cmd").
     - Type "java -version" and press enter.
     - If the returned message displays a version of Java such as 1.8.0_241 then Java is installed an configured.
     
