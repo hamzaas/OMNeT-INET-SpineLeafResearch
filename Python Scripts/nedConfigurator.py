@@ -7,9 +7,9 @@ def writePost(file, post):
 
 
 def writeParameters(file, spines, leaves, hostsPerLeaf):
-    file.write('\n\t\tint numSpines = ' + str(spines) + '\n')
-    file.write('\t\tint numLeafs = ' + str(leaves) + '\n')
-    file.write('\t\tint hostPerLeaf = ' + str(hostsPerLeaf) + '\n\n')
+    file.write('\n\t\tint numSpines = ' + str(spines) + ';\n')
+    file.write('\t\tint numLeafs = ' + str(leaves) + ';\n')
+    file.write('\t\tint hostPerLeaf = ' + str(hostsPerLeaf) + ';\n\n')
 
 
 input_file = open('input.txt', 'r').read().splitlines()
