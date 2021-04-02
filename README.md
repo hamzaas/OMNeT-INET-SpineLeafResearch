@@ -1,46 +1,102 @@
-# OMNeT-INET-SpineLeafResearch
+# <img src="https://cdn.freebiesupply.com/logos/large/2x/eclipse-11-logo-png-transparent.png" width="24" height="24"> Eclipse Integrated Development Environment (IDE) 2020-03
 
-Code for SpineLeaf DCN implemented in Omnetpp and INET.
+Table of Contents
+- [Introduction](#introduction)
+- [System Requirements](#equipment)
+- [Installation/use instructions](#installation)
+- [FAQs](#faq)
+- [Troubleshooting/Where to Get Support](#support)
+- [Licensing](#licensing)
 
+---
 
-### Installing and Running ###
+## Introduction <a name ="introduction"></a>
 
-1) First step is to install OMNet++ version 5.6.2. We used the windows version, but other operating systems should work as well.
-      You can install here: https://omnetpp.org/download/. Make sure it is 5.6.2 before preceding.
-      
-2) Follow the installation setup. I would highly recommend following the instructions found here: https://doc.omnetpp.org/omnetpp/InstallGuide.pdf.
-      The installation guide is for version 5.6.1 but it should still be fine. Make sure OMNet++ is working properly before proceeding. 
-      ./configure and 'make' can take a while.
-      
-3) Launch the OMNet++ GUI. Do not install the INET Framework, as we have our 'own' INET Framework that is specific to our Spine-Leaf Datacenter.
+OMNeT-INET-SpineLeafResearch is a simulation of a spine-leaf data center network implemented in Omnetpp and INET. This simulation allows for the data center to be scalable and customizable. Our custom traffic generator also allows for different sized traffic even on different sized networks. This project is intended for research purposes. It was developed as a research project by two students at Appalachian State University. 
 
-4) Go ahead and download our repository. There are two main projects in our repository that you will have to import into OMNet++.
-      The inet-4.2.0u and Spine-Leaf-ManualDCN. The inet-4.2.0u is basically an OMNeT++ extension (INeT version 4.2.0) that we have modified to allow the 
-      functionality of a Spine Leaf data center topology. The Spine-Leaf-ManualDCN is where the actual network is located. You will need to import
-      both these projects seperately into OMNet++. To do this we recommend launching the GUI. 
-      To import the projects into OMNeT++ General > Existing Projects Into Workspace
-      
-5) Once you have imported both projects into OMNet++. Confirm that Spine-Leaf-ManualDCN is referencing inetu. Right click Spine-LeafDCN, then go to
-      properties > project references, and make sure inetu is checked.
-      
- From here you can either run in the GUI or follow the below steps to run from command line.
+## System Requirements<a name ="equipment"></a>
 
-6) Another thing you need to check is in Spine-LeafDCN > _XHost_SpineLeaf > XHost_SpineLeaf.ini and make sure that the "**.configurator.config = xmldoc" value
-      is set to the command line option. Just simply comment out the GUI value and comment in the commmand line value. Should be the line adjacent.
-      
-7) Make sure you save anything and go ahead and close out of the GUI. Now inside the mingwen terminal go into the Spine-Leaf-ManualDCN directory. 
+| Minimum | Recommended |
+|---------|-------------|
+|2GB RAM|3GB+ RAM     |
+|3GB Disk Space|5GB+ Disk Space|
+|3.5Ghz Processor|3.7Ghz+ Processor|
 
-8) Run the command below. I'll break down the command for ya. The first argument is the executable to run the Spine Leaf simulation. The "-u Cmdenv"
-      argument tells OMNeT++ to run the simulation in the terminal. The "-f _XHostSpineLeaf/XHostSpineLeaf.ini" argument directs it to the ini file 
-      we want to run. The "-c Traffic_1" is the configuration within the .ini file we want to run. If you would like to learn more about the command
-      line interface you can look at this: https://doc.omnetpp.org/omnetpp4/manual/usman.html#sec360
+## Installation/use instructions<a name ="installation"></a>
 
-      ./Spine-LeafDCN.exe -u Cmdenv -f _XHostSpineLeaf/XHost_SpineLeaf.ini -c Traffic_1
-      
-      
-### Useful links ####
+Installing OMNeT++ version 5.6.2
 
-1) OMNeT++ user Manual : https://doc.omnetpp.org/omnetpp4/manual/usman.html
-2) INET User Guide : https://inet.omnetpp.org/docs/users-guide/
-3) INET Framework Manual : https://doc.omnetpp.org/inet/api-current/neddoc/index.html
+1. Go to [OMNeT++'s download page](https://omnetpp.org/download/.).
+	- *Note:* This simulation was built on Windows operating system. Other operating systems can lead to future erros.
 
+2. Follow the installation process from [OMNeT++'s installation guide](https://omnetpp.org/download/.).<br/>
+	- *Note:* Ensure the OMNeT++ is working properly before proceeding, by following the installation guide.
+
+3. Launch the OMNet++ GUI. <br/>
+	- You do not have to install the INET Framework, as we have our 'own' INET Framework that is specific to our Spine-Leaf Datacenter.
+	- If you have already installed the INET Framework. You may delete it from the workspace, or leave it. Our simulation will not touch it.
+
+Installing our repository into OMNeT++.
+
+4. Download our repository. There are two main projects in our repository that you will have to import into OMNet++. The inet-4.2.0u and Spine-Leaf-ManualDCN. The inet-4.2.0u is basically an OMNeT++ extension (INeT version 4.2.0) that we have modified to allow the functionality of a Spine Leaf data center topology. The Spine-Leaf-ManualDCN is where the actual network is located. You will need to import both these projects into OMNet++. </br>
+
+5. Right click on the workspace in OMNeT++ and click Import.
+
+6. Then click Existing Projects Into Workspace and select our repository.
+
+7. Confirm that Spine-Leaf-ManualDCN is referencing inetu by right clicking Spine-LeafDCN and click on properties.
+
+8. From the properties click on project references and make sure inetu is checked.
+
+Running the simulation.
+<p> You may run our simulation from inside the OMNeT++ GUI. Or 
+
+5. Click the button for the appropriate version of Eclipse you need.
+    - *Note:* If unsure, the "Eclipse IDE for Java Developers" will suffice for most cases.
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/10245426/78837277-b32de580-79c1-11ea-9c71-dc26d1b5fa00.png">
+</p>
+
+6. Click the large Install Button.<br/>
+    - *Note:* Choose a different installation path here if desired. You can also choose to uncheck "create start menu entry" or "create desktop shortcut" options if desired.
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/10245426/78836707-a52b9500-79c0-11ea-9807-505172e4cc5c.png">
+</p>                                                                                                
+    
+7. Wait for the installation to finish.<br/>
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/10245426/78837339-d5bffe80-79c1-11ea-8348-83e58fd9f01b.png">
+</p>
+
+You may now use Eclipse however you wish. If you selected "create desktop shortcut" then you can find the Eclipse icon on your desktop which can be used to launch the application. Otherwise, you may have to open the path which you installed the application to and launch from there by opening "eclipse.exe".
+
+## FAQs<a name ="faq"></a>
+
+ - How can I tell if I have Java installed?
+    - Open the command prompt (*Note:* This can be done by pressing <img src="https://user-images.githubusercontent.com/10245426/78837365-e2445700-79c1-11ea-88f0-3e50289fc44f.png" height="32" width="32"> + R then running "cmd").
+    - Type "java -version" and press enter.
+    - If the returned message displays a version of Java such as 1.8.0_241 then Java is installed an configured.
+    
+ - How can I install plug-ins?
+    - Open Eclipse.
+    - Open the "Help" menu in the top naviation bar.
+    - Click "Install New Software".
+    - Search for your desired plug-in.
+    - Follow the printed on screen instructions to installed the plug-in.
+    
+ - How do I change Eclipse's appearance?
+    - Open Eclipse.
+    - Open the "Window" menu in the top naviagation bar.
+    - Click "Preferences".
+    - Expand the "General" menu.
+    - Select "Appearance".
+    - You can now select your desired *Theme* and *Color and Font theme* from the appropriate drop down.
+        - *Note:* Additional themes can be installed through the marketplace. See "How can I install plug-ins?" above.
+
+## Troubleshooting/Where to Get Support<a name ="support"></a>
+
+For more help with Eclipse or help with other issues, please visit [Eclipse's help page](https://help.eclipse.org/2020-03/index.jsp).
+
+## Licensing<a name ="licensing"></a>
+
+Eclipse is an open-source piece of software which abides by a Public License. For more info about the Eclipse Public License (EPL) click [here](https://www.eclipse.org/legal/epl-2.0/).
