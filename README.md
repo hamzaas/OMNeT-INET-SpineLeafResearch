@@ -28,7 +28,7 @@ OMNeT-INET-SpineLeafResearch is a simulation of a spine-leaf data center network
 
 Installing OMNeT++ version 5.6.2
 
-1. Go to [OMNeT++'s download page](https://omnetpp.org/download/.).
+1. Go to [OMNeT++'s download page](https://omnetpp.org/download/.) and download the windows version.
 	- *Note:* This simulation was built on Windows operating system. Other operating systems can lead to future erros.
 
 2. Follow the installation process from [OMNeT++'s installation guide](https://omnetpp.org/download/.).
@@ -40,7 +40,8 @@ Installing OMNeT++ version 5.6.2
 
 Installing our repository into OMNeT++.
 
-4. Download our repository. There are two main projects in our repository that you will have to import into OMNet++. The inet-4.2.0u and Spine-Leaf-ManualDCN. The inet-4.2.0u is basically an OMNeT++ extension (INeT version 4.2.0) that we have modified to allow the functionality of a Spine Leaf data center topology. The Spine-Leaf-ManualDCN is where the actual network is located. You will need to import both these projects into OMNet++. </br>
+4. Download our repository. 
+	- There are two main projects in our repository that you will have to import into OMNet++. The inet-4.2.0u and Spine-Leaf-ManualDCN. The inet-4.2.0u is basically an OMNeT++ extension (INeT version 4.2.0) that we have modified to allow the functionality of a Spine Leaf data center topology. The Spine-Leaf-ManualDCN is where the actual network is located. You will need to import both these projects into OMNet++. </br>
 
 5. In the workspace section, click on Import Projects.
 <p align="center">
@@ -52,15 +53,17 @@ Installing our repository into OMNeT++.
     <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/1891ca423db15d5cce0c28f0714fb3614f481e72/images/ExistingProject.PNG">
 </p>
 
-7. Click browse and select the folder from out repository.
+7. Click browse and select the folder from our repository.
 	- The folder should include both inet-4.2.0u and Spine-Leaf-ManualDCN.
 <p align="center">
     <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/f03daf70ca3fe0c10e68581c89ccd0c75ddf922a/images/BrowesProjects.PNG">
 </p>
 
-8. Confirm that Spine-Leaf-ManualDCN is referencing inetu by right clicking Spine-LeafDCN and click on properties.
+8. Click Finish.
 
-9. From the properties click on project references and make sure inetu is checked.
+9. Confirm that Spine-Leaf-ManualDCN is referencing inetu by right clicking Spine-LeafDCN and click on properties.
+
+10. From the properties click on project references and make sure inetu is checked.
 <p align="center">
     <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/1891ca423db15d5cce0c28f0714fb3614f481e72/images/Refrence.PNG">
 </p>
@@ -88,6 +91,9 @@ Installing our repository into OMNeT++.
 
 3.  Run the command below.
 	- More information can be found about the OMNeT++ command line here: [OMNeT++ Manual #Section 360](https://doc.omnetpp.org/omnetpp4/manual/usman.html#sec360).
+<p align="center">
+    <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/22dc51beecc7ab03fffe2e8d13c2db9ba5f6d872/images/RunCommands.PNG">
+</p>
 
 The command line will prompt and ask you for the parameters of the network. Once the simulation has finished you can view the results inside of the OMNeT++ GUI. More information on OMNeT++'s data visualization tool can be found here: [OMNeT++ Manual #Section 401](https://doc.omnetpp.org/omnetpp4/manual/usman.html#sec401).
 
