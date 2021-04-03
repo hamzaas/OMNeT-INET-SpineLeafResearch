@@ -29,7 +29,7 @@ OMNeT-INET-SpineLeafResearch is a simulation of a spine-leaf data center network
 Installing OMNeT++ version 5.6.2
 
 1. Go to [OMNeT++'s download page](https://omnetpp.org/download/.) and download the windows version.
-	- *Note:* This simulation was built on Windows operating system. Other operating systems can lead to future erros.
+	- *Note:* This simulation was built on Windows operating system. Other operating systems can lead to future errors.
 
 2. Follow the installation process from [OMNeT++'s installation guide](https://omnetpp.org/download/.).
 	- *Note:* Ensure the OMNeT++ is working properly before proceeding, by following the installation guide.
@@ -61,19 +61,19 @@ Installing our repository into OMNeT++.
 
 8. Click Finish.
 
-9. Confirm that Spine-Leaf-ManualDCN is referencing inetu by right clicking Spine-LeafDCN and click on properties.
+9. Confirm that Spine-Leaf-ManualDCN is referencing inetu by right-clicking Spine-LeafDCN and click on properties.
 
 10. From the properties click on project references and make sure inetu is checked.
 <p align="center">
     <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/1891ca423db15d5cce0c28f0714fb3614f481e72/images/Refrence.PNG">
 </p>
 
-10. Finally build the workspace. Right click the workspace and click Build Project.
+10. Finally, build the workspace. Right-click the workspace and click Build Project.
 
 ## Running from the GUI.<a name ="runningGUI"></a>
 
 1. First check the ini_generated.ini file and make sure that the correct line is uncommented to run in GUI.
-	- The path changes when running from command line to GUI.
+	- The path changes when running from the command line to GUI.
 <p align="center">
     <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/e04cf5e287cfdae7afa80950a65fb662cc8c7a5f/images/RunFromGUI.PNG">
 </p>
@@ -99,12 +99,12 @@ The command line will prompt and ask you for the parameters of the network. Once
 
 ## FAQs<a name ="faq"></a>
 
- - An error is recieved when attempting to run the program.
+ - An error is received when attempting to run the program.
     - Try cleaning and rebuilding the workspace.
-    - Make sure the ini_generated.ini file has the correct line commeted out.
+    - Make sure the ini_generated.ini file has the correct line commented out.
     
  - Is this project finished?
-    - No this project is still under construction by Ethan Little and Bryan Hill. We are both research assistants at Appalachian State University.
+    - No, this project is still under construction by Ethan Little and Bryan Hill. We are both research assistants at Appalachian State University.
     - Will continue to update and work on this project.
 
 ## Troubleshooting/Where to Get Support<a name ="support"></a>
