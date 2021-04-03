@@ -3,7 +3,8 @@
 Table of Contents
 - [Introduction](#introduction)
 - [System Requirements](#equipment)
-- [Installation/use instructions](#installation)
+- [Installation](#installation)
+- [Running the Simulation](#running)
 - [FAQs](#faq)
 - [Troubleshooting/Where to Get Support](#support)
 - [Licensing](#licensing)
@@ -29,10 +30,10 @@ Installing OMNeT++ version 5.6.2
 1. Go to [OMNeT++'s download page](https://omnetpp.org/download/.).
 	- *Note:* This simulation was built on Windows operating system. Other operating systems can lead to future erros.
 
-2. Follow the installation process from [OMNeT++'s installation guide](https://omnetpp.org/download/.).<br/>
+2. Follow the installation process from [OMNeT++'s installation guide](https://omnetpp.org/download/.).
 	- *Note:* Ensure the OMNeT++ is working properly before proceeding, by following the installation guide.
 
-3. Launch the OMNet++ GUI. <br/>
+3. Launch the OMNet++ GUI.
 	- You do not have to install the INET Framework, as we have our 'own' INET Framework that is specific to our Spine-Leaf Datacenter.
 	- If you have already installed the INET Framework. You may delete it from the workspace, or leave it. Our simulation will not touch it.
 
@@ -48,25 +49,31 @@ Installing our repository into OMNeT++.
 
 8. From the properties click on project references and make sure inetu is checked.
 
-Running the simulation.
-<p> You may run our simulation from inside the OMNeT++ GUI. Or 
+## Running the simulation.<a name ="running"></a>
+<p> You may run our simulation from inside the OMNeT++ GUI or from command line. </p>
 
-5. Click the button for the appropriate version of Eclipse you need.
-    - *Note:* If unsure, the "Eclipse IDE for Java Developers" will suffice for most cases.
+Running from the GUI.
 
-6. Click the large Install Button.<br/>
-    - *Note:* Choose a different installation path here if desired. You can also choose to uncheck "create start menu entry" or "create desktop shortcut" options if desired.                                                                                               
-    
-7. Wait for the installation to finish.<br/>
+1. First check the XHost_SpineLeaf.ini file and make sure that the correct line is uncommented to run in GUI.
+	- The path changes when running from command line to GUI.
+2. Click on the XHost_SpineLeaf.ini file and hit the OMNeT++ run button at the top of the editor.
 
-You may now use Eclipse however you wish. If you selected "create desktop shortcut" then you can find the Eclipse icon on your desktop which can be used to launch the application. Otherwise, you may have to open the path which you installed the application to and launch from there by opening "eclipse.exe".
+Running from the command line.
+
+1. First check the XHost_SpineLeaf.ini file and make sure that the correct line is uncommented to run in the command line.
+
+2.  Now open the mingwen terminal and go to Spine-Leaf-ManualDCN directory.
+
+3.  Run the command below.
+	- More information can be found about the OMNeT++ command line here: [OMNeT++ Manual #Section 360](https://doc.omnetpp.org/omnetpp4/manual/usman.html#sec360).
+
+The command line will prompt and ask you for the parameters of the network. Once the simulation has finished you can view the results inside of the OMNeT++ GUI. More information on OMNeT++'s data visualization tool can be found here: [OMNeT++ Manual #Section 401](https://doc.omnetpp.org/omnetpp4/manual/usman.html#sec401).
 
 ## FAQs<a name ="faq"></a>
 
- - How can I tell if I have Java installed?
-    - Open the command prompt (*Note:* This can be done by pressing  + R then running "cmd").
-    - Type "java -version" and press enter.
-    - If the returned message displays a version of Java such as 1.8.0_241 then Java is installed an configured.
+ - An error is recieved when attempting to run the program.
+    - Try cleaning and rebuilding the workspace.
+    - Make sure the XHost_SpineLeaf.ini file has the correct line commeted out.
     
  - How can I install plug-ins?
     - Open Eclipse.
@@ -86,8 +93,10 @@ You may now use Eclipse however you wish. If you selected "create desktop shortc
 
 ## Troubleshooting/Where to Get Support<a name ="support"></a>
 
-For more help with Eclipse or help with other issues, please visit [Eclipse's help page](https://help.eclipse.org/2020-03/index.jsp).
+For more help with OMNeT++, please visit [OMNeT++ User Manual](https://doc.omnetpp.org/omnetpp4/manual/usman.html).
+For more help with INET, please visit [INET's User Guide](https://inet.omnetpp.org/docs/users-guide/)
+For more help with INET's Framework, please visit [INET's Framework Manual] (https://doc.omnetpp.org/inet/api-current/neddoc/index.html)
 
 ## Licensing<a name ="licensing"></a>
 
-Eclipse is an open-source piece of software which abides by a Public License. For more info about the Eclipse Public License (EPL) click [here](https://www.eclipse.org/legal/epl-2.0/).
+This project is free to use by anyone. It is intended for other data center researchers and data center enthusiasts.
