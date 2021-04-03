@@ -105,7 +105,7 @@ The command line will prompt and ask you for the parameters of the network. Once
 
 For more help with OMNeT++, please visit [OMNeT++ User Manual](https://doc.omnetpp.org/omnetpp4/manual/usman.html). </br>
 For more help with INET, please visit [INET's User Guide](https://inet.omnetpp.org/docs/users-guide/) </br>
-For more help with INET's Framework, please visit [INET's Framework Manual] (https://doc.omnetpp.org/inet/api-current/neddoc/index.html) </br>
+For more help with INET's Framework, please visit [INET's Framework Manual](https://doc.omnetpp.org/inet/api-current/neddoc/index.html) </br>
 
 ## Licensing<a name ="licensing"></a>
 
