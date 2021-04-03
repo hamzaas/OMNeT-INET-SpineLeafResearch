@@ -4,7 +4,8 @@ Table of Contents
 - [Introduction](#introduction)
 - [System Requirements](#equipment)
 - [Installation](#installation)
-- [Running the Simulation](#running)
+- [Running in GUI](#runningGUI)
+- [Running in Command Line](#runningCMD)
 - [FAQs](#faq)
 - [Troubleshooting/Where to Get Support](#support)
 - [Licensing](#licensing)
@@ -41,18 +42,20 @@ Installing our repository into OMNeT++.
 
 4. Download our repository. There are two main projects in our repository that you will have to import into OMNet++. The inet-4.2.0u and Spine-Leaf-ManualDCN. The inet-4.2.0u is basically an OMNeT++ extension (INeT version 4.2.0) that we have modified to allow the functionality of a Spine Leaf data center topology. The Spine-Leaf-ManualDCN is where the actual network is located. You will need to import both these projects into OMNet++. </br>
 
-5. Right click on the workspace in OMNeT++ and click Import.
+5. In the workspace section, click on Import Projects.
 
-6. Then click Existing Projects Into Workspace and select our repository.
+6. Then click Existing Projects Into Workspace.
 
-7. Confirm that Spine-Leaf-ManualDCN is referencing inetu by right clicking Spine-LeafDCN and click on properties.
+7. Click browse and select the folder from out repository.
+	- The folder should include both inet-4.2.0u and Spine-Leaf-ManualDCN.
 
-8. From the properties click on project references and make sure inetu is checked.
+8. Confirm that Spine-Leaf-ManualDCN is referencing inetu by right clicking Spine-LeafDCN and click on properties.
 
-## Running the simulation.<a name ="running"></a>
-<p> You may run our simulation from inside the OMNeT++ GUI or from command line. </p>
+9. From the properties click on project references and make sure inetu is checked.
 
-Running from the GUI.
+10. Finally build the workspace. Right click the workspace and click Build Project.
+
+## Running from the GUI.<a name ="runningGUI"></a>
 
 1. First check the ini_generated.ini file and make sure that the correct line is uncommented to run in GUI.
 	- The path changes when running from command line to GUI.
@@ -62,7 +65,7 @@ Running from the GUI.
 
 2. Click on the ini_generated.ini file and hit the OMNeT++ run button at the top of the editor.
 
-Running from the command line.
+## Running from the command line.<a name ="runningCMD"></a>
 
 1. First check the ini_generated.ini file and make sure that the correct line is uncommented to run in the command line.
 <p align="center">
