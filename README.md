@@ -56,11 +56,18 @@ Running from the GUI.
 
 1. First check the ini_generated.ini file and make sure that the correct line is uncommented to run in GUI.
 	- The path changes when running from command line to GUI.
+<p align="center">
+    <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/e04cf5e287cfdae7afa80950a65fb662cc8c7a5f/images/RunFromGUI.PNG">
+</p>
+
 2. Click on the ini_generated.ini file and hit the OMNeT++ run button at the top of the editor.
 
 Running from the command line.
 
 1. First check the ini_generated.ini file and make sure that the correct line is uncommented to run in the command line.
+<p align="center">
+    <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/e04cf5e287cfdae7afa80950a65fb662cc8c7a5f/images/RunFromCommandLine.PNG">
+</p>
 
 2.  Now open the mingwen terminal and go to Spine-Leaf-ManualDCN directory.
 
