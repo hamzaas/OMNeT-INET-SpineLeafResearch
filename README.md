@@ -54,13 +54,13 @@ Installing our repository into OMNeT++.
 
 Running from the GUI.
 
-1. First check the XHost_SpineLeaf.ini file and make sure that the correct line is uncommented to run in GUI.
+1. First check the ini_generated.ini file and make sure that the correct line is uncommented to run in GUI.
 	- The path changes when running from command line to GUI.
-2. Click on the XHost_SpineLeaf.ini file and hit the OMNeT++ run button at the top of the editor.
+2. Click on the ini_generated.ini file and hit the OMNeT++ run button at the top of the editor.
 
 Running from the command line.
 
-1. First check the XHost_SpineLeaf.ini file and make sure that the correct line is uncommented to run in the command line.
+1. First check the ini_generated.ini file and make sure that the correct line is uncommented to run in the command line.
 
 2.  Now open the mingwen terminal and go to Spine-Leaf-ManualDCN directory.
 
@@ -73,29 +73,17 @@ The command line will prompt and ask you for the parameters of the network. Once
 
  - An error is recieved when attempting to run the program.
     - Try cleaning and rebuilding the workspace.
-    - Make sure the XHost_SpineLeaf.ini file has the correct line commeted out.
+    - Make sure the ini_generated.ini file has the correct line commeted out.
     
- - How can I install plug-ins?
-    - Open Eclipse.
-    - Open the "Help" menu in the top naviation bar.
-    - Click "Install New Software".
-    - Search for your desired plug-in.
-    - Follow the printed on screen instructions to installed the plug-in.
-    
- - How do I change Eclipse's appearance?
-    - Open Eclipse.
-    - Open the "Window" menu in the top naviagation bar.
-    - Click "Preferences".
-    - Expand the "General" menu.
-    - Select "Appearance".
-    - You can now select your desired *Theme* and *Color and Font theme* from the appropriate drop down.
-        - *Note:* Additional themes can be installed through the marketplace. See "How can I install plug-ins?" above.
+ - Is this project finished?
+    - No this project is still under construction by Ethan Little and Bryan Hill. We are both research assistants at Appalachian State University.
+    - Will continue to update and work on this project.
 
 ## Troubleshooting/Where to Get Support<a name ="support"></a>
 
-For more help with OMNeT++, please visit [OMNeT++ User Manual](https://doc.omnetpp.org/omnetpp4/manual/usman.html).
-For more help with INET, please visit [INET's User Guide](https://inet.omnetpp.org/docs/users-guide/)
-For more help with INET's Framework, please visit [INET's Framework Manual] (https://doc.omnetpp.org/inet/api-current/neddoc/index.html)
+For more help with OMNeT++, please visit [OMNeT++ User Manual](https://doc.omnetpp.org/omnetpp4/manual/usman.html). </br>
+For more help with INET, please visit [INET's User Guide](https://inet.omnetpp.org/docs/users-guide/) </br>
+For more help with INET's Framework, please visit [INET's Framework Manual] (https://doc.omnetpp.org/inet/api-current/neddoc/index.html) </br>
 
 ## Licensing<a name ="licensing"></a>
 
