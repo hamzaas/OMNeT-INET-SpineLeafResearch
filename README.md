@@ -43,15 +43,27 @@ Installing our repository into OMNeT++.
 4. Download our repository. There are two main projects in our repository that you will have to import into OMNet++. The inet-4.2.0u and Spine-Leaf-ManualDCN. The inet-4.2.0u is basically an OMNeT++ extension (INeT version 4.2.0) that we have modified to allow the functionality of a Spine Leaf data center topology. The Spine-Leaf-ManualDCN is where the actual network is located. You will need to import both these projects into OMNet++. </br>
 
 5. In the workspace section, click on Import Projects.
+<p align="center">
+    <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/1891ca423db15d5cce0c28f0714fb3614f481e72/images/Import.PNG">
+</p>
 
 6. Then click Existing Projects Into Workspace.
+<p align="center">
+    <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/1891ca423db15d5cce0c28f0714fb3614f481e72/images/ExistingProject.PNG">
+</p>
 
 7. Click browse and select the folder from out repository.
 	- The folder should include both inet-4.2.0u and Spine-Leaf-ManualDCN.
+<p align="center">
+    <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/f03daf70ca3fe0c10e68581c89ccd0c75ddf922a/images/BrowesProjects.PNG">
+</p>
 
 8. Confirm that Spine-Leaf-ManualDCN is referencing inetu by right clicking Spine-LeafDCN and click on properties.
 
 9. From the properties click on project references and make sure inetu is checked.
+<p align="center">
+    <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/1891ca423db15d5cce0c28f0714fb3614f481e72/images/Refrence.PNG">
+</p>
 
 10. Finally build the workspace. Right click the workspace and click Build Project.
 
