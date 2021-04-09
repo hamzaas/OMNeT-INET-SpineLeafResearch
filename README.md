@@ -45,7 +45,7 @@ OMNeT-INET-SpineLeafResearch is a simulation of a spine-leaf data center network
 
 5. In the workspace section, click on Import Projects.
 <p align="center">
-    <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/1891ca423db15d5cce0c28f0714fb3614f481e72/images/Import.PNG">
+    <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/76969f4f8d65c00ae5494eb1eb5e2b02c49171cc/images/Import.PNG">
 </p>
 
 6. Then click Existing Projects Into Workspace.
@@ -56,7 +56,7 @@ OMNeT-INET-SpineLeafResearch is a simulation of a spine-leaf data center network
 7. Click browse and select the folder from our repository.
 	- The folder should include both inet-4.2.0u and Spine-Leaf-ManualDCN.
 <p align="center">
-    <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/f03daf70ca3fe0c10e68581c89ccd0c75ddf922a/images/BrowesProjects.PNG">
+    <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/76969f4f8d65c00ae5494eb1eb5e2b02c49171cc/images/BrowesProjects.PNG">
 </p>
 
 8. Click Finish.
@@ -65,7 +65,7 @@ OMNeT-INET-SpineLeafResearch is a simulation of a spine-leaf data center network
 
 10. From the properties click on project references and make sure inetu is checked.
 <p align="center">
-    <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/1891ca423db15d5cce0c28f0714fb3614f481e72/images/Refrence.PNG">
+    <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/76969f4f8d65c00ae5494eb1eb5e2b02c49171cc/images/Refrence.PNG">
 </p>
 
 10. Finally, build the workspace. Right-click the workspace and click Build Project.
