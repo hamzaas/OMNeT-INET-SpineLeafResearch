@@ -1,103 +1,68 @@
-# <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/d7df523fde0cfa57b07f5dae37a566d5afc6c277/images/DCNLogo.png" width="40" height="40"> OMNeT-INET-SpineLeafResearch
+# <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/d7df523fde0cfa57b07f5dae37a566d5afc6c277/images/DCNLogo.png" width="40" height="40"> OMNET++ README
 
 Table of Contents
 - [Introduction](#introduction)
-- [System Requirements](#equipment)
-- [Installation](#installation)
-- [Running in GUI](#runningGUI)
-- [Running in Command Line](#runningCMD)
-- [FAQs](#faq)
+- [Launching](#launch)
+- [The .ini File](#ini)
+- [The NED File](#ned)
+- [Simulation GUI](#simulation)
 - [Troubleshooting/Where to Get Support](#support)
-- [Licensing](#licensing)
-
 ---
 
 ## Introduction <a name ="introduction"></a>
 
-OMNeT-INET-SpineLeafResearch is a simulation of a spine-leaf data center network implemented in Omnetpp and INET. This simulation allows for the data center to be scalable and customizable. Our custom traffic generator also allows for different sized traffic even on different sized networks. This project is intended for research purposes. It was developed as a research project by two students at Appalachian State University. 
+"OMNeT++ is an extensible, modular, component-based C++ simulation library and framework, primarily for building network simulators." - [Omnetpp.org](https://omnetpp.org/intro/). OMNeT++ is basically an IDE for network simulations. 
 
-## System Requirements<a name ="equipment"></a>
-
-| Minimum | Recommended |
-|---------|-------------|
-|2GB RAM|3GB+ RAM     |
-|3GB Disk Space|5GB+ Disk Space|
-|3.5Ghz Processor|3.7Ghz+ Processor|
-
-## Installation/use instructions<a name ="installation"></a>
-
-Installing OMNeT++ version 5.6.2
-
-1. Go to [OMNeT++'s download page](https://omnetpp.org/download/.) and download the windows version.
-	- *Note:* This simulation was built on Windows operating system. Other operating systems can lead to future errors.
-
-2. Follow the installation process from [OMNeT++'s installation guide](https://omnetpp.org/download/.).
-	- *Note:* Ensure the OMNeT++ is working properly before proceeding, by following the installation guide.
-
-3. Launch the OMNet++ GUI.
-	- You do not have to install the INET Framework, as we have our 'own' INET Framework that is specific to our Spine-Leaf Datacenter.
-	- If you have already installed the INET Framework. You may delete it from the workspace, or leave it. Our simulation will not touch it.
-
-Installing our repository into OMNeT++.
-
-4. Download our repository. 
-	- There are two main projects in our repository that you will have to import into OMNet++. The inet-4.2.0u and Spine-Leaf-ManualDCN. The inet-4.2.0u is basically an OMNeT++ extension (INeT version 4.2.0) that we have modified to allow the functionality of a Spine Leaf data center topology. The Spine-Leaf-ManualDCN is where the actual network is located. You will need to import both these projects into OMNet++. </br>
-
-5. In the workspace section, click on Import Projects.
+## Launching<a name ="launch"></a>
+1. Launching OMNet++ GUI is pretty simple. Open up the mingwenv commad line prompt. It will be located in the sub-root directory of the omnetpp-5.6.2-src-windows folder. I would just make a shortcut and put this on the desktop. 
 <p align="center">
-    <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/1891ca423db15d5cce0c28f0714fb3614f481e72/images/Import.PNG">
+    <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/f7106e9d90757ca00aff4a01143e4ff52bee2c01/images/RunTheGUI.PNG">
 </p>
 
-6. Then click Existing Projects Into Workspace.
+2. Once the command line opens. Simply type 'omnetpp' and hit enter. You will be spending 90% of your time in the GUI. The GUI is where you will be making, building, testing, and implementing your projects. The command line is used more when you are running your simulation for long periods of time to gather results.
 <p align="center">
-    <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/1891ca423db15d5cce0c28f0714fb3614f481e72/images/ExistingProject.PNG">
+    <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/f7106e9d90757ca00aff4a01143e4ff52bee2c01/images/RunTheGUIFromCMD.PNG">
 </p>
 
-7. Click browse and select the folder from our repository.
-	- The folder should include both inet-4.2.0u and Spine-Leaf-ManualDCN.
+## The .ini File <a name ="ini"></a>
+
+The .ini is a important file for a project. Think of it as a configuration file for your network simulation. You must have one to run your network simulation. To run your simulation you must click on the .ini file so that it is highlighted and then hit the green run arrow button at the top of the IDE. 
+
+Below is a very simple example of a .ini file. I will try to break it down for you. You can also look at [OMNeT++'s Configuration File #sec330](https://doc.omnetpp.org/omnetpp4/manual/usman.html#sec330).
+
+1. The first thing we notice is the Traffic Headings. When you run your simulation you have the option to run different traffics on the network. So when you click launch it will ask you which traffic heading you will like to run. There must be a General for a .ini file.
+
+2. The next thing a .ini file needs is to know what network to preform the traffic on. That is the following line under General. Every .ini file must have this as well. 
+
+3. Finally under each traffic heading is the traffic specification. Which is broken down into appalications on eact host.
 <p align="center">
-    <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/f03daf70ca3fe0c10e68581c89ccd0c75ddf922a/images/BrowesProjects.PNG">
+    <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/f7106e9d90757ca00aff4a01143e4ff52bee2c01/images/Example%20ini%20file.PNG">
 </p>
 
-8. Click Finish.
+## The NED File <a name ="ned"></a>
 
-9. Confirm that Spine-Leaf-ManualDCN is referencing inetu by right-clicking Spine-LeafDCN and click on properties.
-
-10. From the properties click on project references and make sure inetu is checked.
+The NED file is also a critical file to your network simulation as it describes your network topology. With OMNeT alone building network topologies can be difficult. That is why we use INET++. INET is an extension to OMNeT++ and allows us to drag and drop routers, servers, switches, radios, ethernet cables, and like a 1,000 different things. 
+Now back to the NED file. The NED file has two tabs. You can build and edit using either tab.
+1. The Design tab. Shows you the actual look of your network.
 <p align="center">
-    <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/1891ca423db15d5cce0c28f0714fb3614f481e72/images/Refrence.PNG">
+    <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/f7106e9d90757ca00aff4a01143e4ff52bee2c01/images/Example%20NED%20file.PNG">
+</p>
+3. The Source tab. Shows you the code to the network. Inside the source tab you can see the network class. That name goes into your .ini file.
+<p align="center">
+    <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/f7106e9d90757ca00aff4a01143e4ff52bee2c01/images/Example%20NED%20file%20source.PNG">
 </p>
 
-10. Finally, build the workspace. Right-click the workspace and click Build Project.
+## Simulation GUI <a name ="simulation"></a>
 
-## Running from the GUI.<a name ="runningGUI"></a>
-
-1. First check the ini_generated.ini file and make sure that the correct line is uncommented to run in GUI.
-	- The path changes when running from the command line to GUI.
+When you run you simulation the simulation GUI will pop up. In here you can visualy watch your netork simulation run. Which is really nice for testing and debugging but can be very slow when trying to run your simulation for a long period of time to gather results. 
+1. The first thing you will notics is the simulation time and tools. The time at the top right is simulation time. The tools to the left of it just simply change the real-time speed. 
+2. The second thing you should focus on is the green background portion of the GUI. This is where the actual simulation visualization takes place.
+3. The last thing is the console at the bottom. Can be very useful for debug purposes. 
+More information about the simulation can be found here: [OMNeT++ simulation GUI #Chapter 7.1](https://doc.omnetpp.org/omnetpp/UserGuide.pdf).
 <p align="center">
-    <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/e04cf5e287cfdae7afa80950a65fb662cc8c7a5f/images/RunFromGUI.PNG">
+    <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/f7106e9d90757ca00aff4a01143e4ff52bee2c01/images/SimulationGUI.PNG">
 </p>
 
-2. Click on the ini_generated.ini file and hit the OMNeT++ run button at the top of the editor.
-
-## Running from the command line.<a name ="runningCMD"></a>
-
-1. First check the ini_generated.ini file and make sure that the correct line is uncommented to run in the command line.
-<p align="center">
-    <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/e04cf5e287cfdae7afa80950a65fb662cc8c7a5f/images/RunFromCommandLine.PNG">
-</p>
-
-2.  Now open the mingwen terminal and go to Spine-Leaf-ManualDCN directory.
-
-3.  Run the command below.
-	- More information can be found about the OMNeT++ command line here: [OMNeT++ Manual #Section 360](https://doc.omnetpp.org/omnetpp4/manual/usman.html#sec360).
-<p align="center">
-    <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/22dc51beecc7ab03fffe2e8d13c2db9ba5f6d872/images/RunCommands.PNG">
-</p>
-
-The command line will prompt and ask you for the parameters of the network. Once the simulation has finished you can view the results inside of the OMNeT++ GUI. More information on OMNeT++'s data visualization tool can be found here: [OMNeT++ Manual #Section 401](https://doc.omnetpp.org/omnetpp4/manual/usman.html#sec401).
-
-## FAQs<a name ="faq"></a>
 
  - An error is received when attempting to run the program.
     - Try cleaning and rebuilding the workspace.
@@ -109,10 +74,5 @@ The command line will prompt and ask you for the parameters of the network. Once
 
 ## Troubleshooting/Where to Get Support<a name ="support"></a>
 
-For more help with OMNeT++, please visit [OMNeT++ User Manual](https://doc.omnetpp.org/omnetpp4/manual/usman.html). </br>
-For more help with INET, please visit [INET's User Guide](https://inet.omnetpp.org/docs/users-guide/) </br>
-For more help with INET's Framework, please visit [INET's Framework Manual](https://doc.omnetpp.org/inet/api-current/neddoc/index.html) </br>
-
-## Licensing<a name ="licensing"></a>
-
-This project is free to use by anyone. It is intended for other data center researchers and data center enthusiasts.
+OMNeT++ Manual, please visit [OMNeT++ User Manual](https://doc.omnetpp.org/omnetpp4/manual/usman.html). </br>
+OMNeT++ User Guid, please visit [OMNeT++ User Guid](https://doc.omnetpp.org/omnetpp/UserGuide.pdf). </br>
