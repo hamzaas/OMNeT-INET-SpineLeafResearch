@@ -63,15 +63,6 @@ More information about the simulation can be found here: [OMNeT++ simulation GUI
     <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/f7106e9d90757ca00aff4a01143e4ff52bee2c01/images/SimulationGUI.PNG">
 </p>
 
-
- - An error is received when attempting to run the program.
-    - Try cleaning and rebuilding the workspace.
-    - Make sure the ini_generated.ini file has the correct line commented out.
-    
- - Is this project finished?
-    - No, this project is still under construction by Ethan Little and Bryan Hill. We are both research assistants at Appalachian State University.
-    - Will continue to update and work on this project.
-
 ## Troubleshooting/Where to Get Support<a name ="support"></a>
 
 OMNeT++ Manual, please visit [OMNeT++ User Manual](https://doc.omnetpp.org/omnetpp4/manual/usman.html). </br>
