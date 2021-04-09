@@ -26,19 +26,19 @@ OMNeT-INET-SpineLeafResearch is a simulation of a spine-leaf data center network
 
 ## Installation/use instructions<a name ="installation"></a>
 
-Installing OMNeT++ version 5.6.2
+***Installing OMNeT++ version 5.6.2***
 
 1. Go to [OMNeT++'s download page](https://omnetpp.org/download/.) and download the windows version.
 	- *Note:* This simulation was built on Windows operating system. Other operating systems can lead to future errors.
 
 2. Follow the installation process from [OMNeT++'s installation guide](https://omnetpp.org/download/.).
-	- *Note:* Ensure the OMNeT++ is working properly before proceeding, by following the installation guide.
+	- *Note:* Ensure the OMNeT++ is working properly before proceeding by following the installation guide.
 
 3. Launch the OMNet++ GUI.
 	- You do not have to install the INET Framework, as we have our 'own' INET Framework that is specific to our Spine-Leaf Datacenter.
-	- If you have already installed the INET Framework. You may delete it from the workspace, or leave it. Our simulation will not touch it.
+	- If you have already installed the INET Framework. You may delete it from the workspace or leave it. Our simulation will not touch it.
 
-Installing our repository into OMNeT++.
+***Installing our repository into OMNeT++.***
 
 4. Download our repository. 
 	- There are two main projects in our repository that you will have to import into OMNet++. The inet-4.2.0u and Spine-Leaf-ManualDCN. The inet-4.2.0u is basically an OMNeT++ extension (INeT version 4.2.0) that we have modified to allow the functionality of a Spine Leaf data center topology. The Spine-Leaf-ManualDCN is where the actual network is located. You will need to import both these projects into OMNet++. </br>
@@ -72,13 +72,13 @@ Installing our repository into OMNeT++.
 
 ## Running from the GUI.<a name ="runningGUI"></a>
 
-1. First check the ini_generated.ini file and make sure that the correct line is uncommented to run in GUI.
+1. First, check the ini_generated.ini file and reassure that the correct line is uncommented to run in GUI.
 	- The path changes when running from the command line to GUI.
 <p align="center">
     <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/e04cf5e287cfdae7afa80950a65fb662cc8c7a5f/images/RunFromGUI.PNG">
 </p>
 
-2. Click on the ini_generated.ini file and hit the OMNeT++ run button at the top of the editor.
+2. Click on the ini_generated.ini file and hit the OMNeT++ run button located at the top of the editor.
 
 ## Running from the command line.<a name ="runningCMD"></a>
 
@@ -95,7 +95,7 @@ Installing our repository into OMNeT++.
     <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/22dc51beecc7ab03fffe2e8d13c2db9ba5f6d872/images/RunCommands.PNG">
 </p>
 
-The command line will prompt and ask you for the parameters of the network. Once the simulation has finished you can view the results inside of the OMNeT++ GUI. More information on OMNeT++'s data visualization tool can be found here: [OMNeT++ Manual #Section 401](https://doc.omnetpp.org/omnetpp4/manual/usman.html#sec401).
+The command line will prompt and ask you for the parameters of the network. Once the simulation finishes, you can view the results inside of the OMNeT++ GUI. More information on OMNeT++'s data visualization tool can be found here: [OMNeT++ Manual #Section 401](https://doc.omnetpp.org/omnetpp4/manual/usman.html#sec401).
 
 ## FAQs<a name ="faq"></a>
 
@@ -115,4 +115,4 @@ For more help with INET's Framework, please visit [INET's Framework Manual](http
 
 ## Licensing<a name ="licensing"></a>
 
-This project is free to use by anyone. It is intended for other data center researchers and data center enthusiasts.
+This project is free to use by anyone. It's intended for other data center researchers and data center enthusiasts.
