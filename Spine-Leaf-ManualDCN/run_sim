@@ -29,7 +29,8 @@ do
 	echo 'Converting results file.'
 
 	cd ./_XHostSpineLeaf/results
-	scavetool x *.sca -o results.csv
+	scavetool x *.sca -o "run${i}.csv"
+	mv "run${i}.csv" ../../../Python\ Scripts/
 
 	# Running python script to display graphs
 	echo 'Running graphing script.'
@@ -40,4 +41,10 @@ do
 	#py ResultsAnalysisVec.py
 	cd Python\ Scripts
 	pwd
+
+
+	#Stuff
+	py csvMerger.py "run${i}.csv"
 done
+
+py ThroughputBoxPlot.py

@@ -1,7 +1,7 @@
 import pandas as panda
-
+import sys
 # Getting filename of current run
-fileName = input()
+fileName = sys.argv[1]
 
 # Getting data frames
 tempFile = panda.read_csv(fileName)
