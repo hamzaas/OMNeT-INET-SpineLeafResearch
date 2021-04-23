@@ -19,7 +19,6 @@ tempFile = tempFile[tempFile['name'] == 'bits/sec rcvd']
 tempFile = tempFile[tempFile['value'] != 0]
 tempFile = tempFile.drop(columns=['name'])
 tempFile = tempFile.rename(columns={'value': 'bits/sec rcvd'})
-tempFile['Run'] = fileName
 
 
 # Appending to main file
