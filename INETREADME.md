@@ -1,9 +1,9 @@
-# <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/d7df523fde0cfa57b07f5dae37a566d5afc6c277/images/DCNLogo.png" width="40" height="40"> OMNeT-INET-SpineLeafResearch
+# <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/d7df523fde0cfa57b07f5dae37a566d5afc6c277/images/DCNLogo.png" width="40" height="40"> INET++ ReadMe
 
 Table of Contents
 - [Introduction](#introduction)
-- [Installation](#installation)
-- [Things we Changed](#changes)
+- [The Problems](#problems)
+- [Things We Changed](#changes)
 - [Troubleshooting/Where to Get Support](#support)
 - [Licensing](#licensing)
 
@@ -13,19 +13,10 @@ Table of Contents
 
 INET++ is a extension framework for OMNeT++ that allows the ability to drag and drop network devices. INET comes with a lot of nice features to allow you to build and test networks. 
 
-## Installation/use instructions<a name ="installation"></a>
+## The Problem <a name ="problems"></a>
 
-Since we made changes to INeT++. We included INeT++ in out github repoistory.
+INET offers a lot of nice built in features. However to create our spine-leaf data center network we need to create our own "random router". We need to implement a truly random routing feature for the TopOfRack routers in the leaves. In a spine-leaf network, the leaf will randomly choose a spine to send the current packet. This allows the traffic load on each spine to be balanced. To our knowledge INET has no router or switch that allows for the random routingness. So we must create our own. Which is explained in the next section. It sounds pretty basic but INET does a very nice job of creating these devices from the very low level. Its all very modular. The picture below shows the router module. Which is made up of many smaller modules inside. So we will have to change a lot of things. For example, the routing tables that were being used inside of the basic router would not keep duplicate equal routes. For example if a host to host connection had multiple equal routes it would only keep the first / "defualt" route and discard the other routes. We have to create our own routing table module to save all equal routes.
 
-## Running from the GUI.<a name ="runningGUI"></a>
-
-1. First check the ini_generated.ini file and make sure that the correct line is uncommented to run in GUI.
-	- The path changes when running from the command line to GUI.
-<p align="center">
-    <img src="https://github.com/littleet9/OMNeT-INET-SpineLeafResearch/blob/e04cf5e287cfdae7afa80950a65fb662cc8c7a5f/images/RunFromGUI.PNG">
-</p>
-
-2. Click on the ini_generated.ini file and hit the OMNeT++ run button at the top of the editor.
 
 ## Things We Changed.<a name ="changes"></a>
 
