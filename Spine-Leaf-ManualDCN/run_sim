@@ -3,6 +3,7 @@
 
 # Building topology info and saving input
 cd ../Python\ Scripts
+touch mainCSV.csv
 py RouterConfigurator.py
 rm ../Spine-Leaf-ManualDCN/_XHostSpineLeaf/ManualRoutingXML.xml
 mv ManualRoutingXML.xml ../Spine-Leaf-ManualDCN/_XHostSpineLeaf/ManualRoutingXML.xml
@@ -48,3 +49,5 @@ do
 done
 
 py ThroughputBoxPlot.py
+
+rm *.csv
