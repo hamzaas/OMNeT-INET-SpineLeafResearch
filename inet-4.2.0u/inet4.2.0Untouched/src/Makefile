@@ -1556,6 +1556,7 @@ FEATURETOOL := opp_featuretool
 #
 #CFLAGS += -Wold-style-cast
 
+
 ifeq ($(PLATFORM),win32.x86_64)
   #
   # on windows we have to link with the ws2_32 (winsock2) library as it is no longer added

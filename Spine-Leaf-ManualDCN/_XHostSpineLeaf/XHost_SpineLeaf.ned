@@ -17,6 +17,7 @@ import inet.networklayer.configurator.ipv4.Ipv4NetworkConfigurator;
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 //
 import inet.node.ethernet.Eth100M;
+import inet.node.ethernet.EtherSwitch;
 import inet.node.inet.Router;
 import inet.node.inet.StandardHost;
 
@@ -27,9 +28,9 @@ import inet.node.inet.StandardHost;
 network XHost_SpineLeaf_Network
 {
     parameters:
-		int numSpines = 3;
-		int numLeafs = 3;
-		int hostPerLeaf = 3;
+		int numSpines = 5;
+		int numLeafs = 5;
+		int hostPerLeaf = 5;
 
         //** If hostPerLeaf moved to moduleLeaf then each leaf could have different # of hosts.
         @display("i=device/lan-bus;bgb=755,333");
@@ -45,6 +46,9 @@ network XHost_SpineLeaf_Network
                 topOfRack: LeafRouter {
                     @display("p=147,53");
                 }
+		rackSwitch: EtherSwitch {
+                    @display("p=147,116");
+                }
                 H[hostPerLeaf]: StandardHost {
                     @display("p=147,140,r,50");
                 }
@@ -59,9 +63,11 @@ network XHost_SpineLeaf_Network
                 for i=0..numSpines-1 {
                     topOfRack.ethg++ <--> leafDoor++;
                 }
-                // Connects all hosts in leaf to topOfRack
+                // Connects rackSwitch to topOfRack router
+                topOfRack.ethg++ <--> Eth100M <--> rackSwitch.ethg++;
+                // Connects all hosts in leaf to rackSwitch
                 for k=0..hostPerLeaf-1 {
-                    H[k].ethg++ <--> Eth100M <--> topOfRack.ethg++;
+                    H[k].ethg++ <--> Eth100M <--> rackSwitch.ethg++;
                 }
         }
     submodules:

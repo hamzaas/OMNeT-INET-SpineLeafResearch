@@ -12,7 +12,7 @@ def writeParameters(file, spines, leaves, hostsPerLeaf):
     file.write('\t\tint hostPerLeaf = ' + str(hostsPerLeaf) + ';\n\n')
 
 
-input_file = open('input.txt', 'r').read().splitlines()
+input_file = open('input.txt', 'r').read().splitlines()[1:] # [1:] filters out the mode selection
 ned_new = open('../Spine-Leaf-ManualDCN/_XHostSpineLeaf/XHost_SpineLeaf.ned', 'w')
 ned_prev = open('ned_prev.txt', 'r')
 ned_post = open('ned_post.txt', 'r')

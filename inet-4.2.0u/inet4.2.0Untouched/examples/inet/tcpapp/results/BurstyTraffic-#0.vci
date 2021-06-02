@@ -1,4 +1,4 @@
-file 1796 1612376594                                            
+file 1796 1622660695                                            
 version 2
 run BurstyTraffic-0-20210203-13:23:12-2404
 attr configname BurstyTraffic
@@ -36,10 +36,9 @@ vector 0 TcpAppExample.client.ppp[0].ppp transmissionState:vector ETV
 attr interpolationmode sample-hold
 attr source transmissionStateChanged
 attr title "tx state, vector"
+0	1776 9 0 0 0 0 1 0 0 0 0
 vector 1 TcpAppExample.server.ppp[0].ppp transmissionState:vector ETV
 attr interpolationmode sample-hold
 attr source transmissionStateChanged
 attr title "tx state, vector"
-0	1776 9 0 0 0 0 1 0 0 0 0
-1	1785 9 0 0 0 0 1 0 0 0 0
-
+1	1785 11 0 0 0 0 1 0 0 0 0

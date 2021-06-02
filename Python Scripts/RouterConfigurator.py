@@ -1,7 +1,7 @@
 def writeSelfRoutesToFile(file, leaf, leafs, host, spine, hostsPerLeaf):
     file.write(
         '\t<route hosts="leaf[' + str(leaf) + '].topOfRack" destination="' + 'leaf[' + str(leafs) + '].' + 'H[' + str(
-            host) + ']"' + ' netmask="255.255.255.255" gateway="*" interface="eth' + str(spines + host) +
+            host) + ']"' + ' netmask="255.255.255.255" gateway="*" interface="eth' + str(spines) + # was str(spines + host)
         '"' + ' metric="*"/>\n')
 
 
@@ -32,7 +32,7 @@ def writeVLANS(file, max):
     for lan in range(max):
         file.write('\t<interface hosts="leaf[' + str(lan) + '].**" address="10.0.' + str(lan + 1) + '.x" netmask="255.255.255.x"/>\n')
 
-    file.write('\n\t<interface hosts="**" address="10.0.' + str(max + 1) + '.x" netmask="255.255.255.x"/>\n\n')
+    file.write('\n\t<interface hosts="**" address="10.2.x.x" netmask="255.255.x.x"/>\n\n')
 
 def writeRoutes(fileName, numLeaves, numSpines, hostsPerLeaf):
     file = open(fileName, 'w')
@@ -72,12 +72,13 @@ def writeRoutes(fileName, numLeaves, numSpines, hostsPerLeaf):
 
 # -----------------------------------------------------------------------------------------------------------------------
 
-# Input - Spines, Leaves, and hosts per each leaf
-print("Enter Number of Spines: ")
-spines = int(input())
+# Input - Mode, Spines, Leaves, and hosts per each leaf
 
-print("Enter Number of Leaves: ")
-leaves = int(input())
+graphical_mode = input("Enter 0 for Terminal Mode enter 1 for Graphical Mode: ")
+
+spines = int(input("Enter Number of Spines: "))
+
+leaves = int(input("Enter Number of Leaves: "))
 
 hostsPerLeafArray = []
 
@@ -85,8 +86,7 @@ hostsPerLeafArray = []
 lastInput = 1
 
 for i in range(leaves):
-    print("Number of Hosts for leaf", (i + 1))
-    inp = input()
+    inp = input("Number of Hosts for leaf " + str(i + 1) + ": ")
     if inp == 'f':
         for j in range(leaves - i):
             hostsPerLeafArray.append(lastInput)
@@ -99,6 +99,7 @@ for i in range(leaves):
 # Writing input to file for bash implementation.
 
 file = open('input.txt', 'w')
+file.write(graphical_mode + '\n') # pass though graphical mode value
 file.write(str(spines) + "\n")  # writing num spines to input file
 file.write(str(leaves) + "\n")  # writing num leaves to input file
 for i in hostsPerLeafArray:     # writing hosts per leaf to file

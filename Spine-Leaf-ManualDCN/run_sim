@@ -12,7 +12,7 @@ mv ManualRoutingXML.xml ../Spine-Leaf-ManualDCN/_XHostSpineLeaf/ManualRoutingXML
 py nedConfigurator.py
 
 # For loop
-for ((i=1; i<=$1; i++))
+for i in {1..$1}
 do
 	echo $i
 	# Creating Traffic based on topology input
@@ -45,7 +45,7 @@ do
 
 
 	#Stuff
-	py csvMerger.py "run${i}.csv"
+	py csvMerger.py $i
 done
 
 py ThroughputBoxPlot.py

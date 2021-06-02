@@ -1,5 +1,6 @@
 import math
 import random
+#import argparse
 
 APPLICATION_PERCENTAGE = 0.2
 INTER_INTRA_PERCENTAGE = 2
@@ -46,8 +47,15 @@ def writeToMap(map, key):
 
 # Main Calls
 
+graphical_mode = bool(int(input("Enter 0 for Terminal Mode enter 1 for Graphical Mode: ")))
+
+
 new_ini_file = open('ini_generated.ini', 'w')
-ini_base_file = open('iniBase.ini', 'r')
+
+if graphical_mode:
+	ini_base_file = open('iniBaseG.ini', 'r')
+else:
+	ini_base_file = open('iniBase.ini', 'r')
 size_map = {}
 
 # Writing configs and new lines

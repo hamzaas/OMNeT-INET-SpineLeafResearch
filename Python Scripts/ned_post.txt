@@ -12,6 +12,9 @@
                 topOfRack: LeafRouter {
                     @display("p=147,53");
                 }
+		rackSwitch: EtherSwitch {
+                    @display("p=147,116");
+                }
                 H[hostPerLeaf]: StandardHost {
                     @display("p=147,140,r,50");
                 }
@@ -26,9 +29,11 @@
                 for i=0..numSpines-1 {
                     topOfRack.ethg++ <--> leafDoor++;
                 }
-                // Connects all hosts in leaf to topOfRack
+                // Connects rackSwitch to topOfRack router
+                topOfRack.ethg++ <--> Eth100M <--> rackSwitch.ethg++;
+                // Connects all hosts in leaf to rackSwitch
                 for k=0..hostPerLeaf-1 {
-                    H[k].ethg++ <--> Eth100M <--> topOfRack.ethg++;
+                    H[k].ethg++ <--> Eth100M <--> rackSwitch.ethg++;
                 }
         }
     submodules:
