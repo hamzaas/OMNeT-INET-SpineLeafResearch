@@ -81,7 +81,10 @@ spines = int(input("Enter Number of Spines: "))
 leaves = int(input("Enter Number of Leaves: "))
 
 hostsPerLeafArray = []
-
+try:
+    print("Num Hosts: ", sum([int(num, base=10) for num in hostsPerLeafArray]))
+except:
+    print("Some number of hosts")
 # default is one
 lastInput = 1
 
