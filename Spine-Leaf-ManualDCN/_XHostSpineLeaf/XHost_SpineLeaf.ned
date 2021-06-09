@@ -28,9 +28,9 @@ import inet.node.inet.StandardHost;
 network XHost_SpineLeaf_Network
 {
     parameters:
-		int numSpines = 5;
-		int numLeafs = 5;
-		int hostPerLeaf = 5;
+		int numSpines = 4;
+		int numLeafs = 30;
+		int hostPerLeaf = 124;
 
         //** If hostPerLeaf moved to moduleLeaf then each leaf could have different # of hosts.
         @display("i=device/lan-bus;bgb=755,333");
