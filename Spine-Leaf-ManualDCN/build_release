@@ -1,0 +1,7 @@
+#build project
+cd ../inet-4.2.0u/inet4.2.0Untouched
+make MODE=release
+cd ../../Spine-Leaf-ManualDCN
+make MODE=release
+
+

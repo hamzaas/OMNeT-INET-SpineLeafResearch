@@ -1,22 +1,19 @@
-#!/bin/bash
-
-
 # Building topology info and saving input
-cd ../Python\ Scripts
+cd ../'Python Scripts'
 touch mainCSV.csv
-py RouterConfigurator.py
+python3 RouterConfigurator.py
 rm ../Spine-Leaf-ManualDCN/_XHostSpineLeaf/ManualRoutingXML.xml
 mv ManualRoutingXML.xml ../Spine-Leaf-ManualDCN/_XHostSpineLeaf/ManualRoutingXML.xml
 
 #Creating New .ned file
-py nedConfigurator.py
+python3 nedConfigurator.py
 
 # For loop
 for i in {1..$1}
 do
 	echo $i
 	# Creating Traffic based on topology input
-	py SendScript.py < input.txt
+	python3 SendScript.py < input.txt
 	rm ../Spine-Leaf-ManualDCN/_XHostSpineLeaf/ini_generated.ini
 	mv ini_generated.ini ../Spine-Leaf-ManualDCN/_XHostSpineLeaf/ini_generated.ini
 
@@ -24,7 +21,7 @@ do
 	cd ../Spine-Leaf-ManualDCN
 
 	#Running the simulation
-	./Spine-LeafDCN.exe -u Cmdenv -f _XHostSpineLeaf/ini_generated.ini -c scriptTraffic
+	./Spine-LeafDCN -u Cmdenv -f _XHostSpineLeaf/ini_generated.ini -c scriptTraffic
 
 	# Converting results to .csv file
 	echo 'Converting results file.'
@@ -34,7 +31,7 @@ do
 	mv "run${i}.csv" ../../../Python\ Scripts/
 
 	# Running python script to display graphs
-	echo 'Running graphing script.'
+	echo 'Running graphing script.' 
 
 	cd ../../../
 	pwd
@@ -45,9 +42,9 @@ do
 
 
 	#Stuff
-	py csvMerger.py $i
+	python3 csvMerger.py $i
 done
 
-py ThroughputBoxPlot.py
+python3 ThroughputBoxPlot.py
 
 rm *.csv
