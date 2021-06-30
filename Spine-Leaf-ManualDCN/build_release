@@ -1,7 +1,9 @@
 #build project
 cd ../inet-4.2.0u/inet4.2.0Untouched
+opp_makemake -f
 make MODE=release
 cd ../../Spine-Leaf-ManualDCN
+opp_makemake -f
 make MODE=release
 
 
