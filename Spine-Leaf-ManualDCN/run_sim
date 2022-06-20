@@ -3,7 +3,7 @@ cd ../'Python Scripts'
 touch mainCSV.csv
 python3 RouterConfigurator.py
 rm ../Spine-Leaf-ManualDCN/_XHostSpineLeaf/ManualRoutingXML.xml
-mv ManualRoutingXML.xml ../Spine-Leaf-ManualDCN/_XHostSpineLeaf/ManualRoutingXML.xml
+#mv ManualRoutingXML.xml ../Spine-Leaf-ManualDCN/_XHostSpineLeaf/ManualRoutingXML.xml
 
 #Creating New .ned file
 python3 nedConfigurator.py
@@ -24,27 +24,27 @@ do
 	./Spine-LeafDCN -u Cmdenv -f _XHostSpineLeaf/ini_generated.ini -c scriptTraffic
 
 	# Converting results to .csv file
-	echo 'Converting results file.'
+	#echo 'Converting results file.'
 
-	cd ./_XHostSpineLeaf/results
-	scavetool x *.sca -o "run${i}.csv"
-	mv "run${i}.csv" ../../../Python\ Scripts/
+	#cd ./_XHostSpineLeaf/results
+	#scavetool x *.sca -o "run${i}.csv"
+	#mv "run${i}.csv" ../../../Python\ Scripts/
 
 	# Running python script to display graphs
-	echo 'Running graphing script.' 
+	#echo 'Running graphing script.' 
 
-	cd ../../../
-	pwd
+	#cd ../../../
+	#pwd
 	#py ResultsAnalysis.py
 	#py ResultsAnalysisVec.py
-	cd Python\ Scripts
-	pwd
+	#cd Python\ Scripts
+	#pwd
 
 
 	#Stuff
-	python3 csvMerger.py $i
+	#python3 csvMerger.py $i
 done
 
-python3 ThroughputBoxPlot.py
+#python3 ThroughputBoxPlot.py
 
-rm *.csv
+#rm *.csv
