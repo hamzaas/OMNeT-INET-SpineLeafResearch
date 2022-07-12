@@ -1,0 +1,16 @@
+package fattree.simulations._XHostFatTree;
+
+
+import inet.visualizer.integrated.IntegratedCanvasVisualizer;
+import inet.networklayer.configurator.ipv4.Ipv4NetworkConfigurator;
+
+
+import inet.node.ethernet.Eth100M;
+import inet.node.ethernet.EtherSwitch;
+import inet.node.inet.Router;
+import inet.node.inet.StandardHost;
+
+network _XHostFatTree
+{
+    parameters:
+        @display("bgb=2634.0076,1679.7712");
