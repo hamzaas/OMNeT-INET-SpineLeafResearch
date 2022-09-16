@@ -1,0 +1,14 @@
+#build project
+cd ../inet-4.2.0u/inet4.2.0Untouched
+opp_makemake -f 
+make MODE=release -j2
+cd src
+opp_makemake --make-so -f --deep -o INET -O out -pINET -I. -Xinet/applications/voipstream -Xinet/emulation -Xinet/transportlayer/tcp_lwip -Xinet/transportlayer/tcp_nsc
+make MODE=release -j 2
+cd ../tests/packet
+opp_makemake -I../../src -f -L../../src -lINET_dbg
+cd ../../../../Spine-Leaf-ManualDCN
+opp_makemake -f --deep -O out -I.
+make MODE=release -j2
+
+

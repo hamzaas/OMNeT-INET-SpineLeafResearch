@@ -1,0 +1,84 @@
+
+package fattree.simulations._XHostFatTree;
+
+
+import inet.visualizer.integrated.IntegratedCanvasVisualizer;
+import inet.networklayer.configurator.ipv4.Ipv4NetworkConfigurator;
+
+
+import inet.node.ethernet.Eth100M;
+import inet.node.ethernet.EtherSwitch;
+import inet.node.inet.Router;
+import inet.node.inet.StandardHost;
+
+network _XHostFatTree
+{
+    parameters:
+        @display("bgb=2634.0076,1679.7712");
+        int numCore = 4;
+        int numPods = 30;
+        int hostPerLeaf = 48;
+
+        //** If hostPerLeaf moved to moduleLeaf then each leaf could have different # of hosts.
+        @display("i=device/lan-bus;bgb=755,333");
+    types:
+        module pods
+        {
+            parameters:
+                @display("i=device/server2;bgb=1279,759");
+            gates:
+                inout podDoor[];
+            submodules:
+                agg1: Router {
+                    @display("p=197.69232,193.07693");
+                }
+                agg2: Router {
+                    @display("p=252.30771,193.07693");
+                }
+                edge1: Router {
+                    @display("p=197.69232,278.46155");
+                }
+                edge2: Router {
+                    @display("p=252.30771,278.46155");
+                }
+                S1: EtherSwitch {
+                    @display("p=138.46155,354.6154");
+                }
+                S2: EtherSwitch {
+                    @display("p=310.76926,354.6154");
+                }
+                H1: StandardHost;
+                H2: StandardHost;
+                H3: StandardHost;
+                H4: StandardHost;
+                H5: StandardHost;
+                H6: StandardHost;
+            connections:
+                agg1.ethg++ <--> podDoor++;
+                agg2.ethg++ <--> podDoor++;
+                agg1.ethg++ <--> podDoor++;
+                agg2.ethg++ <--> podDoor++;
+                agg1.ethg++ <--> Eth100M <--> edge1.ethg++;
+                agg2.ethg++ <--> Eth100M <--> edge2.ethg++;
+                agg1.ethg++ <--> Eth100M <--> edge2.ethg++;
+                agg2.ethg++ <--> Eth100M <--> edge1.ethg++;
+                edge1.ethg++ <--> Eth100M <--> S1.ethg++;
+                edge2.ethg++ <--> Eth100M <--> S2.ethg++;
+                edge1.ethg++ <--> Eth100M <--> H1.ethg++;
+                edge1.ethg++ <--> Eth100M <--> H2.ethg++;
+                edge1.ethg++ <--> Eth100M <--> H3.ethg++;
+                edge2.ethg++ <--> Eth100M <--> H4.ethg++;
+                edge2.ethg++ <--> Eth100M <--> H5.ethg++;
+                edge2.ethg++ <--> Eth100M <--> H6.ethg++;
+
+
+        }
+    submodules:
+        visualizer: IntegratedCanvasVisualizer {
+            @display("p=349.622,1448.4341");
+        }
+        configurator: Ipv4NetworkConfigurator {
+            @display("p=114.582,1448.4341");
+        }
+
+	

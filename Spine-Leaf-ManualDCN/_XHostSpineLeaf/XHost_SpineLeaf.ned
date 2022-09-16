@@ -29,8 +29,8 @@ network XHost_SpineLeaf_Network
 {
     parameters:
 		int numSpines = 4;
-		int numLeafs = 30;
-		int hostPerLeaf = 124;
+		int numLeafs = 9;
+		int hostPerLeaf = 32;
 
         //** If hostPerLeaf moved to moduleLeaf then each leaf could have different # of hosts.
         @display("i=device/lan-bus;bgb=755,333");

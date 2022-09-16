@@ -1,53 +1,38 @@
-#!/bin/bash
-
-
 # Building topology info and saving input
-cd ../Python\ Scripts
-touch mainCSV.csv
-py RouterConfigurator.py
-rm ../Spine-Leaf-ManualDCN/_XHostSpineLeaf/ManualRoutingXML.xml
-mv ManualRoutingXML.xml ../Spine-Leaf-ManualDCN/_XHostSpineLeaf/ManualRoutingXML.xml
-
-#Creating New .ned file
-py nedConfigurator.py
-
 # For loop
 for i in {1..$1}
 do
 	echo $i
 	# Creating Traffic based on topology input
-	py SendScript.py < input.txt
-	rm ../Spine-Leaf-ManualDCN/_XHostSpineLeaf/ini_generated.ini
-	mv ini_generated.ini ../Spine-Leaf-ManualDCN/_XHostSpineLeaf/ini_generated.ini
 
 	echo 'Starting Simulation'
-	cd ../Spine-Leaf-ManualDCN
+	cd _XHostSpineLeaf
 
 	#Running the simulation
-	./Spine-LeafDCN.exe -u Cmdenv -f _XHostSpineLeaf/ini_generated.ini -c scriptTraffic
+    ../Spine-LeafDCN -m  -n ..:../../inet-4.2.0u/inet4.2.0Untouched/src:../../inet-4.2.0u/inet4.2.0Untouched/examples:../../inet-4.2.0u/inet4.2.0Untouched/tutorials:../../inet-4.2.0u/inet4.2.0Untouched/showcases --image-path=../../inet-4.2.0u/inet4.2.0Untouched/images -l ../../inet-4.2.0u/inet4.2.0Untouched/src/INET -u Cmdenv -c test ini_generated.ini
 
 	# Converting results to .csv file
-	echo 'Converting results file.'
+	#echo 'Converting results file.'
 
-	cd ./_XHostSpineLeaf/results
-	scavetool x *.sca -o "run${i}.csv"
-	mv "run${i}.csv" ../../../Python\ Scripts/
+	#cd ./_XHostSpineLeaf/results
+	#scavetool x *.sca -o "run${i}.csv"
+	#mv "run${i}.csv" ../../../Python\ Scripts/
 
 	# Running python script to display graphs
-	echo 'Running graphing script.'
+	#echo 'Running graphing script.' 
 
-	cd ../../../
-	pwd
+	#cd ../../../
+	#pwd
 	#py ResultsAnalysis.py
 	#py ResultsAnalysisVec.py
-	cd Python\ Scripts
-	pwd
+	#cd Python\ Scripts
+	#pwd
 
 
 	#Stuff
-	py csvMerger.py $i
+	#python3 csvMerger.py $i
 done
 
-py ThroughputBoxPlot.py
+#python3 ThroughputBoxPlot.py
 
-rm *.csv
+#rm *.csv
